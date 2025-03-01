@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Personalized One to One Class",
+        "description": "Get individual attention with tailored lessons designed to match your learning pace and goals.",
+        "icon": "/assets/key-benefits-icons/one-to-one.svg"
+    },
+    {
+        "title": "Pay For What You Learn",
+        "description": "Flexible payment model—only pay for the lessons you take, ensuring affordability and value.",
+        "icon": "/assets/key-benefits-icons/pay-what-you-learn.svg"
+    },
+    {
+        "title": "Flexible Timings",
+        "description": "Schedule your sessions at your convenience and track your learning progress effectively.",
+        "icon": "/assets/key-benefits-icons/flexible-timing.svg"
+    },
+    {
+        "title": "Monthly Report",
+        "description": "Maximize your time with focused, one-on-one lessons that fit your schedule and learning style.",
+        "icon": "/assets/key-benefits-icons/monthly-report.svg"
+    }
+]
