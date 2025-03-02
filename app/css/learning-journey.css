@@ -1,0 +1,40 @@
+.learning-journey-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 88px;
+}
+.learning-journey-content{
+    max-width: 733px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.learning-journey-description{
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 44px;
+}
+.learning-journey-btn{
+    width: 247px;
+    max-height: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+}
+.learning-journey-image-div {
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.learning-journey-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}

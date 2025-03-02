@@ -1,0 +1,22 @@
+.key-benefits-section{
+    margin: 63px auto;
+    /* min-height: 80vh; */
+}
+.key-benefits-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.key-benefits-cards{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 12px; 
+   margin-top: 65px;
+   justify-content: center;
+}
+.key-benefits-title{
+    max-width: 425px;
+    text-align: center;
+}
