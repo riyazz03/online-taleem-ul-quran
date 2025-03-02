@@ -28,9 +28,11 @@ const coursesCard = ({
         <h2 className="courses-card-title">{title}</h2>
         <div className="courses-card-button">
           <p className="courses-card-button-text">{buttonText}</p>
-          <img
+          <Image
             src="/assets/Icons/arrow-icon-with-background-color.svg"
             alt="Right Arrow"
+            height={1}
+            width={1}
           />
         </div>
       </div>

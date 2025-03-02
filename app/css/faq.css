@@ -1,7 +1,7 @@
 .faq-section{
     width: 100%;
-    min-height: 100vh;
-    margin-bottom: 150px;
+    margin: 45px auto;
+    margin-bottom: 150px;   
 }
 .faq-container{
     display: flex;
@@ -10,7 +10,6 @@
     align-items: center;
 }
 .faq-heading{
-    margin-top: 130px;
     width: 573px;
     display: flex;
     justify-content: center;

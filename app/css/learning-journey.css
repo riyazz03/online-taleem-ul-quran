@@ -1,3 +1,6 @@
+.learning-journey{
+    margin: 45px auto;
+}
 .learning-journey-container{
     display: flex;
     justify-content: space-between;
