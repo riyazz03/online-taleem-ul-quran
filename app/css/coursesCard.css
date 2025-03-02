@@ -1,0 +1,56 @@
+.courses-card{
+    max-width: 658px;
+    max-height: 600px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    background-color: var(--main-color);
+    overflow: hidden;
+}
+.courses-card-image-div{
+    position: relative;
+    max-width: 658px;
+    max-height: 600px;
+    width: 100%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-position: center;
+}
+.courses-card-image{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.courses-card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    padding: 0px 10px 40px 28px;
+}
+.courses-card-title{
+    color: var(--white);
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+}
+.courses-card-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 296px;
+    max-height: 70px;
+    gap: 20px;
+    padding: 30px;
+    background-color: var(--secondary-color);
+    border-radius: 100px;
+}
+.courses-card-button-text{
+    color: var(--black);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+}

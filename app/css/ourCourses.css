@@ -1,0 +1,22 @@
+.our-courses-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    min-height: 80vh;
+}
+.our-courses-content{
+    max-width: 573px;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.our-courses-cards{
+    margin-top: 85px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
