@@ -2,7 +2,7 @@
 
 import React from "react";
 import "../css/faqCard.css";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const FaqsCard = ({
   question,
@@ -12,6 +12,14 @@ const FaqsCard = ({
   answer: string;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [contentHeight, setContentHeight] = useState(0);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setContentHeight(contentRef.current.scrollHeight);
+    }
+  }, [answer]);
 
   return (
     <div className="faqs-card">
@@ -28,13 +36,19 @@ const FaqsCard = ({
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="feather feather-plus text-black flex-shrink-0 transition duration-300 "
+            className={`feather feather-plus text-black flex-shrink-0 transition duration-300 ${isOpen ? "rotate-45" : ""}`}
           >
-            <line x1="12" y1="5" x2="12" y2="19"></line>   
-            <line x1="5" y1="12" x2="19" y2="12"></line>  
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
           </svg>
         </div>
-        <div className={`${isOpen ? "block" : "hidden"} faq-answers`}>
+        <div
+          ref={contentRef}
+          className="faq-answers overflow-hidden transition-all duration-300"
+          style={{
+            maxHeight: isOpen ? `${contentHeight}px` : "0",
+          }}
+        >
           <p className="faq-answers-p">{answer}</p>
         </div>
       </div>
