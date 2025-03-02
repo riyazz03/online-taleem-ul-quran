@@ -1,13 +1,15 @@
 import React from 'react'
-import "../css/freeTrail.css"
+import Image from 'next/image'
 
 const FreeTrial = () => {
   return (
     <div>
-        <img
+        <Image
             src="/assets/Icons/left-mosque-icon.svg"
             alt="Right Arrow"
             className='mosque-icon'
+            height={1}
+            width={1}
           />
     </div>
   )
