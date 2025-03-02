@@ -1,5 +1,5 @@
 import React from 'react'
-import "../css/free-trial.css"
+import "../css/freeTrail.css"
 
 const FreeTrial = () => {
   return (

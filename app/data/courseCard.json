@@ -1,27 +1,27 @@
 [
   {
-    "src": "/Images/Our-Courses-image1.png",
+    "src": "/images/courses/quran-recitation.png",
     "name": "Quran Recitation",
     "url": "http://example.com",
     "width": 658,
     "height": 409
   },
   {
-    "src": "/Images/Our-Courses-image2.png",
+    "src": "/images/courses/simplified-tajweed.png",
     "name": "Simplified Tajweed",
     "url": "http://example.com",
     "width": 658,
     "height": 409
   },
   {
-    "src": "/Images/Our-Courses-image3.png",
+    "src": "/images/courses/arabic-language.png",
     "name": "Arabic Language",
     "url": "http://example.com",
     "width": 658,
     "height": 409
   },
   {
-    "src": "/Images/Our-Courses-image4.png",
+    "src": "/images/courses/quran-memorization.png",
     "name": "Quran Memorization",
     "url": "http://example.com",
     "width": 658,
