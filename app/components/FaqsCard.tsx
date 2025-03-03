@@ -2,7 +2,7 @@
 
 import React from "react";
 import "../css/faqCard.css";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const FaqsCard = ({
   question,
@@ -12,6 +12,14 @@ const FaqsCard = ({
   answer: string;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [contentHeight, setContentHeight] = useState(0);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setContentHeight(contentRef.current.scrollHeight);
+    }
+  }, [answer]);
 
   return (
     <div className="faqs-card">
@@ -29,27 +37,27 @@ const FaqsCard = ({
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className={`feather feather-plus text-black flex-shrink-0 transition-transform duration-300 ${
-                isOpen ? "rotate-180" : ""
-              }`}
+              className={`feather feather-plus text-black flex-shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                }`}
             >
               <line
                 x1="12"
                 y1="5"
                 x2="12"
                 y2="19"
-                className={`transition-opacity duration-300 ${
-                  isOpen ? "opacity-0" : "opacity-100"
-                }`}
+                className={`transition-opacity duration-300 ${isOpen ? "opacity-0" : "opacity-100"
+                  }`}
               ></line>
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
           </div>
         </div>
         <div
-          className={`faq-answers transition-all duration-300 ease-in-out ${
-            isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-          }`}
+          ref={contentRef}
+          className="faq-answers overflow-hidden transition-all duration-300 ease-in-out"
+          style={{
+            maxHeight: isOpen ? `${contentHeight}px` : "0",
+          }}
         >
           <p className="faq-answers-p">{answer}</p>
         </div>
