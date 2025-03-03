@@ -29,7 +29,7 @@ const OurCourses = () => {
           ))}
         </div>
       </div> 
-    </div>  // End of our-courses-section
+    </div>
   );
 };
 
