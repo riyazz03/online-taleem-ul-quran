@@ -51,6 +51,38 @@ body {
 /* Section Heading Styles Ends */
 
 /* mosque svg icon */
-.mosque-icon{
-    width: 100%;
+.mosque-icon {
+  width: 100%;
+}
+
+/* button design */
+
+.section-btn {
+  border-radius: 8px;
+  border-radius: 8px;
+  background: #63aea7;
+  max-width: 277px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 40px;
+}
+.section-btn p {
+  color: var(--white);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.section-btn svg {
+  width: 17px;
+  height: auto;
+  flex-shrink: 0;
 }
