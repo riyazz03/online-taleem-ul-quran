@@ -53,6 +53,7 @@ const Navbar: React.FC = () => {
                     <Link href="/" className="nav-link">Home</Link>
                     <Link href="/our-course" className="nav-link">Our Courses</Link>
                     <Link href="/about-us" className="nav-link">About us</Link>
+                    <Link href="/about-us" className="nav-link">Contact us</Link>
                     <div className="nav-menu-button" onClick={toggleMenu}>
                         <div className={`nav-menu-circles-wrapper ${isMenuOpen ? 'active' : ''}`}>
                             <div className="black-circle"></div>
@@ -63,30 +64,22 @@ const Navbar: React.FC = () => {
             </div>
             <div className={`nav-menu-overlay ${isMenuOpen ? 'active' : ''}`}>
                 <div className="nav-menu-overlay-links-wrapper">
-                    <div className="overlay-nav-overflow">
-                        <Link href="/" className="overlay-nav-link">
-                            {splitTextIntoChars('Home')}
-                        </Link>
-                       
-                    </div>
-                    <div className="overlay-nav-overflow">
-                        <Link href="/our-course" className="overlay-nav-link">
-                            {splitTextIntoChars('Our Courses')}
-                        </Link>
-                        
-                    </div>
-                    <div className="overlay-nav-overflow">
-                        <Link href="/about-us" className="overlay-nav-link">
-                            {splitTextIntoChars('About us')}
-                        </Link>
-                   
-                    </div>
-                    <div className="overlay-nav-overflow">
-                        <Link href="/contact-us" className="overlay-nav-link">
-                            {splitTextIntoChars('Contact us')}
-                        </Link>
-                       
-                    </div>
+
+                    <Link href="/" className="overlay-nav-link">
+                        {splitTextIntoChars('Home')}
+                    </Link>
+
+                    <Link href="/our-course" className="overlay-nav-link">
+                        {splitTextIntoChars('Our Courses')}
+                    </Link>
+
+                    <Link href="/about-us" className="overlay-nav-link">
+                        {splitTextIntoChars('About us')}
+                    </Link>
+
+                    <Link href="/contact-us" className="overlay-nav-link">
+                        {splitTextIntoChars('Contact us')}
+                    </Link>
                 </div>
             </div>
         </nav>

@@ -7,8 +7,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5rem;
+  padding: 20px 0;
   width: 100%;
+  max-width: 85rem;
 }
 .nav-menu-links {
   display: flex;
@@ -36,6 +37,7 @@
   transition: all 0.3s ease;
   cursor: pointer;
   z-index: 100;
+  display: none;
 }
 .nav-menu-button:hover {
   border-color: var(--main-color);
