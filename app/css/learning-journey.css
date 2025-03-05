@@ -18,6 +18,10 @@
     font-size: 34px;
     font-weight: 400;
     line-height: 44px;
+    text-align: justify;
+}
+.learning-journey-description-span{
+    color: #63AEA7;
 }
 .learning-journey-btn{
     width: 247px;

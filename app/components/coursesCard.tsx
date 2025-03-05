@@ -31,8 +31,8 @@ const coursesCard = ({
           <Image
             src="/assets/Icons/arrow-icon-with-background-color.svg"
             alt="Right Arrow"
-            height={1}
-            width={1}
+            height={40}
+            width={40}
           />
         </div>
       </div>
