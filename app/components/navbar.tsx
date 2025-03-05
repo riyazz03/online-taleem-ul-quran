@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
             <div className="nav-container">
                 <div className="nav-logo-wrapper">
                     <Image
-                        src="/images/temp-logo.png"
+                        src="/Images/temp-logo.png"
                         alt="nav-logo"
                         className="nav-logo"
                         height={72}
