@@ -5,6 +5,8 @@ import KeyBenefits from "./sections/keyBenefits";
 import OurCourses from "./sections/OurCourses";
 import FAQ from "./sections/faq";
 import FreeTrial from "./sections/FreeTrial";
+import Footer from "./components/footer";
+import Testimonial from "./sections/testimonial";
 
 export default function Home() {
   return (
@@ -15,7 +17,9 @@ export default function Home() {
       <KeyBenefits />
       <OurCourses />
       <FreeTrial />
+      <Testimonial />
       <FAQ />
+      <Footer />
     </main>
   );
 }
