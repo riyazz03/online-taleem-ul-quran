@@ -25,6 +25,12 @@
   letter-spacing: 0%;
   color: var(--black);
 }
+.nav-link:hover{
+  color: var(--main-color);
+}
+.nav-link:nth-child(1) {
+  color: var(--main-color);
+}
 .nav-menu-button {
   height: 50px;
   width: 50px;

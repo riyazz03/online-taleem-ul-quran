@@ -1,14 +1,32 @@
 [
     {
-        "name": "Student Name",
-        "testimonial": "Testimonial content goes here."
-    },
-    {
-        "name": "Student Name",
-        "testimonial": "Testimonial content goes here."
-    },
-    {
-        "name": "Student Name",
-        "testimonial": "Testimonial content goes here."
-    }
-]
+          "image": "/Images/testimonial/Avatar1.png",
+          "name": "Ayesha K",
+          "review": "This online Quran class has been a life-changing experience! The teachers are patient, knowledgeable, and make learning so easy. Highly recommend!"
+        },
+        {
+          "image": "/Images/testimonial/Avatar2.png",
+          "name": "Atihck",
+          "review": "I’ve tried many online Quran courses, but this one stands out. The lessons are well-structured, and my recitation has improved tremendously!" 
+        },
+        {
+          "image": "/Images/testimonial/Avatar3.png", 
+          "name": "Fatima S",
+          "review": "Perfect for beginners and advanced learners alike. The interactive lessons and flexible timings make it easy to stay consistent with my learning."
+        },
+        {
+          "image": "/Images/testimonial/Avatar1.png",
+          "name": "Omar H",
+          "review": "My kids love their Quran teacher! The engaging and friendly approach has made them excited to learn every day."
+        },
+        {
+          "image": "/Images/testimonial/Avatar2.png",
+          "name": "Zainab A",
+          "review": "Learning Tajweed has never been this easy! The instructors are incredibly supportive, and the one-on-one sessions are so helpful."
+        },
+        {
+          "image": "/Images/testimonial/Avatar3.png",
+          "name": "Salman",
+          "review": "This online Quran class has been a life-changing experience! The teachers are patient, knowledgeable, and make learning so easy. Highly recommend!"
+        }
+    ]
