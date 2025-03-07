@@ -8,11 +8,10 @@ import Button from "../components/button";
 const HOMECTA = () => {
   return (
     <div className="home-cta-section">
-      <div className="main-container home-cta-container">
+      <div className=" home-cta-container">
         <div className="home-cta-main">
           <div className="home-cta-content">
             <div className="home-cta-heading">
-              {" "}
               {/* beginning of the heading text */}
               <div className="flex gap-4">
                 <h1 className="home-cta-title"> Your Quran </h1>
@@ -24,7 +23,7 @@ const HOMECTA = () => {
                 />
               </div>
               <h1 className="home-cta-title">Journey Begins Here</h1>
-            </div>{" "}
+            </div>
             {/* End of the Heading text */}
             <p className="home-cta-description">
               Expert-led lessons, flexible schedules, lifelong learning.
@@ -36,40 +35,40 @@ const HOMECTA = () => {
               <Image
                 src="/Images/homepage/home-page-image1.png"
                 alt="Logo"
-                width={208}
-                height={208}
+                width={240}
+                height={240}
                 className="home-page-quran"
               />
               <div className="quran-text-content-background quran1">
                 <h3>Anytime, anywhere, with expert guidance.</h3>
               </div>
-            </div>{" "}
+            </div>
             {/*End of first quran block */}
             <div className="home-page-quran-2">
               <Image
                 src="/Images/homepage/home-page-image2.png"
                 alt="Logo"
-                width={182}
-                height={182}
+                width={200}
+                height={200}
                 className="home-page-quran"
               />
               <div className="quran-text-content-background quran2">
                 <h3>Learn with clarity, recite with confidence.</h3>
               </div>
-            </div>{" "}
+            </div>
             {/* End of second quran block*/}
             <div className="home-page-quran-3">
               <Image
                 src="/Images/homepage/home-page-image3.png"
                 alt="Logo"
-                width={168}
-                height={168}
+                width={200}
+                height={200}
                 className="home-page-quran"
               />
               <div className="quran-text-content-background quran3">
                 <h3>Guided learning for every heart and mind.</h3>
               </div>
-            </div>{" "}
+            </div>
             {/* End of third quran block*/}
           </div>
         </div>

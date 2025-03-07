@@ -7,18 +7,18 @@
   overflow: hidden;
 }
 .home-cta-main {
-  max-width: 85rem;
-  height: 47rem;
+  max-width: 90%;
+  margin: 1rem 5rem;
   border-radius: 1.25rem;
   background: #204343;
   display: flex;
-  padding: 75px 40px;
-  /* justify-content: space-between; */
+  gap: 25rem;
+  padding: 75px 120px;
   z-index: -1;
+  overflow: hidden;
 }
 .home-cta-content {
   display: flex;
-  width: 710px;
   height: 406px;
   padding: 5px 0px;
   flex-direction: column;
@@ -45,22 +45,23 @@
 }
 .home-cta-image {
   z-index: 10;
+  margin-left: -2%;
 }
 .home-page-quran-1 {
   position: relative;
   z-index: 1;
-  left: 30%;
+  left: 20%;
 }
 .home-page-quran-2 {
   position: relative;
   z-index: 1;
-  top: -15%;
-  left: 150%;
+  top: -10%;
+  left: 140%;
 }
 .home-page-quran-3 {
   position: relative;
   z-index: 1;
-  left: 0;
+  left: -25%;
   top: -7%;
 }
 .quran-text-content-background {
@@ -104,4 +105,89 @@
   bottom: 5%;
   left: 5%;
   z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .home-cta-section {
+    margin-top: 5rem;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  .home-cta-main {
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 1.25rem;
+    background: #204343;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 50px 20px;
+    overflow: hidden;
+  }
+  
+  .home-cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    width: 90%;
+  }
+  
+  .home-cta-title {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  
+  .home-cta-description {
+    font-size: 1.25rem;
+    max-width: 90%;
+  }
+  
+  .home-cta-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .home-page-quran-1,
+  .home-page-quran-2,
+  .home-page-quran-3 {
+    position: relative;
+    text-align: center;
+  }
+  
+  .quran-text-content-background {
+    max-width: 250px;
+    font-size: 16px;
+    padding: 15px;
+    position: static;
+  }
+  
+  .homepage-mosque {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .homepage-mosque-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .homepage-mosque-gradient {
+    width: 100%;
+    height: 100px;
+    filter: blur(80px);
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: 0;
+  }
+  
 }
