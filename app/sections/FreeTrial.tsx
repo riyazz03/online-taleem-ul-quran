@@ -13,7 +13,7 @@ const FreeTrial = () => {
         height={1}
         width={1}
       />
-      <div className="main-container free-tail-container">
+      <div className="main-container free-trial-container">
         <Image
           src="/Images/free-trial-background.png"
           alt="free trial background"
@@ -27,7 +27,9 @@ const FreeTrial = () => {
             <p className="free-trial-description">
               Come by with a hello to eliminate any confusion promptly.
             </p>
-            <Button text="Book Your Demo" />
+            <div className="free-trial-button">
+              <Button text="Book Your Demo" />
+            </div>
           </div>
           <div className="trial-offer">
             <h2 className="trial-offer-title">Claim Your Free Trial ! ✧₊⁺</h2>

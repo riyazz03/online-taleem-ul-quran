@@ -4,16 +4,16 @@
 .free-trial-image {
   position: relative;
 }
-.free-tail-container {
+.free-trial-container {
   margin: 90px auto;
   position: relative;
+  overflow: hidden;
 }
 .free-trial-content-block {
   position: absolute;
   z-index: 5;
   top: 13px;
   width: 100%;
-  /* margin: 10px 100px; */
   display: flex;
   gap: 170px;
   align-items: center;
@@ -45,7 +45,8 @@
   height: 450px;
   width: 450px;
   border-radius: 15px;
-  padding: 65px 70px;
+  padding: 65px 50px;
+  position: relative;
 }
 .trial-offer-title {
   color: #63aea7;
@@ -54,22 +55,182 @@
   font-weight: 600;
   line-height: normal;
 }
-.trial-offer-features-block{
-    margin-top: 40px;
+.trial-offer-features-block {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+.trial-offer-features-line {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+}
+.trial-offer-features-paragraph {
+  color: #ddd;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .free-trial-section {
+    position: relative;
+    width: 100%;
+  }
+
+  .free-trial-image {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .free-trial-container {
+    margin: 5vh auto;
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 27px;
-}
-.trial-offer-features-line{
-    display: flex;
-    justify-content: start;
     align-items: center;
-    gap: 30px;
-}
-.trial-offer-features-paragraph{
-    color: #DDD;
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+  }
+
+  .free-trial-content-block {
+    width: 100%;
+    display: flex;
+    gap: 10vw;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 5;
+    padding: 5vh 0;
+  }
+
+  .free-trial-content {
+    width: 40vw;
+    text-align: center;
+  }
+
+  .free-trial-title {
+    color: var(--white);
+    font-size: 3vw;
+    font-weight: 600;
+    margin-bottom: 2vh;
+  }
+
+  .free-trial-description {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 2vw;
+    font-weight: 300;
+    margin-bottom: 4vh;
+  }
+
+  .trial-offer {
+    background-color: rgba(99, 174, 166, 0.209);
+    backdrop-filter: blur(10px);
+    height: 55vh;
+    width: 40vw;
+    border-radius: 15px;
+    padding: 6vh 4vw;
+    position: relative;
+    text-align: center;
+  }
+
+  .trial-offer-title {
+    color: #63aea7;
+    font-size: 2vw;
+    font-weight: 600;
+  }
+
+  .trial-offer-features-block {
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+  }
+
+  .trial-offer-features-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+  }
+
+  .trial-offer-features-paragraph {
+    color: #ddd;
+    font-size: 1.8vw;
+    font-weight: 500;
+    max-width: 35vw;
+  }
+
+  .free-trial-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .free-trial-content-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .free-trial-image {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .free-trial-content {
+    width: 90%;
+    text-align: center;
+  }
+
+  .free-trial-title {
+    font-size: 9vw;
+  }
+
+  .free-trial-description {
+    font-size: 5vw;
+  }
+
+  .trial-offer {
+    width: 80%;
+    height: auto;
+    padding: 6vh 6vw;
+    margin-top: -16%;
+  }
+
+  .trial-offer-title {
+    font-size: 4vw;
+  }
+
+  .trial-offer-features-block {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 2vh;
+  }
+
+  .trial-offer-features-line {
+    gap: 4vw;
+    display: flex;
+  }
+
+  .trial-offer-features-paragraph {
+    font-size: 3.5vw;
+    max-width: 90%;
+  }
+  .free-trial-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
