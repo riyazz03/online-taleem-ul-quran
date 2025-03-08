@@ -132,7 +132,7 @@ const Testimonial = () => {
       <div className="testimonial-section swiper-js-section">
         {/* Content on Top */}
         <div className="testimonial-card-content">
-          <h1 className="section-title testimonial-mobile-title testimonial-card-title">
+          <h1 className="section-title testimonial-card-title">
             Why Students Love <span>Our Quran</span> Classes
           </h1>
           <p className="section-description testimonial-card-description">
@@ -148,7 +148,7 @@ const Testimonial = () => {
             spaceBetween={20}
             slidesPerView={1}
             loop={true}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
             modules={[Autoplay]}
             className="testimonial-swiper"
           >

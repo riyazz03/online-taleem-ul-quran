@@ -9,17 +9,10 @@ const Footer = () => {
   return (
     <div className="footer">
       <Image
-        src="/Images/footer-waves-bg.png"
+        src="/assets/Icons/waves.svg"
         alt="image"
-        className="footer-waves-bg"
-        height={98}
-        width={1600}
-      />
-      <Image
-        src="/Images/footer-waves-bg.png"
-        alt="image"
-        className="footer-waves-bg2"
-        height={98}
+        className="footer-waves-bgg"
+        height={68}
         width={1600}
       />
       <div className="footer-section">

@@ -106,7 +106,35 @@
   left: 5%;
   z-index: 1;
 }
-
+@media screen and (max-width: 1600px) {
+  .home-cta-image{
+    margin-left: -10rem;
+  }
+  .home-page-quran{
+    height: 150px;
+    width: 150px;
+  }
+  .quran-text-content-background{
+    max-width: 200px;
+    font-size: 16px;
+    padding: 15px;
+  }
+  .home-page-quran-1{
+    left: 0;
+  }
+  .home-page-quran-2 {
+    position: relative;
+    z-index: 1;
+    top: -10%;
+    left: 140%;
+  }
+  .home-page-quran-3 {
+    position: relative;
+    z-index: 1;
+    left: -55%;
+    top: -7%;
+  }
+}
 @media screen and (max-width: 768px) {
   .home-cta-section {
     margin-top: 5rem;
@@ -129,24 +157,41 @@
   }
   
   .home-cta-content {
+    margin-top: -50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
     gap: 20px;
     width: 90%;
   }
-  
   .home-cta-title {
-    font-size: 36px;
+    font-size: 30px;
     line-height: 48px;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 100%;
+    text-align: center;
   }
-  
   .home-cta-description {
     font-size: 1.25rem;
-    max-width: 90%;
+    max-width: 100%;
+    margin-top: 15px;
   }
-  
+  .home-cta-button{
+    max-width: 70vw;
+    height: 50px;
+    margin-top: 25px;
+  }
+  .home-page-heading-image{
+    height: 50px;
+    width: 120px;
+  }
   .home-cta-image {
     display: flex;
     flex-direction: column;
@@ -154,16 +199,38 @@
     gap: 20px;
     width: 100%;
   }
-  
-  .home-page-quran-1,
-  .home-page-quran-2,
-  .home-page-quran-3 {
-    position: relative;
-    text-align: center;
+  .home-page-quran{
+    height: 120px;
+    width: 120px;
   }
   
+  .home-page-quran-1 {
+    position: relative;
+    z-index: 1;
+    left: 5%;
+  }
+  .home-page-quran-2 {
+    position: relative;
+    z-index: 1;
+    left: 50%;
+    top: -2.5+rem;
+  }
+  .home-page-quran-3 {
+    position: relative;
+    z-index: 1;
+    left: 8%;
+    top: -5rem;
+  }
+  .quran2{
+    bottom: -15%;
+    left: -15%;
+  }
+  .qr2{
+    position: relative;
+    left: 4.8rem;
+  }
   .quran-text-content-background {
-    max-width: 250px;
+    max-width: 200px;
     font-size: 16px;
     padding: 15px;
     position: static;
@@ -172,13 +239,13 @@
   .homepage-mosque {
     position: relative;
     width: 100%;
-    margin-top: 30px;
   }
   
   .homepage-mosque-image {
-    width: 100%;
+    width: 90%;
     height: auto;
-    position: relative;
+    position: absolute;
+    left: 0;
   }
   
   .homepage-mosque-gradient {

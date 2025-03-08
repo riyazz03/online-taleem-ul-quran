@@ -20,6 +20,7 @@ const HOMECTA = () => {
                   alt="homepage image"
                   width={205}
                   height={75}
+                  className="home-page-heading-image"
                 />
               </div>
               <h1 className="home-cta-title">Journey Begins Here</h1>
@@ -28,7 +29,9 @@ const HOMECTA = () => {
             <p className="home-cta-description">
               Expert-led lessons, flexible schedules, lifelong learning.
             </p>
-            <Button text="Book Your Demo" />
+            <div className="home-cta-button">
+              <Button text="Book Your Demo" />
+            </div>
           </div>
           <div className="home-cta-image">
             <div className="home-page-quran-1">
@@ -50,7 +53,7 @@ const HOMECTA = () => {
                 alt="Logo"
                 width={200}
                 height={200}
-                className="home-page-quran"
+                className="home-page-quran qr2"
               />
               <div className="quran-text-content-background quran2">
                 <h3>Learn with clarity, recite with confidence.</h3>
