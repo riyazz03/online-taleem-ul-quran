@@ -2,6 +2,8 @@
   position: relative;
   display: flex;
   justify-content: center;
+  z-index: 5;
+  background-color: var(--background);
 }
 .nav-container {
   display: flex;
@@ -26,10 +28,10 @@
   color: var(--black);
 }
 .nav-link:hover {
-  color: var(--main-color);
+  color: var(--secondary-color);
 }
 .nav-link:nth-child(1) {
-  color: var(--main-color);
+  color: var(--secondary-color);
 }
 .nav-menu-button {
   height: 60px;

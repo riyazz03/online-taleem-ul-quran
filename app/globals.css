@@ -69,9 +69,14 @@ body {
 
 /* mosque svg icon */
 .mosque-icon {
-  width: 100%;
+  width: 100vw;
 }
-
+@media screen and (max-width: 768px) {
+  .mosque-icon {
+    width: 100%;
+    height: 60px;
+  }
+}
 /* button design  STarts*/
 
 .section-btn {
@@ -105,3 +110,4 @@ body {
 }
 
 /* button design  Ends*/
+
