@@ -3,6 +3,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  /* z-index: 5; */
+  background-color: var(--background);
+  padding: 45px 0;
 }
 .testimonial-card-container {
   display: flex;
@@ -24,7 +27,6 @@
   flex-direction: column;
   justify-content: flex-end;
   gap: 1vw;
-  /* display: none; */
 }
 .swiper-js-section{
   display: none;
@@ -48,6 +50,7 @@
   max-width: 30vw;
   gap: 2vh;
   z-index: 2;
+  padding-top: 45px;
 }
 .testimonial-card-title {
   max-width: 24vw;

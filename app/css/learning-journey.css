@@ -1,5 +1,7 @@
 .learning-journey {
-  margin: 90px auto;
+  padding: 45px 0;
+  z-index: 5;
+  background-color: var(--background);
 }
 .learning-journey-container {
   display: flex;

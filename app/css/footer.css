@@ -1,6 +1,15 @@
-.footer {
+.empty-footer-page{
+  min-height: 60vh;
   position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.footer {
   overflow: hidden;
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  bottom: 0;
 }
 .footer-waves-bgg {
   position: absolute;
@@ -42,7 +51,7 @@
   color: var(--white);
   font-size: 1.5rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
   letter-spacing: -0.03rem;
 }

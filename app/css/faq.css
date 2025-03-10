@@ -1,7 +1,9 @@
 .faq-section {
   width: 100%;
-  margin: 90px auto;
-  margin-bottom: 150px;
+  padding: 45px auto;
+  padding: 150px;
+  z-index: 5;
+  background-color: var(--background);
 }
 .faq-container {
   display: flex;

@@ -1,11 +1,12 @@
 .free-trial-section {
   position: relative;
+  z-index: 5;
+  background-color: var(--background);
 }
 .free-trial-image {
   position: relative;
 }
 .free-trial-container {
-  margin: 90px auto;
   position: relative;
   overflow: hidden;
 }

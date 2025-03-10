@@ -1,0 +1,112 @@
+.contact-us-section {
+  position: relative;
+}
+.contact-us-container {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+}
+.contact-us-heading {
+  width: 518px;
+}
+.contact-us-form-content{
+    margin-top: 54px;
+
+}
+.contact-us-form-block{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-input-block{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.form-label-title{
+    color: #1D1D1D;
+font-family: "DM Sans";
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: -0.48px;
+}
+.form-input{
+    width: 683px;
+height: 80px;
+padding: 23px 36px;
+flex-shrink: 0;
+border-radius: 20px;
+border: 1.434px solid #204343;
+color: #AAA;
+font-family: "DM Sans";
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -0.44px;
+}
+.contact-us-details-title {
+  color: #066;
+  font-family: "DM Sans";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+.contact-us-details-line {
+  display: flex;
+  width: 469.806px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 40px;
+}
+.contact-us-details-svg {
+  border-radius: 10.975px;
+  background: #204343;
+  padding: 17px;
+}
+.contact-us-details-svg-block {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+.numbers {
+  display: flex;
+  flex-direction: column;
+  color: #1d1d1d;
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+.email {
+  color: #000;
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+.map {
+  width: 377.533px;
+  color: #1d1d1d;
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
