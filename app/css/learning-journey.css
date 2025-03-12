@@ -1,5 +1,5 @@
 .learning-journey {
-  padding: 45px 0;
+  padding: 0 0 45px 0;
   z-index: 5;
   background-color: var(--background);
 }
@@ -50,7 +50,7 @@
 
 @media screen and (max-width: 768px) {
   .learning-journey {
-    margin: 5vh auto;
+    margin: 5vh 0 0 0;
   }
 
   .learning-journey-container {

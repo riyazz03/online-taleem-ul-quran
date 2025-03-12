@@ -5,8 +5,9 @@ import "../css/testimonial.css";
 import TestimonialCard from "../components/TestimonialCard";
 import Button from "../components/button";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/pagination";
 
 const testimonials = [
   {
@@ -125,11 +126,10 @@ const Testimonial = () => {
         </div>
         {/* Testimonial background gradient div */}
         <div className="testimonial-background-gradient"></div>
-      </div>  
-
+      </div>
 
       {/* swiper js responsive slider */}
-      <div className="testimonial-section swiper-js-section">
+      <div className="testimonial-section-mobile swiper-js-section">
         {/* Content on Top */}
         <div className="testimonial-card-content">
           <h1 className="section-title testimonial-card-title">
@@ -143,22 +143,25 @@ const Testimonial = () => {
         </div>
 
         {/* Swiper Slider for Testimonials */}
-        <div className="testimonial-card-container">
+        <div className="testimonial-card-container swiper-slide">
           <Swiper
             spaceBetween={20}
             slidesPerView={1}
             loop={true}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
-            modules={[Autoplay]}
-            className="testimonial-swiper"
+            pagination={{ clickable: true }}
+            modules={[Autoplay, Pagination]}
+            className="testimonial-swiper "
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
-                <TestimonialCard
-                  image={testimonial.image}
-                  name={testimonial.name}
-                  review={testimonial.review}
-                />
+                <div className="testimonial-card ">
+                  <TestimonialCard
+                    image={testimonial.image}
+                    name={testimonial.name}
+                    review={testimonial.review}
+                  />
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>

@@ -8,7 +8,7 @@ import Testimonial from "./sections/testimonial";
 
 export default function Home() {
   return (
-    <main>
+    <main className="main">
       <Homecta />
       <LearningJourney />
       <KeyBenefits />

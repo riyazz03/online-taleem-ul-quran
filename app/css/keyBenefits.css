@@ -21,3 +21,9 @@
   max-width: 425px;
   text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+  .key-benefits-section{
+    padding: 20px 0 0 0;
+  }
+}

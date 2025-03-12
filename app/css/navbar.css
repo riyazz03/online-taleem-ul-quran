@@ -87,7 +87,8 @@
 }
 
 .nav-menu-overlay.active {
-  width: 50vw;
+  width: 70vw;
+  z-index: 50;
 }
 
 .nav-menu-overlay-links-wrapper {
@@ -123,15 +124,14 @@
   margin-bottom: 1rem;
   perspective: 1000px;
 }
-
 /* Mobile responsive */
 @media screen and (max-width: 768px) {
   .navbar {
     position: relative;
     display: flex;
     justify-content: center;
-    margin: 0 auto;
-    width: 95%;
+    padding: 0 3%;
+    width: 100%;
   }
   .nav-link {
     display: none;
