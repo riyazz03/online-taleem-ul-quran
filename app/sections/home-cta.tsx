@@ -8,7 +8,20 @@ import Button from "../components/button";
 const HOMECTA = () => {
   return (
     <div className="home-cta-section">
-      <Image src="/assets/Icons/Grids.svg" alt="Logo" width={500} height={800} className="home-page-grid-image" />
+      <Image
+        src="/assets/Icons/Grids.svg"
+        alt="Logo"
+        width={500}
+        height={800}
+        className="home-page-grid-image-left"
+      />
+      <Image
+        src="/assets/Icons/Grids.svg"
+        alt="Logo"
+        width={500}
+        height={800}
+        className="home-page-grid-image-right"
+      />
       <div className="main-container home-cta-container">
         <div className="home-cta-main">
           <div className="home-cta-content">
@@ -86,15 +99,7 @@ const HOMECTA = () => {
           />
         </div>
       </div>
-      <div className="mosque">
-        <Image
-          src="/assets/Icons/right-mosque-icon.svg"
-          alt="Right Arrow"
-          className="mosque-icon"
-          height={100}
-          width={1}
-        />
-      </div>
+      
     </div>
   );
 };

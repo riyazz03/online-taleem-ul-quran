@@ -1,13 +1,13 @@
 .faq-section {
   width: 100%;
   padding: 45px auto;
-  padding: 150px;
+  padding: 100px 150px;
   z-index: 5;
   background-color: var(--background);
 }
 .faq-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
 }
@@ -116,9 +116,7 @@
     height: auto;
   }
   .faq-section {
-    margin-top: -130%;
     margin-bottom: -5%;
-    min-height: 250vh;
     overflow: hidden;
   }
 

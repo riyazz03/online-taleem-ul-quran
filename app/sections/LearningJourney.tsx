@@ -5,6 +5,13 @@ import '../css/learning-journey.css'
 const LearningJourney = () => {
   return (
     <section className='learning-journey'>
+      <Image
+        src="/assets/Icons/right-mosque-icon.svg"
+        alt="Right Arrow"
+        className="mosque-icon"
+        height={1}
+        width={1}
+      />
         <div className="main-container learning-journey-container">
             <div className="learning-journey-content">
                 <h1 className='section-title'>Empowering Your Quran <span>Learning Journey</span></h1>

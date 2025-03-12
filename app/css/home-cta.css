@@ -3,17 +3,27 @@
   padding: 90px auto;
   z-index: 5;  
   width: 100%;
+  position: relative;
   background-color: var(--background);
 
 }
-.home-page-grid-image{
+.home-page-grid-image-left{
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: 3;
+  width: 25.25rem;
+  height: 93.50013rem;
+  flex-shrink: 0; 
+}
+.home-page-grid-image-right{
   position: absolute;
   top: 10px;
   right: 0;
   z-index: 3;
   width: 25.25rem;
   height: 93.50013rem;
-  flex-shrink: 0;
+  flex-shrink: 0; 
 }
 .home-cta-container {
   position: relative;
@@ -124,9 +134,28 @@
 
 @media screen and (max-width: 768px) {
   .home-cta-section {
-    margin-top: 5rem;
-    margin: 50px auto;
+    padding-top: 5rem;
+    padding: 20px auto;
     padding: 20px;
+    z-index: 5;
+  }
+  .home-page-grid-image-left{
+    position: absolute;
+    top: -40px;
+    left: -25px;
+    z-index: 3;
+    width: 25.25rem;
+    height: 77.50013rem;
+    flex-shrink: 0; 
+  }
+  .home-page-grid-image-right{
+    position: absolute;
+    top: -40px;
+    /* right: -10px; */
+    z-index: 3;
+    width: 25.25rem;
+    height: 77.50013rem;
+    flex-shrink: 0; 
   }
   
   .home-cta-main {
@@ -208,8 +237,8 @@
   .home-page-quran-3 {
     position: relative;
     z-index: 1;
-    left: 0%;
-    top: -2rem;
+    left: -18%;
+    top: -5rem;
   }
   .quran2{
     bottom: -15%;

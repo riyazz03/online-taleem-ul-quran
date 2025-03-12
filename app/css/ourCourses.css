@@ -28,7 +28,7 @@
 
 @media screen and (max-width: 768px) {
   .our-courses-section {
-    margin: 5vh auto;
+    padding: 20px auto;
   }
   .our-courses-container {
     display: flex;

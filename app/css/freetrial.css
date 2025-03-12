@@ -92,7 +92,7 @@
   }
 
   .free-trial-container {
-    margin: 5vh auto;
+    padding: 5vh auto;
     position: relative;
     overflow: hidden;
     display: flex;
