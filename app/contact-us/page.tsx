@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import "../css/contactUs.css";
 import Image from "next/image";
 
-const Page = () => {
+const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -231,4 +231,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default ContactUs;
