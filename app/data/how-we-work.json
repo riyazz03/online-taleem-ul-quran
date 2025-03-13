@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Schedule a Demo with our founder",
+        "icon": "/assets/how-we-work/Schedule.svg"
+    },
+    {
+        "title": "Assessment of your child",
+        "icon": "/assets/how-we-work/Assessment.svg"
+    },
+    {
+        "title": "Fill up the Application Form",
+        "icon": "/assets/how-we-work/Form.svg"
+    },
+    {
+        "title": "Get your teacher assigned",
+        "icon": "/assets/how-we-work/Teacher.svg"
+    },
+    {
+        "title": "Commencement of first class",
+        "icon": "/assets/how-we-work/F-Class.svg"
+    }
+]

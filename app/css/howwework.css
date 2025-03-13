@@ -1,0 +1,30 @@
+.how-we-work-section{
+    padding: 5rem;
+    padding: 90px auto;
+    z-index: 2;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--background);
+}
+.how-we-work-title{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+.cards-outer-div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.top-arrow{
+    background-color: red;
+    display: flex;
+}
+.card-content{
+    display: flex;
+    gap: 28px;
+}

@@ -1,17 +1,17 @@
-.key-benefits-card {
+.how-we-work-card {
   background-color: #066;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   border-radius: 20px;
-  max-width: 330px;
-  max-height: 359px;
+  max-width: 250px;
+  max-height: 306px;
   padding: 60px 30px;
   gap: 20px;
   text-align: center;
 }
-.key-benefits-card-icon {
+.how-we-work-card-icon {
   border: 1px solid var(--white);
   border-radius: 15px;
   border: 1px solid rgba(255, 253, 253, 0.53);
@@ -30,11 +30,11 @@
   fill: #fff;
   filter: blur(25px);
 }
-.key-benefits-card-icon-image {
+.how-we-work-card-icon-image {
   height: 64px;
   width: 60px;
 }
-.key-benefits-card-title {
+.how-we-work-card-title {
   color: var(--white);
   text-align: center;
   font-size: 20px;
@@ -43,7 +43,7 @@
   line-height: 23px;
   letter-spacing: -0.2px;
 }
-.key-benefits-card-description {
+.how-we-work-card-description {
   color: var(--white);
   text-align: center;
   font-size: 1rem;
