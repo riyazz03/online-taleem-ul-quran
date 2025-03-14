@@ -11,7 +11,7 @@ const OurCourses = () => {
           <h1 className="section-title">
             Our <span>Courses</span>
           </h1>
-          <p className="section-description">
+          <p className="section-description our-courses-description">
             Unlock the beauty of the Quran with expert-guided, interactive
             courses
           </p>

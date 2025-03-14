@@ -5,9 +5,15 @@ import "../css/testimonial.css";
 import TestimonialCard from "../components/TestimonialCard";
 import Button from "../components/button";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import {
+  Autoplay,
+  Navigation,
+  Mousewheel,
+  Keyboard,
+  Pagination,
+} from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const testimonials = [
   {
@@ -145,17 +151,20 @@ const Testimonial = () => {
         {/* Swiper Slider for Testimonials */}
         <div className="testimonial-card-container swiper-slide">
           <Swiper
-            spaceBetween={20}
             slidesPerView={1}
+            spaceBetween={30}
             loop={true}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
-            pagination={{ clickable: true }}
-            modules={[Autoplay, Pagination]}
-            className="testimonial-swiper "
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Pagination, Mousewheel, Keyboard, Autoplay, Navigation]}
+            className="mySwiper"
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
-                <div className="testimonial-card ">
+                <div className="testimonial-cards ">
                   <TestimonialCard
                     image={testimonial.image}
                     name={testimonial.name}
