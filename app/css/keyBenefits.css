@@ -12,9 +12,10 @@
 }
 .key-benefits-cards {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 65px;
+  margin-top: 60px;
   justify-content: center;
 }
 .key-benefits-title {
@@ -23,7 +24,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  .key-benefits-section{
-    padding: 20px 0 0 0;
+  .key-benefits-section {
+    padding: 20px 20px;
+  }
+  .key-benefits-title {
+    max-width: 220px;
+    line-height: 30px;
+  }
+  .key-benefits-cards{
+    margin-top: 15px;
   }
 }

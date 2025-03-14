@@ -67,6 +67,9 @@
     flex-direction: column;
     gap: 3vh;
   }
+  .learning-journey-title {
+    line-height: 9vw;
+  }
 
   .learning-journey-description {
     font-size: 2.5vw;
@@ -100,39 +103,36 @@
 
   .learning-journey-image {
     width: 100%;
-    height: auto;
+    height: 350px;
+    object-fit: cover;
     display: block;
   }
+  .learning-journey-container {
+    flex-direction: column;
+    gap: 4vh;
+    text-align: center;
+  }
 
-  /* Mobile responsive */
-  @media screen and (max-width: 768px) {
-    .learning-journey-container {
-      flex-direction: column;
-      gap: 4vh;
-      text-align: center;
-    }
+  .learning-journey-content {
+    max-width: 90%;
+    text-align: center;
+  }
 
-    .learning-journey-content {
-      max-width: 90%;
-      text-align: center;
-    }
+  .learning-journey-description {
+    font-size: 5vw;
+    line-height: 6vw;
+  }
 
-    .learning-journey-description {
-      font-size: 5vw;
-      line-height: 6vw;
-    }
+  .learning-journey-btn {
+    width: 50%;
+    max-height: 6vh;
+    padding: 1.5vh;
+    font-size: 4vw;
+  }
 
-    .learning-journey-btn {
-      width: 50%;
-      max-height: 6vh;
-      padding: 1.5vh;
-      font-size: 4vw;
-    }
-
-    .learning-journey-image-div {
-      width: 90%;
-      max-width: 400px;
-      margin: 0 auto;
-    }
+  .learning-journey-image-div {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }

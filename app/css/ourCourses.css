@@ -28,7 +28,7 @@
 
 @media screen and (max-width: 768px) {
   .our-courses-section {
-    padding: 20px auto;
+    padding: 20px 0 125px 0;
   }
   .our-courses-container {
     display: flex;
@@ -44,23 +44,25 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 3vh;
+    gap: 0.5vh;
   }
   .our-courses-cards {
     margin-top: 5vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 3vw;
     width: 100%;
     max-width: 900px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 4vh;
+    width: 90%;
   }
   .our-courses-content {
     max-width: 90%;
   }
-
-  .our-courses-cards {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 4vh;
-    width: 90%;
+  .our-courses-description{
+    line-height: 3vh;
   }
 }

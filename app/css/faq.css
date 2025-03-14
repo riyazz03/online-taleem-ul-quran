@@ -1,12 +1,15 @@
 .faq-section {
   width: 100%;
+  position: relative;
   padding: 45px auto;
   padding: 100px 150px;
   z-index: 5;
+  min-height: 120vh;
   background-color: var(--background);
 }
 .faq-container {
   display: flex;
+  position: relative;
   flex-direction: column; 
   justify-content: center;
   align-items: center;
@@ -51,14 +54,15 @@
 @media screen and (max-width: 768px) {
   .faq-section {
     width: 100vw;
-    height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 5vh 5vw;
+    padding: 30px 20px;
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
+    padding-bottom: 50vh;
   }
 
   .faq-container {
@@ -67,7 +71,9 @@
     align-items: center;
     justify-content: center;
     width: 90vw;
+    min-height: auto;
     max-width: 1200px;
+    top: 0;
   }
 
   .faq-heading {
@@ -75,12 +81,11 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: 4.5vh;
   }
 
-  .faq-heading h1 {
-    font-size: 4vw;
-    font-weight: 600;
+  .faq-heading-h1 {
+    line-height: 3vh;
     color: #222;
   }
 
@@ -115,10 +120,6 @@
     width: 5vw;
     height: auto;
   }
-  .faq-section {
-    margin-bottom: -5%;
-    overflow: hidden;
-  }
 
   .faq-container {
     width: 100vw;
@@ -126,11 +127,6 @@
 
   .faq-heading {
     width: 90vw;
-  }
-
-  .faq-heading h1 {
-    font-size: 6vw;
-    white-space: nowrap;
   }
 
   .faq-heading span {
@@ -153,4 +149,10 @@
     right: 2vw;
     width: 8vw;
   }
+
+
+
+  
+
+
 }
