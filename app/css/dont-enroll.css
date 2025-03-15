@@ -1,0 +1,54 @@
+.dont-enroll-section{
+    position: relative;
+    padding: 45px atuo;
+    z-index: 5;
+    width: 100%;
+    background-color: var(--background);
+}
+.dont-enroll-heading{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 45px;
+}
+.dont-enroll-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+.dont-enroll-card{
+    display: flex;
+    width: 85.1875rem;
+    height: 12.5rem;
+    /* padding: 1.4375rem 16.3125rem; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    border-radius: 1.25rem;
+    background: linear-gradient(0deg, rgba(0, 102, 102, 0.95) 0%, rgba(0, 102, 102, 0.95) 100%) ;
+}
+.dont-enroll-card-title{
+    color: #FFF;
+font-family: "DM Sans";
+font-size: 2.1875rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.dont-enroll-card-review{
+    color: #FFF;
+text-align: center;
+font-family: "DM Sans";
+font-size: 1.5625rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+max-width: 58rem;
+
+}

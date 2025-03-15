@@ -12,7 +12,6 @@
 }
 .key-benefits-cards {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 60px;
@@ -33,5 +32,7 @@
   }
   .key-benefits-cards{
     margin-top: 15px;
+    display: flex;
+    flex-direction: column;
   }
 }
