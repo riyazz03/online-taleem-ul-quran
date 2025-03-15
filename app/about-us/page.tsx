@@ -1,16 +1,18 @@
 import React from 'react'
-import AboutUsCTA from '../sections/about-us-cta'
-import AboutUsGuidance from '../sections/about-us-guidance'
-import HowWeWork from '../sections/how-we-work'
+import AboutUsCTA from '../sections/AboutUsCta'
+import AboutUsGuidance from '../sections/AboutUsGuidance'
+import HowWeWork from '../sections/HowWeWork'
+import AboutUsFreeTrial from '../sections/AboutUsFreeTrial'
 
-const aboutUs = () => {
+const AboutUs = () => {
   return (
     <main>
         <AboutUsCTA />
         <AboutUsGuidance />
         <HowWeWork />
+        <AboutUsFreeTrial />
     </main>
   )
 }
 
-export default aboutUs
+export default AboutUs

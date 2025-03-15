@@ -1,7 +1,6 @@
 .about-us-guidance-section {
-  padding: 5rem;
   padding: 90px auto;
-  z-index: 2;
+  z-index: 5;
   width: 100%;
   position: relative;
   overflow: hidden;

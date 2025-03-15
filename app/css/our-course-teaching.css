@@ -1,0 +1,37 @@
+.our-course-teaching {
+  position: relative;
+  z-index: 5;
+  padding: 45px auto;
+  background-color: var(--background);
+}
+.teaching-content {
+  position: relative;
+  display: flex;
+  width: 1360px;
+  height: 300px;
+  padding: 50px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  /* gap: 69px; */
+  border-radius: 20px;
+  background: linear-gradient(4deg, #204343 2.5%, #42736b 79.71%);
+}
+.teaching-content-title {
+  color: #fff;
+  font-family: "DM Sans";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  max-width: 562px;
+}
+.teaching-content-description {
+    color: #FFF;
+font-family: "DM Sans";
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+max-width: 587px;
+}

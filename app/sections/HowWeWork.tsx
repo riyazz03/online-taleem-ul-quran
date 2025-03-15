@@ -19,15 +19,15 @@ const HowWeWork = () => {
               src="/assets/how-we-work/arrowTop.svg"
               alt="Top Arrow"
               className="top-arrow-icon"
-              height={1}
-              width={1}
+              height={46}
+              width={124}
             />
             <Image
               src="/assets/how-we-work/arrowTop.svg"
               alt="Top Arrow"
               className="top-arrow-icon"
-              height={1}
-              width={1}
+              height={46}
+              width={124}
             />
           </div>
           <div className="card-content">
@@ -35,10 +35,27 @@ const HowWeWork = () => {
               <HowWeWorkCard key={index} title={card.title} icon={card.icon} />
             ))}
           </div>
-          <div className="bottom-arrow"></div>
+          <div className="bottom-arrow">
+            <Image
+              src="/assets/how-we-work/arrowBottom.svg"
+              alt="Bottom Arrow"
+              className="bottom-arrow-icon"
+              height={46}
+              width={124}
+            />
+            <Image
+              src="/assets/how-we-work/arrowBottom.svg"
+              alt="Bottom Arrow"
+              className="bottom-arrow-icon"
+              height={46}
+              width={124}
+            />
+          </div>
         </div>
         {/* <HowWeWorkCard title="Learn Quran" icon="/assets/how-we-work/schedule.svg" /> */}
+        
       </div>
+      
     </section>
   );
 };

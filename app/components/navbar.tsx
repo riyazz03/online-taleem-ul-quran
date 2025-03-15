@@ -12,6 +12,10 @@ const Navbar: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleCloseMenu = (): void => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-container">
@@ -39,9 +43,7 @@ const Navbar: React.FC = () => {
           </Link>
           <div className="nav-menu-button" onClick={toggleMenu}>
             <div
-              className={`nav-menu-circles-wrapper ${
-                isMenuOpen ? "active" : ""
-              }`}
+              className={`nav-menu-circles-wrapper ${isMenuOpen ? "active" : ""}`}
             >
               <div className="black-circle"></div>
               <div className="black-circle"></div>
@@ -52,16 +54,16 @@ const Navbar: React.FC = () => {
 
       <div className={`nav-menu-overlay ${isMenuOpen ? "active" : ""}`}>
         <div className="nav-menu-overlay-links-wrapper">
-          <Link href="/" className="overlay-nav-link">
+          <Link href="/" className="overlay-nav-link" onClick={handleCloseMenu}>
             Home
           </Link>
-          <Link href="/our-course" className="overlay-nav-link">
+          <Link href="/our-course" className="overlay-nav-link" onClick={handleCloseMenu}>
             Our Courses
           </Link>
-          <Link href="/about-us" className="overlay-nav-link">
+          <Link href="/about-us" className="overlay-nav-link" onClick={handleCloseMenu}>
             About us
           </Link>
-          <Link href="/contact-us" className="overlay-nav-link">
+          <Link href="/contact-us" className="overlay-nav-link" onClick={handleCloseMenu}>
             Contact us
           </Link>
         </div>
