@@ -81,6 +81,7 @@
   .free-trial-section {
     position: relative;
     width: 100%;
+    overflow: hidden;
   }
 
   .free-trial-image {
@@ -172,6 +173,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
   }
 
   .free-trial-content-block {
