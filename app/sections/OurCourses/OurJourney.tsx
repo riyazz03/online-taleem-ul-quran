@@ -11,7 +11,7 @@ const OurJourney = () => {
           </h1>
           <p className="our-journey-description">
             We have guided over 300 students on their journey toward Jannah,
-            proudly calling them our "Guided Seekers."
+            proudly calling them our  Guided Seekers.
           </p>
         </div>
         <div className="our-journey-cirlce-block">
