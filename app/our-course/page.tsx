@@ -1,12 +1,16 @@
 import React from 'react'
-import HowWeWork from '../sections/HowWeWork'
-import OurCourseTeaching from '../sections/OurCourseTeaching'
-import DontEnroll from '../sections/DontEnroll'
+import HowWeWork from '../sections/AboutUs/HowWeWork'
+import OurCourseTeaching from '../sections/OurCourses/OurCourseTeaching'
+import DontEnroll from '../sections/OurCourses/DontEnroll'
+import OurJourney from '../sections/OurCourses/OurJourney'
+import OurCoursesLive from '../sections/OurCourses/OurCoursesLive'
 
 const OurCourse = () => {
   return (
-    <main>
+    <main className='main'>
         <OurCourseTeaching />
+        <OurJourney />
+        <OurCoursesLive />
         <DontEnroll />
         <HowWeWork />
     </main>

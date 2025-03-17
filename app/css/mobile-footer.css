@@ -22,7 +22,8 @@
 .footer-svg-outline {
   padding: 10px;
   border-radius: 50%;
-  border: 1px solid var(--black);
+  /* border: 1px solid var(--black); */
+  display: none;
 }
 .footer-mobile {
   width: 1280px;
@@ -55,9 +56,6 @@
   .footer-questions.active svg {
     transform: rotate(45deg);
   }
-  .footer-svg-outline svg{
-    stroke: white;
-  }
   .footer-answers-p {
     font-size: 25px;
   }
@@ -78,8 +76,8 @@
 
   .footer-questions {
     display: flex;
-    width: 90%;
-    justify-content: space-evenly;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
     cursor: pointer;
   }
@@ -99,10 +97,11 @@
   .footer-svg-outline {
     padding: 1vh;
     border-radius: 50%;
-    border: 1px solid var(--white);
+    /* border: 1px solid var(--white); */
     display: flex;
     align-items: center;
     justify-content: center;
+    
   }
 
   .footer-answers {

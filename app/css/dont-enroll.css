@@ -52,3 +52,37 @@ line-height: normal;
 max-width: 58rem;
 
 }
+
+
+@media screen and (max-width: 768px) {
+    .dont-enroll-section {
+      padding: 30px 15px;
+    }
+  
+    .dont-enroll-heading {
+      margin-bottom: 30px;
+    }
+  
+    .dont-enroll-cards {
+      gap: 1rem;
+    }
+  
+    .dont-enroll-card {
+      width: 100%;
+      height: auto;
+      padding: 20px;
+      gap: 0.75rem;
+      border-radius: 1rem;
+      text-align: center;
+    }
+  
+    .dont-enroll-card-title {
+      font-size: 1.5rem;
+    }
+  
+    .dont-enroll-card-review {
+      font-size: 1rem;
+      max-width: 100%;
+    }
+  }
+  

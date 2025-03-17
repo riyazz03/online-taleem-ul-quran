@@ -88,13 +88,12 @@
     position: relative;
     width: 100%;
     z-index: 1;
+    display: none;
   }
   .footer {
-    position: fixed;
-    /* overflow-x: hidden; */
+    position: relative;
     z-index: 2;
     width: 100%;
-    min-height: 90vh;
     bottom: 0;
   }
   .footer-section {
