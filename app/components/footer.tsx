@@ -49,7 +49,7 @@ const MobileFooterData = [
 ];
 
 const Footer = () => {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   return (
     <>
       <div className="empty-footer-page"></div>
@@ -192,13 +192,11 @@ const Footer = () => {
                 links4={item.links4}
                 links5={item.links5}
                 isOpen={openIndex === index} // Pass the state to MobileFooter
-                onClick={() => setOpenIndex(index)} // Update state on click
+                onClick={() => setOpenIndex(openIndex === index ? null : index)} // Toggle state on click
               />
             ))}
 
             <div className="footer-content-links-block connect-now-block">
-              {" "}
-              {/*fourth link div */}
               <h4 className="footer-content-link-title">Connect Now</h4>
               <div className="footer-content-links-wrapper-div">
                 <div className="footer-social-media-icon-block-mobile">
@@ -237,6 +235,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
+
             <div className="crayont-div footer-logo-div">
               <h3 className="crayont-text">Crafted by Crayont</h3>
               <Image

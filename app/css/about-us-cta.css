@@ -98,6 +98,61 @@
   z-index: 1;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   
+} */
+@media (max-width: 768px) {
+  .about-us-cta-section {
+    padding: 20px;
+  }
+  
+  .about-us-cta-main {
+    flex-direction: column;
+    height: auto;
+    padding: 50px 20px;
+    gap: 30px;
+  }
+  
+  .about-us-cta-content {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .about-us-cta-title,
+  .about-us-title,
+  .about-us-title span {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+  
+  .about-us-description {
+    font-size: 20px;
+  }
+  
+  .about-us-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-us-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+  
+  .about-us-mosque {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-us-mosque-image {
+    /* width: 100%;
+    height: auto;
+    position: static; */
+    display: none;
+  }
 }

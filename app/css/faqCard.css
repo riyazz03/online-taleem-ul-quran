@@ -72,7 +72,7 @@
   .faq {
     width: 100%;
     border-top: 1px solid var(--gray);
-    padding: 1.5vh 2vw;
+    /* padding: 1.5vh 2vw; */
   }
 
   .faq-questions {
@@ -115,7 +115,6 @@
     font-weight: 400;
     line-height: 2vh;
     letter-spacing: -0.2vw;
-    margin-left: 2vw;
     margin-bottom: 2vh;
     max-width: 90%;
     padding: 1rem 0;
@@ -125,9 +124,6 @@
     transform: rotate(45deg);
   }
 
-  .faq {
-    padding: 2vh 4vw;
-  }
 
   .faq-question-h3 {
     font-size: 4vw;

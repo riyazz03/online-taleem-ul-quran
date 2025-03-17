@@ -23,13 +23,13 @@ const MobileFooter = ({
   answer: string;
   answer2: string;
   answer3: string;
-  answer4: string;
-  answer5: string;
+  answer4?: string;
+  answer5?: string;
   links: string;
   links2: string;
   links3: string;
-  links4: string;
-  links5: string;
+  links4?: string;
+  links5?: string;
   isOpen: boolean;
   onClick: () => void;
 }) => {
@@ -92,12 +92,16 @@ const MobileFooter = ({
             <Link href={links3} className="footer-link">
               {answer3}
             </Link>
-            <Link href={links4} className="footer-link">
-              {answer4}
-            </Link>
-            <Link href={links5} className="footer-link">
-              {answer5}
-            </Link>
+            {answer4 && links4 && (
+              <Link href={links4} className="footer-link">
+                {answer4}
+              </Link>
+            )}
+            {answer5 && links5 && (
+              <Link href={links5} className="footer-link">
+                {answer5}
+              </Link>
+            )}
           </div>
         </div>
       </div>

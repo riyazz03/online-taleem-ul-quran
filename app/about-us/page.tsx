@@ -1,8 +1,8 @@
 import React from 'react'
-import AboutUsCTA from '../sections/AboutUsCta'
-import AboutUsGuidance from '../sections/AboutUsGuidance'
-import HowWeWork from '../sections/HowWeWork'
-import AboutUsFreeTrial from '../sections/AboutUsFreeTrial'
+import AboutUsCTA from '../sections/AboutUs/AboutUsCta'
+import AboutUsGuidance from '../sections/AboutUs/AboutUsGuidance'
+import HowWeWork from '../sections/AboutUs/HowWeWork'
+import AboutUsFreeTrial from '../sections/AboutUs/AboutUsFreeTrial'
 
 const AboutUs = () => {
   return (

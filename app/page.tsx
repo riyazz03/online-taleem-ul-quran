@@ -1,10 +1,10 @@
-import Homecta from "./sections/home-cta";
-import LearningJourney from "./sections/LearningJourney";
-import KeyBenefits from "./sections/keyBenefits";
-import OurCourses from "./sections/OurCourses";
-import FAQ from "./sections/faq";
-import FreeTrial from "./sections/FreeTrial";
-import Testimonial from "./sections/testimonial";
+import Homecta from "./sections/HomePage/home-cta";
+import LearningJourney from "./sections/HomePage/LearningJourney";
+import KeyBenefits from "./sections/HomePage/keyBenefits";
+import OurCourses from "./sections/HomePage/OurCourses";
+import FAQ from "./sections/HomePage/faq";
+import FreeTrial from "./sections/HomePage/FreeTrial";
+import Testimonial from "./sections/HomePage/testimonial";
 
 export default function Home() {
   return (
