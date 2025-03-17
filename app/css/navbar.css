@@ -8,6 +8,9 @@
   backdrop-filter: blur(50px);
   border-bottom: 2px solid #ffffff57;
 }
+img.nav-logo {
+  width: 80px;
+}
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -153,8 +156,9 @@
   .overlay-nav-link {
     font-size: 30px;
   }
-  .nav-logo-wrapper {
-    width: 110px;
+
+  img.nav-logo {
+    width: 60px;
   }
   .nav-container {
     padding: 15px 0;
