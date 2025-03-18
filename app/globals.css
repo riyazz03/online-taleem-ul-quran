@@ -67,13 +67,12 @@ body {
 }
 @media screen and (max-width: 768px) {
   .section-title {
-    font-size: 24px;
-  }
-  .section-title span{
-    font-size: 24px;
-  }
+    font-size: 30px;
+    line-height: 140% !important;
+}
   .section-description {  
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 140% !important;
   }
 }
 /* Section Heading Styles Ends */
@@ -132,3 +131,6 @@ body {
 }
 
 
+.padding-global{
+  padding: 0 2rem;
+}

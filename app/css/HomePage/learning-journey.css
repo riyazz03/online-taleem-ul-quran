@@ -50,32 +50,35 @@
 
 @media screen and (max-width: 768px) {
   .learning-journey {
-    margin: 5vh 0 0 0;
-  }
-
-  .learning-journey-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5vw;
-  }
-
-  .learning-journey-content {
-    max-width: 50vw;
-    height: auto;
     display: flex;
     flex-direction: column;
-    gap: 3vh;
+    justify-content: end;
+    align-items: end;
+    overflow: hidden;
+  }
+  .learning-journey-container {
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .mosque-icon {
+    min-width: 1300px;
+    height: 110px;
+    margin: 0;
+    padding: 0;
+  }
+  .learning-journey-content {
+    gap: 20px;
   }
   .learning-journey-title {
-    line-height: 9vw;
+    line-height: 140%;
   }
 
   .learning-journey-description {
-    font-size: 2.5vw;
-    font-weight: 400;
-    line-height: 3.5vw;
-    text-align: justify;
+    font-size: 1.25rem;
+    line-height: 140%;
+    text-align: left;
   }
 
   .learning-journey-description-span {
@@ -115,20 +118,17 @@
 
   .learning-journey-content {
     max-width: 90%;
-    text-align: center;
+    text-align: left;
+    display: flex;
+    justify-content: start;
+    align-items: start;
   }
-
-  .learning-journey-description {
-    font-size: 5vw;
-    line-height: 6vw;
-  }
-
   .learning-journey-btn {
-    width: 50%;
-    max-height: 6vh;
-    padding: 1.5vh;
-    font-size: 4vw;
-  }
+    width: auto;
+    max-height: 100%;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+}
 
   .learning-journey-image-div {
     width: 90%;

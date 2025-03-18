@@ -10,7 +10,7 @@
 .faq-container {
   display: flex;
   position: relative;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -31,7 +31,6 @@
 }
 .faq-heading-span {
   color: var(--primary-color);
-  font-family: Griffiths;
   font-size: 60px;
   font-style: normal;
   font-weight: 400;
@@ -40,7 +39,6 @@
 .faq-subheading-p {
   color: #808080;
   text-align: center;
-  font-family: "DM Sans";
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -53,11 +51,14 @@
 
 @media screen and (max-width: 768px) {
   .faq-section {
-    width: 100vw;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-    padding: 30px 20px;
+    padding: 0px 20px;
+    padding-bottom: 40px;
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
@@ -74,42 +75,18 @@
     top: 0;
   }
 
-  .faq-heading {
-    width: 70vw;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 4.5vh;
-  }
-
-  .faq-heading-h1 {
-    line-height: 3vh;
-    color: #222;
-  }
-
-  .faq-heading span {
-    color: var(--primary-color);
-    font-family: Griffiths;
-    font-size: 4.5vw;
-    font-weight: 600;
-  }
-
-  .faq-subheading-p {
-    color: #808080;
-    font-family: "DM Sans";
-    font-size: 1.8vw;
-    font-weight: 400;
-    letter-spacing: -0.2vw;
-  }
-
   .faq-qa {
     width: 100%;
     max-width: 900px;
     display: flex;
     flex-direction: column;
-    gap: 2vh;
+    gap: 2.5rem;
   }
-
+  .faq-answers-p {
+    font-size: 1rem;
+    line-height: 150%;
+    margin: 0;
+  }
   .faq-icon {
     position: absolute;
     right: 5vw;
@@ -120,36 +97,15 @@
   }
 
   .faq-container {
-    width: 100vw;
+    width: 100%;
   }
 
   .faq-heading {
     width: 90vw;
   }
 
-  .faq-heading span {
-    margin-top: 2vh;
-    font-size: 7.5vw;
-    color: var(--secondary-color);
-  }
-
-  .faq-subheading-p {
-    font-size: 4vw;
-    letter-spacing: -0.1vw;
-  }
-
   .faq-qa {
     width: 100%;
+    margin-top: 40px;
   }
-
-  .faq-icon {
-    right: 2vw;
-    width: 8vw;
-  }
-
-
-
-  
-
-
 }

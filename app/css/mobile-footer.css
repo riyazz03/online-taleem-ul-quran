@@ -6,7 +6,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin: 28px 24px; */
   cursor: pointer;
 }
 .footer-question-h3 {
@@ -20,9 +19,7 @@
   letter-spacing: -0.48px;
 }
 .footer-svg-outline {
-  padding: 10px;
   border-radius: 50%;
-  /* border: 1px solid var(--black); */
   display: none;
 }
 .footer-mobile {
@@ -40,8 +37,6 @@
   letter-spacing: -0.48px;
   margin-left: 24px;
   margin-bottom: 25px;
-  max-width: 977px;
-  padding: 1rem 0;
 }
 .footer-questions.active svg {
   transform: rotate(45deg);
@@ -49,8 +44,6 @@
 .footer-questions.active svg {
   transform: rotate(45deg);
 }
-
-/* mobile phone responsive */
 
 @media screen and (max-width: 768px) {
   .footer-questions.active svg {
@@ -71,9 +64,7 @@
 
   .footer-mobile {
     width: 100%;
-    padding: 1.5vh 2vw;
   }
-
   .footer-questions {
     display: flex;
     width: 100%;
@@ -81,68 +72,39 @@
     align-items: center;
     cursor: pointer;
   }
-
   .footer-question-h3 {
     color: var(--text-color-primary);
     font-family: "DM Sans";
-    font-size: 1.8vw;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 500;
     line-height: normal;
-    letter-spacing: -0.2vw;
     flex: 1;
     word-break: break-word;
     white-space: normal;
   }
 
   .footer-svg-outline {
-    padding: 1vh;
     border-radius: 50%;
-    /* border: 1px solid var(--white); */
     display: flex;
     align-items: center;
     justify-content: center;
-    
   }
-
   .footer-answers {
     overflow: hidden;
-  }
-
-  .footer-answers-p {
-    color: var(--gray);
-    font-size: 1.5vw;
-    font-weight: 400;
-    line-height: 2vh;
-    letter-spacing: -0.2vw;
-    margin-left: 2vw;
-    margin-bottom: 2vh;
-    max-width: 90%;
-    padding: 1rem 0;
-    word-break: break-word;
   }
   .footer-questions.active svg {
     transform: rotate(45deg);
   }
   .footer-question-h3 {
-    font-size: 5.5vw;
-    line-height: 5vh;
+    font-size: 1.5rem;
+    line-height: 200%;
     color: var(--secondary-color);
     text-align: left;
   }
-  .footer-answers-p {
-    font-size: 4.5vw;
-    color: var(--white);
-    text-align: left;
-    font-weight: 600;
-    line-height: 1.8;
-  }
-  .footer-svg-outline {
-    padding: 1.5vw;
-  }
-  .footer-answers-wrapper{
+  .footer-answers-wrapper {
     display: flex;
     flex-direction: column;
     height: auto;
-    gap: 5px;
+    gap: 20px;
   }
 }

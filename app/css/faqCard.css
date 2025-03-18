@@ -16,7 +16,6 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: -0.48px;
 }
 .faq-svg-outline {
   padding: 10px;
@@ -25,7 +24,7 @@
 }
 .faq {
   width: 1280px;
-  border-top: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
 }
 .faq-answers {
   overflow: hidden;
@@ -71,40 +70,41 @@
 
   .faq {
     width: 100%;
-    border-top: 1px solid var(--gray);
-    /* padding: 1.5vh 2vw; */
   }
 
   .faq-questions {
     display: flex;
-    width: 90%;
+    width: 100%;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: start;
     cursor: pointer;
-    gap: 5vw;
+    gap: 2rem;
+    margin: 10px 0;
+    margin-bottom: 20px;
   }
-
   .faq-question-h3 {
     color: var(--text-color-primary);
     font-family: "DM Sans";
     font-size: 1.8vw;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: -0.2vw;
     flex: 1;
     word-break: break-word;
     white-space: normal;
   }
 
   .faq-svg-outline {
-    padding: 1vh;
-    border-radius: 50%;
-    border: 1px solid var(--black);
+    padding: 0.2rem;
+    width: 25px;
+    height: 25px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
-
+  .faq-svg-outline svg {
+    width: 15px;
+    height: 15px;
+  }
   .faq-answers {
     overflow: hidden;
   }
@@ -124,18 +124,9 @@
     transform: rotate(45deg);
   }
 
-
   .faq-question-h3 {
     font-size: 4vw;
     text-align: left;
   }
 
-  .faq-answers-p {
-    font-size: 3.5vw;
-    line-height: 1.8;
-  }
-
-  .faq-svg-outline {
-    padding: 1.5vw;
-  }
 }
