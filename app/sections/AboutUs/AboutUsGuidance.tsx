@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import "@/app/css/about-us-guidance.css";
+import "@/app/css/AboutUs/about-us-guidance.css";
 
 const AboutUsGuidance = () => {
   return (
@@ -12,28 +12,30 @@ const AboutUsGuidance = () => {
         height={1}
         width={1}
       />
-      <div className="main-container about-us-guidance-container">
-        <div className="guidance-content">
-          <h1 className="section-title">
-            Defining <span>Our Path</span>
-          </h1>
-          <p className="guidance-description">
-            At Taleem-ul-Quran, our vision is to create a world where the
-            teachings of the Holy Quran illuminate the hearts and minds of every
-            individual, guiding them toward righteousness, peace, and success in
-            both this life and the Hereafter. We aspire to build a spiritually
-            enlightened society where the Quran is not just read but deeply
-            understood, cherished, and applied in daily life.
-          </p>
-        </div>
-        <div className="guidance-image">
-          <Image
-            src="/Images/about-us-guidance-image.png"
-            alt="Guidance Image"
-            className="guidance-image-image"
-            height={403}
-            width={427}
-          />
+      <div className="padding-global">
+        <div className="main-container about-us-guidance-container">
+          <div className="guidance-content">
+            <h1 className="section-title">
+              Defining <span>Our Path</span>
+            </h1>
+            <p className="guidance-description">
+              At Taleem-ul-Quran, our vision is to create a world where the
+              teachings of the Holy Quran illuminate the hearts and minds of
+              every individual, guiding them toward righteousness, peace, and
+              success in both this life and the Hereafter. We aspire to build a
+              spiritually enlightened society where the Quran is not just read
+              but deeply understood, cherished, and applied in daily life.
+            </p>
+          </div>
+          <div className="guidance-image">
+            <Image
+              src="/Images/about-us-guidance-image.png"
+              alt="Guidance Image"
+              className="guidance-image-image"
+              height={403}
+              width={427}
+            />
+          </div>
         </div>
       </div>
     </section>

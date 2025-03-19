@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import "@/app/css/testimonial.css";
+import "@/app/css/HomePage/testimonial.css";
 import TestimonialCard from "@/app/components/TestimonialCard";
 import Button from "@/app/components/button";
 import { Swiper, SwiperSlide } from "swiper/react";

@@ -20,9 +20,10 @@ const OurCoursesLiveCard = ({
             <p className='our-courses-subtitle'>Start your Journey From</p>
             <h2 className='our-courses-title'>{title}</h2>
             <p className='our-courses-description-text'>{description}</p>
+            <Image src="/assets/social-media-icons/Rating.svg" alt="Rating Image" height={22} width={167} className='rating-icon' />
             <div className="courses-btn">
                 <p className='courses-btn-text'>Start With a Free Trail</p>
-                <Image src="/assets/Icons/arrow-icon.svg" alt="Arrow" height={40} width={40} className='courses-btn-icon' />
+                <Image src="/assets/Icons/arrow-icon.svg" alt="Arrow" height={0} width={20} className='courses-btn-icon' />
             </div>
         </div>
     </div>

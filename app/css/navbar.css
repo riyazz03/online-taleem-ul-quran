@@ -37,8 +37,13 @@ img.nav-logo {
 .nav-link:hover {
   color: var(--secondary-color);
 }
-.nav-link:nth-child(1) {
+.nav-link:focus,
+.nav-link:active {
   color: var(--secondary-color);
+}
+.active-link {
+  color: var(--secondary-color) !important;
+  font-weight: bold;
 }
 .nav-menu-button {
   height: 60px;
@@ -124,6 +129,9 @@ img.nav-logo {
   white-space: nowrap;
   position: relative;
   display: block;
+}
+.overlay-nav-link::hover{
+  color: var(--secondary-color);
 }
 .overlay-nav-overflow {
   position: relative;
