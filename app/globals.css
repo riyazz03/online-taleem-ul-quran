@@ -134,3 +134,9 @@ body {
 .padding-global{
   padding: 0 2rem;
 }
+
+@media screen and (max-width: 768px) {
+  .padding-global{
+    padding: 0 0;
+  }
+}
