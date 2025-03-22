@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/contactUs.css";
 import Image from "next/image";
 
@@ -16,6 +16,27 @@ const ContactUs = () => {
 
   const [selectedCourse, setSelectedCourse] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
+  const [nextDay, setNextDay] = useState("");
+
+  useEffect(() => {
+    const today = new Date();
+    today.setDate(today.getDate() + 2); // Add 2 days
+
+    const optionsDate: Intl.DateTimeFormatOptions = {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    };
+
+    const optionsDay: Intl.DateTimeFormatOptions = {
+      weekday: "long",
+    };
+
+    const formattedDate = today.toLocaleDateString("en-GB", optionsDate).replace(/\//g, "-"); // DD-MM-YYYY
+    const formattedDay = today.toLocaleDateString("en-GB", optionsDay); // Day Name (e.g., Friday)
+
+    setNextDay(`${formattedDate}, ${formattedDay}`); // Format: 21-03-2025, Friday
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -155,9 +176,9 @@ const ContactUs = () => {
                     required
                   >
                     <option value="">Select Your Date</option>
-                    <option value="Today">Option 1</option>
-                    <option value="Tomorrow">Option 2</option>
-                    <option value="Next day">Option 3</option>
+                    <option value="option1">Today</option>
+                    <option value="option2">Tomorrow</option>
+                    <option value="option3">{nextDay}</option>
                   </select>
                 </div>
 

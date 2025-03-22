@@ -109,7 +109,7 @@
     overflow: hidden;
   }
 
-  .faq-answers-p {
+  /* .faq-answers-p {
     color: var(--gray);
     font-size: 1.5vw;
     font-weight: 400;
@@ -119,6 +119,17 @@
     max-width: 90%;
     padding: 1rem 0;
     word-break: break-word;
+  } */
+  .faq-answers-p {
+    color: var(--gray);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-left: 0;
+    margin-bottom: 20px;
+    max-width: 350px;
+    padding: 0;
   }
   .faq-questions.active svg {
     transform: rotate(45deg);

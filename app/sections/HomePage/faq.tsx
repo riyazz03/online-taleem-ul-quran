@@ -14,7 +14,7 @@ const FAQ = () => {
             <h1 className="section-title ">
               Got Questions? <br /> <span> We&apos;ve Got Answers!</span>
             </h1>
-            <p>
+            <p className="section-description">
               Explore our FAQs to learn more about our classes, schedules, and
               teaching methods.
             </p>

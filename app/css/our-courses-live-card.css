@@ -53,6 +53,7 @@
   font-weight: 500;
   line-height: normal;
   max-width: 18.0625rem;
+  text-align: left;
 }
 .courses-btn {
   display: flex;
