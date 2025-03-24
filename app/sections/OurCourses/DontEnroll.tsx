@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 import "@/app/css/OurCourses/dont-enroll.css";
 import Image from "next/image";
 
@@ -26,8 +29,32 @@ const dontEnroll = [
 ];
 
 const DontEnroll = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const cards = cardsRef.current.filter((el) => el !== null);
+
+    gsap.fromTo(
+      cards,
+      { opacity: 0, y: 150 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.35,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
+
   return (
-    <section className="dont-enroll-section">
+    <section className="dont-enroll-section" ref={sectionRef}>
       <Image
         src="/assets/Icons/left-mosque-icon.svg"
         alt="Right Arrow"
@@ -44,7 +71,13 @@ const DontEnroll = () => {
           </div>
           <div className="dont-enroll-cards">
             {dontEnroll.map((card, index) => (
-              <div className="dont-enroll-card" key={index}>
+              <div
+                className="dont-enroll-card"
+                ref={(el) => {
+                  if (el) cardsRef.current[index] = el;
+                }}
+                key={index}
+              >
                 <h3 className="dont-enroll-card-title">{card.title}</h3>
                 <p className="dont-enroll-card-review">{card.review}</p>
               </div>

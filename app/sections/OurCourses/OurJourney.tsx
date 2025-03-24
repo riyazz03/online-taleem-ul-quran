@@ -1,7 +1,28 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
+import gsap from "gsap";
 import "@/app/css/OurCourses/our-journey.css";
 
 const OurJourney = () => {
+  useEffect(() => {
+    gsap.to(".circle", {
+      rotation: -360,
+      duration: 10,
+      repeat: -1,
+      ease: "linear",
+      transformOrigin: "center center",
+    });
+    gsap.to(".stats-wrapper", {
+      rotation: 360,
+      duration: 10,
+      repeat: -1,
+      ease: "linear",
+      transformOrigin: "center center",
+    });
+    
+  }, []);
+
   return (
     <section className="our-journey-section">
       <div className="padding-global">

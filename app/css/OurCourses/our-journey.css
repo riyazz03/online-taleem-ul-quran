@@ -70,7 +70,9 @@ line-height: normal;
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  transform: translateY(-5%) rotate(0deg);
 }
+
 
 .circle:hover {
   transform: scale(1.05);

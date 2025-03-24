@@ -1,6 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "@/app/css/HomePage/testimonial.css";
 import TestimonialCard from "@/app/components/TestimonialCard";
 import Button from "@/app/components/button";
@@ -14,6 +16,8 @@ import {
 } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const testimonials = [
   {
@@ -49,9 +53,32 @@ const testimonials = [
 ];
 
 const Testimonial = () => {
+  const testimonialRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const cards = gsap.utils.toArray(".testimonial-card-container .testimonial-card-col1, .testimonial-card-container .testimonial-card-col2, .testimonial-card-container .testimonial-card-col3, .testimonial-card-container .testimonial-card-col4, .testimonial-card-container .testimonial-card-col5");
+
+    gsap.fromTo(
+      cards,
+      { opacity: 0, y: -100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        ease: "power3.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: testimonialRef.current,
+          start: "top 90%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, []);
+
   return (
     <>
-      <div className="testimonial-section desktop-view">
+      <div ref={testimonialRef} className="testimonial-section desktop-view">
         <div className="testimonial-card-container desktop">
           <div className="testimonial-card-col1">
             <TestimonialCard
@@ -119,6 +146,7 @@ const Testimonial = () => {
             />
           </div>
         </div>
+
         {/* Testimonial content div */}
         <div className="testimonial-card-content desktop">
           <h1 className="section-title testimonial-card-title">
@@ -134,9 +162,8 @@ const Testimonial = () => {
         <div className="testimonial-background-gradient"></div>
       </div>
 
-      {/* swiper js responsive slider */}
+      {/* Swiper JS Responsive Slider */}
       <div className="testimonial-section-mobile swiper-js-section">
-        {/* Content on Top */}
         <div className="testimonial-card-content">
           <h1 className="section-title testimonial-card-title">
             Why Students Love <span>Our Quran</span> Classes
@@ -148,7 +175,6 @@ const Testimonial = () => {
           <Button text="Start Learning" />
         </div>
 
-        {/* Swiper Slider for Testimonials */}
         <div className="testimonial-card-container swiper-slide">
           <Swiper
             slidesPerView={1}
@@ -176,7 +202,6 @@ const Testimonial = () => {
           </Swiper>
         </div>
 
-        {/* Background Gradient */}
         <div className="testimonial-background-gradient"></div>
       </div>
     </>
