@@ -16,7 +16,7 @@ const OurCoursesLiveCard = ({
         <div className="courses-image">
             <Image src={images} alt="our-courses-live-card" width={550} height={500} className='our-courses-card-image' />
         </div>
-        <div className="our-courses-content">
+        <div className="our-courses-live-content">
             <p className='our-courses-subtitle'>Start your Journey From</p>
             <h2 className='our-courses-title'>{title}</h2>
             <p className='our-courses-description-text'>{description}</p>

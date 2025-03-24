@@ -32,7 +32,6 @@
     justify-content: flex-start;
     gap: 432px;
     margin-left: 274px;
-    /* width: 90%; */
 }
 .card-content{
     display: flex;
@@ -56,4 +55,5 @@
       display: none; 
     }
   }
+  
   

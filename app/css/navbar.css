@@ -33,9 +33,23 @@ img.nav-logo {
   line-height: 26.04px;
   letter-spacing: 0%;
   color: var(--black);
+  position: relative;
 }
 .nav-link:hover {
   color: var(--secondary-color);
+}
+.nav-link::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--secondary-color);
+  transition: all ease 0.7s;
+}
+.nav-link:hover::after{
+  width: 100%;
 }
 .nav-link:focus,
 .nav-link:active {
@@ -149,6 +163,7 @@ img.nav-logo {
   }
   .nav-link {
     display: none;
+    position: relative;
   }
   .nav-menu-button {
     display: block;
@@ -172,3 +187,4 @@ img.nav-logo {
     padding: 15px 0;
   }
 }
+
