@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
+import React, { useRef } from "react";
+import { motion } from "framer-motion";
 import "@/app/css/OurCourses/dont-enroll.css";
 import Image from "next/image";
 
@@ -28,30 +28,21 @@ const dontEnroll = [
   },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 150 },
+  visible: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: index * 0.35,
+      ease: "easeOut",
+    },
+  }),
+};
+
 const DontEnroll = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    const cards = cardsRef.current.filter((el) => el !== null);
-
-    gsap.fromTo(
-      cards,
-      { opacity: 0, y: 150 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.35,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 80%",
-          toggleActions: "play none none reverse",
-        },
-      }
-    );
-  }, []);
+  const sectionRef = useRef(null);
 
   return (
     <section className="dont-enroll-section" ref={sectionRef}>
@@ -71,16 +62,18 @@ const DontEnroll = () => {
           </div>
           <div className="dont-enroll-cards">
             {dontEnroll.map((card, index) => (
-              <div
+              <motion.div
                 className="dont-enroll-card"
-                ref={(el) => {
-                  if (el) cardsRef.current[index] = el;
-                }}
                 key={index}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                custom={index}
               >
                 <h3 className="dont-enroll-card-title">{card.title}</h3>
                 <p className="dont-enroll-card-review">{card.review}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

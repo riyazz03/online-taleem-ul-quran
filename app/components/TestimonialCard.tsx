@@ -24,7 +24,7 @@ export default function Cards({
 
   const handleMouseEnter = () => {
     gsap.to(cardRef.current, {
-      scaleX: -1, // Flips the card horizontally
+      scaleX: 1, 
       duration: 0.6,
       ease: "power2.out",
     });
@@ -32,7 +32,7 @@ export default function Cards({
 
   const handleMouseLeave = () => {
     gsap.to(cardRef.current, {
-      scaleX: 1, // Returns to normal state
+      scaleX: 1, 
       duration: 0.6,
       ease: "power2.out",
     });

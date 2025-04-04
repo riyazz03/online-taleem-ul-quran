@@ -5,6 +5,8 @@
 }
 .free-trial-image {
   position: relative;
+  height: 100%;
+  width: 100%;
 }
 .free-trial-container {
   position: relative;

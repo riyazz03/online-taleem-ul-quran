@@ -3,7 +3,7 @@
     padding: 45px 0;
     z-index: 5;
     background-color: var(--background);
-    min-height: 80vh;
+    /* min-height: 80vh; */
 }
 .our-courses-live-container{
     display: flex;

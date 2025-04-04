@@ -1,27 +1,31 @@
 "use client";
 
-import React, { useEffect } from "react";
-import gsap from "gsap";
+import React from "react";
+import { motion } from "framer-motion";
 import "@/app/css/OurCourses/our-journey.css";
 
 const OurJourney = () => {
-  useEffect(() => {
-    gsap.to(".circle", {
-      rotation: -360,
-      duration: 10,
-      repeat: -1,
-      ease: "linear",
-      transformOrigin: "center center",
-    });
-    gsap.to(".stats-wrapper", {
-      rotation: 360,
-      duration: 10,
-      repeat: -1,
-      ease: "linear",
-      transformOrigin: "center center",
-    });
-    
-  }, []);
+  const rotationAnimation = {
+    animate: {
+      rotate: 360,
+      transition: {
+        duration: 10,
+        repeat: Infinity,
+        ease: "linear",
+      },
+    },
+  };
+
+  const textRotationAnimation = {
+    animate: {
+      rotate: -360,
+      transition: {
+        duration: 10,
+        repeat: Infinity,
+        ease: "linear",
+      },
+    },
+  };
 
   return (
     <section className="our-journey-section">
@@ -38,56 +42,88 @@ const OurJourney = () => {
           </div>
           <div className="our-journey-cirlce-block">
             <div className="stats-container">
-              <div className="stats-wrapper">
+              <motion.div
+                {...rotationAnimation}
+                style={{ transformOrigin: "center center" }}
+                className="stats-wrapper"
+              >
                 <div className="circle center">
-                  <div className="content">
+                  <motion.div
+                    {...textRotationAnimation}
+                    style={{ transformOrigin: "center center" }}
+                    className="content"
+                  >
                     <div className="number">1000+</div>
                     <div className="label">Demo</div>
-                  </div>
+                  </motion.div>
                 </div>
 
                 <div className="circle top-left">
-                  <div className="content">
+                  <motion.div
+                    {...textRotationAnimation}
+                    style={{ transformOrigin: "center center" }}
+                    className="content"
+                  >
                     <div className="number">20+</div>
                     <div className="label">Countries</div>
-                  </div>
+                  </motion.div>
                 </div>
 
                 <div className="circle top-right">
-                  <div className="content">
+                  <motion.div
+                    {...textRotationAnimation}
+                    style={{ transformOrigin: "center center" }}
+                    className="content"
+                  >
                     <div className="number">200+</div>
                     <div className="label">QQI Grads</div>
-                  </div>
+                  </motion.div>
                 </div>
 
                 <div className="circle middle-left">
-                  <div className="content">
+                  <motion.div
+                    {...textRotationAnimation}
+                    style={{ transformOrigin: "center center" }}
+                    className="content"
+                  >
                     <div className="number">1+</div>
                     <div className="label">Year</div>
-                  </div>
+                  </motion.div>
                 </div>
 
                 <div className="circle middle-right">
-                  <div className="content">
+                  <motion.div
+                    {...textRotationAnimation}
+                    style={{ transformOrigin: "center center" }}
+                    className="content"
+                  >
                     <div className="number">50k</div>
                     <div className="label">Class Taken</div>
-                  </div>
+                  </motion.div>
                 </div>
 
                 <div className="circle bottom-left">
-                  <div className="content">
+                  <motion.div
+                    {...textRotationAnimation}
+                    style={{ transformOrigin: "center center" }}
+                    className="content"
+                  >
                     <div className="number">120+</div>
                     <div className="label">Students</div>
-                  </div>
+                  </motion.div>
                 </div>
 
                 <div className="circle bottom-right">
-                  <div className="content">
+                  <motion.div
+                    {...textRotationAnimation}
+                    style={{ transformOrigin: "center center" }}
+                    className="content"
+                  >
                     <div className="number">15+</div>
                     <div className="label">Instructors</div>
-                  </div>
+                  </motion.div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

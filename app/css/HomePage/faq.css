@@ -1,10 +1,10 @@
 .faq-section {
   width: 100%;
   position: relative;
-  padding: 45px auto;
+  /* padding: 45px auto; */
   padding: 100px 150px;
   z-index: 5;
-  min-height: 120vh;
+  /* min-height: 120vh; */
   background-color: var(--background);
 }
 .faq-container {
@@ -70,7 +70,7 @@
     align-items: center;
     justify-content: center;
     width: 90vw;
-    min-height: auto;
+    /* min-height: auto; */
     max-width: 1200px;
     top: 0;
   }

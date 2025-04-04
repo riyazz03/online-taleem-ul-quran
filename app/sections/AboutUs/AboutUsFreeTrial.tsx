@@ -2,13 +2,24 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import "@/app/css/AboutUs/about-us-free-trial.css";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
+};
 
 const AboutUsFreeTrial = () => {
   const [selectedCourse, setSelectedCourse] = useState("");
 
   return (
-    <section className="about-us-free-trial">
+    <motion.section
+      className="about-us-free-trial"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }} // Animation triggers when 20% of the section is visible
+    >
       <Image
         src="/assets/Icons/left-mosque-icon.svg"
         alt="Right Arrow"
@@ -26,7 +37,14 @@ const AboutUsFreeTrial = () => {
             className="free-trial-image"
           />
           <div className="free-trial-content-block">
-            <div className="free-trial-content">
+            {/* Title & Description Animation */}
+            <motion.div
+              className="free-trial-content"
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+            >
               <h1 className="free-trial-title">Wanna hear more about us ?</h1>
               <p className="free-trial-description">
                 Drop by to say Salaam and get the answers you seek in a
@@ -48,71 +66,48 @@ const AboutUsFreeTrial = () => {
                   <option value="option2">Tomorrow</option>
                 </select>
               </div>
-            </div>
-            <div className="trial-offer">
+            </motion.div>
+
+            {/* Free Trial Offer Animation */}
+            <motion.div
+              className="trial-offer"
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+            >
               <h2 className="trial-offer-title">Claim Your Free Trial ! ✧₊⁺</h2>
               <div className="trial-offer-features-block">
-                <div className="trial-offer-features-line">
-                  <Image
-                    src="/assets/Icons/tick-icon.svg"
-                    alt="Tick icon"
-                    width={30}
-                    height={30}
-                  />
-                  <p className="trial-offer-features-paragraph">
-                    Expert & Certified Tutors
-                  </p>
-                </div>
-                <div className="trial-offer-features-line">
-                  <Image
-                    src="/assets/Icons/tick-icon.svg"
-                    alt="Tick icon"
-                    width={30}
-                    height={30}
-                  />
-                  <p className="trial-offer-features-paragraph">
-                    Affordable & Flexible Plans
-                  </p>
-                </div>
-                <div className="trial-offer-features-line">
-                  <Image
-                    src="/assets/Icons/tick-icon.svg"
-                    alt="Tick icon"
-                    width={30}
-                    height={30}
-                  />
-                  <p className="trial-offer-features-paragraph">
-                    Male & Female Tutors
-                  </p>
-                </div>
-                <div className="trial-offer-features-line">
-                  <Image
-                    src="/assets/Icons/tick-icon.svg"
-                    alt="Tick icon"
-                    width={30}
-                    height={30}
-                  />
-                  <p className="trial-offer-features-paragraph">
-                    Islamic Studies & Duas
-                  </p>
-                </div>
-                <div className="trial-offer-features-line">
-                  <Image
-                    src="/assets/Icons/tick-icon.svg"
-                    alt="Tick icon"
-                    width={30}
-                    height={30}
-                  />
-                  <p className="trial-offer-features-paragraph">
-                    24/7 Learning Availability
-                  </p>
-                </div>
+                {[
+                  "Expert & Certified Tutors",
+                  "Affordable & Flexible Plans",
+                  "Male & Female Tutors",
+                  "Islamic Studies & Duas",
+                  "24/7 Learning Availability",
+                ].map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    className="trial-offer-features-line"
+                    variants={fadeInUp}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.1 }}
+                  >
+                    <Image
+                      src="/assets/Icons/tick-icon.svg"
+                      alt="Tick icon"
+                      width={30}
+                      height={30}
+                    />
+                    <p className="trial-offer-features-paragraph">{feature}</p>
+                  </motion.div>
+                ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

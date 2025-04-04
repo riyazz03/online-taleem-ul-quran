@@ -1,8 +1,19 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
 import "@/app/css/AboutUs/about-us-guidance.css";
 
 const AboutUsGuidance = () => {
+  const titleRef = useRef(null);
+  const descriptionRef = useRef(null);
+  const imageRef = useRef(null);
+
+  const isTitleInView = useInView(titleRef, { once: true, margin: "-50px" });
+  const isDescriptionInView = useInView(descriptionRef, { once: true, margin: "-50px" });
+  const isImageInView = useInView(imageRef, { once: true, margin: "-50px" });
+
   return (
     <section className="about-us-guidance-section">
       <Image
@@ -15,19 +26,41 @@ const AboutUsGuidance = () => {
       <div className="padding-global">
         <div className="main-container about-us-guidance-container">
           <div className="guidance-content">
-            <h1 className="section-title">
+            {/* Animated Title */}
+            <motion.h1
+              ref={titleRef}
+              className="section-title"
+              initial={{ opacity: 0, y: 100 }}
+              animate={isTitleInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+            >
               Defining <span>Our Path</span>
-            </h1>
-            <p className="guidance-description">
+            </motion.h1>
+
+            {/* Animated Description */}
+            <motion.p
+              ref={descriptionRef}
+              className="guidance-description"
+              initial={{ opacity: 0, y: 50 }}
+              animate={isDescriptionInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
+            >
               At Taleem-ul-Quran, our vision is to create a world where the
               teachings of the Holy Quran illuminate the hearts and minds of
               every individual, guiding them toward righteousness, peace, and
               success in both this life and the Hereafter. We aspire to build a
               spiritually enlightened society where the Quran is not just read
               but deeply understood, cherished, and applied in daily life.
-            </p>
+            </motion.p>
           </div>
-          <div className="guidance-image">
+
+          {/* Animated Image */}
+          <motion.div
+            ref={imageRef}
+            initial={{ y: 100, opacity: 0 }}
+            animate={isImageInView ? { y: 0, opacity: 1 } : {}}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
             <Image
               src="/Images/about-us-guidance-image.png"
               alt="Guidance Image"
@@ -35,7 +68,7 @@ const AboutUsGuidance = () => {
               height={403}
               width={427}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
