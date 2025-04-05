@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../css/contactUs.css";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -18,9 +19,15 @@ const ContactUs = () => {
   const [selectedDate, setSelectedDate] = useState("");
   const [nextDay, setNextDay] = useState("");
 
+  const formRef = useRef(null);
+  const detailsRef = useRef(null);
+
+  const isFormInView = useInView(formRef, { once: true, amount: 0.2 });
+  const isDetailsInView = useInView(detailsRef, { once: true, amount: 0.2 });
+
   useEffect(() => {
     const today = new Date();
-    today.setDate(today.getDate() + 2); // Add 2 days
+    today.setDate(today.getDate() + 2);
 
     const optionsDate: Intl.DateTimeFormatOptions = {
       day: "2-digit",
@@ -32,10 +39,10 @@ const ContactUs = () => {
       weekday: "long",
     };
 
-    const formattedDate = today.toLocaleDateString("en-GB", optionsDate).replace(/\//g, "-"); // DD-MM-YYYY
-    const formattedDay = today.toLocaleDateString("en-GB", optionsDay); // Day Name (e.g., Friday)
+    const formattedDate = today.toLocaleDateString("en-GB", optionsDate).replace(/\//g, "-");
+    const formattedDay = today.toLocaleDateString("en-GB", optionsDay);
 
-    setNextDay(`${formattedDate}, ${formattedDay}`); // Format: 21-03-2025, Friday
+    setNextDay(`${formattedDate}, ${formattedDay}`);
   }, []);
 
   const handleChange = (
@@ -48,6 +55,16 @@ const ContactUs = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
+  };
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
+
+  const popUp = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } },
   };
 
   return (
@@ -68,15 +85,20 @@ const ContactUs = () => {
       />
       <div className="padding-global">
         <div className="main-container contact-us-container">
-          <div className="contact-us-form">
-            <div className="contact-us-heading">
+          <motion.div
+            className="contact-us-form"
+            ref={formRef}
+            initial="hidden"
+            animate={isFormInView ? "visible" : "hidden"}
+            variants={fadeInUp}
+          >
+            <motion.div className="contact-us-heading" variants={fadeInUp}>
               <h1 className="section-title contact-us-title">
                 <span>Contact</span> & Join Together
               </h1>
-            </div>
+            </motion.div>
             <div className="contact-us-form-content">
               <form onSubmit={handleSubmit} className="contact-us-form-block">
-                {/* Name Input */}
                 <div className="form-input-block">
                   <label htmlFor="name" className="form-label-title">
                     Name
@@ -91,8 +113,6 @@ const ContactUs = () => {
                     className="form-input"
                   />
                 </div>
-
-                {/* Email Input */}
                 <div className="form-input-block">
                   <label htmlFor="email" className="form-label-title">
                     Email
@@ -108,8 +128,6 @@ const ContactUs = () => {
                     className="form-input"
                   />
                 </div>
-
-                {/* Phone Number Input */}
                 <div className="form-input-block">
                   <label htmlFor="phone" className="form-label-title">
                     Phone Number
@@ -125,8 +143,6 @@ const ContactUs = () => {
                     className="form-input"
                   />
                 </div>
-
-                {/* Course Dropdown */}
                 <div className="form-input-block">
                   <label htmlFor="course" className="form-label-title">
                     I&apos;m interested in
@@ -145,8 +161,6 @@ const ContactUs = () => {
                     <option value="option3">Option 3</option>
                   </select>
                 </div>
-
-                {/* Message Input */}
                 <div className="form-input-block">
                   <label htmlFor="message" className="form-label-title">
                     Message
@@ -161,8 +175,6 @@ const ContactUs = () => {
                     className="message-input"
                   />
                 </div>
-
-                {/* Demo Schedule Dropdown */}
                 <div className="form-input-block">
                   <label htmlFor="date" className="form-label-title">
                     Demo Schedule (Every Day 09:00 pm)
@@ -181,16 +193,20 @@ const ContactUs = () => {
                     <option value="option3">{nextDay}</option>
                   </select>
                 </div>
-
                 <button type="submit" className="form-button">
                   Submit
                 </button>
               </form>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Contact Details Section */}
-          <div className="contact-us-details">
+          <motion.div
+            className="contact-us-details"
+            ref={detailsRef}
+            initial="hidden"
+            animate={isDetailsInView ? "visible" : "hidden"}
+            variants={popUp}
+          >
             <Image
               src="/Images/contact-us-image.png"
               alt="contact-us-image"
@@ -202,7 +218,6 @@ const ContactUs = () => {
               <h3 className="contact-us-details-title">Connect Now</h3>
             </div>
             <div className="contact-us-details-line">
-              {/* Phone Number */}
               <div className="contact-us-details-svg-block">
                 <div className="contact-us-details-svg">
                   <Image
@@ -218,8 +233,6 @@ const ContactUs = () => {
                   <p>+91 9629158073</p>
                 </div>
               </div>
-
-              {/* Email */}
               <div className="contact-us-details-svg-block">
                 <Image
                   src="/assets/Icons/email.svg"
@@ -230,8 +243,6 @@ const ContactUs = () => {
                 />
                 <p className="email">onlinetaleem@gmail.com</p>
               </div>
-
-              {/* Address */}
               <div className="contact-us-details-svg-block">
                 <Image
                   src="/assets/Icons/map.svg"
@@ -247,7 +258,7 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

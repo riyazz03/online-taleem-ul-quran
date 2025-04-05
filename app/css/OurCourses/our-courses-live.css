@@ -1,55 +1,55 @@
-.our-courses-live-section{
-    position: relative;
-    padding: 45px 0;
-    z-index: 5;
-    background-color: var(--background);
-    min-height: 80vh;
+.our-courses-live-section {
+  position: relative;
+  padding: 45px 0;
+  z-index: 5;
+  background-color: var(--background);
+  /* min-height: 80vh; */
 }
-.our-courses-live-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
+.our-courses-live-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
 }
-.our-courses-haading{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    max-width: 573px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.our-courses-haading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 573px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-.our-courses-card-block{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;  
-    width: 100%;  
-    gap: 90px;
-    margin-top: 90px;
+.our-courses-card-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  gap: 90px;
+  margin-top: 90px;
 }
-
 
 @media screen and (max-width: 768px) {
-    .our-courses-live-section {
-      padding: 30px 0;
-      min-height: auto; 
-    }
-  
-    .our-courses-haading {
-      max-width: 100%; 
-      padding: 0 20px; 
-    }
-  
-    .our-courses-card-block {
-      display: flex;
-      flex-direction: column;
-      gap: 40px; 
-      align-items: center; 
-      margin-top: 50px; 
-      width: 100%;
-    }
+  .our-courses-live-section {
+    padding: 30px 0;
+    min-height: auto;
+    overflow: hidden;
   }
-  
+
+  .our-courses-haading {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .our-courses-card-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 50px;
+    width: 100%;
+  }
+}

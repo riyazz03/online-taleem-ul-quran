@@ -35,6 +35,7 @@
   color: var(--white);
   padding: 20px;
   border-radius: 8px;
+  margin-bottom: 10px;
 }
 .learning-journey-image-div {
   border-radius: 15px;

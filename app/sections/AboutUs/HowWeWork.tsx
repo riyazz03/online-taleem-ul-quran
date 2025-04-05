@@ -1,76 +1,42 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
+import { motion } from "framer-motion";
 import howwework from "@/app/data/how-we-work.json";
 import "@/app/css/howwework.css";
 import HowWeWorkCard from "@/app/components/howWeWorkCard";
 import Image from "next/image";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+const cardVariants = {
+  hidden: { opacity: 0, x: -100 },
+  visible: (index: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      delay: index * 0.3, // Stagger effect
+    },
+  }),
+};
+
+const arrowVariants = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: (index: number) => ({
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: "backOut",
+      delay: index * 0.5,
+    },
+  }),
+};
 
 const HowWeWork = () => {
   const sectionRef = useRef(null);
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-
-
-  useEffect(() => {
-    // Ensure the elements start at their default position before animation
-    cardsRef.current.forEach((card) => {
-      if (card) {
-        gsap.set(card, { opacity: 0, x: -100 });
-      }
-    });
-  
-    gsap.set(".top-arrow-icon, .bottom-arrow-icon", { opacity: 0, scale: 0 });
-  
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 75%",
-        end: "bottom 50%",
-        toggleActions: "play none none none",
-        once: true, // Play the animation only once
-      },
-    });
-  
-    cardsRef.current.forEach((card, index) => {
-      if (card) {
-        tl.to(card, {
-          x: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: "power2.out",
-        });
-      }
-  
-      if (index % 2 === 0) {
-        tl.to(`.top-arrow-icon:nth-of-type(${index / 2 + 1})`, {
-          scale: 1,
-          opacity: 1,
-          duration: 0.5,
-          ease: "back.out(1.7)",
-        });
-      } else {
-        tl.to(`.bottom-arrow-icon:nth-of-type(${Math.ceil(index / 2)})`, {
-          scale: 1,
-          opacity: 1,
-          duration: 0.5,
-          ease: "back.out(1.7)",
-        });
-      }
-    });
-  
-    return () => {
-      tl.kill(); // Cleanup GSAP animations when component unmounts
-    };
-  }, []);
-  
-  
-  
 
   return (
-    <section ref={sectionRef} className="how-we-work-section">
+    <section ref={sectionRef} className="how-we-work-section pb-10">
       <div className="padding-global">
         <div className="main-container how-we-work-container">
           <div className="how-we-work-title">
@@ -80,48 +46,61 @@ const HowWeWork = () => {
           </div>
           <div className="cards-outer-div">
             <div className="top-arrow">
-              <Image
-                src="/assets/how-we-work/arrowTop.svg"
-                alt="Top Arrow"
-                className="top-arrow-icon"
-                height={46}
-                width={124}
-              />
-              <Image
-                src="/assets/how-we-work/arrowTop.svg"
-                alt="Top Arrow"
-                className="top-arrow-icon"
-                height={46}
-                width={124}
-              />
-            </div>
-            <div className="card-content">
-              {howwework.map((card, index) => (
-                <div
+              {[...Array(2)].map((_, index) => (
+                <motion.div
                   key={index}
-                  ref={(el)=> {
-                    if (el) cardsRef.current.push(el);
-                  }}
+                  className="top-arrow-icon"
+                  variants={arrowVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  custom={index}
                 >
-                  <HowWeWorkCard title={card.title} icon={card.icon} />
-                </div>
+                  <Image
+                    src="/assets/how-we-work/arrowTop.svg"
+                    alt="Top Arrow"
+                    height={46}
+                    width={124}
+                  />
+                </motion.div>
               ))}
             </div>
+
+            <div className="card-content">
+              {howwework.map((card, index) => (
+                <motion.div
+                  key={index}
+                  className="how-we-work-card-wrapper"
+                  variants={cardVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  custom={index}
+                >
+                  <HowWeWorkCard title={card.title} icon={card.icon} />
+                </motion.div>
+              ))}
+            </div>
+
             <div className="bottom-arrow">
-              <Image
-                src="/assets/how-we-work/arrowBottom.svg"
-                alt="Bottom Arrow"
-                className="bottom-arrow-icon"
-                height={46}
-                width={124}
-              />
-              <Image
-                src="/assets/how-we-work/arrowBottom.svg"
-                alt="Bottom Arrow"
-                className="bottom-arrow-icon"
-                height={46}
-                width={124}
-              />
+              {[...Array(2)].map((_, index) => (
+                <motion.div
+                  key={index}
+                  className="bottom-arrow-icon"
+                  variants={arrowVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  custom={index}
+                >
+                  <Image
+                    src="/assets/how-we-work/arrowBottom.svg"
+                    alt="Bottom Arrow"
+                    height={46}
+                    width={124}
+                  />
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>

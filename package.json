@@ -11,10 +11,12 @@
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
     "@svgr/webpack": "^8.1.0",
+    "framer-motion": "^12.6.3",
     "gsap": "^3.12.7",
     "next": "15.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-intersection-observer": "^9.16.0",
     "swiper": "^11.2.5"
   },
   "devDependencies": {

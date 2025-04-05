@@ -1,31 +1,18 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import Image from "next/image";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import "@/app/css/HomePage/learning-journey.css";
 
-gsap.registerPlugin(ScrollTrigger);
+import React, { useRef } from "react";
+import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import "@/app/css/HomePage/learning-journey.css";
 
 const LearningJourney = () => {
   const imageRef = useRef(null);
   const imageWrapperRef = useRef(null);
+  const titleRef = useRef(null);
 
-  useEffect(() => {
-    gsap.fromTo(
-      imageRef.current,
-      { y: 100 },
-      {
-        y: -100,
-        scrollTrigger: {
-          trigger: imageWrapperRef.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
-      }
-    );
-  }, []);
+  // Check if elements are in view
+  const isImageInView = useInView(imageWrapperRef, { once: true, margin: "-50px" });
+  const isTitleInView = useInView(titleRef, { once: true, margin: "-50px" });
 
   return (
     <section className="learning-journey">
@@ -39,9 +26,17 @@ const LearningJourney = () => {
       <div className="padding-global">
         <div className="main-container learning-journey-container">
           <div className="learning-journey-content">
-            <h1 className="section-title learning-journey-title">
+            {/* Heading Animation */}
+            <motion.h1
+              ref={titleRef}
+              className="section-title learning-journey-title"
+              initial={{ opacity: 0, y: 50 }}
+              animate={isTitleInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
               Empowering Your Quran <span>Learning Journey</span>
-            </h1>
+            </motion.h1>
+
             <h4 className="learning-journey-description">
               At{" "}
               <span className="learning-journey-description-span">
@@ -55,19 +50,33 @@ const LearningJourney = () => {
               memorizing the Quran, our platform ensures high-quality education
               from the comfort of your home.
             </h4>
-            <button className="learning-journey-btn">Know More</button>
+
+            <motion.button
+              className="learning-journey-btn"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Know More
+            </motion.button>
           </div>
+
           {/* Static Wrapper */}
           <div ref={imageWrapperRef} className="learning-journey-image-div">
-            {/* Moving Image */}
-            <Image
-              ref={imageRef}
-              src="/Images/learning-journey-image.png"
-              className="learning-journey-image"
-              alt="Learning Journey"
-              width={477}
-              height={700}
-            />
+            {/* Image Animation */}
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              animate={isImageInView ? { y: 0, opacity: 1 } : {}}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+              <Image
+                ref={imageRef}
+                src="/Images/learning-journey-image.png"
+                className="learning-journey-image"
+                alt="Learning Journey"
+                width={477}
+                height={700}
+              />
+            </motion.div>
           </div>
         </div>
       </div>

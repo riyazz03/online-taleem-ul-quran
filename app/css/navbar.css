@@ -37,6 +37,7 @@ img.nav-logo {
 }
 .nav-link:hover {
   color: var(--secondary-color);
+  transition: all ease 0.7s;
 }
 .nav-link::after{
   content: "";
@@ -49,6 +50,9 @@ img.nav-logo {
   transition: all ease 0.7s;
 }
 .nav-link:hover::after{
+  width: 100%;
+}
+.nav-link:focus::after{
   width: 100%;
 }
 .nav-link:focus,

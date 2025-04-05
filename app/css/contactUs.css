@@ -223,7 +223,6 @@
     padding: 15px 20px;
     font-size: 18px;
   }
-
   .form-button {
     height: 50px;
     font-size: 20px;
@@ -234,7 +233,6 @@
   }
   .contact-us-details {
     width: 90%;
-    padding: 0 20px;
     justify-content: flex-start;
     overflow-x: hidden;
     margin-top: 40px;

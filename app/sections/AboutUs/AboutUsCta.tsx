@@ -1,13 +1,39 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "@/app/css/AboutUs/about-us-cta.css";
 import Image from "next/image";
 import Button from "@/app/components/button";
+import { motion } from "framer-motion";
 
 const AboutUsCTA = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const currentRef = sectionRef.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.3 } // Trigger animation when 30% of the section is visible
+    );
+
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
   return (
-    <div className="about-us-cta-section">
+    <div className="about-us-cta-section" ref={sectionRef}>
       <Image
         src="/assets/Icons/Grids.svg"
         alt="Logo"
@@ -26,34 +52,57 @@ const AboutUsCTA = () => {
         <div className="main-container about-us-cta-container">
           <div className="about-us-cta-main">
             <div className="about-us-cta-content">
-              <div className="about-us-cta-heading">
-                {/* beginning of the heading text */}
-                <div className="about-us-cta-title">
-                  <h1 className="about-us-title">
-                    Connecting you with the{" "}
-                    <span>timeless wisdom of Islam</span>{" "}
-                  </h1>
-                </div>
-              </div>
-              {/* End of the Heading text */}
-              <p className="about-us-description">
+              {/* Animated Title */}
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="about-us-cta-heading"
+              >
+                <h1 className="about-us-title">
+                  Connecting you with the{" "}
+                  <span>timeless wisdom of Islam</span>
+                </h1>
+              </motion.div>
+
+              {/* Animated Description */}
+              <motion.p
+                initial={{ opacity: 0, y: 50 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+                className="about-us-description"
+              >
                 Guiding hearts with the wisdom of the Quran, Illuminating lives
                 with the light of Islam.
-              </p>
-              <Button text="Book Your Demo" />
+              </motion.p>
+
+              {/* Animated Button */}
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+              >
+                <Button text="Book Your Demo" />
+              </motion.div>
             </div>
-            <div className="about-us-cta-image">
-              <div className="about-us-image">
-                <Image
-                  src="/Images/about-us-cta-image.png"
-                  alt="About Us image"
-                  height={350}
-                  width={410}
-                  className="about-us-image"
-                />
-              </div>
-            </div>
+
+            {/* Animated Image (Pop-up Effect) */}
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={isVisible ? { scale: 1, opacity: 1 } : {}}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+              className="about-us-cta-image"
+            >
+              <Image
+                src="/Images/about-us-cta-image.png"
+                alt="About Us image"
+                height={350}
+                width={410}
+                className="about-us-image"
+              />
+            </motion.div>
           </div>
+
           <div className="about-us-mosque">
             <div className="about-us-mosque-gradient"></div>
             <Image
