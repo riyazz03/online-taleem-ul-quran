@@ -9,7 +9,7 @@ import Button from "@/app/components/button";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
 const FreeTrial = () => {

@@ -1,7 +1,6 @@
 .our-courses-card {
   width: 34.375rem;
   height: 50rem;
-  flex-shrink: 0;
   border-radius: 1.25rem;
   background: #fff;
 }
@@ -89,6 +88,12 @@
     width: 90%;
     height: auto;
     border-radius: 1rem;
+  }
+  .our-courses-card-outer-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .courses-image {

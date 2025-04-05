@@ -22,9 +22,9 @@ const OurCourses = () => {
             <motion.h1
               className="section-title"
               ref={titleRef}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={isTitleInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
             >
               Our <span>Courses</span>
             </motion.h1>
@@ -46,9 +46,9 @@ const OurCourses = () => {
             {coursedata.map((card, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 120 }}
+                initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.2 }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
                 viewport={{ once: true, amount: 0.1 }}
               >
                 <CoursesCard

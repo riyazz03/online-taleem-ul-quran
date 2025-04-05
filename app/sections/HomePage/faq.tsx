@@ -19,7 +19,7 @@ const FAQ = () => {
               className="section-title"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true, amount: 0.1 }}
             >
               Got Questions? <br /> <span> We&apos;ve Got Answers!</span>
@@ -29,7 +29,7 @@ const FAQ = () => {
               className="section-description"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+              transition={{ duration: 0.4, ease: "easeOut", delay: 0.3 }}
               viewport={{ once: true, amount: 0.1 }}
             >
               Explore our FAQs to learn more about our classes, schedules, and teaching methods.
@@ -40,9 +40,9 @@ const FAQ = () => {
             {faqdata.map((faq, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 100 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 * index }}
+                transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 * index }}
                 viewport={{ once: true, amount: 0.1 }}
               >
                 <FaqsCard question={faq.question} answer={faq.answer} />

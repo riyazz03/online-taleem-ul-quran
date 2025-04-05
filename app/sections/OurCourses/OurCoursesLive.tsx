@@ -35,15 +35,15 @@ const ourCoursesCard = [
 
 const titleVariants = {
   hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 150 },
+  hidden: { opacity: 0, y: 50 },
   visible: (index: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 1, delay: index * 0.35, ease: "easeOut" },
+    transition: { duration: 0.6, delay: index * 0.35, ease: "easeOut" },
   }),
 };
 
@@ -72,12 +72,14 @@ const OurCoursesLive = () => {
               Our <span>Courses</span>
             </h1>
             <p className="section-description">
-              Unlock the beauty of the Quran with expert-guided, interactive courses
+              Unlock the beauty of the Quran with expert-guided, interactive
+              courses
             </p>
           </motion.div>
           <div className="our-courses-card-block">
             {ourCoursesCard.map((card, index) => (
               <motion.div
+                className="our-courses-card-outer-div"
                 key={index}
                 custom={index}
                 initial="hidden"

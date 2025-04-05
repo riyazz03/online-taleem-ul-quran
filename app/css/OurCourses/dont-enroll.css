@@ -3,6 +3,7 @@
     padding: 45px atuo;
     z-index: 5;
     width: 100%;
+    overflow: hidden;
     background-color: var(--background);
 }
 .dont-enroll-heading{

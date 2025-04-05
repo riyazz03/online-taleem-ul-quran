@@ -30,9 +30,9 @@ const AboutUsGuidance = () => {
             <motion.h1
               ref={titleRef}
               className="section-title"
-              initial={{ opacity: 0, y: 100 }}
+              initial={{ opacity: 0, y: 60 }}
               animate={isTitleInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 1.2, ease: "easeOut" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
             >
               Defining <span>Our Path</span>
             </motion.h1>

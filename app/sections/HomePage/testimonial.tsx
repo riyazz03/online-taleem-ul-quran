@@ -64,7 +64,7 @@ const Testimonial = () => {
       <div ref={sectionRef} className="testimonial-section desktop-view">
         <div className="testimonial-card-container desktop">
           <motion.div
-            initial={{ opacity: 0, y: 120 }}
+            initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.3 }}

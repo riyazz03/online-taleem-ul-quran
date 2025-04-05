@@ -12,7 +12,7 @@ const cardVariants = {
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.6,
       ease: "easeOut",
       delay: index * 0.3, // Stagger effect
     },

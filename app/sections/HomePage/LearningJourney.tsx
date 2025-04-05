@@ -30,9 +30,9 @@ const LearningJourney = () => {
             <motion.h1
               ref={titleRef}
               className="section-title learning-journey-title"
-              initial={{ opacity: 0, y: 100 }}
+              initial={{ opacity: 0, y: 50 }}
               animate={isTitleInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 1.2, ease: "easeOut" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
             >
               Empowering Your Quran <span>Learning Journey</span>
             </motion.h1>
@@ -64,9 +64,9 @@ const LearningJourney = () => {
           <div ref={imageWrapperRef} className="learning-journey-image-div">
             {/* Image Animation */}
             <motion.div
-              initial={{ y: 100, opacity: 0 }}
+              initial={{ y: 50, opacity: 0 }}
               animate={isImageInView ? { y: 0, opacity: 1 } : {}}
-              transition={{ duration: 1.5, ease: "easeOut" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
             >
               <Image
                 ref={imageRef}

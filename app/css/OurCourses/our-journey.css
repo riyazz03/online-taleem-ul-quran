@@ -146,6 +146,10 @@ line-height: normal;
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
+  .our-journey-section {
+    padding: 45px 20px 0 20px;
+    overflow: hidden;
+  }
   .our-journey-container {
     flex-direction: column;
     gap: 50px;

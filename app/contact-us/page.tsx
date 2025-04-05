@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../css/contactUs.css";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -18,6 +18,12 @@ const ContactUs = () => {
   const [selectedCourse, setSelectedCourse] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
   const [nextDay, setNextDay] = useState("");
+
+  const formRef = useRef(null);
+  const detailsRef = useRef(null);
+
+  const isFormInView = useInView(formRef, { once: true, amount: 0.2 });
+  const isDetailsInView = useInView(detailsRef, { once: true, amount: 0.2 });
 
   useEffect(() => {
     const today = new Date();
@@ -81,9 +87,10 @@ const ContactUs = () => {
         <div className="main-container contact-us-container">
           <motion.div
             className="contact-us-form"
+            ref={formRef}
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            animate={isFormInView ? "visible" : "hidden"}
+            variants={fadeInUp}
           >
             <motion.div className="contact-us-heading" variants={fadeInUp}>
               <h1 className="section-title contact-us-title">
@@ -195,9 +202,9 @@ const ContactUs = () => {
 
           <motion.div
             className="contact-us-details"
+            ref={detailsRef}
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            animate={isDetailsInView ? "visible" : "hidden"}
             variants={popUp}
           >
             <Image
