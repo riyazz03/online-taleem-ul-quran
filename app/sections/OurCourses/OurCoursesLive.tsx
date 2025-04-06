@@ -8,25 +8,25 @@ import "@/app/css/OurCourses/our-courses-live.css";
 
 const ourCoursesCard = [
   {
-    image: "/Images/courses/our-courses-image1.png",
+    image: "/Images/courses/quran-recitation.png",
     title: "Quran Recitation",
     description:
       "Learn to Recite with Beauty and Precision, Live Online, Anytime, Anywhere!",
   },
   {
-    image: "/Images/courses/our-courses-image2.png",
+    image: "/Images/courses/simplified-tajweed.png",
     title: "Simplified Tajweed",
     description:
       "Learn to Recite with Beauty and Precision, Live Online, Anytime, Anywhere!",
   },
   {
-    image: "/Images/courses/our-courses-image3.png",
+    image: "/Images/courses/arabic-language.png",
     title: "Quran Memorization",
     description:
       "Learn to Recite with Beauty and Precision, Live Online, Anytime, Anywhere!",
   },
   {
-    image: "/Images/courses/our-courses-image4.png",
+    image: "/Images/courses/quran-memorization.png",
     title: "Arabic Language",
     description:
       "Learn to Recite with Beauty and Precision, Live Online, Anytime, Anywhere!",

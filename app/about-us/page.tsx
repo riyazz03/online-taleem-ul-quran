@@ -6,7 +6,7 @@ import AboutUsFreeTrial from '../sections/AboutUs/AboutUsFreeTrial'
 
 const AboutUs = () => {
   return (
-    <main>
+    <main className="main">
         <AboutUsCTA />
         <AboutUsGuidance />
         <HowWeWork />
