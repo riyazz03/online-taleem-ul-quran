@@ -1,0 +1,136 @@
+.prophetic-hadith-container {
+  width: 100%;
+}
+.prophetic-hadith-content {
+  border-radius: 20px;
+  border: 2px solid #1d1d1d;
+  background: #0c6c6c;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 1360px;
+  height: 687px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 28px 75px;
+}
+.prophetic-hadith-title {
+  color: #fff;
+  font-family: "DM Sans";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  width: 933px;
+  margin-top: 28px;
+}
+.porphetic-hadith-contnet-description {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 1124px;
+}
+.prophetic-hadith-description {
+  color: #fff;
+  font-family: "DM Sans";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.prophetic-hadith-description span {
+  color: #fff;
+  font-family: "DM Sans";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.prophetic-hadith-name {
+  color: #fff;
+  font-family: "DM Sans";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  max-width: 385px;
+  max-height: 66px;
+  margin-left: 880px;
+}
+.prophetic-hadith-sub-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 68px;
+}
+.prophetic-hadith-paragraph {
+  color: #1d1d1d;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 1145px;
+}
+
+
+
+@media (max-width: 768px) {
+  .prophetic-hadith-content {
+    width: auto;
+    margin: 0 16px; 
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 16px;
+  }
+
+  .prophetic-hadith-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+  }
+
+  .porphetic-hadith-contnet-description {
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .prophetic-hadith-description {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .prophetic-hadith-description span {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .prophetic-hadith-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-left: 0;
+    margin-top: 20px;
+    text-align: right;
+  }
+
+  .prophetic-hadith-sub-title {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 0 16px;
+  }
+
+  .prophetic-hadith-paragraph {
+    width: 100%;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.6;
+    text-align: center;
+  }
+}

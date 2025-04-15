@@ -52,3 +52,8 @@
   line-height: 1.1rem;
   letter-spacing: 0.01rem;
 }
+@media screen and (max-width: 768px) {
+  .how-we-work-card {
+    width: 320px;
+  }
+}

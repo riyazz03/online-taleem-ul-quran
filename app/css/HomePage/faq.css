@@ -80,7 +80,7 @@
     max-width: 900px;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 1rem;
   }
   .faq-answers-p {
     font-size: 1rem;

@@ -1,59 +1,62 @@
-.how-we-work-section{
-    padding: 5rem;
-    margin: 90px auto;
-    z-index: 5;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    background-color: var(--background);
+.how-we-work-section {
+  padding: 5rem;
+  margin: 90px auto;
+  z-index: 5;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--background);
 }
-.how-we-work-title{
-    width: 100%;
-    text-align: center;
-    justify-content: center;
+.how-we-work-title {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
 }
-.cards-outer-div{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
+.cards-outer-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
 }
-.top-arrow{
-    display: flex;
-    justify-content: flex-start;
-    gap: 430px;
-    margin-left: 180px;
-    width: 80%;
+.top-arrow {
+  display: flex;
+  justify-content: flex-start;
+  gap: 430px;
+  margin-left: 180px;
+  width: 80%;
 }
-.bottom-arrow{
-    display: flex;
-    justify-content: flex-start;
-    gap: 432px;
-    margin-left: 274px;
+.bottom-arrow {
+  display: flex;
+  justify-content: flex-start;
+  gap: 432px;
+  margin-left: 274px;
 }
-.card-content{
-    display: flex;
-    gap: 28px;
+.card-content {
+  display: flex;
+  gap: 28px;
 }
 
 @media screen and (max-width: 768px) {
-    .cards-outer-div {
-      flex-direction: column; 
-      align-items: center; 
-      gap: 20px;
-    }
-  
-    .card-content {
-      flex-direction: column; 
-      align-items: center; 
-      gap: 20px;
-    }
-  
-    .top-arrow, .bottom-arrow {
-      display: none; 
-    }
+  .how-we-work-section {
+    margin: 0;
+    padding: 0 0 5rem 0;
   }
-  
-  
+  .cards-outer-div {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .top-arrow,
+  .bottom-arrow {
+    display: none;
+  }
+}

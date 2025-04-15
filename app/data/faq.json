@@ -22,5 +22,17 @@
     {
         "question": "What payment methods do you accept?",
         "answer": "We accept various payment methods, including credit/debit cards, PayPal, and bank transfers, depending on your location."
+    },
+    {
+        "question": "What if I miss a class?",
+        "answer": "If you miss a class, you can reschedule based on availability. We also offer recorded sessions in some cases for review."
+    },
+    {
+        "question": "How can I book a free demo class?",
+        "answer": "You can book a free demo by clicking the &quot;Book Now&quot; button on our website and filling out the registration form."
+    },
+    {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept various payment methods, including credit/debit cards, PayPal, and bank transfers, depending on your location."
     }
 ]

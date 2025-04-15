@@ -1,0 +1,137 @@
+.quran-learning-overview-section {
+  position: relative;
+  /* margin: 90px auto; */
+}
+.quran-learning-overview-heading {
+  width: 100%;
+  height: 53px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 86px;
+}
+.quran-learning-overview-title {
+  width: 995px;
+  height: 53px;
+  text-align: center;
+  margin-top: 0;
+}
+.quran-learning-overview-description {
+  width: 978px;
+  height: 53px;
+  text-align: center;
+  margin-top: 86px;
+}
+.quran-learning-overview-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 95px;
+  margin-top: 195px;
+}
+.quran-learning-overview-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+.quran-learning-overview-card-title {
+  color: #63aea7;
+  font-family: "DM Sans";
+  font-size: 2.8125rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  max-height: 53px;
+}
+.quran-learning-overview-card-description {
+  color: #1d1d1d;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 1.5625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 28.6875rem;
+  height: 6.1875rem;
+}
+.quran-learning-overview-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.8rem;
+}
+
+@media (max-width: 768px) {
+.quran-learning-overview-section {
+  margin: 90px auto;
+}
+  .quran-learning-overview-heading {
+    margin: 90px auto;
+    height: 153px;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .quran-learning-overview-title {
+    width: 100%;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .quran-learning-overview-title span {
+    display: inline;
+    font-size: inherit;
+  }
+
+  .quran-learning-overview-description {
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: center;
+    margin-top: 95px;
+  }
+
+  .quran-learning-overview-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 120px;
+    align-items: center;
+  }
+
+  .quran-learning-overview-card {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .quran-learning-overview-card-title {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .quran-learning-overview-card-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+  }
+
+  .quran-learning-overview-btn {
+    margin-top: 40px;
+  }
+
+  .mosque-icon {
+    display: none;
+  }
+}

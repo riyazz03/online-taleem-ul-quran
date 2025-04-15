@@ -22,7 +22,7 @@ const FreeTrial = () => {
     >
       <Image
         src="/assets/Icons/left-mosque-icon.svg"
-        alt="Right Arrow"
+        alt="Left Arrow"
         className="mosque-icon"
         height={1}
         width={1}
