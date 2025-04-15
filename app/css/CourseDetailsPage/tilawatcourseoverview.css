@@ -1,0 +1,79 @@
+.tilawat-course-overview-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+}
+.tilawat-course-overview-title {
+  margin-top: 40px;
+  width: 721px;
+  height: 28.375rem;
+  color: #1d1d1d;
+  font-family: "DM Sans";
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.tilawat-course-overview-title span {
+  color: #63aea7;
+  font-family: "DM Sans";
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.tilawat-course-overview-content {
+  display: flex;
+  gap: 100px;
+  align-items: start;
+}
+.tilawat-course-overview-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.tilawat-course-overview-cards-bottom {
+  display: flex;
+  gap: 130px;
+}
+@media (max-width: 768px) {
+  .tilawat-course-overview-container {
+    gap: 40px;
+    padding: 0 16px;
+  }
+
+  .tilawat-course-overview-title {
+    width: 100%;
+    height: auto;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.4;
+    margin-top: 20px;
+  }
+
+  .tilawat-course-overview-title span {
+    font-size: 2rem;
+  }
+
+  .tilawat-course-overview-content {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .tilawat-course-overview-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .tilawat-course-overview-cards-bottom {
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    align-items: center;
+  }
+}

@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Age Required",
+        "description": "Age knows no bounds in our diverse student community, spanning from 4 to 56 years old.",
+        "icon": "/assets/tilawat-card/1.svg"
+    },
+    {
+        "title": "Prerequisites",
+        "description": "Should complete The Mastery Phase of our Al-Hira Neo-Noorani Qaidah Course",
+        "icon": "/assets/tilawat-card/2.svg"
+    }
+]

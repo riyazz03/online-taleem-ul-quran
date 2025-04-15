@@ -1,0 +1,54 @@
+.book-your-demo-home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.book-your-demo-home-content {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.book-your-demo-home-title {
+  width: 606px;
+  max-height: 278px;
+}
+.book-your-demo-home-description {
+  width: 502px;
+}
+@media (max-width: 768px) {
+  .book-your-demo-home-container {
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .book-your-demo-home-content {
+    align-items: center;
+    gap: 20px;
+  }
+
+  .book-your-demo-home-title {
+    width: 100%;
+    max-height: none;
+    font-size: 1.75rem; /* Adjust heading size */
+    line-height: 1.4;
+  }
+
+  .book-your-demo-home-description {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+
+  .book-your-demo-home-image img,
+  .learning-journey-imagee {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .mosque-icon {
+    display: none;
+  }
+}

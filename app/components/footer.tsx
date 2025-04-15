@@ -12,7 +12,6 @@ const MobileFooterData = [
     answer: "Home",
     answer2: "Our Courses",
     answer3: "About us",
-    answer4: "Book Your Demo",
     answer5: "Contact us",
     links: "/",
     links2: "/our-course",
@@ -78,9 +77,6 @@ const Footer = () => {
                 </Link>
                 <Link href="/about-us" className="footer-link">
                   About us
-                </Link>
-                <Link href="/book-your-demo" className="footer-link">
-                  Book Your Demo
                 </Link>
                 <Link href="/contact-us" className="footer-link">
                   Contact us

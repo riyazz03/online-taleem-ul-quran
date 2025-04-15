@@ -12,7 +12,6 @@ export default function Home() {
       <Homecta />
       <LearningJourney />
       <KeyBenefits />
-      {/* <OurCourses /> */}
       <OurCoursesLive />
       <FreeTrial />
       <Testimonial />
