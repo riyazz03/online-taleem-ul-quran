@@ -11,7 +11,10 @@ const LearningJourney = () => {
   const titleRef = useRef(null);
 
   // Check if elements are in view
-  const isImageInView = useInView(imageWrapperRef, { once: true, margin: "-50px" });
+  const isImageInView = useInView(imageWrapperRef, {
+    once: true,
+    margin: "-50px",
+  });
   const isTitleInView = useInView(titleRef, { once: true, margin: "-50px" });
 
   return (
@@ -42,13 +45,20 @@ const LearningJourney = () => {
               <span className="learning-journey-description-span">
                 Online Taleem ul Quran
               </span>
-              , we are committed to making Quran learning accessible,
-              interactive, and enriching for students of all ages. With expert
-              tutors, flexible online classes, and a structured curriculum, we
-              provide a seamless learning experience tailored to your needs.
-              Whether you&apos;re starting your journey, improving Tajweed, or
-              memorizing the Quran, our platform ensures high-quality education
-              from the comfort of your home.
+              , we are dedicated to delivering a comprehensive and accessible
+              Quran learning experience for students of all ages, backgrounds,
+              and skill levels. Whether you’re a beginner, a non-Arabic speaker,
+              or someone looking to enhance Tajweed and Qirat, our expert tutors
+              guide you step by step through flexible online classes tailored to
+              your pace and needs. Especially beneficial for those without
+              access to nearby mosques or Quran teachers, our platform brings
+              high-quality education to your home with complete freedom to
+              choose your schedule—day or night. Female learners benefit from a
+              safe and convenient environment, and children gain a strong
+              foundation in Quran reading, pronunciation, and rules. We ensure
+              every student learns the correct articulation of each verse,
+              preserving its true meaning and helping them develop a lifelong
+              connection with the Holy Quran.
             </h4>
 
             <motion.button
