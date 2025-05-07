@@ -288,3 +288,18 @@
     margin-top: 30px;
   }
 }
+
+
+
+select.form-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #f5f4fa; /* Match your design background */
+  background-image: url('/assets/icons/down-arrow.svg'); /* <-- your path */
+  background-repeat: no-repeat;
+  background-position: right 1rem center; /* Adjust as needed */
+  background-size: 1.2rem; /* Resize the arrow */
+  padding-right: 2.5rem; /* Space for the arrow */
+  border-radius: 0.75rem; /* Optional: match your border radius */
+}

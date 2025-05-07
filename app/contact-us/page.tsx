@@ -39,7 +39,9 @@ const ContactUs = () => {
       weekday: "long",
     };
 
-    const formattedDate = today.toLocaleDateString("en-GB", optionsDate).replace(/\//g, "-");
+    const formattedDate = today
+      .toLocaleDateString("en-GB", optionsDate)
+      .replace(/\//g, "-");
     const formattedDay = today.toLocaleDateString("en-GB", optionsDay);
 
     setNextDay(`${formattedDate}, ${formattedDay}`);
@@ -59,12 +61,20 @@ const ContactUs = () => {
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
 
   const popUp = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
 
   return (
@@ -93,7 +103,7 @@ const ContactUs = () => {
             variants={fadeInUp}
           >
             <motion.div className="contact-us-heading" variants={fadeInUp}>
-              <h1 className="section-title contact-us-title">
+              <h1 className="section-title">
                 <span>Contact</span> & Join Together
               </h1>
             </motion.div>
@@ -151,9 +161,9 @@ const ContactUs = () => {
                     id="course"
                     name="course"
                     value={selectedCourse}
-                    className="form-input"
                     onChange={(e) => setSelectedCourse(e.target.value)}
                     required
+                    className="form-input appearance-none bg-none pr-4"
                   >
                     <option value="">Select Your Course</option>
                     <option value="option1">Option 1</option>

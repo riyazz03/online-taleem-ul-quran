@@ -104,9 +104,8 @@ const Footer = () => {
               </div>
             </div>{" "}
             {/*End of second LInk div */}
-            <div className="footer-content-links-block">
-              {" "}
               {/*third link div */}
+            {/* <div className="footer-content-links-block">
               <h4 className="footer-content-link-title">Support & Policies</h4>
               <div className="footer-content-links-wrapper-div">
                 <Link href="/" className="footer-link">
@@ -119,7 +118,7 @@ const Footer = () => {
                   Privacy Policy
                 </Link>
               </div>
-            </div>{" "}
+            </div> */}
             {/*End of third LInk div */}
             <div className="footer-content-links-block">
               {" "}
