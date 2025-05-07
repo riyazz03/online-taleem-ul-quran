@@ -5,6 +5,7 @@ import "@/app/css/HomePage/home-cta.css";
 import Image from "next/image";
 import Button from "@/app/components/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 // ** Animation Variants **
 const fadeUp = {
@@ -80,7 +81,9 @@ const HOMECTA = () => {
 
               {/* Button */}
               <motion.div variants={fadeUp} custom={0.4}>
-                <Button text="Book Your Demo" />
+                <Link rel="stylesheet" href="/contact-us">
+                  <Button text="Book Your Demo" />
+                </Link>
               </motion.div>
             </motion.div>
 

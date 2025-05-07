@@ -15,6 +15,7 @@ import {
 } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import Link from "next/link";
 
 const testimonials = [
   {
@@ -181,7 +182,9 @@ const Testimonial = () => {
             the Quran with us!
           </motion.p>
           <div className="testimonial-btn">
-            <Button text="Start Learning" />
+            <Link rel="stylesheet" href="/contact-us">
+              <Button text="Start Learning" />
+            </Link>
           </div>
         </div>
         <div className="testimonial-background-gradient"></div>
