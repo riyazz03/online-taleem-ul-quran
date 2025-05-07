@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import "@/app/css/HomePage/faq.css";
 import "@/app/css/HomePage/freetrial.css";
 import Button from "@/app/components/button";
+import Link from "next/link";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -43,15 +44,27 @@ const FreeTrial = () => {
                 Come by with a hello to eliminate any confusion promptly.
               </p>
               <div className="free-trial-button">
-                <Button text="Book Your Demo" />
+                <Link rel="stylesheet" href="/contact-us">
+                  <Button text="Book Your Demo" />
+                </Link>
               </div>
             </motion.div>
 
             <motion.div className="trial-offer" variants={fadeInUp}>
               <h2 className="trial-offer-title">Claim Your Free Trial ! ✧₊⁺</h2>
               <div className="trial-offer-features-block">
-                {["Expert & Certified Tutors", "Affordable & Flexible Plans", "Male & Female Tutors", "Islamic Studies & Duas", "24/7 Learning Availability"].map((feature, index) => (
-                  <motion.div key={index} className="trial-offer-features-line" variants={fadeInUp}>
+                {[
+                  "Expert & Certified Tutors",
+                  "Affordable & Flexible Plans",
+                  "Male & Female Tutors",
+                  "Islamic Studies & Duas",
+                  "24/7 Learning Availability",
+                ].map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    className="trial-offer-features-line"
+                    variants={fadeInUp}
+                  >
                     <Image
                       src="/assets/Icons/tick-icon.svg"
                       alt="Tick icon"

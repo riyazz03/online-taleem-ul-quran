@@ -5,6 +5,7 @@ import "@/app/css/AboutUs/about-us-cta.css";
 import Image from "next/image";
 import Button from "@/app/components/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const AboutUsCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -60,8 +61,7 @@ const AboutUsCTA = () => {
                 className="about-us-cta-heading"
               >
                 <h1 className="about-us-title">
-                  Connecting you with the{" "}
-                  <span>timeless wisdom of Islam</span>
+                  Connecting you with the <span>timeless wisdom of Islam</span>
                 </h1>
               </motion.div>
 
@@ -82,7 +82,9 @@ const AboutUsCTA = () => {
                 animate={isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
               >
-                <Button text="Book Your Demo" />
+                <Link rel="stylesheet" href="/contact-us">
+                  <Button text="Book Your Demo" />
+                </Link>
               </motion.div>
             </div>
 

@@ -4,6 +4,7 @@ import "@/app/css/CourseDetailsPage/quranlearningoverview.css";
 import Button from "@/app/components/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 // Animation Variants
 const containerVariant = {
@@ -119,7 +120,9 @@ const QuranLearningOverview = () => {
 
             {/* Button */}
             <div className="quran-learning-overview-btn">
-              <Button text="Book Your Demo" />
+              <Link rel="stylesheet" href="/contact-us">
+                <Button text="Book Your Demo" />
+              </Link>
             </div>
           </motion.div>
         </div>

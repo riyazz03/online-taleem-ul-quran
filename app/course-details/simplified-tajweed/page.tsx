@@ -159,20 +159,20 @@ const quranLearning = [
 ];
 
 const ourCoursesCard = [
-  // {
-  //   image: "/Images/courses/quran-recitation.png",
-  //   title: "Quran Recitation",
-  //   description:
-  //     "Unlock the Beauty of the Quran Master Recitation and Comprehension with Expert Guidance.",
-  //   link: "/course-details/quran-recitation",
-  // },
   {
-    image: "/Images/courses/simplified-tajweed.png",
-    title: "Simplified Tajweed",
+    image: "/Images/courses/quran-recitation.png",
+    title: "Quran Recitation",
     description:
-      "Master the Art of Tajweed with Expert Guidance Live, Personalized, and at Your Pace!",
-    link: "/course-details/simplified-tajweed",
+      "Unlock the Beauty of the Quran Master Recitation and Comprehension with Expert Guidance.",
+    link: "/course-details/quran-recitation",
   },
+  // {
+  //   image: "/Images/courses/simplified-tajweed.png",
+  //   title: "Simplified Tajweed",
+  //   description:
+  //     "Master the Art of Tajweed with Expert Guidance Live, Personalized, and at Your Pace!",
+  //   link: "/course-details/simplified-tajweed",
+  // },
   {
     image: "/Images/courses/arabic-language.png",
     title: "Quran Memorization",
@@ -189,7 +189,7 @@ const ourCoursesCard = [
   },
 ];
 
-const QuranRecitation = () => {
+const SimplifiedTajweed = () => {
   const useSectionRef = useRef(null);
 
   return (
@@ -534,4 +534,4 @@ const QuranRecitation = () => {
   );
 };
 
-export default QuranRecitation;
+export default SimplifiedTajweed;

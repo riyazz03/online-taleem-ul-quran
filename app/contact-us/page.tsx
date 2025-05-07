@@ -154,6 +154,21 @@ const ContactUs = () => {
                   />
                 </div>
                 <div className="form-input-block">
+                  <label htmlFor="phone" className="form-label-title">
+                    What&apos;sApp Number
+                  </label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="91+ 12345 67890"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    className="form-input"
+                  />
+                </div>
+                <div className="form-input-block">
                   <label htmlFor="course" className="form-label-title">
                     I&apos;m interested in
                   </label>
@@ -166,9 +181,9 @@ const ContactUs = () => {
                     className="form-input appearance-none bg-none pr-4"
                   >
                     <option value="">Select Your Course</option>
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <option value="option3">Option 3</option>
+                    <option value="option1">Quran Recitation</option>
+                    <option value="option2">Simplified Tajweed</option>
+                    <option value="option3">Quran Memorization</option>
                   </select>
                 </div>
                 <div className="form-input-block">

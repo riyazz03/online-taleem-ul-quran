@@ -7,10 +7,12 @@ const OurCoursesLiveCard = ({
   images,
   title,
   description,
+  link,
 }: {
   images: string;
   title: string;
   description: string;
+  link: string;
 }) => {
   return (
     <div className="our-courses-card">
@@ -34,7 +36,7 @@ const OurCoursesLiveCard = ({
           width={167}
           className="rating-icon"
         />
-        <Link href="/course-details/quran-recitation">
+        <Link href={link}>
           <div className="courses-btn">
             <p className="courses-btn-text">Start With a Free Trail</p>
             <Image

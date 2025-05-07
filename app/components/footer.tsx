@@ -55,13 +55,15 @@ const Footer = () => {
       <div className="footer">
         <div className="footer-section">
           <div className="footer-logo-image">
-            <Image
-              src="/Images/footer-logo.png"
-              alt="nav-logo"
-              className=""
-              height={72}
-              width={165}
-            />
+            <Link href="/">
+              <Image
+                src="/Images/footer-logo.png"
+                alt="nav-logo"
+                className=""
+                height={72}
+                width={165}
+              />
+            </Link>
           </div>
           <div className="footer-content-block">
             <div className="footer-content-links-block">
@@ -104,7 +106,7 @@ const Footer = () => {
               </div>
             </div>{" "}
             {/*End of second LInk div */}
-              {/*third link div */}
+            {/*third link div */}
             {/* <div className="footer-content-links-block">
               <h4 className="footer-content-link-title">Support & Policies</h4>
               <div className="footer-content-links-wrapper-div">

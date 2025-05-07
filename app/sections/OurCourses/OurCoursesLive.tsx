@@ -11,25 +11,29 @@ const ourCoursesCard = [
     image: "/Images/courses/quran-recitation.png",
     title: "Quran Recitation",
     description:
-      "Learn to Recite with Beauty and Precision, Live Online, Anytime, Anywhere!",
+      "Unlock the Beauty of the Quran Master Recitation and Comprehension with Expert Guidance.",
+    link: "/course-details/quran-recitation",
   },
   {
     image: "/Images/courses/simplified-tajweed.png",
     title: "Simplified Tajweed",
     description:
-      "Learn to Recite with Beauty and Precision, Live Online, Anytime, Anywhere!",
+      "Master the Art of Tajweed with Expert Guidance Live, Personalized, and at Your Pace!",
+    link: "/course-details/simplified-tajweed",
   },
   {
     image: "/Images/courses/arabic-language.png",
     title: "Quran Memorization",
     description:
-      "Learn to Recite with Beauty and Precision, Live Online, Anytime, Anywhere!",
+      "Memorize the Quran with Expert Guidance Step-by-Step, Rooted in Tradition, Rewarded for Eternity.",
+    link: "/course-details/quran-memorization",
   },
   {
     image: "/Images/courses/quran-memorization.png",
     title: "Arabic Language",
     description:
       "Learn to Recite with Beauty and Precision, Live Online, Anytime, Anywhere!",
+    link: "/course-details/quran-recitation",
   },
 ];
 
@@ -91,6 +95,7 @@ const OurCoursesLive = () => {
                   images={card.image}
                   title={card.title}
                   description={card.description}
+                  link={card.link}
                 />
               </motion.div>
             ))}

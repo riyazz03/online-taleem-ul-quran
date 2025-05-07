@@ -4,6 +4,7 @@ import Image from "next/image";
 import "@/app/css/CourseDetailsPage/CourseDetailsPageCtc.css";
 import Button from "@/app/components/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 // Popup animation variant
 const popupVariant = {
@@ -20,7 +21,6 @@ const CourseDetailsPageCtc = () => {
     <section className="book-your-demo-home-section">
       <div className="padding-global">
         <div className="main-container book-your-demo-home-container">
-
           {/* Popup content */}
           <motion.div
             className="book-your-demo-home-content"
@@ -33,9 +33,12 @@ const CourseDetailsPageCtc = () => {
               Master the Art of Quran Recitation in just <span>64 weeks</span>
             </h1>
             <div className="book-your-demo-home-description">
-              Embark on a remarkable journey of Quran recitation mastery with our seasoned Islamic tutors at Quran Online India.
+              Embark on a remarkable journey of Quran recitation mastery with
+              our seasoned Islamic tutors at Quran Online India.
             </div>
-            <Button text="Book Your Demo" />
+            <Link rel="stylesheet" href="/contact-us">
+              <Button text="Book Your Demo" />
+            </Link>
           </motion.div>
 
           {/* Popup image with proper scaling */}
@@ -47,7 +50,9 @@ const CourseDetailsPageCtc = () => {
             variants={popupVariant}
             style={{ width: "100%", maxWidth: "600px" }}
           >
-            <div style={{ position: "relative", width: "100%", height: "auto" }}>
+            <div
+              style={{ position: "relative", width: "100%", height: "auto" }}
+            >
               <Image
                 src="/Images/book-your-demo.png"
                 alt="Learning Journey"
