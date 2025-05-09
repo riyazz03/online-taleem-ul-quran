@@ -26,16 +26,9 @@ const OurCoursesLiveCard = ({
         />
       </div>
       <div className="our-courses-live-content">
-        {/* <p className="our-courses-subtitle">Start your Journey From</p> */}
         <h2 className="our-courses-title">{title}</h2>
         <p className="our-courses-description-text">{description}</p>
-        <Image
-          src="/assets/social-media-icons/Rating.svg"
-          alt="Rating Image"
-          height={22}
-          width={167}
-          className="rating-icon"
-        />
+
         <Link href={link}>
           <div className="courses-btn">
             <p className="courses-btn-text">Start With a Free Trail</p>

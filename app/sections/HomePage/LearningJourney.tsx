@@ -10,7 +10,6 @@ const LearningJourney = () => {
   const imageWrapperRef = useRef(null);
   const titleRef = useRef(null);
 
-  // Check if elements are in view
   const isImageInView = useInView(imageWrapperRef, {
     once: true,
     margin: "-50px",

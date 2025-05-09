@@ -32,31 +32,39 @@
   margin-top: 195px;
 }
 .quran-learning-overview-card {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.25rem; */
+  border-radius: 10px;
+  background: linear-gradient(0deg, #63aea7 0%, #63aea7 100%), #fff;
+  display: flex;
+  padding: 25px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 .quran-learning-overview-card-title {
-  color: #63aea7;
+  color: #fff;
+  text-align: center;
   font-family: "DM Sans";
-  font-size: 2.8125rem;
+  font-size: 45px;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
-  max-height: 53px;
+  /* max-height: 53px; */
 }
 .quran-learning-overview-card-description {
-  color: #1d1d1d;
+  color: #fff;
   text-align: center;
   font-family: "DM Sans";
-  font-size: 1.5625rem;
+  font-size: 25px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  max-width: 28.6875rem;
-  height: 6.1875rem;
+  /* max-width: 28.6875rem;
+  height: 6.1875rem; */
 }
 .quran-learning-overview-btn {
   width: 100%;
@@ -67,9 +75,9 @@
 }
 
 @media (max-width: 768px) {
-.quran-learning-overview-section {
-  margin: 90px auto;
-}
+  .quran-learning-overview-section {
+    margin: 90px auto;
+  }
   .quran-learning-overview-heading {
     margin: 90px auto;
     height: 153px;

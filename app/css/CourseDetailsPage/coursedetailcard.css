@@ -1,0 +1,108 @@
+.quran-memorization-cards-section {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  position: relative;
+}
+.quran-memorization-card-title {
+  /* width: 829px; */
+  height: 108px;
+  flex-shrink: 0;
+  text-align: center;
+}
+.quran-memorization-cards-container {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.quran-memorization-card {
+  width: 278px;
+  height: 414px;
+  border-radius: 10px;
+  background: #63aea7;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+.card1,
+.card3 {
+  top: 0;
+}
+.card2,
+.card4 {
+  margin-top: 56px;
+}
+.quran-memorization-card-description {
+  color: #fff;
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 255px;
+  height: 87px;
+  flex-shrink: 0;
+}
+.quran-memorization-card-description span {
+  color: #fff;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.blur-effect {
+  border-radius: 1669px;
+  background: rgba(116, 206, 198, 0.65);
+  filter: blur(125px);
+  width: 1669px;
+  height: 365px;
+  position: absolute;
+  top: 450px;
+}
+.quran-memorization-content-container-ctc {
+  width: 1329px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.quran-memorization-content-container-ctc p {
+  color: #000;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.quran-memorization-content-box {
+  background-color: #63aea7;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.25rem;
+  gap: 40px;
+  width: 83.5625rem;
+  height: 15.3125rem;
+  padding: 35px 45px;
+}
+.quran-memorization-content-box p {
+  color: #fff;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
