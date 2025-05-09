@@ -1,25 +1,27 @@
 "use client";
 import React, { useRef } from "react";
 import Image from "next/image";
-import "@/app/css/CourseDetailsPage/CourseDetailsPageCtc.css";
-import "@/app/css/CourseDetailsPage/tilawatcourseoverview.css";
-import "@/app/css/CourseDetailsPage/quranlearningoverview.css";
+import { motion, useInView } from "framer-motion";
+import "@/app/css/CourseDetailsPage/coursedetailhomectc.css";
+import "@/app/css/CourseDetailsPage/coursedetailcard.css";
+import "@/app/css/CourseDetailsPage/coursedetailcontent.css";
 import "@/app/css/CourseDetailsPage/prophetichadithsection.css";
+import "@/app/css/CourseDetailsPage/quranlearningoverview.css";
 import "@/app/css/OurCourses/our-courses-live.css";
-import TilawatCards from "@/app/components/tilawatCards";
-import tilawatCard from "@/app/data/tilawat-card.json";
-import OurCoursesLiveCard from "@/app/components/OurCoursesLiveCard";
-import Button from "@/app/components/button";
-import { motion } from "framer-motion";
 import Link from "next/link";
+import Button from "@/app/components/button";
+import HowWeWork from "@/app/sections/AboutUs/HowWeWork";
+import OurCoursesCardMini from "@/app/components/OurCoursesCardMini";
 
-// Popup animation variant
-const popupVariant = {
-  hidden: { opacity: 0, scale: 0.8 },
+const contentVariant = {
+  hidden: { opacity: 0, y: 40 },
   visible: {
     opacity: 1,
-    scale: 1,
-    transition: { duration: 0.6, ease: "easeOut" },
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
   },
 };
 
@@ -39,13 +41,13 @@ const cardsContainerVariant = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.3,
     },
   },
 };
 
 const cardItemVariant = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
@@ -55,85 +57,6 @@ const cardItemVariant = {
     },
   },
 };
-
-const contentVariant = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  },
-};
-
-const titleVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, delay: index * 0.35, ease: "easeOut" },
-  }),
-};
-
-// Animation Variants
-// const containerVariant = {
-//     hidden: { opacity: 0, y: 40 },
-//     visible: {
-//       opacity: 1,
-//       y: 0,
-//       transition: {
-//         duration: 0.6,
-//         ease: "easeOut",
-//       },
-//     },
-//   };
-
-//   const cardsContainerVariant = {
-//     hidden: {},
-//     visible: {
-//       transition: {
-//         staggerChildren: 0.3,
-//       },
-//     },
-//   };
-
-//   const cardItemVariant = {
-//     hidden: { opacity: 0, y: 20 },
-//     visible: {
-//       opacity: 1,
-//       y: 0,
-//       transition: {
-//         duration: 0.5,
-//         ease: "easeOut",
-//       },
-//     },
-//   };
-
-const tilawatcourse = [
-  {
-    title: "Certification",
-    description:
-      "We provide a Quran completion certificate accredited by Quran Online India",
-    icon: "/assets/tilawat-card/3.svg",
-  },
-  {
-    title: "Class Type",
-    description: "Exclusive One-on-One Sessions for Uncompromised Development",
-    icon: "/assets/tilawat-card/4.svg",
-  },
-  {
-    title: "Duration",
-    description: "Our best students complete quran recitation in just 64 weeks",
-    icon: "/assets/tilawat-card/5.svg",
-  },
-];
 
 const quranLearning = [
   {
@@ -190,124 +113,128 @@ const ourCoursesCard = [
 ];
 
 const QuranMemorization = () => {
-  const useSectionRef = useRef(null);
+  const imageRef = useRef(null);
+  const imageWrapperRef = useRef(null);
+  const titleRef = useRef(null);
+
+  // const isImageInView = useInView(imageWrapperRef, {
+  //   once: true,
+  //   margin: "-50px",
+  // });
+  const isTitleInView = useInView(titleRef, { once: true, margin: "-50px" });
 
   return (
     <main className="main">
-      <section className="book-your-demo-home-section">
-        <div className="padding-global">
-          <div className="main-container book-your-demo-home-container">
-            {/* Popup content */}
-            <motion.div
-              className="book-your-demo-home-content"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.4 }}
-              variants={popupVariant}
+      <section className="learning-journey-ctc">
+        <div className=" learning-journey-container-ctc">
+          <div className="learning-journey-content-ctc">
+            <p className="learning-journey-subtitle-ctc">COURSES</p>
+            <motion.h1
+              ref={titleRef}
+              className="section-title learning-journey-title-ctc"
+              initial={{ opacity: 0, y: 50 }}
+              animate={isTitleInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              <h1 className="section-title book-your-demo-home-title">
-                Master the Art of Quran Recitation in just <span>64 weeks</span>
-              </h1>
-              <div className="book-your-demo-home-description">
-                Embark on a remarkable journey of Quran recitation mastery with
-                our seasoned Islamic tutors at Quran Online India.
-              </div>
-              <Link rel="stylesheet" href="/contact-us" >
-                <Button text="Book Your Demo" />
-              </Link>
-            </motion.div>
+              <span>Quran Memorization Online</span>
+            </motion.h1>
 
-            {/* Popup image with proper scaling */}
-            <motion.div
-              className="book-your-demo-home-image"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.4 }}
-              variants={popupVariant}
-              style={{ width: "100%", maxWidth: "600px" }}
-            >
-              <div
-                style={{ position: "relative", width: "100%", height: "auto" }}
-              >
+            <h4 className="learning-journey-description-ctc">
+              Our online Quran memorization classes offer a flexible, guided
+              path for both kids and adults, with female teachers available for
+              sisters. Memorize the entire Quran or selected Surahs at your
+              pace. It&apos;s a spiritual journey and a great blessing, as
+              encouraged by Prophet Muhammad (PBUH) for lasting rewards.
+              <span className="learning-journey-description-span-ctc">
+                {/* Online Taleem ul Quran */}
+              </span>
+            </h4>
+
+            <Link rel="stylesheet" href="/contact-us">
+              <Button text="Book Your Demo" />
+            </Link>
+          </div>
+
+          <div ref={imageWrapperRef} className="learning-journey-image-div-ctc">
+            <div>
+              <Image
+                ref={imageRef}
+                src="/Images/quran-memorization.png"
+                className="learning-journey-image-ctc"
+                alt="Learning Journey"
+                width={827}
+                height={714}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="quran-memorization-cards-section">
+        <div className="padding-global">
+          <div className="main-container">
+            <div className="quran-memorization-card-heading">
+              <h1 className="section-title quran-memorization-card-title">
+                Say goodbye to stumbles—embrace the <br />
+                <span>smooth flow of Tilawat</span>
+              </h1>
+            </div>
+            <div className="quran-memorization-cards-container">
+              <div className="quran-memorization-card card1">
                 <Image
-                  src="/Images/book-your-demo.png"
-                  alt="Learning Journey"
-                  className="learning-journey-imagee"
-                  width={600}
-                  height={600}
-                  style={{ width: "100%", height: "auto", display: "block" }}
+                  src="/assets/quran-memorization/card1.svg"
+                  alt="card1"
+                  height={73}
+                  width={73}
+                  className="quran-memorization-card-icon"
                 />
+                <p className="quran-memorization-card-description">
+                  Age knows no bounds in our diverse student community, spanning
+                  from <span> 4 to 56 years old.</span>
+                </p>
               </div>
-            </motion.div>
+              <div className="quran-memorization-card card2">
+                <Image
+                  src="/assets/quran-memorization/card2.svg"
+                  alt="card1"
+                  height={57}
+                  width={57}
+                  className="quran-memorization-card-icon"
+                />
+                <p className="quran-memorization-card-description">
+                  Should complete The Mastery Phase of our{" "}
+                  <span>Al-Hira Neo-Noorani Qaidah Course</span>
+                </p>
+              </div>
+              <div className="quran-memorization-card card3">
+                <Image
+                  src="/assets/quran-memorization/card3.svg"
+                  alt="card1"
+                  height={78}
+                  width={78}
+                  className="quran-memorization-card-icon"
+                />
+                <p className="quran-memorization-card-description">
+                  We provide a <span> Quran completion certificate</span>
+                  accredited by Quran Online India
+                </p>
+              </div>
+              <div className="quran-memorization-card card4">
+                <Image
+                  src="/assets/quran-memorization/card4.svg"
+                  alt="card1"
+                  height={66}
+                  width={66}
+                  className="quran-memorization-card-icon"
+                />
+                <p className="quran-memorization-card-description">
+                  Exclusive <span>One-on-One Sessions </span>for Uncompromised
+                  Development
+                </p>
+              </div>
+            </div>
+            <div className="blur-effect"></div>
           </div>
         </div>
-
-        <Image
-          src="/assets/Icons/right-mosque-icon.svg"
-          alt="Right Arrow"
-          className="mosque-icon"
-          height={1}
-          width={1}
-        />
-      </section>
-      <section className="tilawat-course-overview-section">
-        <div className="padding-global">
-          <div className="main-container tilawat-course-overview-container">
-            {/* Title + description */}
-            <motion.div
-              className="tilawat-course-overview-content"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.4 }}
-              variants={containerVariant}
-            >
-              <h1 className="section-title tilawat-course-overview-title">
-                Say goodbye to stumbling over words and embrace the harmonious{" "}
-                <span> flow of Tilawat.</span>
-              </h1>
-
-              {/* Cards from JSON (first set) */}
-              <motion.div
-                className="tilawat-course-overview-wrapper"
-                variants={cardsContainerVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                {tilawatCard.map((card, index) => (
-                  <motion.div key={index} variants={cardItemVariant}>
-                    <TilawatCards
-                      title={card.title}
-                      description={card.description}
-                      icon={card.icon}
-                    />
-                  </motion.div>
-                ))}
-              </motion.div>
-            </motion.div>
-
-            {/* Cards from inline data (second set) */}
-            <motion.div
-              className="tilawat-course-overview-cards-bottom"
-              variants={cardsContainerVariant}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-            >
-              {tilawatcourse.map((card, index) => (
-                <motion.div key={index} variants={cardItemVariant}>
-                  <TilawatCards
-                    title={card.title}
-                    description={card.description}
-                    icon={card.icon}
-                  />
-                </motion.div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
-      <section className="quran-learning-overview-section">
         <Image
           src="/assets/Icons/left-mosque-icon.svg"
           alt="Left Arrow"
@@ -315,66 +242,113 @@ const QuranMemorization = () => {
           height={1}
           width={1}
         />
-        <div className="padding-global">
-          <div className="main-container quran-learning-overview-container">
-            <motion.div
-              className="quran-learning-overview-content"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={containerVariant}
-            >
-              <div className="quran-learning-overview-heading">
-                <h1 className="section-title quran-learning-overview-title">
-                  Enrich Your recitation Journey with basics of{" "}
-                  <span>Aqeeda, Seerat, Fiqh & Surahs</span>
-                </h1>
-                <p className="section-description quran-learning-overview-description">
-                  Our Tilawat-ul-Quran course goes beyond recitation, offering a
-                  treasure trove of knowledge, empowering you with a deeper
-                  understanding of Islam&rsquo;s core principles.
+      </section>
+      <section className="quran-memorization-content-section">
+        <div className="padding-gobal">
+          <div className="main-container">
+            <div className="quran-memorization-content-heading">
+              Our Approach
+            </div>
+            <div className="quran-memorization-content-container-ctc">
+              <br />
+              <p>
+                An approach that has stood the test of time, preserved through
+                generations, rooted in tradition.
+              </p>
+              <p>
+                Sabaq (New Lesson)
+                <br />
+                Sabaq means new lessons. In which the teacher Listens the
+                recitation of the verses of the Holy Quran from the student and
+                practices to learn these verses with correct pronunciation and
+                accent first and then try to memorize it by repeating it many
+                times.
+              </p>
+              <p>
+                Instructor will help you with his Tips & Tricks to memorize
+                lessons during and after the class as well. The student has to
+                fully memorize this lesson before the next class.
+              </p>
+              <p>
+                Sabaq Para (Revision) Sabaq Para means revision of the previous
+                lessons of the same juzz, The student has memorized in the
+                recent classes.
+              </p>
+              <p>
+                The student will recite and the teacher will listen to him. Each
+                student has to recite Sabaq Para lessons in each class after the
+                new lesson so that he or she memorizes the last lessons very
+                well.
+              </p>
+              <p>
+                Purana Sabaq (Old Lesson)
+                <br />
+                Purana Sabaq means the revision of any juzz, the student has
+                memorized it already. In each class, the student will recite at
+                least half a juzz and the teacher will listen to him.
+              </p>
+              <p>
+                It gives the student and teacher a kind of satisfaction and
+                surety that the student is memorizing more and more without
+                forgetting the previous lessons.
+              </p>
+              <p>
+                Reap the benefits of memorizing The Quran <br />
+                Safe from the trial of Dajjal
+              </p>
+              <p>
+                The Prophet (PBUH) said,” Whoever memorizes ten verses from the{" "}
+                <br />
+                beginning of Surah Al Kahf, he will be protected from the
+                Dajjal.”
+              </p>
+              <p>(Muslim)</p>
+              <p>
+                The Highest Honour for the Parents of the Memoriser of the
+                Qur&apos;an
+              </p>
+              <p>
+                &apos;Whosoever recites the Quran and practices upon its
+                injunctions, the reciter&apos;s parents will be given a crown on
+                the day of Qiyaamat. The brightness of that crown will be more
+                intense than the brightness of the sun in your actual
+                house.&apos; The Prophet (PBUH) further said: &apos;What do you
+                think will be given to the Hafiz (reciter) of the Quran
+                himself?’”
+              </p>
+              <p>(Mishkaat Vol I.)</p>
+              <p>Highest ranks of Jannah for the Memoriser of the Qur’an</p>
+              <p>
+                The Prophet (PBUH) said, “It will be said to the companion of
+                the Qur’aan after he has entered Paradise, ‘Recite, and rise!’
+                For every verse he recites he will rise one level (in Paradise),
+                until he recites the last verse with him (i.e., in his memory).”
+              </p>
+              <p>(Abu Dawood)</p>
+              <p>
+                Every letter the Memoriser of the Qur&apos;an recites is
+                rewarded ten
+              </p>
+              <p>
+                “Whoever recites one Word from the Book of Allah will be
+                rewarded for a good deed and ten more like it; and I don’t say
+                that Alif Lam Mim is a letter but Alif is a letter and Lam is a
+                letter and Mim is a letter”
+              </p>
+              <p>(Tirmidhi & Al-Dareemi)</p>
+              <div className="quran-memorization-content-box">
+                <p>The Messenger of Allah صلی ‌اللہ ‌علیہ ‌وسلم said:</p>
+                <p>
+                  who was devoted to the Quran will be told to recite, ascend
+                  and recite carefully as he recited carefully when he was in
+                  the world, for he will reach his abode when he comes to the
+                  last verse he recites{" "}
                 </p>
+                <p>(Abu Dawood 1464)</p>
               </div>
-
-              {/* Cards container with staggered animation */}
-              <motion.div
-                className="quran-learning-overview-cards"
-                variants={cardsContainerVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                {quranLearning.map((card, index) => (
-                  <motion.div
-                    className="quran-learning-overview-card"
-                    key={index}
-                    variants={cardItemVariant}
-                  >
-                    <div className="quran-learning-overview-card-title">
-                      {card.title}
-                    </div>
-                    <div className="quran-learning-overview-card-description">
-                      {card.description}
-                    </div>
-                  </motion.div>
-                ))}
-              </motion.div>
-
-              {/* Button */}
-              <div className="quran-learning-overview-btn">
-                <Button text="Book Your Demo" />
-              </div>
-            </motion.div>
+            </div>
           </div>
         </div>
-
-        <Image
-          src="/assets/Icons/right-mosque-icon.svg"
-          alt="Right Arrow"
-          className="mosque-icon"
-          height={1}
-          width={1}
-        />
       </section>
       <section className="prophetic-hadith-section">
         <div className="padding-global">
@@ -446,6 +420,7 @@ const QuranMemorization = () => {
                   </span>
                   “This is enough”.
                 </p>
+                <br />
                 <p className="prophetic-hadith-description">
                   <span>Ibn Masʿūd said, </span>“I looked at him and he was
                   shedding tears.”
@@ -484,7 +459,69 @@ const QuranMemorization = () => {
           </div>
         </div>
       </section>
-      <section className="our-courses-live-section" ref={useSectionRef}>
+      <section className="quran-learning-overview-section">
+        <Image
+          src="/assets/Icons/left-mosque-icon.svg"
+          alt="Left Arrow"
+          className="mosque-icon"
+          height={1}
+          width={1}
+        />
+        <div className="padding-global">
+          <div className="main-container quran-learning-overview-container">
+            <motion.div
+              className="quran-learning-overview-content"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={containerVariant}
+            >
+              <div className="quran-learning-overview-heading">
+                <h1 className="section-title quran-learning-overview-title">
+                  Enrich Your recitation Journey with basics of{" "}
+                  <span>Aqeeda, Seerat, Fiqh & Surahs</span>
+                </h1>
+                <p className="section-description quran-learning-overview-description">
+                  Our Tilawat-ul-Quran course goes beyond recitation, offering a
+                  treasure trove of knowledge, empowering you with a deeper
+                  understanding of Islam&rsquo;s core principles.
+                </p>
+              </div>
+
+              {/* Cards container with staggered animation */}
+              <motion.div
+                className="quran-learning-overview-cards"
+                variants={cardsContainerVariant}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                {quranLearning.map((card, index) => (
+                  <motion.div
+                    className="quran-learning-overview-card"
+                    key={index}
+                    variants={cardItemVariant}
+                  >
+                    <div className="quran-learning-overview-card-title">
+                      {card.title}
+                    </div>
+                    <div className="quran-learning-overview-card-description">
+                      {card.description}
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+
+              {/* Button */}
+              <div className="quran-learning-overview-btn">
+                <Link rel="stylesheet" href="/contact-us">
+                  <Button text="Book Your Demo" />
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
         <Image
           src="/assets/Icons/right-mosque-icon.svg"
           alt="Right Arrow"
@@ -492,39 +529,26 @@ const QuranMemorization = () => {
           height={1}
           width={1}
         />
+      </section>
+      <HowWeWork />
+      <section className="course-detail-courses">
         <div className="padding-global">
-          <div className="main-container our-courses-live-container">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              variants={titleVariants}
-              viewport={{ once: true, amount: 0.1 }}
-              className="our-courses-haading"
-            >
+          <div className="main-container">
+            <div className="course-detail-title">
               <h1 className="section-title">
-                Our <span>Courses</span>
+                Other <span>Courses</span>
               </h1>
-              <p className="section-description">
-                Unlock the beauty of the Quran with expert-guided, interactive
-                courses
-              </p>
-            </motion.div>
-            <div className="our-courses-card-block">
+            </div>
+            <div className="course-detail-cards">
               {ourCoursesCard.map((card, index) => (
-                <motion.div
-                  className="our-courses-card-outer-div"
-                  key={index}
-                  custom={index}
-                  initial="hidden"
-                  whileInView="visible"
-                  variants={cardVariants}
-                  viewport={{ once: true, amount: 0.1 }}
-                >
-                  <OurCoursesLiveCard
+                <div className="course-detail-card" key={index}>
+                  <OurCoursesCardMini
                     images={card.image}
                     title={card.title}
-                    description={card.description} link={card.link}                  />
-                </motion.div>
+                    description={card.description}
+                    link={card.link}
+                  />
+                </div>
               ))}
             </div>
           </div>
