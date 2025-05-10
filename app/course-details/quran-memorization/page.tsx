@@ -121,7 +121,7 @@ const QuranMemorization = () => {
   return (
     <main className="main">
       <section className="learning-journey-ctc">
-        <div className=" learning-journey-container-ctc mt-0">
+        <div className=" learning-journey-container-ctc">
           <div className="learning-journey-content-ctc">
             <p className="learning-journey-subtitle-ctc">COURSES</p>
             <motion.h1
