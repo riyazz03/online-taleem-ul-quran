@@ -67,6 +67,21 @@
   border-radius: 0.625rem;
   background: #204343;
   margin-top: 0.2rem;
+  transition: background-color 0.3s ease;
+}
+.courses-btn-ctc:hover {
+  background-color: var(--secondary-color);
+}
+.courses-btn-ctc:hover img {
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease;
+}
+.courses-btn-ctc:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease-in-out;
+}
+.courses-btn-icon-ctc {
+  transition: transform 0.5s ease-in-out;
 }
 .courses-btn-text-ctc {
   color: #fff;
