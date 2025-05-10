@@ -1,12 +1,13 @@
 .our-courses-card {
-  width: 34.375rem;
-  height: 45rem;
+  width: 100%;
+  height: 100%;
+  height: 47rem;
   border-radius: 1.25rem;
   background: #fff;
 }
 .courses-image {
-  width: 34.375rem;
-  height: 31.25rem;
+  height: 33.25rem;
+  width: 100%;
   border-radius: 1.25rem;
   background: linear-gradient(
     0deg,
@@ -15,10 +16,10 @@
   );
 }
 .our-courses-card-image {
-  width: 34.375rem;
-  height: 31.25rem;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  /* border-radius: 1.25rem; */
+  border-radius: 1.25rem;
   border-top-left-radius: 1.25rem;
   border-top-right-radius: 1.25rem;
 }
@@ -53,9 +54,8 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  max-width: 70%;
+  max-width: 90%;
   text-align: left;
-  width: 70%;
 }
 .courses-btn {
   display: flex;
@@ -93,7 +93,7 @@
     height: auto;
     border-radius: 1rem;
   }
-  .our-courses-card-outer-div{
+  .our-courses-card-outer-div {
     display: flex;
     flex-direction: column;
     align-items: center;

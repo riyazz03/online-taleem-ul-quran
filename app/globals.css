@@ -104,6 +104,7 @@ body {
   gap: 40px;
   overflow: hidden;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 .section-btn p {
   color: var(--white);
@@ -122,28 +123,23 @@ body {
   width: 17px;
   height: auto;
   flex-shrink: 0;
+  transition: transform 0.3s ease; 
 }
 
 .section-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
   background-color: var(--main-color);
-}
-.section-btn:hover svg {
-  /* transform: translateX(5px); */
-  transition: transform 0.4s ease-in-out;
-  rotate: -45deg;
-}
-
-.section-btn:hover .arrow-icon {
-  transform: translateX(5px);
-  transition: transform 0.4s ease-in-out;
 }
 
 .section-btn:active {
   transform: scale(0.95);
   transition: transform 0.1s ease-in-out;
 }
+
+
+.section-btn:hover svg {
+  transform: rotate(-45deg); 
+}
+
 
 .arrow-icon {
   transition: transform 0.5s ease-in-out;
@@ -184,7 +180,6 @@ Button {
 }
 .course-detail-courses {
   margin: 50px auto;
-  min-height: 100vh;
 }
 
 @media (max-width: 768px) {

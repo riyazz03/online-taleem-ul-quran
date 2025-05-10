@@ -2,22 +2,24 @@
   /* margin: 50px auto; */
   z-index: 5;
   background-color: var(--background);
-  padding: 22px 144px 45px 0;
+  padding: 0 0 45px 0;
 }
 .learning-journey-container-ctc {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-flow: row-reverse;
-  gap: 88px;
+  /* gap: 88px; */
   z-index: 10;
+  width: 100%;
 }
 .learning-journey-content-ctc {
-  max-width: 733px;
+  /* max-width: 733px; */
   height: auto;
   display: flex;
   flex-direction: column;
   gap: 40px;
+  width: 47%;
 }
 .learning-journey-subtitle-ctc {
   color: #5da9a3;
@@ -64,7 +66,8 @@
   margin-bottom: 10px;
 }
 .learning-journey-image-div-ctc {
-  width: 827px;
+  /* width: 827px; */
+  width: 47%;
   height: 714px;
   overflow: hidden;
   position: relative;

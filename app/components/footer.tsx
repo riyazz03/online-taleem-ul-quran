@@ -91,17 +91,23 @@ const Footer = () => {
               {/*second link div */}
               <h4 className="footer-content-link-title">Our Courses</h4>
               <div className="footer-content-links-wrapper-div">
-                <Link href="/" className="footer-link">
+                <Link
+                  href="/course-details/quran-recitation"
+                  className="footer-link"
+                >
+                  Quran Recitation
+                </Link>
+                <Link
+                  href="/course-details/simplified-tajweed"
+                  className="footer-link"
+                >
                   Simplified Tajweed
                 </Link>
-                <Link href="/" className="footer-link">
-                  Arabic Language
-                </Link>
-                <Link href="/" className="footer-link">
+                <Link
+                  href="/course-details/quran-memorization"
+                  className="footer-link"
+                >
                   Quran Memorization
-                </Link>
-                <Link href="/" className="footer-link">
-                  Tafseer-Ul-Quran
                 </Link>
               </div>
             </div>{" "}
