@@ -4,6 +4,8 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import "@/app/css/HomePage/learning-journey.css";
+import Link from "next/link";
+import Button from "@/app/components/button";
 
 const LearningJourney = () => {
   const imageRef = useRef(null);
@@ -60,13 +62,9 @@ const LearningJourney = () => {
               connection with the Holy Quran.
             </h4>
 
-            <motion.button
-              className="learning-journey-btn"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              Know More
-            </motion.button>
+            <Link rel="stylesheet" href="/about-us">
+              <Button text="Know More" />
+            </Link>
           </div>
 
           {/* Static Wrapper */}
