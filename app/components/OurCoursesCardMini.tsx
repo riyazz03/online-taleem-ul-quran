@@ -20,7 +20,7 @@ const OurCoursesCardMini = ({
         <Image
           src={images}
           alt="our-courses-live-card"
-          width={450}
+          width={500}
           height={336}
           className="our-courses-card-image-ctc"
         />

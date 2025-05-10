@@ -160,3 +160,68 @@
     margin: 0 auto;
   }
 }
+
+
+
+@media screen and (max-width: 768px) {
+  .learning-journey {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    overflow: hidden;
+  }
+
+  .mosque-icon {
+    width: 100%;
+    height: auto;
+  }
+
+  .learning-journey-container {
+    flex-direction: column;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .learning-journey-content {
+    max-width: 100%;
+    padding: 0 1.5rem;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .learning-journey-title {
+    font-size: 1.75rem;
+    line-height: 2.2rem;
+  }
+
+  .learning-journey-description {
+    font-size: 1.125rem;
+    line-height: 1.8rem;
+    text-align: left;
+    width: 100%;
+  }
+
+  .learning-journey-btn {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    width: auto;
+    border-radius: 6px;
+  }
+
+  .learning-journey-image-div {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .learning-journey-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+}

@@ -1,14 +1,12 @@
 .our-courses-card-ctc {
-  /* width: 34.375rem; */
-  /* height: 45rem; */
   border-radius: 1.25rem;
   background: #fff;
-  width: 450px;
+  width: 550px;
   height: 554px;
 }
 .courses-image-ctc {
-  width: 450px;
-  height: 336px;
+  width: 100%;
+  height: 100%;
   flex-shrink: 0;
   border-radius: 1.25rem;
   background: linear-gradient(
@@ -18,8 +16,8 @@
   );
 }
 .our-courses-card-image-ctc {
-  width: 450px;
-  height: 336px;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   border-top-left-radius: 1.25rem;
   border-top-right-radius: 1.25rem;

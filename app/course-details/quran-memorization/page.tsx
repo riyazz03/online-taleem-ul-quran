@@ -58,6 +58,19 @@ const cardItemVariant = {
   },
 };
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (delay: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+      delay,
+    },
+  }),
+};
+
 const quranLearning = [
   {
     title: "Aqeeda",
@@ -103,13 +116,6 @@ const ourCoursesCard = [
   //     "Memorize the Quran with Expert Guidance Step-by-Step, Rooted in Tradition, Rewarded for Eternity.",
   //   link: "/course-details/quran-memorization",
   // },
-  {
-    image: "/Images/courses/quran-memorization.png",
-    title: "Arabic Language",
-    description:
-      "Learn to Recite with Beauty and Precision, Live Online, Anytime, Anywhere!",
-    link: "/course-details/quran-recitation",
-  },
 ];
 
 const QuranMemorization = () => {
@@ -117,16 +123,13 @@ const QuranMemorization = () => {
   const imageWrapperRef = useRef(null);
   const titleRef = useRef(null);
 
-  // const isImageInView = useInView(imageWrapperRef, {
-  //   once: true,
-  //   margin: "-50px",
-  // });
+
   const isTitleInView = useInView(titleRef, { once: true, margin: "-50px" });
 
   return (
     <main className="main">
       <section className="learning-journey-ctc">
-        <div className=" learning-journey-container-ctc">
+        <div className=" learning-journey-container-ctc mt-0">
           <div className="learning-journey-content-ctc">
             <p className="learning-journey-subtitle-ctc">COURSES</p>
             <motion.h1
@@ -172,66 +175,63 @@ const QuranMemorization = () => {
       <section className="quran-memorization-cards-section">
         <div className="padding-global">
           <div className="main-container">
-            <div className="quran-memorization-card-heading">
+            <motion.div
+              className="quran-memorization-card-heading"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
+            >
               <h1 className="section-title quran-memorization-card-title">
                 Say goodbye to stumbles—embrace the <br />
                 <span>smooth flow of Tilawat</span>
               </h1>
-            </div>
+            </motion.div>
+
             <div className="quran-memorization-cards-container">
-              <div className="quran-memorization-card card1">
-                <Image
-                  src="/assets/quran-memorization/card1.svg"
-                  alt="card1"
-                  height={73}
-                  width={73}
-                  className="quran-memorization-card-icon"
-                />
-                <p className="quran-memorization-card-description">
-                  Age knows no bounds in our diverse student community, spanning
-                  from <span> 4 to 56 years old.</span>
-                </p>
-              </div>
-              <div className="quran-memorization-card card2">
-                <Image
-                  src="/assets/quran-memorization/card2.svg"
-                  alt="card1"
-                  height={57}
-                  width={57}
-                  className="quran-memorization-card-icon"
-                />
-                <p className="quran-memorization-card-description">
-                  Should complete The Mastery Phase of our{" "}
-                  <span>Al-Hira Neo-Noorani Qaidah Course</span>
-                </p>
-              </div>
-              <div className="quran-memorization-card card3">
-                <Image
-                  src="/assets/quran-memorization/card3.svg"
-                  alt="card1"
-                  height={78}
-                  width={78}
-                  className="quran-memorization-card-icon"
-                />
-                <p className="quran-memorization-card-description">
-                  We provide a <span> Quran completion certificate</span>
-                  accredited by Quran Online India
-                </p>
-              </div>
-              <div className="quran-memorization-card card4">
-                <Image
-                  src="/assets/quran-memorization/card4.svg"
-                  alt="card1"
-                  height={66}
-                  width={66}
-                  className="quran-memorization-card-icon"
-                />
-                <p className="quran-memorization-card-description">
-                  Exclusive <span>One-on-One Sessions </span>for Uncompromised
-                  Development
-                </p>
-              </div>
+              {[...Array(4)].map((_, index) => (
+                <motion.div
+                  key={index}
+                  className={`quran-memorization-card card${index + 1}`}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  custom={0.2 * index}
+                  variants={fadeInUp}
+                >
+                  <Image
+                    src={`/assets/quran-memorization/card${index + 1}.svg`}
+                    alt={`card${index + 1}`}
+                    height={70}
+                    width={70}
+                    className="quran-memorization-card-icon"
+                  />
+                  <p className="quran-memorization-card-description">
+                    {
+                      [
+                        <>
+                          Age knows no bounds in our diverse student community,
+                          spanning from <span>4 to 56 years old.</span>
+                        </>,
+                        <>
+                          Should complete The Mastery Phase of our{" "}
+                          <span>Al-Hira Neo-Noorani Qaidah Course</span>
+                        </>,
+                        <>
+                          We provide a <span>Quran completion certificate</span>{" "}
+                          accredited by Quran Online India
+                        </>,
+                        <>
+                          Exclusive <span>One-on-One Sessions</span> for
+                          Uncompromised Development
+                        </>,
+                      ][index]
+                    }
+                  </p>
+                </motion.div>
+              ))}
             </div>
+
             <div className="blur-effect"></div>
           </div>
         </div>
@@ -243,6 +243,7 @@ const QuranMemorization = () => {
           width={1}
         />
       </section>
+
       <section className="quran-memorization-content-section">
         <div className="padding-gobal">
           <div className="main-container">
@@ -436,7 +437,7 @@ const QuranMemorization = () => {
                 variants={contentVariant}
                 transition={{ delay: 1 }}
               >
-                - Sahih Muslim, Book 31, Hadith 5920.
+                – Sahih Muslim, Book 31, &nbsp;&nbsp;&nbsp;&nbsp;Hadith 5920.
               </motion.h4>
             </div>
 
