@@ -69,8 +69,8 @@ body {
   .section-title {
     font-size: 30px;
     line-height: 140% !important;
-}
-  .section-description {  
+  }
+  .section-description {
     font-size: 18px;
     line-height: 140% !important;
   }
@@ -129,7 +129,7 @@ body {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
   background-color: var(--main-color);
 }
-.section-btn:hover svg{
+.section-btn:hover svg {
   /* transform: translateX(5px); */
   transition: transform 0.4s ease-in-out;
   rotate: -45deg;
@@ -153,37 +153,69 @@ Button {
   cursor: pointer;
 }
 
-
 /* button design  Ends*/
 
-.main{
+.main {
   background-color: var(--background);
   z-index: 9;
   position: relative;
   overflow: hidden;
 }
 
-
-.padding-global{
+.padding-global {
   padding: 0 2rem;
 }
 
 @media screen and (max-width: 768px) {
-  .padding-global{
+  .padding-global {
     padding: 0 0;
   }
 }
 
-.course-detail-title{
+.course-detail-title {
   width: 100%;
   text-align: center;
   margin-bottom: 51px;
 }
-.course-detail-cards{
+.course-detail-cards {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
+  gap: 40px;
 }
-.course-detail-courses{
+.course-detail-courses {
+  margin: 50px auto;
   min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .course-detail-courses {
+    margin: 40px auto;
+    padding: 0 16px;
+  }
+
+  .course-detail-title {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .course-detail-title .section-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .course-detail-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .course-detail-card {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

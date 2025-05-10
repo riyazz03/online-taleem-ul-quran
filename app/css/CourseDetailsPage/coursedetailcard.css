@@ -106,3 +106,79 @@
   font-weight: 400;
   line-height: normal;
 }
+
+
+@media screen and (max-width: 768px) {
+  .quran-memorization-cards-section {
+    margin: 30px 16px;
+  }
+
+  .quran-memorization-card-title {
+    font-size: 1.5rem;
+    height: auto;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .quran-memorization-cards-container {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    align-items: center;
+  }
+
+  .quran-memorization-card {
+    width: 90%;
+    height: auto;
+    padding: 24px 16px;
+    gap: 20px;
+  }
+
+  .card2,
+  .card4 {
+    margin-top: 0;
+  }
+
+  .quran-memorization-card-description {
+    font-size: 16px;
+    width: 100%;
+    height: auto;
+  }
+
+  .quran-memorization-card-description span {
+    font-size: 16px;
+  }
+
+  .blur-effect {
+    display: none;
+  }
+
+  .mosque-icon {
+    height: 40px;
+    width: auto;
+    left: 16px;
+    bottom: -10px;
+  }
+
+  .quran-memorization-content-container-ctc {
+    width: 100%;
+    padding: 0 16px;
+    gap: 24px;
+  }
+
+  .quran-memorization-content-container-ctc p {
+    font-size: 1rem;
+  }
+
+  .quran-memorization-content-box {
+    width: 100%;
+    height: auto;
+    padding: 24px;
+    gap: 24px;
+    border-radius: 16px;
+  }
+
+  .quran-memorization-content-box p {
+    font-size: 1rem;
+  }
+}
