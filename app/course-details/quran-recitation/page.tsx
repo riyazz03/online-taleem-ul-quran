@@ -96,33 +96,25 @@ const quranLearning = [
 
 const ourCoursesCard = [
   {
-    image: "/Images/courses/quran-recitation.png",
-    title: "Quran Recitation",
-    description:
-      "Unlock the Beauty of the Quran Master Recitation and Comprehension with Expert Guidance.",
-    link: "/course-details/quran-recitation",
-  },
-  {
     image: "/Images/courses/simplified-tajweed.png",
     title: "Simplified Tajweed",
     description:
       "Master the Art of Tajweed with Expert Guidance Live, Personalized, and at Your Pace!",
     link: "/course-details/simplified-tajweed",
   },
-  // {
-  //   image: "/Images/courses/arabic-language.png",
-  //   title: "Quran Memorization",
-  //   description:
-  //     "Memorize the Quran with Expert Guidance Step-by-Step, Rooted in Tradition, Rewarded for Eternity.",
-  //   link: "/course-details/quran-memorization",
-  // },
+  {
+    image: "/Images/courses/arabic-language.png",
+    title: "Quran Memorization",
+    description:
+      "Memorize the Quran with Expert Guidance Step-by-Step, Rooted in Tradition, Rewarded for Eternity.",
+    link: "/course-details/quran-memorization",
+  },
 ];
 
 const QuranMemorization = () => {
   const imageRef = useRef(null);
   const imageWrapperRef = useRef(null);
   const titleRef = useRef(null);
-
 
   const isTitleInView = useInView(titleRef, { once: true, margin: "-50px" });
 
@@ -139,15 +131,18 @@ const QuranMemorization = () => {
               animate={isTitleInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              <span>Quran Memorization Online</span>
+              <span>Quran Recitation Online</span>
             </motion.h1>
 
             <h4 className="learning-journey-description-ctc">
-              Our online Quran memorization classes offer a flexible, guided
-              path for both kids and adults, with female teachers available for
-              sisters. Memorize the entire Quran or selected Surahs at your
-              pace. It&apos;s a spiritual journey and a great blessing, as
-              encouraged by Prophet Muhammad (PBUH) for lasting rewards.
+              Reading the Qur&apos;an with Tajweed is fardh (obligatory) for
+              everyone, as it ensures correct pronunciation—especially important
+              during Salah, Dhikr, or when reading the Qur&apos;an.
+              Mispronunciation can alter meanings. In this course, we begin with
+              practical Tajweed and then focus on recitation. It&apos;s perfect
+              for complete beginners who&apos;ve never recited the Qur&apos;an
+              or studied Tajweed before. Start learning Tajweed online from the
+              basics, insha&apos;Allah.
               <span className="learning-journey-description-span-ctc">
                 {/* Online Taleem ul Quran */}
               </span>
@@ -162,7 +157,7 @@ const QuranMemorization = () => {
             <div>
               <Image
                 ref={imageRef}
-                src="/Images/quran-memorization.png"
+                src="/Images/courses/quran-recitation.png"
                 className="learning-journey-image-ctc"
                 alt="Learning Journey"
                 width={827}
@@ -253,99 +248,136 @@ const QuranMemorization = () => {
             <div className="quran-memorization-content-container-ctc">
               <br />
               <p>
-                An approach that has stood the test of time, preserved through
-                generations, rooted in tradition.
+                Learn Quranic Arabic and Connect with the Quran on a Deeper
+                Level
               </p>
               <p>
-                Sabaq (New Lesson)
-                <br />
-                Sabaq means new lessons. In which the teacher Listens the
-                recitation of the verses of the Holy Quran from the student and
-                practices to learn these verses with correct pronunciation and
-                accent first and then try to memorize it by repeating it many
-                times.
+                The Quran is a book of divine guidance that Muslims believe was
+                revealed to the Prophet Muhammad (peace be upon him) in Arabic.
+                Therefore, learning Quranic Arabic is essential for
+                understanding the Quran in its original language and connecting
+                with its message on a deeper level.
               </p>
               <p>
-                Instructor will help you with his Tips & Tricks to memorize
-                lessons during and after the class as well. The student has to
-                fully memorize this lesson before the next class.
+                Our Quranic Arabic course is designed to help students of all
+                levels learn the Arabic alphabet, grammar, and vocabulary, as
+                well as how to read and recite the Quran with proper
+                pronunciation and intonation. Our experienced teachers use a
+                variety of interactive teaching methods and materials to make
+                learning Arabic fun and engaging.
               </p>
               <p>
-                Sabaq Para (Revision) Sabaq Para means revision of the previous
-                lessons of the same juzz, The student has memorized in the
-                recent classes.
+                By learning Quran online, you will gain a deeper appreciation
+                and understanding of the Quran&apos;s message and themes. You will
+                also be able to recite and understand the Quran with more
+                confidence and clarity, allowing you to connect with its divine
+                guidance on a personal and spiritual level
               </p>
               <p>
-                The student will recite and the teacher will listen to him. Each
-                student has to recite Sabaq Para lessons in each class after the
-                new lesson so that he or she memorizes the last lessons very
-                well.
+                The Prophet (s) once said to ibn Mas&apo;ud, <br />
+                &quot;Recite to me some Qur&apos;ān&quot;
               </p>
               <p>
-                Purana Sabaq (Old Lesson)
-                <br />
-                Purana Sabaq means the revision of any juzz, the student has
-                memorized it already. In each class, the student will recite at
-                least half a juzz and the teacher will listen to him.
+                He replied, &quot;O messenger of Allāh! How can I recite it to you
+                whilst it was revealed to you?&quot;
+              </p>
+              <p>He said, &quot;I love to hear it from other than me.&quot;</p>
+              <p>
+                He said, &quot;So I started to read from Sūrat An-Nisā until I
+                reached the āyah that reads, &apos;So how will it be when We bring
+                from every nation a witness, and we bring you, O Muḥammad,
+                against these people as a witness?&quot;
               </p>
               <p>
-                It gives the student and teacher a kind of satisfaction and
-                surety that the student is memorizing more and more without
-                forgetting the previous lessons.
+                The Prophet (sall Allāhu &apos;alayhi wa sallam), at this point, said
+                to Ibn Mas&apos;ūd, “This is enough”.
               </p>
               <p>
-                Reap the benefits of memorizing The Quran <br />
-                Safe from the trial of Dajjal
+                Ibn Mas&apos;ūd said, &quot;I looked at him and he was shedding tears. -
+                Sahih Muslim, Book 31, Hadith 5920.
+              </p>
+              <div className="quran-memorization-content-heading">
+                Attainment of Jannah
+              </div>
+              <p>
+                &quot;The best among you are those who learn the Qur&apos;an and teach
+                it.&quot; (Bukhari, Hadith No. 5027)
+              </p>
+              <div className="quran-memorization-content-heading">
+                Source of Healing
+              </div>
+              <p>
+                &quot;We send down in the Qur&apos;an that which is a healing and a mercy
+                to those who believe.&quot; (Qur&apos;an 17:82) Forgiveness of Sins
               </p>
               <p>
-                The Prophet (PBUH) said,” Whoever memorizes ten verses from the{" "}
-                <br />
-                beginning of Surah Al Kahf, he will be protected from the
-                Dajjal.”
-              </p>
-              <p>(Muslim)</p>
-              <p>
-                The Highest Honour for the Parents of the Memoriser of the
-                Qur&apos;an
+                &quot;Whoever recites the Qur&apos;an and acts upon it, his parents will
+                be given a crown on the Day of Resurrection, the light of which
+                will be like the sun.&quot; (Abu Dawood, Hadith No. 1395)
               </p>
               <p>
-                &apos;Whosoever recites the Quran and practices upon its
-                injunctions, the reciter&apos;s parents will be given a crown on
-                the day of Qiyaamat. The brightness of that crown will be more
-                intense than the brightness of the sun in your actual
-                house.&apos; The Prophet (PBUH) further said: &apos;What do you
-                think will be given to the Hafiz (reciter) of the Quran
-                himself?’”
-              </p>
-              <p>(Mishkaat Vol I.)</p>
-              <p>Highest ranks of Jannah for the Memoriser of the Qur’an</p>
-              <p>
-                The Prophet (PBUH) said, “It will be said to the companion of
-                the Qur’aan after he has entered Paradise, ‘Recite, and rise!’
-                For every verse he recites he will rise one level (in Paradise),
-                until he recites the last verse with him (i.e., in his memory).”
-              </p>
-              <p>(Abu Dawood)</p>
-              <p>
-                Every letter the Memoriser of the Qur&apos;an recites is
-                rewarded ten
+                &quot;We send down in the Qur&apos;an that which is a healing and a mercy
+                to those who believe.&quot; (Qur&apos;an 17:82) Increase in Rank
               </p>
               <p>
-                “Whoever recites one Word from the Book of Allah will be
-                rewarded for a good deed and ten more like it; and I don’t say
-                that Alif Lam Mim is a letter but Alif is a letter and Lam is a
-                letter and Mim is a letter”
+                &quot;Recite the Qur&apos;an, for it will come on the Day of Resurrection
+                interceding for its companions.&quot; (Muslim, Hadith No. 804)
               </p>
-              <p>(Tirmidhi & Al-Dareemi)</p>
               <div className="quran-memorization-content-box">
-                <p>The Messenger of Allah صلی ‌اللہ ‌علیہ ‌وسلم said:</p>
                 <p>
-                  who was devoted to the Quran will be told to recite, ascend
-                  and recite carefully as he recited carefully when he was in
-                  the world, for he will reach his abode when he comes to the
-                  last verse he recites{" "}
+                  عَنْ عُثْمَانَ رضي الله عنه عَنِ النَّبِيِّ صلی الله عليه وآله
+                  وسلم قَالَ:خَيرُکُم مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ.
+                  رواه البخاري. وَفِي رِوَايَةٍ عَنْهُ: قَالَ النَّبِيُّ صلی
+                  الله عليه وآله وسلم: إِنَّ أَفْضَلَکُمْ مَنْ تَعَلَّمَ
+                  الْقُرآنَ وَعَلَّمَهُ. رواه البخاري. ”حضرت عثمان (بن عفان) رضی
+                  اللہ عنہ سے روایت ہے کہ حضور نبی اکرم صلی اللہ علیہ وآلہ وسلم
+                  نے فرمایا: تم میں سے بہتر وہ شخص ہے جو قرآن حکیم سیکھے اور
+                  سکھائے۔
                 </p>
-                <p>(Abu Dawood 1464)</p>
+                <p>
+                  &quot;The best among you is the one who learns the Qur&apos;an and
+                  teaches it.&quot;
+                  <br />
+                  &quot;Indeed, the most virtuous among you is the one who learns the
+                  Qur&apos;an and teaches it.&quot;
+                </p>
+                <p>
+                  تم میں سب سے بہتر وہ ہے جو قرآن سیکھے اور سکھائے۔, یقیناً تم
+                  میں سب سے افضل وہ ہے جو قرآن سیکھتا ہے اور سکھاتا ہے۔
+                </p>
+              </div>
+              <div className="quran-memorization-content-box">
+                <p>
+                  عَنْ عَائِشَةَ رضي اﷲ عنها قَالَتْ: قَالَ رَسُولُ اﷲِصلی الله
+                  عليه وآله وسلم: الْمَاهِرُ بِالْقُرْآنِ مَعَ السَّفَرَةِ
+                  الْکِرَامِ الْبَرَرَةِ، وَالَّذِي يَقْرَأُ الْقُرْآنَ
+                  وَيَتَتَعْتَعُ فِيْهِ، وَهُوَ عَلَيْهِ شَاقٌّ لَهُ أَجْرَانِ.
+                  وَفِي رِوايَةٍ: وَالَّذِي يَقْرَأُ وَهُوَ يَشْتَدُّ عَلَيْهِ
+                  لَهُ أَجْرَانِ. متفق عليه و هذا لفظ مسلم. ”حضرت عائشہ صدیقہ
+                  رضی اﷲ عنھا روایت فرماتی ہیں کہ حضور نبی اکرم صلی اللہ علیہ
+                  وآلہ وسلم نے فرمایا: قرآن مجید کا ماہر معزز و محترم فرشتوں اور
+                  معظم و مکرّم انبیاء علیہم السلام کے ساتھ ہوگا اور وہ شخص جو
+                  قرآن پڑھتا ہو لیکن اس میں اٹکتا ہو اور (پڑھنا) اس پر (کند ذہن
+                  یا موٹی زبان ہونے کی وجہ سے) مشکل ہو اس کے لئے بھی دوگنا اجر
+                  ہے۔ ”ایک دوسری روایت میں ہے کہ وہ شخص جو قرآن پڑھتا ہے حالانکہ
+                  یہ پڑھنا اس کے لئے سخت مشکل ہو، اس کے لئے دو اجر ہیں۔“
+                </p>
+                <p>
+                  &quot;The one who is proficient in the Qur&apos;an will be with the
+                  noble, righteous scribes (the angels); and the one who reads
+                  the Qur&apos;an and stammers while reading it, finding it
+                  difficult, will have a double reward.&quot;
+                  <br />
+                  &quot;The one who recites (the Qur&apos;an) with difficulty and hardship
+                  shall receive two rewards.&quot;
+                </p>
+                <p>
+                  قرآن مجید کا ماہر (یعنی جو روانی سے اور درست طریقے سے پڑھتا
+                  ہو) معزز، نیکوکار اور بلند مرتبہ فرشتوں کے ساتھ ہوگا۔ اور وہ
+                  شخص جو قرآن پڑھتا ہے لیکن اسے پڑھنے میں دقت محسوس ہوتی ہے، اس
+                  کے لئے دوگنا اجر ہے۔,وہ شخص جو قرآن پڑھتا ہے حالانکہ یہ پڑھنا
+                  اس کے لیے بہت مشکل ہوتا ہے، اس کے لیے دو اجر ہیں۔
+                </p>
               </div>
             </div>
           </div>
@@ -416,15 +448,15 @@ const QuranMemorization = () => {
               >
                 <p className="prophetic-hadith-description">
                   <span>
-                    The Prophet (sall Allāhu ʿalayhi wa sallam), at this point,
-                    said to Ibn Masʿūd,{" "}
+                    The Prophet (sall Allāhu &apos;alayhi wa sallam), at this point,
+                    said to Ibn Mas&apos;ūd,{" "}
                   </span>
-                  “This is enough”.
+                  &quot;This is enough&quot;.
                 </p>
                 <br />
                 <p className="prophetic-hadith-description">
-                  <span>Ibn Masʿūd said, </span>“I looked at him and he was
-                  shedding tears.”
+                  <span>Ibn Mas&apos;ūd said, </span>&quot;I looked at him and he was
+                  shedding tears.&quot;
                 </p>
               </motion.div>
 
@@ -479,7 +511,7 @@ const QuranMemorization = () => {
             >
               <div className="quran-learning-overview-heading">
                 <h1 className="section-title quran-learning-overview-title">
-                  Enrich Your recitation Journey with basics of{" "}
+                  Enrich Your recitation Journey with basics of
                   <span>Aqeeda, Seerat, Fiqh & Surahs</span>
                 </h1>
                 <p className="section-description quran-learning-overview-description">

@@ -109,20 +109,12 @@ const ourCoursesCard = [
       "Master the Art of Tajweed with Expert Guidance Live, Personalized, and at Your Pace!",
     link: "/course-details/simplified-tajweed",
   },
-  // {
-  //   image: "/Images/courses/arabic-language.png",
-  //   title: "Quran Memorization",
-  //   description:
-  //     "Memorize the Quran with Expert Guidance Step-by-Step, Rooted in Tradition, Rewarded for Eternity.",
-  //   link: "/course-details/quran-memorization",
-  // },
 ];
 
 const QuranMemorization = () => {
   const imageRef = useRef(null);
   const imageWrapperRef = useRef(null);
   const titleRef = useRef(null);
-
 
   const isTitleInView = useInView(titleRef, { once: true, margin: "-50px" });
 
@@ -143,11 +135,14 @@ const QuranMemorization = () => {
             </motion.h1>
 
             <h4 className="learning-journey-description-ctc">
-              Our online Quran memorization classes offer a flexible, guided
-              path for both kids and adults, with female teachers available for
-              sisters. Memorize the entire Quran or selected Surahs at your
-              pace. It&apos;s a spiritual journey and a great blessing, as
-              encouraged by Prophet Muhammad (PBUH) for lasting rewards.
+              Reading the Qur&apos;an with Tajweed is fardh (obligatory) for
+              everyone, as it ensures correct pronunciation—especially important
+              during Salah, Dhikr, or when reading the Qur&apos;an.
+              Mispronunciation can alter meanings. In this course, we begin with
+              practical Tajweed and then focus on recitation. It&apos;s perfect
+              for complete beginners who&apos;ve never recited the Qur&apos;an
+              or studied Tajweed before. Start learning Tajweed online from the
+              basics, insha&apos;Allah.
               <span className="learning-journey-description-span-ctc">
                 {/* Online Taleem ul Quran */}
               </span>
@@ -162,7 +157,7 @@ const QuranMemorization = () => {
             <div>
               <Image
                 ref={imageRef}
-                src="/Images/quran-memorization.png"
+                src="/Images/courses/arabic-language.png"
                 className="learning-journey-image-ctc"
                 alt="Learning Journey"
                 width={827}
@@ -320,10 +315,11 @@ const QuranMemorization = () => {
               <p>(Mishkaat Vol I.)</p>
               <p>Highest ranks of Jannah for the Memoriser of the Qur’an</p>
               <p>
-                The Prophet (PBUH) said, “It will be said to the companion of
-                the Qur’aan after he has entered Paradise, ‘Recite, and rise!’
-                For every verse he recites he will rise one level (in Paradise),
-                until he recites the last verse with him (i.e., in his memory).”
+                The Prophet (PBUH) said, &quot;It will be said to the companion
+                of the Qur&apos;aan after he has entered Paradise, &apos;Recite,
+                and rise!&apos; For every verse he recites he will rise one
+                level (in Paradise), until he recites the last verse with him
+                (i.e., in his memory).&quot;
               </p>
               <p>(Abu Dawood)</p>
               <p>
@@ -331,10 +327,10 @@ const QuranMemorization = () => {
                 rewarded ten
               </p>
               <p>
-                “Whoever recites one Word from the Book of Allah will be
-                rewarded for a good deed and ten more like it; and I don’t say
-                that Alif Lam Mim is a letter but Alif is a letter and Lam is a
-                letter and Mim is a letter”
+                &quot;Whoever recites one Word from the Book of Allah will be
+                rewarded for a good deed and ten more like it; and I don&apos;t
+                say that Alif Lam Mim is a letter but Alif is a letter and Lam
+                is a letter and Mim is a letter&quot;
               </p>
               <p>(Tirmidhi & Al-Dareemi)</p>
               <div className="quran-memorization-content-box">
@@ -398,10 +394,11 @@ const QuranMemorization = () => {
                   <span>He said, </span>“I love to hear it from other than me.”
                 </p>
                 <p className="prophetic-hadith-description">
-                  <span>He said, </span>“So I started to read from Sūrat An-Nisā
-                  until I reached the āyah that reads, &rsquo;So how will it be
-                  when We bring from every nation a witness, and we bring you, O
-                  Muḥammad, against these people as a witness?’”
+                  <span>He said, </span>&quot;So I started to read from Sūrat
+                  An-Nisā until I reached the āyah that reads, &rsquo;So how
+                  will it be when We bring from every nation a witness, and we
+                  bring you, O Muḥammad, against these people as a
+                  witness?&apos;&quot;
                 </p>
               </motion.div>
 
@@ -416,15 +413,15 @@ const QuranMemorization = () => {
               >
                 <p className="prophetic-hadith-description">
                   <span>
-                    The Prophet (sall Allāhu ʿalayhi wa sallam), at this point,
-                    said to Ibn Masʿūd,{" "}
+                    The Prophet (sall Allāhu &apos;alayhi wa sallam), at this
+                    point, said to Ibn Mas&apos;ūd,{" "}
                   </span>
                   “This is enough”.
                 </p>
                 <br />
                 <p className="prophetic-hadith-description">
-                  <span>Ibn Masʿūd said, </span>“I looked at him and he was
-                  shedding tears.”
+                  <span>Ibn Mas&apos;ūd said, </span>&quot;I looked at him and
+                  he was shedding tears.&quot;
                 </p>
               </motion.div>
 

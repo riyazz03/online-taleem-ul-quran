@@ -123,7 +123,6 @@ const QuranMemorization = () => {
   const imageWrapperRef = useRef(null);
   const titleRef = useRef(null);
 
-
   const isTitleInView = useInView(titleRef, { once: true, margin: "-50px" });
 
   return (
@@ -139,15 +138,22 @@ const QuranMemorization = () => {
               animate={isTitleInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
-              <span>Quran Memorization Online</span>
+              <span>Simplified Tajweed Online</span>
             </motion.h1>
 
             <h4 className="learning-journey-description-ctc">
-              Our online Quran memorization classes offer a flexible, guided
-              path for both kids and adults, with female teachers available for
-              sisters. Memorize the entire Quran or selected Surahs at your
-              pace. It&apos;s a spiritual journey and a great blessing, as
-              encouraged by Prophet Muhammad (PBUH) for lasting rewards.
+              Reading the Qur&apos;an with the Tajweed is fardh / obligatory upon
+              every single person, why? because you could be reciting the Quran
+              when you offer salah, you’re reciting the Quran when you do a
+              Dhiker, you recite the Quran when you open the Quran itself. You
+              could be is reading one thing according to you and if you&apos;re not
+              pronouncing the words properly you could be changing the whole
+              meaning of the Quran. we have a certain period where we teach the
+              practical tajweed, then after that, we will concentrate on the
+              recitation. This course is for complete beginners if you&apos;ve never
+              recited Quran before you never studied Tajweed before, this course
+              is for you insha&apos;Allah. Now you can get registered and learn
+              tajweed online right from the beginning inshallah.
               <span className="learning-journey-description-span-ctc">
                 {/* Online Taleem ul Quran */}
               </span>
@@ -162,7 +168,7 @@ const QuranMemorization = () => {
             <div>
               <Image
                 ref={imageRef}
-                src="/Images/quran-memorization.png"
+                src="/Images/courses/simplified-tajweed.png"
                 className="learning-journey-image-ctc"
                 alt="Learning Journey"
                 width={827}

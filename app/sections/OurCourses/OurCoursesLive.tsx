@@ -28,13 +28,6 @@ const ourCoursesCard = [
       "Memorize the Quran with Expert Guidance Step-by-Step, Rooted in Tradition, Rewarded for Eternity.",
     link: "/course-details/quran-memorization",
   },
-  {
-    image: "/Images/courses/quran-memorization.png",
-    title: "Arabic Language",
-    description:
-      "Learn to Recite with Beauty and Precision, Live Online, Anytime, Anywhere!",
-    link: "/course-details/quran-recitation",
-  },
 ];
 
 const titleVariants = {
