@@ -54,9 +54,6 @@
   .faq-questions.active svg {
     transform: rotate(45deg);
   }
-  .faq-answers-p {
-    font-size: 15px;
-  }
   .faq-question-h3 {
     font-size: 15px;
     text-align: left;
@@ -108,21 +105,9 @@
   .faq-answers {
     overflow: hidden;
   }
-
-  /* .faq-answers-p {
-    color: var(--gray);
-    font-size: 1.5vw;
-    font-weight: 400;
-    line-height: 2vh;
-    letter-spacing: -0.2vw;
-    margin-bottom: 2vh;
-    max-width: 90%;
-    padding: 1rem 0;
-    word-break: break-word;
-  } */
   .faq-answers-p {
     color: var(--gray);
-    font-size: 14px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;

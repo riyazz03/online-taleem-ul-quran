@@ -242,11 +242,10 @@ const QuranMemorization = () => {
       <section className="quran-memorization-content-section">
         <div className="padding-gobal">
           <div className="main-container">
-            <div className="quran-memorization-content-heading">
-              Our Approach
-            </div>
             <div className="quran-memorization-content-container-ctc">
-              <br />
+              <div className="quran-memorization-content-heading">
+                Our Approach
+              </div>
               <p>
                 Learn Quranic Arabic and Connect with the Quran on a Deeper
                 Level
@@ -268,8 +267,8 @@ const QuranMemorization = () => {
               </p>
               <p>
                 By learning Quran online, you will gain a deeper appreciation
-                and understanding of the Quran&apos;s message and themes. You will
-                also be able to recite and understand the Quran with more
+                and understanding of the Quran&apos;s message and themes. You
+                will also be able to recite and understand the Quran with more
                 confidence and clarity, allowing you to connect with its divine
                 guidance on a personal and spiritual level
               </p>
@@ -278,50 +277,54 @@ const QuranMemorization = () => {
                 &quot;Recite to me some Qur&apos;ān&quot;
               </p>
               <p>
-                He replied, &quot;O messenger of Allāh! How can I recite it to you
-                whilst it was revealed to you?&quot;
+                He replied, &quot;O messenger of Allāh! How can I recite it to
+                you whilst it was revealed to you?&quot;
               </p>
               <p>He said, &quot;I love to hear it from other than me.&quot;</p>
               <p>
                 He said, &quot;So I started to read from Sūrat An-Nisā until I
-                reached the āyah that reads, &apos;So how will it be when We bring
-                from every nation a witness, and we bring you, O Muḥammad,
+                reached the āyah that reads, &apos;So how will it be when We
+                bring from every nation a witness, and we bring you, O Muḥammad,
                 against these people as a witness?&quot;
               </p>
               <p>
-                The Prophet (sall Allāhu &apos;alayhi wa sallam), at this point, said
-                to Ibn Mas&apos;ūd, “This is enough”.
+                The Prophet (sall Allāhu &apos;alayhi wa sallam), at this point,
+                said to Ibn Mas&apos;ūd, “This is enough”.
               </p>
               <p>
-                Ibn Mas&apos;ūd said, &quot;I looked at him and he was shedding tears. -
-                Sahih Muslim, Book 31, Hadith 5920.
+                Ibn Mas&apos;ūd said, &quot;I looked at him and he was shedding
+                tears. - Sahih Muslim, Book 31, Hadith 5920.
               </p>
               <div className="quran-memorization-content-heading">
                 Attainment of Jannah
               </div>
               <p>
-                &quot;The best among you are those who learn the Qur&apos;an and teach
-                it.&quot; (Bukhari, Hadith No. 5027)
+                &quot;The best among you are those who learn the Qur&apos;an and
+                teach it.&quot; (Bukhari, Hadith No. 5027)
               </p>
               <div className="quran-memorization-content-heading">
                 Source of Healing
               </div>
               <p>
-                &quot;We send down in the Qur&apos;an that which is a healing and a mercy
-                to those who believe.&quot; (Qur&apos;an 17:82) Forgiveness of Sins
+                &quot;We send down in the Qur&apos;an that which is a healing
+                and a mercy to those who believe.&quot; (Qur&apos;an 17:82)
+                Forgiveness of Sins
               </p>
               <p>
-                &quot;Whoever recites the Qur&apos;an and acts upon it, his parents will
-                be given a crown on the Day of Resurrection, the light of which
-                will be like the sun.&quot; (Abu Dawood, Hadith No. 1395)
+                &quot;Whoever recites the Qur&apos;an and acts upon it, his
+                parents will be given a crown on the Day of Resurrection, the
+                light of which will be like the sun.&quot; (Abu Dawood, Hadith
+                No. 1395)
               </p>
               <p>
-                &quot;We send down in the Qur&apos;an that which is a healing and a mercy
-                to those who believe.&quot; (Qur&apos;an 17:82) Increase in Rank
+                &quot;We send down in the Qur&apos;an that which is a healing
+                and a mercy to those who believe.&quot; (Qur&apos;an 17:82)
+                Increase in Rank
               </p>
               <p>
-                &quot;Recite the Qur&apos;an, for it will come on the Day of Resurrection
-                interceding for its companions.&quot; (Muslim, Hadith No. 804)
+                &quot;Recite the Qur&apos;an, for it will come on the Day of
+                Resurrection interceding for its companions.&quot; (Muslim,
+                Hadith No. 804)
               </p>
               <div className="quran-memorization-content-box">
                 <p>
@@ -335,11 +338,11 @@ const QuranMemorization = () => {
                   سکھائے۔
                 </p>
                 <p>
-                  &quot;The best among you is the one who learns the Qur&apos;an and
-                  teaches it.&quot;
+                  &quot;The best among you is the one who learns the Qur&apos;an
+                  and teaches it.&quot;
                   <br />
-                  &quot;Indeed, the most virtuous among you is the one who learns the
-                  Qur&apos;an and teaches it.&quot;
+                  &quot;Indeed, the most virtuous among you is the one who
+                  learns the Qur&apos;an and teaches it.&quot;
                 </p>
                 <p>
                   تم میں سب سے بہتر وہ ہے جو قرآن سیکھے اور سکھائے۔, یقیناً تم
@@ -363,13 +366,13 @@ const QuranMemorization = () => {
                   یہ پڑھنا اس کے لئے سخت مشکل ہو، اس کے لئے دو اجر ہیں۔“
                 </p>
                 <p>
-                  &quot;The one who is proficient in the Qur&apos;an will be with the
-                  noble, righteous scribes (the angels); and the one who reads
-                  the Qur&apos;an and stammers while reading it, finding it
-                  difficult, will have a double reward.&quot;
+                  &quot;The one who is proficient in the Qur&apos;an will be
+                  with the noble, righteous scribes (the angels); and the one
+                  who reads the Qur&apos;an and stammers while reading it,
+                  finding it difficult, will have a double reward.&quot;
                   <br />
-                  &quot;The one who recites (the Qur&apos;an) with difficulty and hardship
-                  shall receive two rewards.&quot;
+                  &quot;The one who recites (the Qur&apos;an) with difficulty
+                  and hardship shall receive two rewards.&quot;
                 </p>
                 <p>
                   قرآن مجید کا ماہر (یعنی جو روانی سے اور درست طریقے سے پڑھتا
@@ -448,15 +451,15 @@ const QuranMemorization = () => {
               >
                 <p className="prophetic-hadith-description">
                   <span>
-                    The Prophet (sall Allāhu &apos;alayhi wa sallam), at this point,
-                    said to Ibn Mas&apos;ūd,{" "}
+                    The Prophet (sall Allāhu &apos;alayhi wa sallam), at this
+                    point, said to Ibn Mas&apos;ūd,{" "}
                   </span>
                   &quot;This is enough&quot;.
                 </p>
                 <br />
                 <p className="prophetic-hadith-description">
-                  <span>Ibn Mas&apos;ūd said, </span>&quot;I looked at him and he was
-                  shedding tears.&quot;
+                  <span>Ibn Mas&apos;ūd said, </span>&quot;I looked at him and
+                  he was shedding tears.&quot;
                 </p>
               </motion.div>
 

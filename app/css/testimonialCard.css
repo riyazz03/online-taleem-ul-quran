@@ -1,51 +1,56 @@
-.cards{
-    height: 18.75rem;
-    width: 18.75rem; 
-    display: flex;
-    flex-direction: column;
-    border-radius: 0.9375rem;
-    justify-content: center;
-    align-items: center; 
-    overflow-x: hidden;
-    background: #F0FDFD;
-    position: relative;
-    z-index: 2;
+.cards {
+  height: 18.75rem;
+  width: 18.75rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.9375rem;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  background: #f0fdfd;
+  position: relative;
+  z-index: 2;
 }
-.card-name-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    gap: 5px;
+.card-name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 5px;
 }
-.card-name-dot{
-    height: 5px;
-    width: 5px;
-    position: relative;
-    top: 15%;
-    border-radius: 50%;
-    background-color: black;
+.card-name-dot {
+  height: 5px;
+  width: 5px;
+  position: relative;
+  top: 15%;
+  border-radius: 50%;
+  background-color: black;
 }
-.card-name{
-    color: var(--text-color-primary);
-    font-family: var(--font-griffy);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 12px;
+.card-name {
+  color: var(--text-color-primary);
+  font-family: var(--font-griffy);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 12px;
 }
-.card-review{
-    color: var(--text-color-primary);
-    text-align: center;
-    font-family: "DM Sans";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    letter-spacing: 0.16px;
+.card-content {
+  margin-top: 12px;
+  transform: rotate(0.099deg);
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
-.card-content{
-    margin-top: 12px;
-    transform: rotate(0.099deg);
+.card-review {
+  color: var(--text-color-primary);
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.16px;
+  width: 90%;
 }

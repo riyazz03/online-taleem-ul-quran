@@ -23,3 +23,10 @@
   padding-left: 20px; 
   margin: 0; 
 }
+
+/* @media screen and (max-width: 768px) {
+  .quran-memorization-content-heading{
+    width: 250px;
+    margin-left: 15px;
+  }
+} */
