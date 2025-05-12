@@ -4,8 +4,8 @@
   z-index: 5;
   position: relative;
 }
-.free-trial-container{
-    position: relative;
+.free-trial-container {
+  position: relative;
 }
 .free-trial-image {
   position: relative;
@@ -20,8 +20,8 @@
   height: 100%;
   z-index: 5;
 }
-.free-trial-content{
-    position: relative;
+.free-trial-content {
+  position: relative;
 }
 .free-trial-title {
   color: #fff;
@@ -85,21 +85,20 @@
   line-height: normal;
   letter-spacing: -0.4px;
   padding: 0 20px;
-  appearance: none; 
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   position: relative;
   border: 1px solid #ccc;
-  
 }
 .free-trial-drop-down-section::after {
-  content: "▼"; 
+  content: "▼";
   font-size: 14px;
   position: absolute;
   top: 50%;
-  right: 15px; 
+  right: 15px;
   transform: translateY(-50%);
-  pointer-events: none; 
+  pointer-events: none;
   color: white;
 }
 .trial-offer {
@@ -228,5 +227,9 @@
 
   .trial-offer-features-paragraph {
     font-size: 1rem;
+  }
+  .free-trial-drop-down-section {
+    position: relative;
+    display: flex;
   }
 }

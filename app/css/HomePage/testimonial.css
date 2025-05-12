@@ -244,4 +244,13 @@
     filter: blur(7vw);
     z-index: 1;
   }
+  .swiper-button-next {
+    right: 0px !important;
+    left: auto !important;
+  }
+
+  .swiper-button-prev {
+    left: 0px !important;
+    right: auto !important;
+  }
 }

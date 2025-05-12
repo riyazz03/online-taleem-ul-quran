@@ -241,11 +241,10 @@ const QuranMemorization = () => {
       <section className="quran-memorization-content-section">
         <div className="padding-gobal">
           <div className="main-container">
-            <div className="quran-memorization-content-heading">
-              Course Outline
-            </div>
             <div className="quran-memorization-content-container-ctc">
-              <br />
+              <div className="quran-memorization-content-heading">
+                Course Outline
+              </div>
               <p>
                 The course will focus on the application oftajweed rules when
                 reciting Quran including but not limited to the following
@@ -312,12 +311,12 @@ const QuranMemorization = () => {
               <div className="quran-memorization-content-heading">Level 3</div>
               <p>
                 This is the final level of online Tajweed courses, at this
-                level, you&apos;ll learn the rules of Waqf (rules about stopping at
-                the end of the verse or in the middle), and you&apos;ll also revise
-                what you&apos;ve learned in the first and second level and implement
-                it while reciting the Quran, some exception of rules you&apos;ve
-                learned, and reading the holy Quran with Tarteel (in very slow
-                motion), etc.
+                level, you&apos;ll learn the rules of Waqf (rules about stopping
+                at the end of the verse or in the middle), and you&apos;ll also
+                revise what you&apos;ve learned in the first and second level
+                and implement it while reciting the Quran, some exception of
+                rules you&apos;ve learned, and reading the holy Quran with
+                Tarteel (in very slow motion), etc.
               </p>
               <p>
                 learn tajweed online, learn quran with tajweed online, kids,
@@ -327,8 +326,8 @@ const QuranMemorization = () => {
               </p>
               <p>
                 Female Quran Teachers for Sisters In this course we will cover
-                all aspects of tajweed, you can join this course if you&apos;re a
-                beginner or you know some tajweed basics and want to get the
+                all aspects of tajweed, you can join this course if you&apos;re
+                a beginner or you know some tajweed basics and want to get the
                 knowledge of tajweed deeply. this course is specially designed
                 for sisters and instructed by female tajweed tutors online.
               </p>
@@ -352,8 +351,8 @@ const QuranMemorization = () => {
                 </p>
                 <p>
                   &quot;Allah listens more attentively to a person reciting the
-                  Qur&apos;an than a man does to his singing slave-girl.&quot; (Ibn Majah,
-                  Al-Hakim)
+                  Qur&apos;an than a man does to his singing slave-girl.&quot;
+                  (Ibn Majah, Al-Hakim)
                 </p>
                 <p>
                   اللہ تعالیٰ قرآن پڑھنے والے کی آواز کی طرف اس شخص سے زیادہ
@@ -371,9 +370,10 @@ const QuranMemorization = () => {
                   آواز قرآن کے حسن کوبڑھادیتی ہے(شعب الایمان)۔
                 </p>
                 <p>
-                  &quot;Recite the Qur&apos;an with the melodies and tones of the Arabs.&quot;
-                  <br /> &quot;Beautify the Qur&apos;an with your voices, for a beautiful
-                  voice enhances the beauty of the Qur&apos;an.&quot;
+                  &quot;Recite the Qur&apos;an with the melodies and tones of
+                  the Arabs.&quot;
+                  <br /> &quot;Beautify the Qur&apos;an with your voices, for a
+                  beautiful voice enhances the beauty of the Qur&apos;an.&quot;
                 </p>
                 <p>
                   قرآن کو عرب کے لہجے اور ان کی آواز میں پڑھو۔,اچھی آواز سے قرآن
@@ -386,10 +386,11 @@ const QuranMemorization = () => {
                   کی ہے(الاتقان فی علوم القرآن)
                 </p>
                 <p>
-                  &quot;And recite the Qur&apos;an with measured, rhythmic tones.&quot;
-                  <br /> &quot;Pronouncing each letter correctly (Tajweed al-Huruf)
-                  and understanding the appropriate places to pause (Ma&apos;rifat
-                  al-Wuqoof).&quot;
+                  &quot;And recite the Qur&apos;an with measured, rhythmic
+                  tones.&quot;
+                  <br /> &quot;Pronouncing each letter correctly (Tajweed
+                  al-Huruf) and understanding the appropriate places to pause
+                  (Ma&apos;rifat al-Wuqoof).&quot;
                 </p>
                 <p>
                   اور قرآن کو ٹھہر ٹھہر کر، صاف صاف اور عمدہ طریقے سے پڑھو۔
@@ -465,15 +466,15 @@ const QuranMemorization = () => {
               >
                 <p className="prophetic-hadith-description">
                   <span>
-                    The Prophet (sall Allāhu &apos;alayhi wa sallam), at this point,
-                    said to Ibn Mas&apos;ūd,{" "}
+                    The Prophet (sall Allāhu &apos;alayhi wa sallam), at this
+                    point, said to Ibn Mas&apos;ūd,{" "}
                   </span>
                   “This is enough”.
                 </p>
                 <br />
                 <p className="prophetic-hadith-description">
-                  <span>Ibn Mas&apos;ūd said, </span>&quot;I looked at him and he was
-                  shedding tears.&quot;
+                  <span>Ibn Mas&apos;ūd said, </span>&quot;I looked at him and
+                  he was shedding tears.&quot;
                 </p>
               </motion.div>
 

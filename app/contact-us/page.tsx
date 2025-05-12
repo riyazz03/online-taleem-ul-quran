@@ -10,6 +10,7 @@ const ContactUs = () => {
     name: "",
     email: "",
     phone: "",
+    whatsapp: "",
     course: "",
     message: "",
     date: "",
@@ -158,11 +159,11 @@ const ContactUs = () => {
                     What&apos;sApp Number
                   </label>
                   <input
-                    id="phone"
-                    name="phone"
+                    id="whatsapp"
+                    name="whatsapp"
                     type="tel"
                     placeholder="91+ 12345 67890"
-                    value={formData.phone}
+                    value={formData.whatsapp}
                     onChange={handleChange}
                     required
                     className="form-input"

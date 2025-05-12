@@ -242,11 +242,10 @@ const QuranMemorization = () => {
       <section className="quran-memorization-content-section">
         <div className="padding-gobal">
           <div className="main-container">
-            <div className="quran-memorization-content-heading">
-              Our Approach
-            </div>
             <div className="quran-memorization-content-container-ctc">
-              <br />
+              <div className="quran-memorization-content-heading">
+                Our Approach
+              </div>
               <p>
                 An approach that has stood the test of time, preserved through
                 generations, rooted in tradition.

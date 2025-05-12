@@ -109,13 +109,6 @@ const ourCoursesCard = [
       "Master the Art of Tajweed with Expert Guidance Live, Personalized, and at Your Pace!",
     link: "/course-details/simplified-tajweed",
   },
-  // {
-  //   image: "/Images/courses/arabic-language.png",
-  //   title: "Quran Memorization",
-  //   description:
-  //     "Memorize the Quran with Expert Guidance Step-by-Step, Rooted in Tradition, Rewarded for Eternity.",
-  //   link: "/course-details/quran-memorization",
-  // },
 ];
 
 const QuranMemorization = () => {
