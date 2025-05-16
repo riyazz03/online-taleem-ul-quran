@@ -232,11 +232,16 @@ const ContactUs = () => {
                     id="phone"
                     name="phone"
                     type="tel"
-                    pattern="\d{10}"
-                    title="Enter exactly 10 digits"
+                    inputMode="numeric"
+                    maxLength={10}
                     placeholder="1234567890"
                     value={formData.phone}
-                    onChange={handleChange}
+                    onChange={(e) => {
+                      const onlyNums = e.target.value.replace(/\D/g, ""); // Remove non-digits
+                      if (onlyNums.length <= 10) {
+                        setFormData({ ...formData, phone: onlyNums });
+                      }
+                    }}
                     required
                     className="form-input"
                   />
@@ -249,11 +254,16 @@ const ContactUs = () => {
                     id="whatsapp"
                     name="whatsapp"
                     type="tel"
-                    pattern="\d{10}"
-                    title="Enter exactly 10 digits"
+                    inputMode="numeric"
+                    maxLength={10}
                     placeholder="1234567890"
                     value={formData.whatsapp}
-                    onChange={handleChange}
+                    onChange={(e) => {
+                      const onlyNums = e.target.value.replace(/\D/g, ""); // Remove non-digits
+                      if (onlyNums.length <= 10) {
+                        setFormData({ ...formData, whatsapp: onlyNums });
+                      }
+                    }}
                     required
                     className="form-input"
                   />
