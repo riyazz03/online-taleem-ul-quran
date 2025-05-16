@@ -4,8 +4,11 @@ import React, { useState, useEffect, useRef } from "react";
 import "../css/contactUs.css";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 const ContactUs = () => {
+  const form = useRef<HTMLFormElement | null>(null);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -90,6 +93,19 @@ const ContactUs = () => {
         setSelectedDate("");
       })
       .catch((error) => console.error(error));
+
+    emailjs
+      .sendForm("service_r36maoy", "template_78iu1vr", form.current!, {
+        publicKey: "9GwxlluH6w4vlxKbe",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   const fadeInUp = {
@@ -111,7 +127,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="contact-us-section">
+    <div className="contact-us-section mt-25">
       <Image
         src="/assets/Icons/Grids.svg"
         alt="Logo"
@@ -141,7 +157,11 @@ const ContactUs = () => {
               </h1>
             </motion.div>
             <div className="contact-us-form-content">
-              <form onSubmit={handleSubmit} className="contact-us-form-block">
+              <form
+                ref={form}
+                onSubmit={handleSubmit}
+                className="contact-us-form-block"
+              >
                 <div className="form-input-block">
                   <label htmlFor="name" className="form-label-title">
                     Name
