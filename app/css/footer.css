@@ -45,9 +45,6 @@
   display: flex;
   gap: 10px;
 }
-.footer-logo{
-  /* margin-top: -50px; */
-}
 .crayont-div {
   position: absolute;
   bottom: 40px;

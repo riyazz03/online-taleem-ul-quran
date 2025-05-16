@@ -308,9 +308,9 @@ const ContactUs = () => {
                   >
                     <option value="">Select Your Date</option>
                     <option
-                      value={new Date()
+                      value={`Today (${new Date()
                         .toLocaleDateString("en-GB")
-                        .replace(/\//g, "-")}
+                        .replace(/\//g, "-")})`}
                     >
                       Today (
                       {new Date()
@@ -319,9 +319,9 @@ const ContactUs = () => {
                       )
                     </option>
                     <option
-                      value={new Date(Date.now() + 86400000)
+                      value={`Tomorrow (${new Date(Date.now() + 86400000)
                         .toLocaleDateString("en-GB")
-                        .replace(/\//g, "-")}
+                        .replace(/\//g, "-")})`}
                     >
                       Tomorrow (
                       {new Date(Date.now() + 86400000)
@@ -329,7 +329,9 @@ const ContactUs = () => {
                         .replace(/\//g, "-")}
                       )
                     </option>
-                    <option value={nextDay}>{nextDay}</option>
+                    <option value={`Day After Tomorrow (${nextDay})`}>
+                      Day After Tomorrow ({nextDay})
+                    </option>
                   </select>
                 </div>
                 <button
