@@ -163,6 +163,7 @@ Button {
   z-index: 9;
   position: relative;
   overflow: hidden;
+  margin-top: 144px;
 }
 
 .padding-global {

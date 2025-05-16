@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/navbar.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,6 +8,8 @@ import { usePathname } from "next/navigation";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const pathname = usePathname();
 
   const toggleMenu = (): void => {
@@ -18,8 +20,29 @@ const Navbar: React.FC = () => {
     setIsMenuOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setShowNavbar(false); // Scroll Down - Hide
+      } else {
+        setShowNavbar(true); // Scroll Up - Show
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <nav className="navbar">
+    <nav
+      className={`navbar ${
+        showNavbar ? "navbar-visible" : "navbar-hidden"
+      }`}
+    >
       <div className="nav-container">
         <div className="nav-logo-wrapper">
           <Link href="/">

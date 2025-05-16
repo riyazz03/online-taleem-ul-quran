@@ -57,7 +57,7 @@ const Footer = () => {
           <div className="footer-logo-image">
             <Link href="/">
               <Image
-                src="/Images/logo.svg"
+                src="/Images/footer-logo.svg"
                 alt="footer-logo"
                 className="footer-logo"
                 height={62}
