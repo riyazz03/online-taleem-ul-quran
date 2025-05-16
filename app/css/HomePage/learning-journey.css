@@ -86,12 +86,12 @@
     text-align: center;
     z-index: 10;
   }
-  .mosque-icon {
+  /* .mosque-icon {
     min-width: 1300px;
     height: 110px;
     margin: 0;
     padding: 0;
-  }
+  } */
   .learning-journey-content {
     gap: 20px;
   }
@@ -173,11 +173,11 @@
     overflow: hidden;
   }
 
-  .mosque-icon {
+  /* .mosque-icon {
     width: 100%;
     height: auto;
     right: 0 !important;
-  }
+  } */
 
   .learning-journey-container {
     flex-direction: column;

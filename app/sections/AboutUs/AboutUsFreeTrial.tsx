@@ -23,7 +23,7 @@ const AboutUsFreeTrial = () => {
       <Image
         src="/assets/Icons/left-mosque-icon.svg"
         alt="Right Arrow"
-        className="mosque-icon"
+        className="right-mosque-icon"
         height={1}
         width={1}
       />
@@ -70,14 +70,14 @@ const AboutUsFreeTrial = () => {
 
             {/* Free Trial Offer Animation */}
             <motion.div
-              className="trial-offer"
+              className="about-us-trial-offer"
               variants={fadeInUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
             >
-              <h2 className="trial-offer-title">Claim Your Free Trial ! ✧₊⁺</h2>
-              <div className="trial-offer-features-block">
+              <h2 className="about-us-trial-offer-title">Claim Your Free Trial ! ✧₊⁺</h2>
+              <div className="about-us-trial-offer-features-block">
                 {[
                   "Expert & Certified Tutors",
                   "Affordable & Flexible Plans",
@@ -87,7 +87,7 @@ const AboutUsFreeTrial = () => {
                 ].map((feature, index) => (
                   <motion.div
                     key={index}
-                    className="trial-offer-features-line"
+                    className="about-us-trial-offer-features-line"
                     variants={fadeInUp}
                     initial="hidden"
                     whileInView="visible"
@@ -99,7 +99,7 @@ const AboutUsFreeTrial = () => {
                       width={30}
                       height={30}
                     />
-                    <p className="trial-offer-features-paragraph">{feature}</p>
+                    <p className="about-us-trial-offer-features-paragraph">{feature}</p>
                   </motion.div>
                 ))}
               </div>

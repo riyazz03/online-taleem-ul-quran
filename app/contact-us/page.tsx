@@ -11,9 +11,7 @@ const ContactUs = () => {
     email: "",
     phone: "",
     whatsapp: "",
-    course: "",
     message: "",
-    date: "",
   });
 
   const [selectedCourse, setSelectedCourse] = useState("");
@@ -55,9 +53,44 @@ const ContactUs = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const course = selectedCourse;
+
+    const url =
+      "https://script.google.com/macros/s/AKfycbxlwQR56C3LOxLeEDzc-_3Y360Q5E9Z6ie1MJwaiilcmg1wmKiMOKz5Q1_S5WomfiYP/exec";
+
+    const formPayload = `Name=${encodeURIComponent(
+      name
+    )}&Email=${encodeURIComponent(email)}&Phone=${encodeURIComponent(
+      formData.phone
+    )}&WhatsApp=${encodeURIComponent(
+      formData.whatsapp
+    )}&Course=${encodeURIComponent(course)}&Message=${encodeURIComponent(
+      formData.message
+    )}&Date=${encodeURIComponent(selectedDate)}`;
+
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: formPayload,
+    })
+      .then((res) => res.text())
+      .then((data) => {
+        console.log(data);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          whatsapp: "",
+          message: "",
+        });
+        setSelectedCourse("");
+        setSelectedDate("");
+      })
+      .catch((error) => console.error(error));
   };
 
   const fadeInUp = {
@@ -182,9 +215,13 @@ const ContactUs = () => {
                     className="form-input appearance-none bg-none pr-4"
                   >
                     <option value="">Select Your Course</option>
-                    <option value="option1">Quran Recitation</option>
-                    <option value="option2">Simplified Tajweed</option>
-                    <option value="option3">Quran Memorization</option>
+                    <option value="Quran Recitation">Quran Recitation</option>
+                    <option value="Simplified Tajweed">
+                      Simplified Tajweed
+                    </option>
+                    <option value="Quran Memorization">
+                      Quran Memorization
+                    </option>
                   </select>
                 </div>
                 <div className="form-input-block">
@@ -214,9 +251,9 @@ const ContactUs = () => {
                     required
                   >
                     <option value="">Select Your Date</option>
-                    <option value="option1">Today</option>
-                    <option value="option2">Tomorrow</option>
-                    <option value="option3">{nextDay}</option>
+                    <option value="Today">Today</option>
+                    <option value="Tomorrow">Tomorrow</option>
+                    <option value={nextDay}>{nextDay}</option>
                   </select>
                 </div>
                 <button type="submit" className="form-button">

@@ -39,7 +39,6 @@
   margin-left: 24px;
   margin-bottom: 25px;
   max-width: 977px;
-  padding: 1rem 0;
 }
 .faq-questions.active svg {
   transform: rotate(45deg);
@@ -104,6 +103,7 @@
   }
   .faq-answers {
     overflow: hidden;
+    margin-bottom: 0;
   }
   .faq-answers-p {
     color: var(--gray);

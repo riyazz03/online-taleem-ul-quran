@@ -88,12 +88,21 @@ body {
     margin-top: -20%;
     margin-bottom: -15%;
     height: 160px;
+    display: block;
+  }
+}
+.right-mosque-icon {
+  width: 100%;
+  padding-bottom: 45px;
+}
+@media screen and (max-width: 768px) {
+  .right-mosque-icon {
+    display: none;
   }
 }
 /* button design  STarts*/
 
 .section-btn {
-  border-radius: 8px;
   border-radius: 8px;
   background: #63aea7;
   max-width: 277px;
@@ -123,7 +132,7 @@ body {
   width: 17px;
   height: auto;
   flex-shrink: 0;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 .section-btn:hover {
@@ -135,11 +144,9 @@ body {
   transition: transform 0.1s ease-in-out;
 }
 
-
 .section-btn:hover svg {
-  transform: rotate(-45deg); 
+  transform: rotate(-45deg);
 }
-
 
 .arrow-icon {
   transition: transform 0.5s ease-in-out;

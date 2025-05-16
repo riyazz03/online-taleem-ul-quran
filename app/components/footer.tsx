@@ -57,11 +57,11 @@ const Footer = () => {
           <div className="footer-logo-image">
             <Link href="/">
               <Image
-                src="/Images/footer-logo.png"
-                alt="nav-logo"
-                className=""
-                height={72}
-                width={165}
+                src="/Images/logo.svg"
+                alt="footer-logo"
+                className="footer-logo"
+                height={62}
+                width={105}
               />
             </Link>
           </div>
