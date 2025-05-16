@@ -8,6 +8,8 @@ import emailjs from "@emailjs/browser";
 
 const ContactUs = () => {
   const form = useRef<HTMLFormElement | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -56,8 +58,22 @@ const ContactUs = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const validatePhoneNumber = (number: string) => {
+    return /^\d{10}$/.test(number);
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (
+      !validatePhoneNumber(formData.phone) ||
+      !validatePhoneNumber(formData.whatsapp)
+    ) {
+      alert("Phone and WhatsApp numbers must be exactly 10 digits.");
+      return;
+    }
+
+    setLoading(true);
 
     const url =
       "https://script.google.com/macros/s/AKfycbxlwQR56C3LOxLeEDzc-_3Y360Q5E9Z6ie1MJwaiilcmg1wmKiMOKz5Q1_S5WomfiYP/exec";
@@ -80,8 +96,17 @@ const ContactUs = () => {
       body: formPayload,
     })
       .then((res) => res.text())
-      .then((data) => {
-        console.log(data);
+      .then(() => {
+        emailjs
+          .sendForm("service_r36maoy", "template_78iu1vr", form.current!, {
+            publicKey: "9GwxlluH6w4vlxKbe",
+          })
+          .then(() => {
+            console.log("Email sent");
+            setShowSuccess(true);
+            setTimeout(() => setShowSuccess(false), 3000);
+          });
+
         setFormData({
           name: "",
           email: "",
@@ -92,20 +117,10 @@ const ContactUs = () => {
         setSelectedCourse("");
         setSelectedDate("");
       })
-      .catch((error) => console.error(error));
-
-    emailjs
-      .sendForm("service_r36maoy", "template_78iu1vr", form.current!, {
-        publicKey: "9GwxlluH6w4vlxKbe",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+      .catch((error) => console.error(error))
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   const fadeInUp = {
@@ -127,23 +142,40 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="contact-us-section mt-25">
+    <div className="contact-us-section mt-25 relative">
+      {/* Background Grid Images */}
       <Image
         src="/assets/Icons/Grids.svg"
-        alt="Logo"
+        alt="Grid"
         width={500}
         height={800}
         className="contact-us-grid-image"
       />
       <Image
         src="/assets/Icons/Grids.svg"
-        alt="Logo"
+        alt="Grid"
         width={500}
         height={800}
         className="contact-us-grid-image-landscape"
       />
+
+      {/* Success Popup */}
+      {showSuccess && (
+        <motion.div
+          className="success-popup"
+          initial={{ opacity: 0, scale: 0.6 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          <div className="success-checkmark">✔</div>
+          <p>Submitted Successfully</p>
+        </motion.div>
+      )}
+
       <div className="padding-global">
         <div className="main-container contact-us-container">
+          {/* Form Section */}
           <motion.div
             className="contact-us-form"
             ref={formRef}
@@ -162,6 +194,7 @@ const ContactUs = () => {
                 onSubmit={handleSubmit}
                 className="contact-us-form-block"
               >
+                {/* Inputs */}
                 <div className="form-input-block">
                   <label htmlFor="name" className="form-label-title">
                     Name
@@ -199,7 +232,9 @@ const ContactUs = () => {
                     id="phone"
                     name="phone"
                     type="tel"
-                    placeholder="91+ 12345 67890"
+                    pattern="\d{10}"
+                    title="Enter exactly 10 digits"
+                    placeholder="1234567890"
                     value={formData.phone}
                     onChange={handleChange}
                     required
@@ -207,14 +242,16 @@ const ContactUs = () => {
                   />
                 </div>
                 <div className="form-input-block">
-                  <label htmlFor="phone" className="form-label-title">
+                  <label htmlFor="whatsapp" className="form-label-title">
                     What&apos;sApp Number
                   </label>
                   <input
                     id="whatsapp"
                     name="whatsapp"
                     type="tel"
-                    placeholder="91+ 12345 67890"
+                    pattern="\d{10}"
+                    title="Enter exactly 10 digits"
+                    placeholder="1234567890"
                     value={formData.whatsapp}
                     onChange={handleChange}
                     required
@@ -270,18 +307,50 @@ const ContactUs = () => {
                     required
                   >
                     <option value="">Select Your Date</option>
-                    <option value="Today">Today</option>
-                    <option value="Tomorrow">Tomorrow</option>
+                    <option
+                      value={new Date()
+                        .toLocaleDateString("en-GB")
+                        .replace(/\//g, "-")}
+                    >
+                      Today (
+                      {new Date()
+                        .toLocaleDateString("en-GB")
+                        .replace(/\//g, "-")}
+                      )
+                    </option>
+                    <option
+                      value={new Date(Date.now() + 86400000)
+                        .toLocaleDateString("en-GB")
+                        .replace(/\//g, "-")}
+                    >
+                      Tomorrow (
+                      {new Date(Date.now() + 86400000)
+                        .toLocaleDateString("en-GB")
+                        .replace(/\//g, "-")}
+                      )
+                    </option>
                     <option value={nextDay}>{nextDay}</option>
                   </select>
                 </div>
-                <button type="submit" className="form-button">
-                  Submit
+                <button
+                  type="submit"
+                  className="form-button"
+                  disabled={loading}
+                >
+                  {loading ? (
+                    <>
+                      Submitting
+                      <span className="loading-spinner" />
+                    </>
+                  ) : (
+                    "Submit"
+                  )}
                 </button>
               </form>
             </div>
           </motion.div>
 
+          {/* Contact Details Section */}
           <motion.div
             className="contact-us-details"
             ref={detailsRef}
