@@ -53,22 +53,21 @@ const ContactUs = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const course = selectedCourse;
 
     const url =
       "https://script.google.com/macros/s/AKfycbxlwQR56C3LOxLeEDzc-_3Y360Q5E9Z6ie1MJwaiilcmg1wmKiMOKz5Q1_S5WomfiYP/exec";
 
     const formPayload = `Name=${encodeURIComponent(
-      name
-    )}&Email=${encodeURIComponent(email)}&Phone=${encodeURIComponent(
+      formData.name
+    )}&Email=${encodeURIComponent(formData.email)}&Phone=${encodeURIComponent(
       formData.phone
     )}&WhatsApp=${encodeURIComponent(
       formData.whatsapp
-    )}&Course=${encodeURIComponent(course)}&Message=${encodeURIComponent(
+    )}&Course=${encodeURIComponent(
+      selectedCourse
+    )}&Message=${encodeURIComponent(
       formData.message
     )}&Date=${encodeURIComponent(selectedDate)}`;
 
