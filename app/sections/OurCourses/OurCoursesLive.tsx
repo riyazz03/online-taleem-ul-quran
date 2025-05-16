@@ -52,7 +52,7 @@ const OurCoursesLive = () => {
       <Image
         src="/assets/Icons/right-mosque-icon.svg"
         alt="Right Arrow"
-        className="mosque-icon"
+        className="right-mosque-icon"
         height={1}
         width={1}
       />

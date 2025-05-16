@@ -101,7 +101,7 @@
   pointer-events: none;
   color: white;
 }
-.trial-offer {
+.about-us-trial-offer {
   background-color: rgba(99, 174, 166, 0.209);
   backdrop-filter: blur(10px);
   height: 450px;
@@ -109,27 +109,28 @@
   border-radius: 15px;
   padding: 65px 50px;
   position: relative;
+  margin-top: 35px;
 }
-.trial-offer-title {
+.about-us-trial-offer-title {
   color: #63aea7;
   font-size: 25px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
 }
-.trial-offer-features-block {
+.about-us-trial-offer-features-block {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 27px;
 }
-.trial-offer-features-line {
+.about-us-trial-offer-features-line {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 30px;
 }
-.trial-offer-features-paragraph {
+.about-us-trial-offer-features-paragraph {
   color: #ddd;
   font-size: 20px;
   font-style: normal;
@@ -205,7 +206,7 @@
     height: 50px;
   }
 
-  .trial-offer {
+  .about-us-trial-offer {
     width: 100%;
     height: auto;
     padding: 2rem;
@@ -215,17 +216,17 @@
     border-radius: 15px;
   }
 
-  .trial-offer-features-block {
+  .about-us-trial-offer-features-block {
     gap: 1rem;
   }
 
-  .trial-offer-features-line {
+  .about-us-trial-offer-features-line {
     justify-content: start;
     gap: 10px;
     text-align: start;
   }
 
-  .trial-offer-features-paragraph {
+  .about-us-trial-offer-features-paragraph {
     font-size: 1rem;
   }
   .free-trial-drop-down-section {
