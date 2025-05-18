@@ -21,7 +21,7 @@ const ContactUs = () => {
 
   const [selectedCourse, setSelectedCourse] = useState("");
   const [selectedDate, setSelectedDate] = useState("");
-  const [nextDay, setNextDay] = useState("");
+  const [weekendOptions, setWeekendOptions] = useState<string[]>([]);
 
   const formRef = useRef(null);
   const detailsRef = useRef(null);
@@ -30,25 +30,28 @@ const ContactUs = () => {
   const isDetailsInView = useInView(detailsRef, { once: true, amount: 0.2 });
 
   useEffect(() => {
+    const weekends: string[] = [];
     const today = new Date();
-    today.setDate(today.getDate() + 2);
+    let count = 0;
 
-    const optionsDate: Intl.DateTimeFormatOptions = {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-    };
+    while (weekends.length < 3 && count < 30) {
+      const day = today.getDay();
+      if (day === 6 || day === 0) {
+        const dateStr = today
+          .toLocaleDateString("en-GB", {
+            weekday: "long",
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric",
+          })
+          .replace(/\//g, "-");
+        weekends.push(dateStr);
+      }
+      today.setDate(today.getDate() + 1);
+      count++;
+    }
 
-    const optionsDay: Intl.DateTimeFormatOptions = {
-      weekday: "long",
-    };
-
-    const formattedDate = today
-      .toLocaleDateString("en-GB", optionsDate)
-      .replace(/\//g, "-");
-    const formattedDay = today.toLocaleDateString("en-GB", optionsDay);
-
-    setNextDay(`${formattedDate}, ${formattedDay}`);
+    setWeekendOptions(weekends);
   }, []);
 
   const handleChange = (
@@ -187,6 +190,9 @@ const ContactUs = () => {
               <h1 className="section-title">
                 <span>Contact</span> & Join Together
               </h1>
+              <p className="form-label-title mb-4">
+                {/* Demo Schedule (Only Weekend at 09:00 pm) */}
+              </p>
             </motion.div>
             <div className="contact-us-form-content">
               <form
@@ -197,7 +203,7 @@ const ContactUs = () => {
                 {/* Inputs */}
                 <div className="form-input-block">
                   <label htmlFor="name" className="form-label-title">
-                    Name
+                    Name <span className="required">*</span>
                   </label>
                   <input
                     id="name"
@@ -211,7 +217,7 @@ const ContactUs = () => {
                 </div>
                 <div className="form-input-block">
                   <label htmlFor="email" className="form-label-title">
-                    Email
+                    Email <span className="required">*</span>
                   </label>
                   <input
                     id="email"
@@ -226,7 +232,7 @@ const ContactUs = () => {
                 </div>
                 <div className="form-input-block">
                   <label htmlFor="phone" className="form-label-title">
-                    Phone Number
+                    Phone Number <span className="required">*</span>
                   </label>
                   <input
                     id="phone"
@@ -237,7 +243,7 @@ const ContactUs = () => {
                     placeholder="1234567890"
                     value={formData.phone}
                     onChange={(e) => {
-                      const onlyNums = e.target.value.replace(/\D/g, ""); // Remove non-digits
+                      const onlyNums = e.target.value.replace(/\D/g, "");
                       if (onlyNums.length <= 10) {
                         setFormData({ ...formData, phone: onlyNums });
                       }
@@ -248,7 +254,7 @@ const ContactUs = () => {
                 </div>
                 <div className="form-input-block">
                   <label htmlFor="whatsapp" className="form-label-title">
-                    What&apos;sApp Number
+                    Whatsapp Number <span className="required">*</span>
                   </label>
                   <input
                     id="whatsapp"
@@ -259,7 +265,7 @@ const ContactUs = () => {
                     placeholder="1234567890"
                     value={formData.whatsapp}
                     onChange={(e) => {
-                      const onlyNums = e.target.value.replace(/\D/g, ""); // Remove non-digits
+                      const onlyNums = e.target.value.replace(/\D/g, "");
                       if (onlyNums.length <= 10) {
                         setFormData({ ...formData, whatsapp: onlyNums });
                       }
@@ -270,7 +276,7 @@ const ContactUs = () => {
                 </div>
                 <div className="form-input-block">
                   <label htmlFor="course" className="form-label-title">
-                    I&apos;m interested in
+                    I&apos;m interested in <span className="required">*</span>
                   </label>
                   <select
                     id="course"
@@ -292,7 +298,7 @@ const ContactUs = () => {
                 </div>
                 <div className="form-input-block">
                   <label htmlFor="message" className="form-label-title">
-                    Message
+                    Message (Optional)
                   </label>
                   <textarea
                     id="message"
@@ -300,13 +306,13 @@ const ContactUs = () => {
                     placeholder="Enter your message"
                     value={formData.message}
                     onChange={handleChange}
-                    required
                     className="message-input"
                   />
                 </div>
                 <div className="form-input-block">
                   <label htmlFor="date" className="form-label-title">
-                    Demo Schedule (Every Day 09:00 pm)
+                    Select Your Preferred Weekend Date{" "}
+                    <span className="required">*</span>
                   </label>
                   <select
                     id="date"
@@ -316,32 +322,12 @@ const ContactUs = () => {
                     onChange={(e) => setSelectedDate(e.target.value)}
                     required
                   >
-                    <option value="">Select Your Date</option>
-                    <option
-                      value={`Today (${new Date()
-                        .toLocaleDateString("en-GB")
-                        .replace(/\//g, "-")})`}
-                    >
-                      Today (
-                      {new Date()
-                        .toLocaleDateString("en-GB")
-                        .replace(/\//g, "-")}
-                      )
-                    </option>
-                    <option
-                      value={`Tomorrow (${new Date(Date.now() + 86400000)
-                        .toLocaleDateString("en-GB")
-                        .replace(/\//g, "-")})`}
-                    >
-                      Tomorrow (
-                      {new Date(Date.now() + 86400000)
-                        .toLocaleDateString("en-GB")
-                        .replace(/\//g, "-")}
-                      )
-                    </option>
-                    <option value={`Day After Tomorrow (${nextDay})`}>
-                      Day After Tomorrow ({nextDay})
-                    </option>
+                    <option value="">Choose a Weekend Date</option>
+                    {weekendOptions.map((option, index) => (
+                      <option key={index} value={option}>
+                        {option}
+                      </option>
+                    ))}
                   </select>
                 </div>
                 <button
@@ -392,8 +378,8 @@ const ContactUs = () => {
                   />
                 </div>
                 <div className="numbers">
-                  <p>+91 9629158073</p>
-                  <p>+91 9629158073</p>
+                  <p>+1 (469) 256-1451</p>
+                  <p>+91 9087078760</p>
                 </div>
               </div>
               <div className="contact-us-details-svg-block">
@@ -404,7 +390,7 @@ const ContactUs = () => {
                   height={65}
                   className="email-icon"
                 />
-                <p className="email">onlinetaleem@gmail.com</p>
+                <p className="email">onlinetaleemulquran342@gmail.com</p>
               </div>
               <div className="contact-us-details-svg-block">
                 <Image
@@ -415,9 +401,7 @@ const ContactUs = () => {
                   className="location-icon"
                 />
                 <div className="map">
-                  <p>
-                    Kirubananda Variyar, Mosque Street Kaspa, Vellore - 632 009
-                  </p>
+                  <p>Madarasa-E-Siddiquia, Masjid-E-Qadeem No.30, Old Mosque Steet Rahmanthpala, Vellore - 632001</p>
                 </div>
               </div>
             </div>

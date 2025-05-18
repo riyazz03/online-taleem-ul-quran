@@ -126,7 +126,7 @@
 }
 .contact-us-details-line {
   display: flex;
-  width: 469.806px;
+  /* width: 469.806px; */
   flex-direction: column;
   align-items: flex-start;
   gap: 30px;

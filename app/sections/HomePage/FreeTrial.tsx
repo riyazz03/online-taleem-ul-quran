@@ -41,8 +41,7 @@ const FreeTrial = () => {
             <motion.div className="free-trial-content" variants={fadeInUp}>
               <h1 className="free-trial-title">Still deciding?</h1>
               <p className="free-trial-description">
-                Interested in Learning more about our Courses? Book a Free
-                Trial.
+                Interested in Learning more about our Courses? Book a Demo.
               </p>
               <div className="free-trial-button">
                 <Link rel="stylesheet" href="/contact-us">
@@ -60,7 +59,6 @@ const FreeTrial = () => {
                   "Male & Female Tutors",
                   "Islamic Studies & Duas",
                   "One to One Classes",
-                  "Flexible weekday/weekend timings",
                 ].map((feature, index) => (
                   <motion.div
                     key={index}

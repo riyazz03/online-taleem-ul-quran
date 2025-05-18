@@ -13,17 +13,6 @@ import Button from "@/app/components/button";
 import HowWeWork from "@/app/sections/AboutUs/HowWeWork";
 import OurCoursesCardMini from "@/app/components/OurCoursesCardMini";
 
-const contentVariant = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  },
-};
 
 const containerVariant = {
   hidden: { opacity: 0, y: 40 },
@@ -135,14 +124,13 @@ const QuranMemorization = () => {
             </motion.h1>
 
             <h4 className="learning-journey-description-ctc">
-              Reading the Qur&apos;an with Tajweed is fardh (obligatory) for
-              everyone, as it ensures correct pronunciation—especially important
-              during Salah, Dhikr, or when reading the Qur&apos;an.
-              Mispronunciation can alter meanings. In this course, we begin with
-              practical Tajweed and then focus on recitation. It&apos;s perfect
-              for complete beginners who&apos;ve never recited the Qur&apos;an
-              or studied Tajweed before. Start learning Tajweed online from the
-              basics, insha&apos;Allah.
+              Are you yearning for a deeper connection with Allah (SWT) and a
+              closer understanding of His divine word? Our Quran memorization
+              course offers a transformative journey, guiding you step-by-step
+              towards memorizing the sacred verses of the Holy Qur&apos;an. This
+              isn&apos;t just about committing words to memory, it&apos;s about
+              enriching your spiritual life, strengthening your faith, and
+              reaping countless rewards in this life and the Hereafter
               <span className="learning-journey-description-span-ctc">
                 {/* Online Taleem ul Quran */}
               </span>
@@ -206,7 +194,8 @@ const QuranMemorization = () => {
                       [
                         <>
                           Age knows no bounds in our diverse student community,
-                          spanning from <span>4 to 56 years old.</span>
+                          welcoming learners from as young as{" "}
+                          <span>4 years old.</span>
                         </>,
                         <>
                           Should complete The Mastery Phase of our{" "}
@@ -217,7 +206,7 @@ const QuranMemorization = () => {
                           accredited by Quran Online India
                         </>,
                         <>
-                          Exclusive <span>One-on-One Sessions</span> for
+                          Exclusive One-on-One and Batch-Wise Sessions for
                           Uncompromised Development
                         </>,
                       ][index]
@@ -244,215 +233,67 @@ const QuranMemorization = () => {
           <div className="main-container">
             <div className="quran-memorization-content-container-ctc">
               <div className="quran-memorization-content-heading">
-                Our Approach
+                Course Outline
               </div>
               <p>
-                An approach that has stood the test of time, preserved through
+                Our Approach has stood the test of time, preserved through
                 generations, rooted in tradition.
               </p>
+              <span className="sub-title-list">Sabaq (New Lesson)</span>
               <p>
-                Sabaq (New Lesson)
-                <br />
                 Sabaq means new lessons. In which the teacher Listens the
                 recitation of the verses of the Holy Quran from the student and
                 practices to learn these verses with correct pronunciation and
                 accent first and then try to memorize it by repeating it many
-                times.
+                times.Instructor will help you with his Tips & Tricks to
+                memorize lessons during and after the class as well. The student
+                has to fully memorize this lesson before the next class.
               </p>
+              <span className="sub-title-list">Sabaq Para (Revision)</span>
+
               <p>
-                Instructor will help you with his Tips & Tricks to memorize
-                lessons during and after the class as well. The student has to
-                fully memorize this lesson before the next class.
-              </p>
-              <p>
-                Sabaq Para (Revision) Sabaq Para means revision of the previous
-                lessons of the same juzz, The student has memorized in the
-                recent classes.
-              </p>
-              <p>
-                The student will recite and the teacher will listen to him. Each
+                Sabaq Para means revision of the previous lessons of the same
+                juzz, The student has memorized in the recent classes.The
+                student will recite and the teacher will listen to him. Each
                 student has to recite Sabaq Para lessons in each class after the
                 new lesson so that he or she memorizes the last lessons very
                 well.
               </p>
+              <span className="sub-title-list"> Purana Sabaq (Old Lesson)</span>
+
               <p>
-                Purana Sabaq (Old Lesson)
-                <br />
                 Purana Sabaq means the revision of any juzz, the student has
                 memorized it already. In each class, the student will recite at
-                least half a juzz and the teacher will listen to him.
+                least half a juzz and the teacher will listen to him.It gives
+                the student and teacher a kind of satisfaction and surety that
+                the student is memorizing more and more without forgetting the
+                previous lessons.
               </p>
-              <p>
-                It gives the student and teacher a kind of satisfaction and
-                surety that the student is memorizing more and more without
-                forgetting the previous lessons.
-              </p>
-              <p>
-                Reap the benefits of memorizing The Quran <br />
-                Safe from the trial of Dajjal
-              </p>
-              <p>
-                The Prophet (PBUH) said,” Whoever memorizes ten verses from the{" "}
-                <br />
-                beginning of Surah Al Kahf, he will be protected from the
-                Dajjal.”
-              </p>
-              <p>(Muslim)</p>
-              <p>
-                The Highest Honour for the Parents of the Memoriser of the
-                Qur&apos;an
-              </p>
-              <p>
-                &apos;Whosoever recites the Quran and practices upon its
-                injunctions, the reciter&apos;s parents will be given a crown on
-                the day of Qiyaamat. The brightness of that crown will be more
-                intense than the brightness of the sun in your actual
-                house.&apos; The Prophet (PBUH) further said: &apos;What do you
-                think will be given to the Hafiz (reciter) of the Quran
-                himself?’”
-              </p>
-              <p>(Mishkaat Vol I.)</p>
-              <p>Highest ranks of Jannah for the Memoriser of the Qur’an</p>
-              <p>
-                The Prophet (PBUH) said, &quot;It will be said to the companion
-                of the Qur&apos;aan after he has entered Paradise, &apos;Recite,
-                and rise!&apos; For every verse he recites he will rise one
-                level (in Paradise), until he recites the last verse with him
-                (i.e., in his memory).&quot;
-              </p>
-              <p>(Abu Dawood)</p>
-              <p>
-                Every letter the Memoriser of the Qur&apos;an recites is
-                rewarded ten
-              </p>
-              <p>
-                &quot;Whoever recites one Word from the Book of Allah will be
-                rewarded for a good deed and ten more like it; and I don&apos;t
-                say that Alif Lam Mim is a letter but Alif is a letter and Lam
-                is a letter and Mim is a letter&quot;
-              </p>
-              <p>(Tirmidhi & Al-Dareemi)</p>
+
               <div className="quran-memorization-content-box">
-                <p>The Messenger of Allah صلی ‌اللہ ‌علیہ ‌وسلم said:</p>
                 <p>
-                  who was devoted to the Quran will be told to recite, ascend
-                  and recite carefully as he recited carefully when he was in
-                  the world, for he will reach his abode when he comes to the
-                  last verse he recites{" "}
+                  حَدَّثَنَا مُسَدَّدٌ، حَدَّثَنَا يَحْيَى، عَنْ سُفْيَانَ،
+                  حَدَّثَنِي عَاصِمُ بْنُ بَهْدَلَةَ، عَنْ زِرٍّ، عَنْ عَبْدِ
+                  اللَّهِ بْنِ عَمْرٍو، قَالَ قَالَ رَسُولُ اللَّهِ صلى الله
+                  عليه وسلم&apos; يُقَالُ لِصَاحِبِ الْقُرْآنِ اقْرَأْ وَارْتَقِ
+                  وَرَتِّلْ كَمَا كُنْتَ تُرَتِّلُ فِي الدُّنْيَا فَإِنَّ
+                  مَنْزِلَكَ عِنْدَ آخِرِ آيَةٍ تَقْرَؤُهَا &apos;.
                 </p>
-                <p>(Abu Dawood 1464)</p>
+                <p>
+                  The Messenger of Allah (ﷺ) said: One who was devoted to the
+                  Qur&spaos;an will be told to recite, ascend and recite
+                  carefully as he recited carefully when he was in the world,
+                  for he will reach his abode when he comes to the last verse he
+                  recites.
+                </p>
+                <p>
+                  رسول اللہ ﷺ نے فرمایا:&apos;جو شخص قرآن کا دل سے پابند رہا، اسے
+                  (قیامت کے دن) کہا جائے گا: پڑھتا جا، بلند ہوتا جا، اور ٹھہر
+                  ٹھہر کر اسی طرح پڑھ جیسے تو دنیا میں ٹھہر ٹھہر کر پڑھتا تھا،
+                  کیونکہ تیرا مقام وہی ہوگا جہاں تو آخری آیت پڑھ کر پہنچے گا۔&apos;
+                </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section className="prophetic-hadith-section">
-        <div className="padding-global">
-          <div className="main-container prophetic-hadith-container">
-            <div className="prophetic-hadith-content">
-              {/* Title */}
-              <motion.h1
-                className="prophetic-hadith-title"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={contentVariant}
-                transition={{ delay: 0.2 }} // Delay added for sequential effect
-              >
-                The Prophet (s) once said to ibn Mas&rsquo;ud,
-              </motion.h1>
-
-              {/* Description */}
-              <motion.div
-                className="prophetic-hadith-content-description"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={contentVariant}
-                transition={{ delay: 0.4 }}
-              >
-                <p className="prophetic-hadith-description">
-                  &ldquo;Recite to me some Qur&rsquo;ān&rdquo;
-                </p>
-                <p className="prophetic-hadith-description">
-                  <span>He replied, </span>“O messenger of Allāh! How can I
-                  recite it to you whilst it was revealed to you?”
-                </p>
-              </motion.div>
-
-              {/* More Content */}
-              <motion.div
-                className="prophetic-hadith-content-description"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={contentVariant}
-                transition={{ delay: 0.6 }}
-              >
-                <p className="prophetic-hadith-description">
-                  <span>He said, </span>“I love to hear it from other than me.”
-                </p>
-                <p className="prophetic-hadith-description">
-                  <span>He said, </span>&quot;So I started to read from Sūrat
-                  An-Nisā until I reached the āyah that reads, &rsquo;So how
-                  will it be when We bring from every nation a witness, and we
-                  bring you, O Muḥammad, against these people as a
-                  witness?&apos;&quot;
-                </p>
-              </motion.div>
-
-              {/* Final Content */}
-              <motion.div
-                className="prophetic-hadith-content-description"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={contentVariant}
-                transition={{ delay: 0.8 }}
-              >
-                <p className="prophetic-hadith-description">
-                  <span>
-                    The Prophet (sall Allāhu &apos;alayhi wa sallam), at this
-                    point, said to Ibn Mas&apos;ūd,{" "}
-                  </span>
-                  “This is enough”.
-                </p>
-                <br />
-                <p className="prophetic-hadith-description">
-                  <span>Ibn Mas&apos;ūd said, </span>&quot;I looked at him and
-                  he was shedding tears.&quot;
-                </p>
-              </motion.div>
-
-              {/* Source */}
-              <motion.h4
-                className="prophetic-hadith-name"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={contentVariant}
-                transition={{ delay: 1 }}
-              >
-                – Sahih Muslim, Book 31, &nbsp;&nbsp;&nbsp;&nbsp;Hadith 5920.
-              </motion.h4>
-            </div>
-
-            {/* Sub Title */}
-            <motion.div
-              className="prophetic-hadith-sub-title"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={contentVariant}
-              transition={{ delay: 1.2 }}
-            >
-              <p className="prophetic-hadith-paragraph">
-                The above hadith shows that the Qur&rsquo;an has an impact on
-                even our Prophet (s) heart. Being the best of mankind, Prophet
-                (s) possessed the most softest of hearts, so much that these
-                verses brought him to tears.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -479,9 +320,9 @@ const QuranMemorization = () => {
                   <span>Aqeeda, Seerat, Fiqh & Surahs</span>
                 </h1>
                 <p className="section-description quran-learning-overview-description">
-                  Our Tilawat-ul-Quran course goes beyond recitation, offering a
-                  treasure trove of knowledge, empowering you with a deeper
-                  understanding of Islam&rsquo;s core principles.
+                  Our course go beyond recitation, offering a treasure trove of
+                  knowledge, empowering you with a deeper understanding of
+                  Islam&rsquo;s core principles.
                 </p>
               </div>
 

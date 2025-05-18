@@ -36,7 +36,7 @@ const OurJourney = () => {
               Our Journey of <span>Guidance & Growth</span>
             </h1>
             <p className="our-journey-description">
-              We have guided over 300 students on their journey toward Jannah,
+              We have guided over 300 students on their Quran journey,
               proudly calling them our Guided Seekers.
             </p>
           </div>
@@ -64,7 +64,7 @@ const OurJourney = () => {
                     style={{ transformOrigin: "center center" }}
                     className="content"
                   >
-                    <div className="number">20+</div>
+                    <div className="number">5+</div>
                     <div className="label">Countries</div>
                   </motion.div>
                 </div>
@@ -75,8 +75,8 @@ const OurJourney = () => {
                     style={{ transformOrigin: "center center" }}
                     className="content"
                   >
-                    <div className="number">200+</div>
-                    <div className="label">QQI Grads</div>
+                    <div className="number">150+</div>
+                    <div className="label">Graduated</div>
                   </motion.div>
                 </div>
 
@@ -97,7 +97,7 @@ const OurJourney = () => {
                     style={{ transformOrigin: "center center" }}
                     className="content"
                   >
-                    <div className="number">50k</div>
+                    <div className="number">500+</div>
                     <div className="label">Class Taken</div>
                   </motion.div>
                 </div>
@@ -108,8 +108,8 @@ const OurJourney = () => {
                     style={{ transformOrigin: "center center" }}
                     className="content"
                   >
-                    <div className="number">120+</div>
-                    <div className="label">Students</div>
+                    <div className="number">100+</div>
+                    <div className="label">Demo</div>
                   </motion.div>
                 </div>
 

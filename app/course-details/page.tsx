@@ -135,18 +135,18 @@ const QuranMemorization = () => {
             </motion.h1>
 
             <h4 className="learning-journey-description-ctc">
-              Reading the Qur&apos;an with the Tajweed is fardh / obligatory upon
-              every single person, why? because you could be reciting the Quran
-              when you offer salah, you’re reciting the Quran when you do a
-              Dhiker, you recite the Quran when you open the Quran itself. You
-              could be is reading one thing according to you and if you&apos;re not
-              pronouncing the words properly you could be changing the whole
+              Reading the Qur&apos;an with the Tajweed is fardh / obligatory
+              upon every single person, why? because you could be reciting the
+              Quran when you offer salah, you’re reciting the Quran when you do
+              a Dhiker, you recite the Quran when you open the Quran itself. You
+              could be is reading one thing according to you and if you&apos;re
+              not pronouncing the words properly you could be changing the whole
               meaning of the Quran. we have a certain period where we teach the
               practical tajweed, then after that, we will concentrate on the
-              recitation. This course is for complete beginners if you&apos;ve never
-              recited Quran before you never studied Tajweed before, this course
-              is for you insha&apos;Allah. Now you can get registered and learn
-              tajweed online right from the beginning inshallah.
+              recitation. This course is for complete beginners if you&apos;ve
+              never recited Quran before you never studied Tajweed before, this
+              course is for you insha&apos;Allah. Now you can get registered and
+              learn tajweed online right from the beginning inshallah.
               <span className="learning-journey-description-span-ctc">
                 {/* Online Taleem ul Quran */}
               </span>
@@ -210,7 +210,8 @@ const QuranMemorization = () => {
                       [
                         <>
                           Age knows no bounds in our diverse student community,
-                          spanning from <span>4 to 56 years old.</span>
+                          welcoming learners from as young as{" "}
+                          <span>4 years old.</span>
                         </>,
                         <>
                           Should complete The Mastery Phase of our{" "}
@@ -221,7 +222,7 @@ const QuranMemorization = () => {
                           accredited by Quran Online India
                         </>,
                         <>
-                          Exclusive <span>One-on-One Sessions</span> for
+                          Exclusive One-on-One and Batch-Wise Sessions for
                           Uncompromised Development
                         </>,
                       ][index]
@@ -247,7 +248,7 @@ const QuranMemorization = () => {
         <div className="padding-gobal">
           <div className="main-container">
             <div className="quran-memorization-content-heading">
-              Our Approach
+              Course Outline
             </div>
             <div className="quran-memorization-content-container-ctc">
               <br />
@@ -330,10 +331,10 @@ const QuranMemorization = () => {
                 rewarded ten
               </p>
               <p>
-                “Whoever recites one Word from the Book of Allah will be
-                rewarded for a good deed and ten more like it; and I don’t say
+                &apos;Whoever recites one Word from the Book of Allah will be
+                rewarded for a good deed and ten more like it; and I don&apos;t say
                 that Alif Lam Mim is a letter but Alif is a letter and Lam is a
-                letter and Mim is a letter”
+                letter and Mim is a letter&apos;
               </p>
               <p>(Tirmidhi & Al-Dareemi)</p>
               <div className="quran-memorization-content-box">
@@ -482,9 +483,9 @@ const QuranMemorization = () => {
                   <span>Aqeeda, Seerat, Fiqh & Surahs</span>
                 </h1>
                 <p className="section-description quran-learning-overview-description">
-                  Our Tilawat-ul-Quran course goes beyond recitation, offering a
-                  treasure trove of knowledge, empowering you with a deeper
-                  understanding of Islam&rsquo;s core principles.
+                  Our course go beyond recitation, offering a treasure trove of
+                  knowledge, empowering you with a deeper understanding of
+                  Islam&rsquo;s core principles.
                 </p>
               </div>
 

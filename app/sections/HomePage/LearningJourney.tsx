@@ -46,19 +46,29 @@ const LearningJourney = () => {
               <span className="learning-journey-description-span">
                 Online Taleem ul Quran
               </span>
-              , we are dedicated to delivering a comprehensive and accessible
-              Quran learning experience for students of all ages, backgrounds. Whether you’re a beginner, a non-Arabic speaker,
-              or someone looking to enhance Tajweed and Qirat, our expert tutors
-              guide you step by step through flexible online classes tailored to
-              your pace and needs. Especially beneficial for those without
-              access to nearby mosques or Quran teachers, our platform brings
-              high-quality education to your home with complete freedom to
-              choose your schedule—day or night. Female learners benefit from a
-              safe and convenient environment, and children gain a strong
-              foundation in Quran reading, pronunciation, and rules. We ensure
-              every student learns the correct articulation of each verse,
-              preserving its true meaning and helping them develop a lifelong
-              connection with the Holy Quran.
+              , we offer a complete and accessible Quran learning experience for
+              all ages and backgrounds. Whether you&apos;re a beginner, non-Arabic
+              speaker, or looking to improve Tajweed and Qirat,expert
+              tutors guide you through{" "}
+              <span className="learning-journey-description-span">
+                flexible online and offline classes
+              </span>{" "}
+              at your own pace. Enjoy{" "}
+              <span className="learning-journey-description-span">
+                high-quality education
+              </span>{" "}
+              from home or in person with{" "}
+              <span className="learning-journey-description-span">
+                flexible weekday and weekend classes
+              </span>
+              . We provide{" "}
+              <span className="learning-journey-description-span">
+                one-to-one and batch sessions
+              </span>{" "}
+              to suit your needs. Female learners benefit from a safe environment,
+              and children build strong Quran reading and pronunciation skills.
+              We help every student master correct verse articulation, ensuring
+              deep understanding and connection with the Holy Quran.
             </h4>
 
             <Link rel="stylesheet" href="/about-us">
