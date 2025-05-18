@@ -3,6 +3,7 @@
   z-index: 9;
   background-color: var(--background);
   overflow: hidden;
+  margin-top: 100px;
 }
 .contact-us-grid-image {
   position: absolute;
@@ -234,6 +235,13 @@
 }
 
 @media screen and (max-width: 768px) {
+  .contact-us-section {
+    position: relative;
+    z-index: 9;
+    background-color: var(--background);
+    overflow: hidden;
+    margin-top: 0;
+  }
   .contact-us-grid-image {
     position: absolute;
     top: 0px;
