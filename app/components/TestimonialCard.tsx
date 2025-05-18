@@ -46,9 +46,9 @@ export default function Cards({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <Image src={image} alt="Avatar" width={76} height={76} />
+      <Image src={image} alt="Avatar" className="card-avatar" width={86} height={86} />
       <div className="card-name-container">
-        <div className="card-name-dot"></div>
+        {/* <div className="card-name-dot"></div> */}
         <h3 className="card-name">{name}</h3>
       </div>
       <div className="card-content">

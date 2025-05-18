@@ -132,7 +132,7 @@ const HOMECTA = () => {
               </motion.div>
 
               <motion.div
-                className="home-page-quran-3"
+                className="home-page-quran-3 hidden md:block"
                 variants={fadeUp}
                 custom={0.9}
               >

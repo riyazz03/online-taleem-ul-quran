@@ -79,7 +79,7 @@ const quranLearning = [
   {
     title: "Surah Memorization",
     description:
-      "We help you memorize 25 surahs from the 30th Juz, a significant milestone in Quran recitation.",
+      "We help you memorize the entire Quran — a lifelong journey of faith and devotion.",
   },
 ];
 
