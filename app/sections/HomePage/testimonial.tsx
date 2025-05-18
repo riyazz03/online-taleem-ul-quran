@@ -19,34 +19,34 @@ import Link from "next/link";
 
 const testimonials = [
   {
-    image: "/Images/testimonial/Avatar1.png",
-    name: "Hafsa",
-    review:
-      "Wonderful experience! Great progress in Tajweed and Qirah. Very dedicated and attentive teacher. Highly recommended!",
-  },
-  {
-    image: "/Images/testimonial/Avatar2.png",
-    name: "Umar",
-    review:
-      "Consistent lessons and patient teaching helped build a strong foundation. Very happy with the progress.",
-  },
-  {
-    image: "/Images/testimonial/Avatar3.png",
-    name: "Mamma",
-    review:
-      "I’m now confident in Tajweed and Qirah. Clear, patient, and encouraging teaching made a big difference.",
-  },
-  {
-    image: "/Images/testimonial/Avatar2.png",
-    name: "Abdul Aziz (America)",
-    review:
-      "Sessions are detailed, clear, and inspiring. Excellent explanations make learning Quran meaningful and impactful.",
-  },
-  {
-    image: "/Images/testimonial/Avatar1.png",
+    image: "/Images/testimonial/Avatar6.png",
     name: "Yasmeen (America)",
     review:
-      "Really enjoying Tajweed class! I feel confident, and I appreciate the patience and flexibility in scheduling.",
+      "This online Quran class has been a life-changing experience! The teachers are patient, knowledgeable, and make learning so easy. Highly recommend!",
+  },
+  {
+    image: "/Images/testimonial/Avatar4.png",
+    name: "Mutahar (Canada)",
+    review:
+      "Teaching made a big impact—recitation improved and connection to the Quran strengthened. Truly appreciated and effective.",
+  },
+  {
+    image: "/Images/testimonial/Avatar12.jpg",
+    name: "Mariam (America)",
+    review:
+      "Extremely satisfied! Noticeable improvement in recitation, especially rulings. Grateful for such dedicated teaching.",
+  },
+  {
+    image: "/Images/testimonial/Avatar5.png",
+    name: "Tajamul Hussai  (America) ",
+    review:
+      "Highly structured, supportive learning. Precise feedback and motivating environment helped me improve significantly.",
+  },
+  {
+    image: "/Images/testimonial/Avatar4.png",
+    name: "Jibreel (America)",
+    review:
+      "Patient, attentive teaching with consistent correction. Huge improvement in Tajweed and Qirah over two years.",
   },
 ];
 
@@ -72,18 +72,18 @@ const Testimonial = () => {
             className="testimonial-card-col1"
           >
             <TestimonialCard
-              image="/Images/testimonial/Avatar1.png"
-              name="Fazal"
-              review="Well-organized classes, kind teachers, and great progress in Hifz. Highly recommended for online Quran learning."
+              image="/Images/testimonial/Avatar6.png"
+              name="Yasmeen (America)"
+              review="This online Quran class has been a life-changing experience! The teachers are patient, knowledgeable, and make learning so easy. Highly recommend!"
             />
             <TestimonialCard
-              image="/Images/testimonial/Avatar2.png"
-              name="Jibreel"
+              image="/Images/testimonial/Avatar4.png"
+              name="Jibreel (America)"
               review="Patient, attentive teaching with consistent correction. Huge improvement in Tajweed and Qirah over two years."
             />
             <TestimonialCard
-              image="/Images/testimonial/Avatar2.png"
-              name="Jibreel Wagid"
+              image="/Images/testimonial/Avatar13.jpg"
+              name="Hafsa (America)"
               review="Corrects every mistake, improves Tajweed and Qirah. Excellent teaching—I highly recommend the classes."
             />
           </motion.div>
@@ -95,13 +95,13 @@ const Testimonial = () => {
             className="testimonial-card-col2"
           >
             <TestimonialCard
-              image="/Images/testimonial/Avatar3.png"
-              name="Tajamul Hussain"
+              image="/Images/testimonial/Avatar5.png"
+              name="Tajamul Hussai  (America) "
               review="Highly structured, supportive learning. Precise feedback and motivating environment helped me improve significantly."
             />
             <TestimonialCard
-              image="/Images/testimonial/Avatar2.png"
-              name="Fahad Abdullah"
+              image="/Images/testimonial/Avatar11.jpg"
+              name="Fahad Abdullah   (Saudi Arabia)"
               review="My son is learning Tajweed with proper names and great interest—Alhamdulillah, very satisfied with the academy."
             />
           </motion.div>
@@ -113,9 +113,9 @@ const Testimonial = () => {
             className="testimonial-card-col3 "
           >
             <TestimonialCard
-              image="/Images/testimonial/Avatar1.png"
-              name="Mutahar"
-              review="Teaching made a big impact—recitation improved and connection to the Qur’an strengthened. Truly appreciated and effective."
+              image="/Images/testimonial/Avatar4.png"
+              name="Mutahar (Canada)"
+              review="Teaching made a big impact—recitation improved and connection to the Quran strengthened. Truly appreciated and effective."
             />
           </motion.div>
           <motion.div
@@ -126,14 +126,14 @@ const Testimonial = () => {
             className="testimonial-card-col4"
           >
             <TestimonialCard
-              image="/Images/testimonial/Avatar2.png"
-              name="Mariam"
+              image="/Images/testimonial/Avatar12.jpg"
+              name="Mariam (America)"
               review="Extremely satisfied! Noticeable improvement in recitation, especially rulings. Grateful for such dedicated teaching."
             />
             <TestimonialCard
-              image="/Images/testimonial/Avatar3.png"
-              name="Abdullah"
-              review="This online Quran class has been a life-changing experience! The teachers are patient, knowledgeable, and make learning so easy. Highly recommend!"
+              image="/Images/testimonial/Avatar11.jpg"
+              name="Fazal (America)"
+              review="Well-organized classes, kind teachers, and great progress in Hifz. Highly recommended for online Quran learning."
             />
           </motion.div>
           <motion.div
@@ -144,18 +144,18 @@ const Testimonial = () => {
             className="testimonial-card-col5"
           >
             <TestimonialCard
-              image="/Images/testimonial/Avatar2.png"
-              name="Zainab A"
+              image="/Images/testimonial/Avatar4.png"
+              name="Umar (America)"
               review="This online Quran class has been a life-changing experience! The teachers are patient, knowledgeable, and make learning so easy. Highly recommend!"
             />
             <TestimonialCard
-              image="/Images/testimonial/Avatar1.png"
-              name="Atihck"
+              image="/Images/testimonial/Avatar6.png"
+              name="Umar Mom (America)"
               review="This online Quran class has been a life-changing experience! The teachers are patient, knowledgeable, and make learning so easy. Highly recommend!"
             />
             <TestimonialCard
-              image="/Images/testimonial/Avatar1.png"
-              name="Atihck"
+              image="/Images/testimonial/Avatar5.png"
+              name="Abdul Aziz (America)"
               review="This online Quran class has been a life-changing experience! The teachers are patient, knowledgeable, and make learning so easy. Highly recommend!"
             />
           </motion.div>

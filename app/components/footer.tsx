@@ -133,15 +133,18 @@ const Footer = () => {
               {/*fourth link div */}
               <h4 className="footer-content-link-title">Connect Now</h4>
               <div className="footer-content-links-wrapper-div">
-                <Link href="/" className="footer-link">
+                <a
+                  href="mailto:onlinetaleemulquran342@gmail.com"
+                  className="footer-link"
+                >
                   onlinetaleemulquran342@gmail.com
-                </Link>
-                <Link href="/" className="footer-link">
+                </a>
+                <a href="tel:+14692561451" className="footer-link">
                   +1 (469) 256-1451
-                </Link>
-                <Link href="/" className="footer-link">
+                </a>
+                <a href="tel:+919087078760" className="footer-link">
                   +91 9087078760
-                </Link>
+                </a>
                 <div className="footer-social-media-icon-block">
                   <Image
                     src="/assets/social-media-icons/whatsapp.svg"
@@ -168,7 +171,7 @@ const Footer = () => {
               </div>
             </div>
             {/*End of fourth LInk div */}
-            <a href="mailto:crayontoffical@gmail.com">
+            <a href="mailto:crayontofficial@gmail.com">
               <div className="crayont-div">
                 <h3 className="crayont-text">Crafted by Crayont</h3>
                 <Image
@@ -205,15 +208,18 @@ const Footer = () => {
               <h4 className="footer-content-link-title">Connect Now</h4>
               <div className="footer-content-links-wrapper-div">
                 <div className="footer-social-media-icon-block-mobile">
-                  <Link href="/" className="footer-link">
+                  <a
+                    href="mailto:onlinetaleemulquran342@gmail.com"
+                    className="footer-link"
+                  >
                     onlinetaleemulquran342@gmail.com
-                  </Link>
-                  <Link href="/" className="footer-link">
+                  </a>
+                  <a href="tel:+14692561451" className="footer-link">
                     +1 (469) 256-1451
-                  </Link>
-                  <Link href="/" className="footer-link">
+                  </a>
+                  <a href="tel:+919087078760" className="footer-link">
                     +91 9087078760
-                  </Link>
+                  </a>
                 </div>
                 <div className="footer-social-media-icon-block">
                   <Image
@@ -240,7 +246,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <a href="mailto:crayontoffical@gmail.com">
+            <a href="mailto:crayontofficial@gmail.com">
               <div className="crayont-div footer-logo-div">
                 <h3 className="crayont-text">Crafted by Crayont</h3>
                 <Image

@@ -145,7 +145,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="contact-us-section mt-25 relative">
+    <div className="contact-us-section relative">
       {/* Background Grid Images */}
       <Image
         src="/assets/Icons/Grids.svg"
