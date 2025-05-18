@@ -222,3 +222,7 @@ Button {
     align-items: center;
   }
 }
+
+.required{
+  color: red;
+}

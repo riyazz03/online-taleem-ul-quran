@@ -11,7 +11,10 @@ const AboutUsGuidance = () => {
   const imageRef = useRef(null);
 
   const isTitleInView = useInView(titleRef, { once: true, margin: "-50px" });
-  const isDescriptionInView = useInView(descriptionRef, { once: true, margin: "-50px" });
+  const isDescriptionInView = useInView(descriptionRef, {
+    once: true,
+    margin: "-50px",
+  });
   const isImageInView = useInView(imageRef, { once: true, margin: "-50px" });
 
   return (
@@ -45,12 +48,16 @@ const AboutUsGuidance = () => {
               animate={isDescriptionInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
             >
-              At Taleem-ul-Quran, our vision is to create a world where the
-              teachings of the Holy Quran illuminate the hearts and minds of
-              every individual, guiding them toward righteousness, peace, and
-              success in both this life and the Hereafter. We aspire to build a
-              spiritually enlightened society where the Quran is not just read
-              but deeply understood, cherished, and applied in daily life.
+              At{" "}
+              <span className="learning-journey-description-span">
+                Taleem-ul-Quran
+              </span>
+              , our vision is to create a world where the teachings of the Holy
+              Quran illuminate the hearts and minds of every individual, guiding
+              them toward righteousness, peace, and success in both this life
+              and the Hereafter. We aspire to build a spiritually enlightened
+              society where the Quran is not just read but deeply understood,
+              cherished, and applied in daily life.
             </motion.p>
           </div>
 

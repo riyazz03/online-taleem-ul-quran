@@ -84,7 +84,7 @@
 }
 
 .quran-memorization-content-box {
-  background-color: #63aea7;
+  background: #0c6c6c;
   font-family: Inter;
   font-size: 1.25rem;
   font-style: normal;
@@ -106,7 +106,6 @@
   font-weight: 400;
   line-height: normal;
 }
-
 
 @media screen and (max-width: 768px) {
   .quran-memorization-cards-section {

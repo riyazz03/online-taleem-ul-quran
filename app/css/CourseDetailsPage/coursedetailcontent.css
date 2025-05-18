@@ -5,7 +5,7 @@
   width: 100%;
   height: 59px;
   flex-shrink: 0;
-  background: #63aea7;
+  background: #0c6c6c;
   color: #fff;
   font-family: Inter;
   font-size: 28px;
@@ -23,7 +23,15 @@
   padding-left: 20px; 
   margin: 0; 
 }
-
+.sub-title-list{
+  padding:1rem 0rem;
+  font-size: 24px;
+  font-weight: bold;
+  color: #0c6c6c;
+  text-transform: uppercase;
+  border-bottom: 1px solid #0c6c6c;
+  padding-bottom: 1rem;
+}
 /* @media screen and (max-width: 768px) {
   .quran-memorization-content-heading{
     width: 250px;

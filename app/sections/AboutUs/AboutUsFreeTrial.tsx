@@ -51,7 +51,7 @@ const AboutUsFreeTrial = () => {
                 welcoming space. Clear your doubts, gain clarity, and start your
                 journey toward deeper faith today!
               </p>
-              <div className="free-trial-time">Every Day 09:00 pm</div>
+              <div className="free-trial-time">Every Weekends</div>
               <div className="free-trial-drop-down-section">
                 <select
                   id="course"
@@ -62,8 +62,8 @@ const AboutUsFreeTrial = () => {
                   required
                 >
                   <option value="">Select Your Date</option>
-                  <option value="option1">Today</option>
-                  <option value="option2">Tomorrow</option>
+                  <option value="option1">Saturday</option>
+                  <option value="option2">Sunday</option>
                 </select>
               </div>
             </motion.div>
@@ -84,8 +84,11 @@ const AboutUsFreeTrial = () => {
                   "Male & Female Tutors",
                   "Islamic Studies & Duas",
                   "One to One Classes",
-                  "Flexible weekday/weekend timings"
                 ].map((feature, index) => (
+// Track your progress with focused, monthly exams designed to reinforce learning and boost retention.
+
+/*************  ✨ Smart Paste 📚  *************/
+/*******  fa1bf485-b9c9-4462-8834-893fdb9a715e  *******/
                   <motion.div
                     key={index}
                     className="about-us-trial-offer-features-line"

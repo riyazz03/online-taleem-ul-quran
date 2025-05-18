@@ -13,17 +13,6 @@ import Button from "@/app/components/button";
 import HowWeWork from "@/app/sections/AboutUs/HowWeWork";
 import OurCoursesCardMini from "@/app/components/OurCoursesCardMini";
 
-const contentVariant = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  },
-};
 
 const containerVariant = {
   hidden: { opacity: 0, y: 40 },
@@ -135,14 +124,15 @@ const QuranMemorization = () => {
             </motion.h1>
 
             <h4 className="learning-journey-description-ctc">
-              Reading the Qur&apos;an with Tajweed is fardh (obligatory) for
-              everyone, as it ensures correct pronunciation—especially important
-              during Salah, Dhikr, or when reading the Qur&apos;an.
-              Mispronunciation can alter meanings. In this course, we begin with
-              practical Tajweed and then focus on recitation. It&apos;s perfect
-              for complete beginners who&apos;ve never recited the Qur&apos;an
-              or studied Tajweed before. Start learning Tajweed online from the
-              basics, insha&apos;Allah.
+              Do you aspire to recite the Holy Qur&apos;an with clarity,
+              confidence, and beautiful Tajweed? Our comprehensive online Quran
+              recitation course is designed to help you achieve just that.
+              Whether you are a beginner taking your first steps or someone
+              looking to refine their existing recitation skills, our expert
+              instructors will guide you on a journey to articulate the words of
+              Allah (SWT) correctly and melodiously. This course focuses on the
+              practical application of Tajweed rules, ensuring you can recite
+              with precision and reverence.
               <span className="learning-journey-description-span-ctc">
                 {/* Online Taleem ul Quran */}
               </span>
@@ -206,7 +196,8 @@ const QuranMemorization = () => {
                       [
                         <>
                           Age knows no bounds in our diverse student community,
-                          spanning from <span>4 to 56 years old.</span>
+                          welcoming learners from as young as{" "}
+                          <span>4 years old.</span>
                         </>,
                         <>
                           Should complete The Mastery Phase of our{" "}
@@ -217,7 +208,7 @@ const QuranMemorization = () => {
                           accredited by Quran Online India
                         </>,
                         <>
-                          Exclusive <span>One-on-One Sessions</span> for
+                          Exclusive One-on-One and Batch-Wise Sessions for
                           Uncompromised Development
                         </>,
                       ][index]
@@ -244,7 +235,7 @@ const QuranMemorization = () => {
           <div className="main-container">
             <div className="quran-memorization-content-container-ctc">
               <div className="quran-memorization-content-heading">
-                Our Approach
+                Course Outline
               </div>
               <p>
                 Learn Quranic Arabic and Connect with the Quran on a Deeper
@@ -272,83 +263,6 @@ const QuranMemorization = () => {
                 confidence and clarity, allowing you to connect with its divine
                 guidance on a personal and spiritual level
               </p>
-              <p>
-                The Prophet (s) once said to ibn Mas&apo;ud, <br />
-                &quot;Recite to me some Qur&apos;ān&quot;
-              </p>
-              <p>
-                He replied, &quot;O messenger of Allāh! How can I recite it to
-                you whilst it was revealed to you?&quot;
-              </p>
-              <p>He said, &quot;I love to hear it from other than me.&quot;</p>
-              <p>
-                He said, &quot;So I started to read from Sūrat An-Nisā until I
-                reached the āyah that reads, &apos;So how will it be when We
-                bring from every nation a witness, and we bring you, O Muḥammad,
-                against these people as a witness?&quot;
-              </p>
-              <p>
-                The Prophet (sall Allāhu &apos;alayhi wa sallam), at this point,
-                said to Ibn Mas&apos;ūd, “This is enough”.
-              </p>
-              <p>
-                Ibn Mas&apos;ūd said, &quot;I looked at him and he was shedding
-                tears. - Sahih Muslim, Book 31, Hadith 5920.
-              </p>
-              <div className="quran-memorization-content-heading">
-                Attainment of Jannah
-              </div>
-              <p>
-                &quot;The best among you are those who learn the Qur&apos;an and
-                teach it.&quot; (Bukhari, Hadith No. 5027)
-              </p>
-              <div className="quran-memorization-content-heading">
-                Source of Healing
-              </div>
-              <p>
-                &quot;We send down in the Qur&apos;an that which is a healing
-                and a mercy to those who believe.&quot; (Qur&apos;an 17:82)
-                Forgiveness of Sins
-              </p>
-              <p>
-                &quot;Whoever recites the Qur&apos;an and acts upon it, his
-                parents will be given a crown on the Day of Resurrection, the
-                light of which will be like the sun.&quot; (Abu Dawood, Hadith
-                No. 1395)
-              </p>
-              <p>
-                &quot;We send down in the Qur&apos;an that which is a healing
-                and a mercy to those who believe.&quot; (Qur&apos;an 17:82)
-                Increase in Rank
-              </p>
-              <p>
-                &quot;Recite the Qur&apos;an, for it will come on the Day of
-                Resurrection interceding for its companions.&quot; (Muslim,
-                Hadith No. 804)
-              </p>
-              <div className="quran-memorization-content-box">
-                <p>
-                  عَنْ عُثْمَانَ رضي الله عنه عَنِ النَّبِيِّ صلی الله عليه وآله
-                  وسلم قَالَ:خَيرُکُم مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ.
-                  رواه البخاري. وَفِي رِوَايَةٍ عَنْهُ: قَالَ النَّبِيُّ صلی
-                  الله عليه وآله وسلم: إِنَّ أَفْضَلَکُمْ مَنْ تَعَلَّمَ
-                  الْقُرآنَ وَعَلَّمَهُ. رواه البخاري. ”حضرت عثمان (بن عفان) رضی
-                  اللہ عنہ سے روایت ہے کہ حضور نبی اکرم صلی اللہ علیہ وآلہ وسلم
-                  نے فرمایا: تم میں سے بہتر وہ شخص ہے جو قرآن حکیم سیکھے اور
-                  سکھائے۔
-                </p>
-                <p>
-                  &quot;The best among you is the one who learns the Qur&apos;an
-                  and teaches it.&quot;
-                  <br />
-                  &quot;Indeed, the most virtuous among you is the one who
-                  learns the Qur&apos;an and teaches it.&quot;
-                </p>
-                <p>
-                  تم میں سب سے بہتر وہ ہے جو قرآن سیکھے اور سکھائے۔, یقیناً تم
-                  میں سب سے افضل وہ ہے جو قرآن سیکھتا ہے اور سکھاتا ہے۔
-                </p>
-              </div>
               <div className="quran-memorization-content-box">
                 <p>
                   عَنْ عَائِشَةَ رضي اﷲ عنها قَالَتْ: قَالَ رَسُولُ اﷲِصلی الله
@@ -356,142 +270,30 @@ const QuranMemorization = () => {
                   الْکِرَامِ الْبَرَرَةِ، وَالَّذِي يَقْرَأُ الْقُرْآنَ
                   وَيَتَتَعْتَعُ فِيْهِ، وَهُوَ عَلَيْهِ شَاقٌّ لَهُ أَجْرَانِ.
                   وَفِي رِوايَةٍ: وَالَّذِي يَقْرَأُ وَهُوَ يَشْتَدُّ عَلَيْهِ
-                  لَهُ أَجْرَانِ. متفق عليه و هذا لفظ مسلم. ”حضرت عائشہ صدیقہ
-                  رضی اﷲ عنھا روایت فرماتی ہیں کہ حضور نبی اکرم صلی اللہ علیہ
-                  وآلہ وسلم نے فرمایا: قرآن مجید کا ماہر معزز و محترم فرشتوں اور
-                  معظم و مکرّم انبیاء علیہم السلام کے ساتھ ہوگا اور وہ شخص جو
-                  قرآن پڑھتا ہو لیکن اس میں اٹکتا ہو اور (پڑھنا) اس پر (کند ذہن
-                  یا موٹی زبان ہونے کی وجہ سے) مشکل ہو اس کے لئے بھی دوگنا اجر
-                  ہے۔ ”ایک دوسری روایت میں ہے کہ وہ شخص جو قرآن پڑھتا ہے حالانکہ
-                  یہ پڑھنا اس کے لئے سخت مشکل ہو، اس کے لئے دو اجر ہیں۔“
+                  لَهُ أَجْرَانِ. متفق عليه و هذا لفظ مسلم.
                 </p>
                 <p>
-                  &quot;The one who is proficient in the Qur&apos;an will be
-                  with the noble, righteous scribes (the angels); and the one
-                  who reads the Qur&apos;an and stammers while reading it,
-                  finding it difficult, will have a double reward.&quot;
+                  &quot;Narrated by Hazrat &apos;Ā&apos;ishah The one who is
+                  proficient in reciting the Qur&apos;an will be with the noble,
+                  honorable angels (and the revered Prophets). And the one who
+                  recites the Qur&apos;an with difficulty, stammering or
+                  struggling, will have double the reward.&quot;
                   <br />
-                  &quot;The one who recites (the Qur&apos;an) with difficulty
-                  and hardship shall receive two rewards.&quot;
+                  &quot;The person who recites the Qur&apos;an with great
+                  difficulty and effort will receive a double reward.&quot;
                 </p>
                 <p>
-                  قرآن مجید کا ماہر (یعنی جو روانی سے اور درست طریقے سے پڑھتا
-                  ہو) معزز، نیکوکار اور بلند مرتبہ فرشتوں کے ساتھ ہوگا۔ اور وہ
-                  شخص جو قرآن پڑھتا ہے لیکن اسے پڑھنے میں دقت محسوس ہوتی ہے، اس
-                  کے لئے دوگنا اجر ہے۔,وہ شخص جو قرآن پڑھتا ہے حالانکہ یہ پڑھنا
-                  اس کے لیے بہت مشکل ہوتا ہے، اس کے لیے دو اجر ہیں۔
+                  &apos;حضرت عائشہ صدیقہ رضی اﷲ عنھا روایت فرماتی ہیں کہ حضور نبی
+                  اکرم صلی اللہ علیہ وآلہ وسلم نے فرمایا: قرآن مجید کا ماہر معزز
+                  و محترم فرشتوں اور معظم و مکرّم انبیاء علیہم السلام کے ساتھ
+                  ہوگا اور وہ شخص جو قرآن پڑھتا ہو لیکن اس میں اٹکتا ہو اور
+                  (پڑھنا) اس پر (کند ذہن یا موٹی زبان ہونے کی وجہ سے) مشکل ہو اس
+                  کے لئے بھی دوگنا اجر ہے۔&apos;”ایک دوسری روایت میں ہے کہ وہ شخص جو
+                  قرآن پڑھتا ہے حالانکہ یہ پڑھنا اس کے لئے سخت مشکل ہو، اس کے
+                  لئ دو اجر ہیں۔“
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section className="prophetic-hadith-section">
-        <div className="padding-global">
-          <div className="main-container prophetic-hadith-container">
-            <div className="prophetic-hadith-content">
-              {/* Title */}
-              <motion.h1
-                className="prophetic-hadith-title"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={contentVariant}
-                transition={{ delay: 0.2 }} // Delay added for sequential effect
-              >
-                The Prophet (s) once said to ibn Mas&rsquo;ud,
-              </motion.h1>
-
-              {/* Description */}
-              <motion.div
-                className="prophetic-hadith-content-description"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={contentVariant}
-                transition={{ delay: 0.4 }}
-              >
-                <p className="prophetic-hadith-description">
-                  &ldquo;Recite to me some Qur&rsquo;ān&rdquo;
-                </p>
-                <p className="prophetic-hadith-description">
-                  <span>He replied, </span>“O messenger of Allāh! How can I
-                  recite it to you whilst it was revealed to you?”
-                </p>
-              </motion.div>
-
-              {/* More Content */}
-              <motion.div
-                className="prophetic-hadith-content-description"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={contentVariant}
-                transition={{ delay: 0.6 }}
-              >
-                <p className="prophetic-hadith-description">
-                  <span>He said, </span>“I love to hear it from other than me.”
-                </p>
-                <p className="prophetic-hadith-description">
-                  <span>He said, </span>“So I started to read from Sūrat An-Nisā
-                  until I reached the āyah that reads, &rsquo;So how will it be
-                  when We bring from every nation a witness, and we bring you, O
-                  Muḥammad, against these people as a witness?’”
-                </p>
-              </motion.div>
-
-              {/* Final Content */}
-              <motion.div
-                className="prophetic-hadith-content-description"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={contentVariant}
-                transition={{ delay: 0.8 }}
-              >
-                <p className="prophetic-hadith-description">
-                  <span>
-                    The Prophet (sall Allāhu &apos;alayhi wa sallam), at this
-                    point, said to Ibn Mas&apos;ūd,{" "}
-                  </span>
-                  &quot;This is enough&quot;.
-                </p>
-                <br />
-                <p className="prophetic-hadith-description">
-                  <span>Ibn Mas&apos;ūd said, </span>&quot;I looked at him and
-                  he was shedding tears.&quot;
-                </p>
-              </motion.div>
-
-              {/* Source */}
-              <motion.h4
-                className="prophetic-hadith-name"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={contentVariant}
-                transition={{ delay: 1 }}
-              >
-                – Sahih Muslim, Book 31, &nbsp;&nbsp;&nbsp;&nbsp;Hadith 5920.
-              </motion.h4>
-            </div>
-
-            {/* Sub Title */}
-            <motion.div
-              className="prophetic-hadith-sub-title"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={contentVariant}
-              transition={{ delay: 1.2 }}
-            >
-              <p className="prophetic-hadith-paragraph">
-                The above hadith shows that the Qur&rsquo;an has an impact on
-                even our Prophet (s) heart. Being the best of mankind, Prophet
-                (s) possessed the most softest of hearts, so much that these
-                verses brought him to tears.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -518,9 +320,9 @@ const QuranMemorization = () => {
                   <span>Aqeeda, Seerat, Fiqh & Surahs</span>
                 </h1>
                 <p className="section-description quran-learning-overview-description">
-                  Our Tilawat-ul-Quran course goes beyond recitation, offering a
-                  treasure trove of knowledge, empowering you with a deeper
-                  understanding of Islam&rsquo;s core principles.
+                  Our course go beyond recitation, offering a treasure trove of
+                  knowledge, empowering you with a deeper understanding of
+                  Islam&rsquo;s core principles.
                 </p>
               </div>
 

@@ -13,17 +13,6 @@ import Button from "@/app/components/button";
 import HowWeWork from "@/app/sections/AboutUs/HowWeWork";
 import OurCoursesCardMini from "@/app/components/OurCoursesCardMini";
 
-const contentVariant = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  },
-};
 
 const containerVariant = {
   hidden: { opacity: 0, y: 40 },
@@ -135,14 +124,14 @@ const QuranMemorization = () => {
             </motion.h1>
 
             <h4 className="learning-journey-description-ctc">
-              Reading the Qur&apos;an with Tajweed is fardh (obligatory) for
-              everyone, as it ensures correct pronunciation—especially important
-              during Salah, Dhikr, or when reading the Qur&apos;an.
-              Mispronunciation can alter meanings. In this course, we begin with
-              practical Tajweed and then focus on recitation. It&apos;s perfect
-              for complete beginners who&apos;ve never recited the Qur&apos;an
-              or studied Tajweed before. Start learning Tajweed online from the
-              basics, insha&apos;Allah.
+              Reading the Qur&apos;an with Tajweed is an obligatory act (fardh)
+              for every Muslim, as it ensures correct pronunciation—especially
+              crucial during Salah, Dhikr, and Qur&apos;anic recitation.
+              Mispronunciation can alter the intended meanings. This course
+              begins with practical Tajweed principles and then progresses to
+              recitation practice. It is ideal for complete beginners who have
+              never recited the Qur&apos;an or studied Tajweed before. Begin
+              your online Tajweed journey from the basics, insha&apos;Allah.
               <span className="learning-journey-description-span-ctc">
                 {/* Online Taleem ul Quran */}
               </span>
@@ -206,7 +195,8 @@ const QuranMemorization = () => {
                       [
                         <>
                           Age knows no bounds in our diverse student community,
-                          spanning from <span>4 to 56 years old.</span>
+                          welcoming learners from as young as{" "}
+                          <span>4 years old.</span>
                         </>,
                         <>
                           Should complete The Mastery Phase of our{" "}
@@ -217,7 +207,7 @@ const QuranMemorization = () => {
                           accredited by Quran Online India
                         </>,
                         <>
-                          Exclusive <span>One-on-One Sessions</span> for
+                          Exclusive One-on-One and Batch-Wise Sessions for
                           Uncompromised Development
                         </>,
                       ][index]
@@ -291,7 +281,7 @@ const QuranMemorization = () => {
                 how to read the holy Quran with tajweed. There are 3 types of
                 courses available:
               </p>
-              <div className="quran-memorization-content-heading">Level 1</div>
+              <div className="sub-title-list">Level 1</div>
               <p>
                 The first level of Tajweed courses online is for those students
                 who want to know how to recite/read the holy Quran, they will
@@ -299,7 +289,7 @@ const QuranMemorization = () => {
                 basic attributes of letters e, i. Nasal sounds, idgham, qalb,
                 maddahs, and types of madds, etc.
               </p>
-              <div className="quran-memorization-content-heading">Level 2</div>
+              <div className="sub-title-list">Level 2</div>
               <p>
                 The second level of online Tajweed courses consists of the
                 improvement of your recitation skills by applying the Tajweed
@@ -308,7 +298,7 @@ const QuranMemorization = () => {
                 differentiate them, avoiding the (sinful) mistakes, like making
                 longer sound where you&apos;ve to make a short vowel sound, etc.
               </p>
-              <div className="quran-memorization-content-heading">Level 3</div>
+              <div className="sub-title-list">Level 3</div>
               <p>
                 This is the final level of online Tajweed courses, at this
                 level, you&apos;ll learn the rules of Waqf (rules about stopping
@@ -342,32 +332,10 @@ const QuranMemorization = () => {
 
               <div className="quran-memorization-content-box">
                 <p>
-                  عَنْ فَضَالَۃَ بنِ عُبَیْدٍرضی اللّٰہ عنہ قالَ: قالَ رسولُ
-                  اللّٰہ صلی اللّٰہ علیہ وسلم: اَللّٰہُ أَشَدُّ أُذُنًا اِلٰی
-                  قَارِیِٔ القُرْآنِ مِنْ صَاحِبِ القَیْنَۃِ اِلٰی
-                  قَیْنَتِہ۔(ابن ماجہ، حاکم)نبی اکرم … کا ارشاد ہے : حق تعالی
-                  شانہ قرآن پڑھنے والے کی آواز کی طرف اس شخص سے زیادہ کان لگاتے
-                  ہیں جوگانے والی باندی سے اپنا گانا سن رہاہو۔
-                </p>
-                <p>
-                  &quot;Allah listens more attentively to a person reciting the
-                  Qur&apos;an than a man does to his singing slave-girl.&quot;
-                  (Ibn Majah, Al-Hakim)
-                </p>
-                <p>
-                  اللہ تعالیٰ قرآن پڑھنے والے کی آواز کی طرف اس شخص سے زیادہ
-                  توجہ فرماتا ہے جو کسی گانے والی لونڈی کا گانا سن رہا ہو۔ (ابن
-                  ماجہ، حاکم)
-                </p>
-              </div>
-              <div className="quran-memorization-content-box">
-                <p>
-                  اِقْرَئُوُا الْقُرْآنَ بِلُحُوْنِ العَرَبِ
-                  وَأَصْوَاتِھَا‘‘۔(قرآن کو عرب کے لہجے اور ان کی آواز میں
-                  پڑھو)(شعب الایمان)۔ ایک اور روایت میں ارشاد ہے: ’’حَسِّنُوا
-                  القُرْآنَ بِأَصْوَاتِکُم؛ فانَّ الصَّوتَ الحَسَنَ یَزِیْدُ
-                  القُرآنَ حُسْنًا۔( اچھی آواز سے قرآن کوپڑھاکرو؛اس لیے کہ اچھی
-                  آواز قرآن کے حسن کوبڑھادیتی ہے(شعب الایمان)۔
+                  اِقْرَئُوُا الْقُرْآنَ بِلُحُوْنِ العَرَبِ وَأَصْوَاتِھَا (شعب
+                  الایمان)۔ ایک اور روایت میں ارشاد ہے: حَسِّنُوا القُرْآنَ
+                  بِأَصْوَاتِکُم؛ فانَّ الصَّوتَ الحَسَنَ یَزِیْدُ القُرآنَ
+                  حُسْنًا (شعب الایمان)۔
                 </p>
                 <p>
                   &quot;Recite the Qur&apos;an with the melodies and tones of
@@ -376,137 +344,12 @@ const QuranMemorization = () => {
                   beautiful voice enhances the beauty of the Qur&apos;an.&quot;
                 </p>
                 <p>
-                  قرآن کو عرب کے لہجے اور ان کی آواز میں پڑھو۔,اچھی آواز سے قرآن
-                  کو پڑھا کرو؛ اس لیے کہ اچھی آواز قرآن کے حسن کو بڑھا دیتی ہے۔
-                </p>
-              </div>
-              <div className="quran-memorization-content-box">
-                <p>
-                  حضرت علی ؓ نے ’’ترتیل‘‘ کی تفسیر تجوید حروف اور معرفۃ وقوف سے
-                  کی ہے(الاتقان فی علوم القرآن)
-                </p>
-                <p>
-                  &quot;And recite the Qur&apos;an with measured, rhythmic
-                  tones.&quot;
-                  <br /> &quot;Pronouncing each letter correctly (Tajweed
-                  al-Huruf) and understanding the appropriate places to pause
-                  (Ma&apos;rifat al-Wuqoof).&quot;
-                </p>
-                <p>
-                  اور قرآن کو ٹھہر ٹھہر کر، صاف صاف اور عمدہ طریقے سے پڑھو۔
-                  ,تجویدِ حروف اور معرفتِ وقوف سے۔
+                  ‘قرآن کو عرب کے لہجے اور ان کی آواز میں پڑھو اچھی آواز سے قرآن
+                  کوپڑھاکرواس لیے کہ اچھی آواز قرآن کے حسن کوبڑھادیتی ہے (شعب
+                  الایمان)
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section className="prophetic-hadith-section">
-        <div className="padding-global">
-          <div className="main-container prophetic-hadith-container">
-            <div className="prophetic-hadith-content">
-              {/* Title */}
-              <motion.h1
-                className="prophetic-hadith-title"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={contentVariant}
-                transition={{ delay: 0.2 }} // Delay added for sequential effect
-              >
-                The Prophet (s) once said to ibn Mas&rsquo;ud,
-              </motion.h1>
-
-              {/* Description */}
-              <motion.div
-                className="prophetic-hadith-content-description"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={contentVariant}
-                transition={{ delay: 0.4 }}
-              >
-                <p className="prophetic-hadith-description">
-                  &ldquo;Recite to me some Qur&rsquo;ān&rdquo;
-                </p>
-                <p className="prophetic-hadith-description">
-                  <span>He replied, </span>“O messenger of Allāh! How can I
-                  recite it to you whilst it was revealed to you?”
-                </p>
-              </motion.div>
-
-              {/* More Content */}
-              <motion.div
-                className="prophetic-hadith-content-description"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={contentVariant}
-                transition={{ delay: 0.6 }}
-              >
-                <p className="prophetic-hadith-description">
-                  <span>He said, </span>“I love to hear it from other than me.”
-                </p>
-                <p className="prophetic-hadith-description">
-                  <span>He said, </span>“So I started to read from Sūrat An-Nisā
-                  until I reached the āyah that reads, &rsquo;So how will it be
-                  when We bring from every nation a witness, and we bring you, O
-                  Muḥammad, against these people as a witness?’”
-                </p>
-              </motion.div>
-
-              {/* Final Content */}
-              <motion.div
-                className="prophetic-hadith-content-description"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={contentVariant}
-                transition={{ delay: 0.8 }}
-              >
-                <p className="prophetic-hadith-description">
-                  <span>
-                    The Prophet (sall Allāhu &apos;alayhi wa sallam), at this
-                    point, said to Ibn Mas&apos;ūd,{" "}
-                  </span>
-                  “This is enough”.
-                </p>
-                <br />
-                <p className="prophetic-hadith-description">
-                  <span>Ibn Mas&apos;ūd said, </span>&quot;I looked at him and
-                  he was shedding tears.&quot;
-                </p>
-              </motion.div>
-
-              {/* Source */}
-              <motion.h4
-                className="prophetic-hadith-name"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                variants={contentVariant}
-                transition={{ delay: 1 }}
-              >
-                – Sahih Muslim, Book 31, &nbsp;&nbsp;&nbsp;&nbsp;Hadith 5920.
-              </motion.h4>
-            </div>
-
-            {/* Sub Title */}
-            <motion.div
-              className="prophetic-hadith-sub-title"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={contentVariant}
-              transition={{ delay: 1.2 }}
-            >
-              <p className="prophetic-hadith-paragraph">
-                The above hadith shows that the Qur&rsquo;an has an impact on
-                even our Prophet (s) heart. Being the best of mankind, Prophet
-                (s) possessed the most softest of hearts, so much that these
-                verses brought him to tears.
-              </p>
-            </motion.div>
           </div>
         </div>
       </section>
@@ -533,9 +376,9 @@ const QuranMemorization = () => {
                   <span>Aqeeda, Seerat, Fiqh & Surahs</span>
                 </h1>
                 <p className="section-description quran-learning-overview-description">
-                  Our Tilawat-ul-Quran course goes beyond recitation, offering a
-                  treasure trove of knowledge, empowering you with a deeper
-                  understanding of Islam&rsquo;s core principles.
+                  Our course go beyond recitation, offering a treasure trove of
+                  knowledge, empowering you with a deeper understanding of
+                  Islam&rsquo;s core principles.
                 </p>
               </div>
 

@@ -88,9 +88,9 @@ const QuranLearningOverview = () => {
                 <span>Aqeeda, Seerat, Fiqh & Surahs</span>
               </h1>
               <p className="section-description quran-learning-overview-description">
-                Our Tilawat-ul-Quran course goes beyond recitation, offering a
-                treasure trove of knowledge, empowering you with a deeper
-                understanding of Islam&rsquo;s core principles.
+                Our course go beyond recitation, offering a treasure trove of
+                knowledge, empowering you with a deeper understanding of
+                Islam&rsquo;s core principles.
               </p>
             </div>
 
