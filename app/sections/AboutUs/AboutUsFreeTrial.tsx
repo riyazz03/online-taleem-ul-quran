@@ -83,7 +83,8 @@ const AboutUsFreeTrial = () => {
                   "Affordable & Flexible Plans",
                   "Male & Female Tutors",
                   "Islamic Studies & Duas",
-                  "24/7 Learning Availability",
+                  "One to One Classes",
+                  "Flexible weekday/weekend timings"
                 ].map((feature, index) => (
                   <motion.div
                     key={index}

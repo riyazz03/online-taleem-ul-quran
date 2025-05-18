@@ -47,8 +47,7 @@ const LearningJourney = () => {
                 Online Taleem ul Quran
               </span>
               , we are dedicated to delivering a comprehensive and accessible
-              Quran learning experience for students of all ages, backgrounds,
-              and skill levels. Whether you’re a beginner, a non-Arabic speaker,
+              Quran learning experience for students of all ages, backgrounds. Whether you’re a beginner, a non-Arabic speaker,
               or someone looking to enhance Tajweed and Qirat, our expert tutors
               guide you step by step through flexible online classes tailored to
               your pace and needs. Especially beneficial for those without
