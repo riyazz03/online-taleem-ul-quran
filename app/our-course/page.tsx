@@ -14,6 +14,7 @@ const OurCourse = () => {
       <OurCoursesLive />
       <KeyBenefits />
       <FreeTrial />
+      <div className="mobile-margin-top"></div>
       <HowWeWork />
     </main>
   );

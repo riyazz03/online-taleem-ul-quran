@@ -134,13 +134,13 @@ const Footer = () => {
               <h4 className="footer-content-link-title">Connect Now</h4>
               <div className="footer-content-links-wrapper-div">
                 <Link href="/" className="footer-link">
-                  onlinetaleem@gmail.com
+                  onlinetaleemulquran342@gmail.com
                 </Link>
                 <Link href="/" className="footer-link">
-                  +91 9629158073
+                  +1 (469) 256-1451
                 </Link>
                 <Link href="/" className="footer-link">
-                  +91 9629158073
+                  +91 9087078760
                 </Link>
                 <div className="footer-social-media-icon-block">
                   <Image
@@ -168,16 +168,18 @@ const Footer = () => {
               </div>
             </div>
             {/*End of fourth LInk div */}
-            <div className="crayont-div">
-              <h3 className="crayont-text">Crafted by Crayont</h3>
-              <Image
-                src="/Images/crayont-logo.png"
-                alt="crayont logo"
-                width={28}
-                height={31}
-                className="crayont-logo"
-              />
-            </div>
+            <a href="mailto:crayontoffical@gmail.com">
+              <div className="crayont-div">
+                <h3 className="crayont-text">Crafted by Crayont</h3>
+                <Image
+                  src="/Images/crayont-logo.png"
+                  alt="crayont logo"
+                  width={28}
+                  height={31}
+                  className="crayont-logo"
+                />
+              </div>
+            </a>
           </div>
           <div className="footer-links-block">
             {MobileFooterData.map((item, index) => (
@@ -204,13 +206,13 @@ const Footer = () => {
               <div className="footer-content-links-wrapper-div">
                 <div className="footer-social-media-icon-block-mobile">
                   <Link href="/" className="footer-link">
-                    onlinetaleem@gmail.com
+                    onlinetaleemulquran342@gmail.com
                   </Link>
                   <Link href="/" className="footer-link">
-                    +91 9629158073
+                    +1 (469) 256-1451
                   </Link>
                   <Link href="/" className="footer-link">
-                    +91 9629158073
+                    +91 9087078760
                   </Link>
                 </div>
                 <div className="footer-social-media-icon-block">
@@ -238,17 +240,18 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-
-            <div className="crayont-div footer-logo-div">
-              <h3 className="crayont-text">Crafted by Crayont</h3>
-              <Image
-                src="/Images/crayont-logo.png"
-                alt="crayont logo"
-                width={28}
-                height={31}
-                className="crayont-logo"
-              />
-            </div>
+            <a href="mailto:crayontoffical@gmail.com">
+              <div className="crayont-div footer-logo-div">
+                <h3 className="crayont-text">Crafted by Crayont</h3>
+                <Image
+                  src="/Images/crayont-logo.png"
+                  alt="crayont logo"
+                  width={28}
+                  height={31}
+                  className="crayont-logo"
+                />
+              </div>
+            </a>
           </div>
         </div>
       </div>

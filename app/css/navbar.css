@@ -178,6 +178,7 @@ img.nav-logo {
     justify-content: center;
     padding: 0 3%;
     width: 100%;
+    position: sticky;
   }
   .nav-link {
     display: none;

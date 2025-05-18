@@ -64,6 +64,7 @@
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.36px;
+  cursor: pointer;
 }
 .crayont-logo {
   border-radius: 50%;
