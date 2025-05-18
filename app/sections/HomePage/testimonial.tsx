@@ -22,7 +22,7 @@ const testimonials = [
     image: "/Images/testimonial/Avatar1.png",
     name: "Salman",
     review:
-      "This online Quran class has been a life-changing experience! The teachers are patient, knowledgeable, and make learning so easy. Highly recommend!",
+      "Assalamu alaikum wrwb. My son is doing Hifz with Al Qasim Online Academy, and we are really happy with how it’s going. The teachers are kind and helpful and he is learning a lot. The classes are well-organized, and so far my son’s memorization is going great, Alhamdhullillah. Definitely recommend it to anyone looking for good online Quran classes.",
   },
   {
     image: "/Images/testimonial/Avatar2.png",
@@ -34,7 +34,7 @@ const testimonials = [
     image: "/Images/testimonial/Avatar3.png",
     name: "Omar H",
     review:
-      "Perfect for beginners and advanced learners alike. The interactive lessons and flexible timings make it easy to stay consistent with my learning.",
+      "Assalamu alaikum wrwb. My son is doing Hifz with Al Qasim Online Academy, and we are really happy with how it’s going. The teachers are kind and helpful and he is learning a lot. The classes are well-organized, and so far my son’s memorization is going great, Alhamdhullillah. Definitely recommend it to anyone looking for good online Quran classes.",
   },
   {
     image: "/Images/testimonial/Avatar2.png",

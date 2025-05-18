@@ -210,7 +210,7 @@ const QuranMemorization = () => {
                         </>,
                         <>
                           Should complete The Mastery Phase of our{" "}
-                          <span>Al-Hira Neo-Noorani Qaidah Course</span>
+                          <span>Al-Burhan Qaida</span>
                         </>,
                         <>
                           We provide a <span>Quran completion certificate</span>{" "}

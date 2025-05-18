@@ -8,18 +8,18 @@ import "@/app/css/OurCourses/our-courses-live.css";
 
 const ourCoursesCard = [
   {
-    image: "/Images/courses/quran-recitation.png",
-    title: "Quran Recitation",
-    description:
-      "Unlock the Beauty of the Quran Master Recitation and Comprehension with Expert Guidance.",
-    link: "/course-details/quran-recitation",
-  },
-  {
     image: "/Images/courses/simplified-tajweed.png",
     title: "Simplified Tajweed",
     description:
       "Master the Art of Tajweed with Expert Guidance Live, Personalized, and at Your Pace!",
     link: "/course-details/simplified-tajweed",
+  },
+  {
+    image: "/Images/courses/quran-recitation.png",
+    title: "Quran Recitation",
+    description:
+      "Unlock the Beauty of the Quran Master Recitation and Comprehension with Expert Guidance.",
+    link: "/course-details/quran-recitation",
   },
   {
     image: "/Images/courses/arabic-language.png",
