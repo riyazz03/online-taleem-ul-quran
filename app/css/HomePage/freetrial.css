@@ -4,7 +4,7 @@
   background-color: var(--background);
 }
 .free-trial-image {
-  position: relative;
+  position: absolute;
   height: 100%;
   width: 100%;
 }
@@ -13,14 +13,14 @@
   overflow: hidden;
 }
 .free-trial-content-block {
-  position: absolute;
+  position: relative;
   z-index: 5;
-  top: 13px;
   width: 100%;
   display: flex;
-  gap: 170px;
+  gap: 270px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  padding: 1rem;
 }
 .free-trial-content {
   width: 524px;
@@ -45,10 +45,15 @@
 .trial-offer {
   background-color: rgba(99, 174, 166, 0.209);
   backdrop-filter: blur(10px);
-  height: 450px;
-  width: 450px;
+  /* height: 450px;  */
+  /* width: 450px; */
+  /* padding: 65px 50px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
   border-radius: 15px;
-  padding: 65px 50px;
   position: relative;
 }
 .trial-offer-title {

@@ -281,7 +281,7 @@ const QuranMemorization = () => {
                 </p>
                 <p>
                   The Messenger of Allah (ﷺ) said: One who was devoted to the
-                  Qur&spaos;an will be told to recite, ascend and recite
+                  Qur&apos;an will be told to recite, ascend and recite
                   carefully as he recited carefully when he was in the world,
                   for he will reach his abode when he comes to the last verse he
                   recites.

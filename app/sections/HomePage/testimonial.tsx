@@ -25,16 +25,16 @@ const testimonials = [
       "This online Quran class has been a life-changing experience! The teachers are patient, knowledgeable, and make learning so easy. Highly recommend!",
   },
   {
-    image: "/Images/testimonial/Avatar4.png",
-    name: "Mutahar (Canada)",
+    image: "/Images/testimonial/Avatar13.jpg",
+    name: "Hafsa (America)",
     review:
-      "Teaching made a big impact—recitation improved and connection to the Quran strengthened. Truly appreciated and effective.",
+      "Corrects every mistake, improves Tajweed and Qirah. Excellent teaching—I highly recommend the classes.",
   },
   {
-    image: "/Images/testimonial/Avatar12.jpg",
-    name: "Mariam (America)",
+    image: "/Images/testimonial/Avatar4.png",
+    name: "Jibreel (America)",
     review:
-      "Extremely satisfied! Noticeable improvement in recitation, especially rulings. Grateful for such dedicated teaching.",
+      "Patient, attentive teaching with consistent correction. Huge improvement in Tajweed and Qirah over two years.",
   },
   {
     image: "/Images/testimonial/Avatar5.png",
@@ -43,10 +43,34 @@ const testimonials = [
       "Highly structured, supportive learning. Precise feedback and motivating environment helped me improve significantly.",
   },
   {
-    image: "/Images/testimonial/Avatar4.png",
-    name: "Jibreel (America)",
+    image: "/Images/testimonial/Avatar11.jpg",
+    name: "Fahad Abdullah   (Saudi Arabia)",
     review:
-      "Patient, attentive teaching with consistent correction. Huge improvement in Tajweed and Qirah over two years.",
+      "My son is learning Tajweed with proper names and great interest—Alhamdulillah, very satisfied with the academy.",
+  },
+  {
+    image: "/Images/testimonial/Avatar4.png",
+    name: "Mutahar (Canada)",
+    review:
+      "Teaching made a big impact—recitation improved and connection to the Quran strengthened. Truly appreciated and effective.",
+  },
+  {
+    image: "/Images/testimonial/Avatar4.png",
+    name: "Umar (America)",
+    review:
+      "This online Quran class has been a life-changing experience! The teachers are patient, knowledgeable, and make learning so easy. Highly recommend!",
+  },
+  {
+    image: "/Images/testimonial/Avatar6.png",
+    name: "Umar Mom (America)",
+    review:
+      "This online Quran class has been a life-changing experience! The teachers are patient, knowledgeable, and make learning so easy. Highly recommend!",
+  },
+  {
+    image: "/Images/testimonial/Avatar5.png",
+    name: "Abdul Aziz (America)",
+    review:
+      "This online Quran class has been a life-changing experience! The teachers are patient, knowledgeable, and make learning so easy. Highly recommend!",
   },
 ];
 
