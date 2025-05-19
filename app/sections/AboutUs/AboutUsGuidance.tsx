@@ -52,12 +52,16 @@ const AboutUsGuidance = () => {
               <span className="learning-journey-description-span">
                 Taleem-ul-Quran
               </span>
-              , our vision is to create a world where the teachings of the Holy
-              Quran illuminate the hearts and minds of every individual, guiding
-              them toward righteousness, peace, and success in both this life
-              and the Hereafter. We aspire to build a spiritually enlightened
-              society where the Quran is not just read but deeply understood,
-              cherished, and applied in daily life.
+             , we&apos;ve been dedicated to teaching the Holy
+              Quran for over 15 years through offline classes. Over time, we
+              noticed that many adults—especially those aged 30 and above—felt
+              hesitant or shy to join in-person sessions. To overcome this, we
+              introduced Online Taleem-ul-Quran, creating a welcoming and
+              private way for learners of all ages to connect with the Quran.
+              Alhamdulillah, many students are now learning online, especially
+              from the U.S., where access to Quran teachers is limited. Our
+              mission continues across 4+ countries, helping hearts reconnect
+              with the Quran globally.
             </motion.p>
           </div>
 
