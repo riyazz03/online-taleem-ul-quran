@@ -251,3 +251,66 @@ Button {
     font-size: 18px !important;
   }
 }
+
+.overflow-add {
+  height: 100vh;
+  width: 100vw;
+  position: fixed; /* Changed from absolute */
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.317);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-image {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+.overflow-center-div {
+  height: 95vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.overflow-center-div-image {
+  height: 85%;
+  width: 100%;
+}
+.overflow-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overflow-center-div-btn {
+  background-color: #63aea7;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overflow-btn {
+  color: #fff;
+  font-family: Inter;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+@media (max-width: 768px) {
+  .overflow-center-div {
+    height: 70vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
