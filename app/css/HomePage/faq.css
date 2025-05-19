@@ -2,7 +2,8 @@
   width: 100%;
   position: relative;
   /* padding: 45px auto; */
-  padding: 100px 150px;
+  /* padding: 100px 150px; */
+  padding: 1rem;
   z-index: 5;
   /* min-height: 120vh; */
   background-color: var(--background);

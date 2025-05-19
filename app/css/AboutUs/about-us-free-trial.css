@@ -107,9 +107,13 @@
   height: 450px;
   width: 450px;
   border-radius: 15px;
-  padding: 65px 50px;
   position: relative;
   margin-top: 35px;
+  /* padding: 65px 50px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .about-us-trial-offer-title {
   color: #63aea7;
