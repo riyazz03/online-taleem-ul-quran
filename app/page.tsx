@@ -14,32 +14,51 @@ import Image from "next/image";
 export default function Home() {
   const [showPopup, setShowPopup] = useState(false);
   const hasClosedManually = useRef(false);
+  const scrollYRef = useRef(0);
+
+  const lockScroll = () => {
+    scrollYRef.current = window.scrollY;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollYRef.current}px`;
+    document.body.style.left = "0";
+    document.body.style.right = "0";
+    document.body.style.overflow = "hidden";
+    document.body.style.width = "100%";
+  };
+  const unlockScroll = () => {
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.left = "";
+    document.body.style.right = "";
+    document.body.style.overflow = "";
+    document.body.style.width = "";
+    window.scrollTo(0, scrollYRef.current);
+  };
 
   useEffect(() => {
-    // Show popup after 4 seconds
     const initialTimer = setTimeout(() => {
       setShowPopup(true);
-      document.body.style.overflow = "hidden";
+      lockScroll();
     }, 4000);
 
-    // Re-show popup every 1 minute if user stays
     const interval = setInterval(() => {
       if (!hasClosedManually.current) {
         setShowPopup(true);
-        document.body.style.overflow = "hidden";
+        lockScroll();
       }
-    }, 60000); // 60,000ms = 1 minute
+    }, 60000);
 
     return () => {
       clearTimeout(initialTimer);
       clearInterval(interval);
+      unlockScroll(); // Just in case
     };
   }, []);
 
   const handleClose = () => {
     setShowPopup(false);
     hasClosedManually.current = true;
-    document.body.style.overflow = "auto";
+    unlockScroll();
   };
 
   return (

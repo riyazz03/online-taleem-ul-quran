@@ -255,7 +255,7 @@ Button {
 .overflow-add {
   height: 100vh;
   width: 100vw;
-  position: fixed; /* Changed from absolute */
+  position: fixed; 
   z-index: 9999;
   top: 0;
   left: 0;
@@ -341,4 +341,10 @@ Button {
 
 .only-whatsapp {
   color: var(--secondary-color);
+}
+
+body.no-scroll {
+  position: fixed !important;
+  overflow: hidden !important;
+  width: 100%;
 }
