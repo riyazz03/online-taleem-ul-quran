@@ -289,21 +289,22 @@ Button {
   height: 100%;
   object-fit: cover;
 }
-.overflow-center-div-btn {
-  background-color: #63aea7;
-  width: 100%;
-  height: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .overflow-btn {
   color: #fff;
   font-family: Inter;
-  font-size: 1.75rem;
+  font-size: 2vh 19.02px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+.overflow-center-div-btn {
+  background-color: #63aea7;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  border-radius: 10px;
 }
 @media (max-width: 768px) {
   .overflow-center-div {
@@ -313,4 +314,31 @@ Button {
     flex-direction: column;
     justify-content: space-between;
   }
+  .overflow-image {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  .overflow-center-div-image {
+    width: 100%;
+    height: 90%;
+  }
+  .close-image {
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 35px;
+  }
+  .close-image {
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 30px;
+  }
+}
+
+.only-whatsapp {
+  color: var(--secondary-color);
 }

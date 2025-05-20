@@ -10,23 +10,39 @@
   position: relative;
   z-index: 9;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8rem;
+}
+.about-us-guidance-image-div{
+  width: 100%;
+  height: 40rem;
+  border-radius: 20px;
+  margin-bottom: 4rem;
+}
+.guidance-image{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
 }
 .guidance-content{
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
+
 .guidance-description {
   color: #1d1d1d;
-  width: 46.1875rem;
+  /* width: 46.1875rem; */
   font-family: "DM Sans";
-  font-size: 2.125rem;
+  font-size: 1.8rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.learning-journey-description-span{
+  color: var(--secondary-color);
 }
 .guidance-image{
   z-index: 9;
@@ -72,5 +88,17 @@
     width: 100%;
     max-width: 350px;
     height: auto;
+  }
+  .about-us-guidance-image-div{
+    width: 100%;
+    height: 12rem;
+    border-radius: 20px;
+    margin-bottom: 0rem;
+  }
+  .guidance-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
   }
 }
