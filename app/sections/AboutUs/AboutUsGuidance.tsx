@@ -28,6 +28,15 @@ const AboutUsGuidance = () => {
       />
       <div className="padding-global">
         <div className="main-container about-us-guidance-container">
+          <div className="about-us-guidance-image-div">
+            <Image
+              src="/Images/about-us-guidance.png"
+              alt="Guidance Image"
+              className="guidance-image"
+              height={403}
+              width={427}
+            />
+          </div>
           <div className="guidance-content">
             {/* Animated Title */}
             <motion.h1
@@ -37,7 +46,8 @@ const AboutUsGuidance = () => {
               animate={isTitleInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              Defining <span>Our Path</span>
+              Our <span> Mission</span> and
+              <span> Purpose</span>
             </motion.h1>
 
             {/* Animated Description */}
@@ -48,20 +58,41 @@ const AboutUsGuidance = () => {
               animate={isDescriptionInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
             >
-              At{" "}
+              Welcome to{" "}
               <span className="learning-journey-description-span">
-                Taleem-ul-Quran
+                online taleem ul Quran
               </span>
-             , we&apos;ve been dedicated to teaching the Holy
-              Quran for over 15 years through offline classes. Over time, we
-              noticed that many adults—especially those aged 30 and above—felt
-              hesitant or shy to join in-person sessions. To overcome this, we
-              introduced Online Taleem-ul-Quran, creating a welcoming and
-              private way for learners of all ages to connect with the Quran.
-              Alhamdulillah, many students are now learning online, especially
-              from the U.S., where access to Quran teachers is limited. Our
-              mission continues across 4+ countries, helping hearts reconnect
-              with the Quran globally.
+              , With over{" "}
+              <span className="learning-journey-description-span">
+                15 years
+              </span>{" "}
+              of experience in Quranic education, we observed a significant gap:
+              while children often have the opportunity to learn the Quran
+              through part-time madrasas, many adults—particularly housewives
+              and older individuals—find it difficult to access such learning.
+              Their responsibilities or feelings of shyness due to age often
+              prevent them from attending mosques or joining traditional
+              classes, even though they have a deep desire to learn the Quran
+              with proper Tajweed. <br />
+              <br />
+              To address this need, our team launched an online Quran education
+              platform. This initiative is designed to offer flexible,
+              accessible Quran learning for everyone—children, adults, men, and
+              women—regardless of their schedules or circumstances. <br />
+              <br />
+              Alhamdulillah, after successfully running our offline Quran
+              education services, we began offering online classes{" "}
+              <span className="learning-journey-description-span">
+                three years ago
+              </span>{" "}
+              . Our aim is to make the words of Allah accessible to hearts
+              around the world and help preserve and strengthen faith through
+              proper Quranic learning. <br />
+              <br />
+              Under the guidance of experienced teachers and adult supervision,
+              students can now learn the Quran at their own pace and
+              convenience. By enrolling in our platform, you can gain the
+              ability to read the Quran correctly and beautifully with Tajweed.
             </motion.p>
           </div>
 
@@ -75,7 +106,7 @@ const AboutUsGuidance = () => {
             <Image
               src="/Images/about-us-guidance-image.png"
               alt="Guidance Image"
-              className="guidance-image-image"
+              className="guidance-image-image hidden"
               height={403}
               width={427}
             />

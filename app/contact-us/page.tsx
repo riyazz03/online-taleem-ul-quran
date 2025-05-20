@@ -378,8 +378,8 @@ const ContactUs = () => {
                   />
                 </div>
                 <div className="numbers">
-                  <p>+1 (469) 256-1451</p>
                   <p>+91 9087078760</p>
+                  <p>+919360771659</p>
                 </div>
               </div>
               <div className="contact-us-details-svg-block">

@@ -139,12 +139,13 @@ const Footer = () => {
                 >
                   onlinetaleemulquran342@gmail.com
                 </a>
-                <a href="tel:+14692561451" className="footer-link">
-                  +1 (469) 256-1451
-                </a>
                 <a href="tel:+919087078760" className="footer-link">
-                  +91 9087078760
+                  +91 9087078760 <span className="only-whatsapp">(Only Whatsapp)</span>
                 </a>
+                <a href="tel:+919360771659" className="footer-link">
+                +919360771659 <span className="only-whatsapp">(Only Whatsapp)</span>
+                </a>
+
                 <div className="footer-social-media-icon-block">
                   <Image
                     src="/assets/social-media-icons/whatsapp.svg"
@@ -214,12 +215,13 @@ const Footer = () => {
                   >
                     onlinetaleemulquran342@gmail.com
                   </a>
-                  <a href="tel:+14692561451" className="footer-link">
-                    +1 (469) 256-1451
-                  </a>
                   <a href="tel:+919087078760" className="footer-link">
-                    +91 9087078760
+                    +91 9087078760 <span className="only-whatsapp">(Only Whatsapp)</span>
                   </a>
+                  <a href="tel:+919360771659" className="footer-link">
+                  +919360771659 <span className="only-whatsapp">(Only Whatsapp)</span>
+                  </a>
+                  
                 </div>
                 <div className="footer-social-media-icon-block">
                   <Image
