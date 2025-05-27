@@ -401,7 +401,7 @@ const ContactUs = () => {
                   className="location-icon"
                 />
                 <div className="map">
-                  <p>Madarasa-E-Siddiquia, Masjid-E-Qadeem No.30, Old Mosque Steet Rahmanthpala, Vellore - 632001</p>
+                  <p>Madarasa-E-Siddiquia, Masjid-E-Qadeem Campus No.30, Old Mosque Steet Rahmathpala, Vellore - 632001</p>
                 </div>
               </div>
             </div>
