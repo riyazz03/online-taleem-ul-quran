@@ -390,7 +390,7 @@ const ContactUs = () => {
                   height={65}
                   className="email-icon"
                 />
-                <p className="email">onlinetaleemulquran342@gmail.com</p>
+                <p className="email">onlinetaleemulquranvlr@gmail.com</p>
               </div>
               <div className="contact-us-details-svg-block">
                 <Image

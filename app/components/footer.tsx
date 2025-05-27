@@ -134,10 +134,10 @@ const Footer = () => {
               <h4 className="footer-content-link-title">Connect Now</h4>
               <div className="footer-content-links-wrapper-div">
                 <a
-                  href="mailto:onlinetaleemulquran342@gmail.com"
+                  href="mailto:onlinetaleemulquranvlr@gmail.com"
                   className="footer-link"
                 >
-                  onlinetaleemulquran342@gmail.com
+                  onlinetaleemulquranvlr@gmail.com
                 </a>
                 <a href="tel:+919087078760" className="footer-link">
                   +91 9087078760 <span className="only-whatsapp">(Only Whatsapp)</span>
@@ -210,10 +210,10 @@ const Footer = () => {
               <div className="footer-content-links-wrapper-div">
                 <div className="footer-social-media-icon-block-mobile">
                   <a
-                    href="mailto:onlinetaleemulquran342@gmail.com"
+                    href="mailto:onlinetaleemulquranvlr@gmail.com"
                     className="footer-link"
                   >
-                    onlinetaleemulquran342@gmail.com
+                    onlinetaleemulquranvlr@gmail.com
                   </a>
                   <a href="tel:+919087078760" className="footer-link">
                     +91 9087078760 <span className="only-whatsapp">(Only Whatsapp)</span>
