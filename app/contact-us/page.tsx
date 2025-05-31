@@ -79,7 +79,7 @@ const ContactUs = () => {
     setLoading(true);
 
     const url =
-      "https://script.google.com/macros/s/AKfycbxlwQR56C3LOxLeEDzc-_3Y360Q5E9Z6ie1MJwaiilcmg1wmKiMOKz5Q1_S5WomfiYP/exec";
+      "https://script.google.com/macros/s/AKfycbwC7RNSJnrPcFn8OCUvEL6MwhI4ZZncad6PWLHsDiIXyPLIYQAjnbM3TvW1gx8Ne5iN/exec";
 
     const formPayload = `Name=${encodeURIComponent(
       formData.name
