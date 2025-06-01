@@ -311,7 +311,7 @@ const ContactUs = () => {
                 </div>
                 <div className="form-input-block">
                   <label htmlFor="date" className="form-label-title">
-                    Select Your Preferred Weekend Date{" "}
+                    Select Your Demo class on Weekends
                     <span className="required">*</span>
                   </label>
                   <select
