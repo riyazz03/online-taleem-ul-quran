@@ -31,7 +31,7 @@ const OurCoursesLiveCard = ({
 
         <Link href={link}>
           <div className="courses-btn">
-            <p className="courses-btn-text">Start With a Free Trail</p>
+            <p className="courses-btn-text">Start With a Free Trial</p>
             <Image
               src="/assets/Icons/arrow-icon.svg"
               alt="Arrow"
