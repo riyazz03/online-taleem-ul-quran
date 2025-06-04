@@ -31,7 +31,7 @@ const OurCoursesCardMini = ({
 
         <Link href={link}>
           <div className="courses-btn-ctc">
-            <p className="courses-btn-text-ctc">Start With a Free Trail</p>
+            <p className="courses-btn-text-ctc">Start With a Free Trial</p>
             <Image
               src="/assets/Icons/arrow-icon.svg"
               alt="Arrow"
