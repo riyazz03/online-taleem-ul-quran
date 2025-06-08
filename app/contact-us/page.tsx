@@ -5,6 +5,8 @@ import "../css/contactUs.css";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 
 const ContactUs = () => {
   const form = useRef<HTMLFormElement | null>(null);
@@ -28,6 +30,8 @@ const ContactUs = () => {
 
   const isFormInView = useInView(formRef, { once: true, amount: 0.2 });
   const isDetailsInView = useInView(detailsRef, { once: true, amount: 0.2 });
+
+  const isValidPhoneNumber = (number: string) => /^\d{20}$/.test(number);
 
   useEffect(() => {
     const weekends: string[] = [];
@@ -61,25 +65,23 @@ const ContactUs = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const validatePhoneNumber = (number: string) => {
-    return /^\d{10}$/.test(number);
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (
-      !validatePhoneNumber(formData.phone) ||
-      !validatePhoneNumber(formData.whatsapp)
-    ) {
-      alert("Phone and WhatsApp numbers must be exactly 10 digits.");
-      return;
-    }
+    // if (!isValidPhoneNumber(formData.phone)) {
+    //   alert("Phone number must be 10 digits.");
+    //   return;
+    // }
+
+    // if (!isValidPhoneNumber(formData.whatsapp)) {
+    //   alert("WhatsApp number must be 10 digits.");
+    //   return;
+    // }
 
     setLoading(true);
 
     const url =
-      "https://script.google.com/macros/s/AKfycbwC7RNSJnrPcFn8OCUvEL6MwhI4ZZncad6PWLHsDiIXyPLIYQAjnbM3TvW1gx8Ne5iN/exec";
+      "https://script.google.com/macros/s/AKfycbxkr-oYcIAWfyP8yT0c9P9R7JgXJFn8GuGoHwawOuCvL6ENDssOvLtnqQjQb01RTvKu/exec";
 
     const formPayload = `Name=${encodeURIComponent(
       formData.name
@@ -105,25 +107,23 @@ const ContactUs = () => {
             publicKey: "9GwxlluH6w4vlxKbe",
           })
           .then(() => {
-            console.log("Email sent");
+            console.log("Email sent ✅");
             setShowSuccess(true);
             setTimeout(() => setShowSuccess(false), 3000);
-          });
-
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          whatsapp: "",
-          message: "",
-        });
-        setSelectedCourse("");
-        setSelectedDate("");
+            setFormData({
+              name: "",
+              email: "",
+              phone: "",
+              whatsapp: "",
+              message: "",
+            });
+            setSelectedCourse("");
+            setSelectedDate("");
+          })
+          .catch((err) => console.error("EmailJS error:", err));
       })
-      .catch((error) => console.error(error))
-      .finally(() => {
-        setLoading(false);
-      });
+      .catch((err) => console.error("Google Sheets error:", err))
+      .finally(() => setLoading(false));
   };
 
   const fadeInUp = {
@@ -146,7 +146,6 @@ const ContactUs = () => {
 
   return (
     <div className="contact-us-section relative">
-      {/* Background Grid Images */}
       <Image
         src="/assets/Icons/Grids.svg"
         alt="Grid"
@@ -162,7 +161,6 @@ const ContactUs = () => {
         className="contact-us-grid-image-landscape"
       />
 
-      {/* Success Popup */}
       {showSuccess && (
         <motion.div
           className="success-popup"
@@ -178,7 +176,6 @@ const ContactUs = () => {
 
       <div className="padding-global">
         <div className="main-container contact-us-container">
-          {/* Form Section */}
           <motion.div
             className="contact-us-form"
             ref={formRef}
@@ -190,9 +187,7 @@ const ContactUs = () => {
               <h1 className="section-title">
                 <span>Contact</span> & Join Together
               </h1>
-              <p className="form-label-title mb-4">
-                {/* Demo Schedule (Only Weekend at 09:00 pm) */}
-              </p>
+              <p className="form-label-title mb-4"></p>
             </motion.div>
             <div className="contact-us-form-content">
               <form
@@ -200,7 +195,6 @@ const ContactUs = () => {
                 onSubmit={handleSubmit}
                 className="contact-us-form-block"
               >
-                {/* Inputs */}
                 <div className="form-input-block">
                   <label htmlFor="name" className="form-label-title">
                     Name <span className="required">*</span>
@@ -234,49 +228,29 @@ const ContactUs = () => {
                   <label htmlFor="phone" className="form-label-title">
                     Phone Number <span className="required">*</span>
                   </label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    inputMode="numeric"
-                    maxLength={10}
-                    placeholder="1234567890"
+                  <PhoneInput
+                    country={'in'}
                     value={formData.phone}
-                    onChange={(e) => {
-                      const onlyNums = e.target.value.replace(/\D/g, "");
-                      if (onlyNums.length <= 10) {
-                        setFormData({ ...formData, phone: onlyNums });
-                      }
-                    }}
-                    required
-                    className="form-input"
+                    onChange={(value) => setFormData({ ...formData, phone: value })}
+                    inputClass="form-input"
+                    inputStyle={{ width: '100%' }}
                   />
                 </div>
                 <div className="form-input-block">
                   <label htmlFor="whatsapp" className="form-label-title">
-                    Whatsapp Number <span className="required">*</span>
+                    WhatsApp Number <span className="required">*</span>
                   </label>
-                  <input
-                    id="whatsapp"
-                    name="whatsapp"
-                    type="tel"
-                    inputMode="numeric"
-                    maxLength={10}
-                    placeholder="1234567890"
+                  <PhoneInput
+                    country={'in'}
                     value={formData.whatsapp}
-                    onChange={(e) => {
-                      const onlyNums = e.target.value.replace(/\D/g, "");
-                      if (onlyNums.length <= 10) {
-                        setFormData({ ...formData, whatsapp: onlyNums });
-                      }
-                    }}
-                    required
-                    className="form-input"
+                    onChange={(value) => setFormData({ ...formData, whatsapp: value })}
+                    inputClass="form-input"
+                    inputStyle={{ width: '100%' }}
                   />
                 </div>
                 <div className="form-input-block">
                   <label htmlFor="course" className="form-label-title">
-                    I&apos;m interested in <span className="required">*</span>
+                    I'm interested in <span className="required">*</span>
                   </label>
                   <select
                     id="course"
@@ -288,12 +262,8 @@ const ContactUs = () => {
                   >
                     <option value="">Select Your Course</option>
                     <option value="Quran Recitation">Quran Recitation</option>
-                    <option value="Simplified Tajweed">
-                      Simplified Tajweed
-                    </option>
-                    <option value="Quran Memorization">
-                      Quran Memorization
-                    </option>
+                    <option value="Simplified Tajweed">Simplified Tajweed</option>
+                    <option value="Quran Memorization">Quran Memorization</option>
                   </select>
                 </div>
                 <div className="form-input-block">
@@ -348,7 +318,6 @@ const ContactUs = () => {
             </div>
           </motion.div>
 
-          {/* Contact Details Section */}
           <motion.div
             className="contact-us-details"
             ref={detailsRef}
