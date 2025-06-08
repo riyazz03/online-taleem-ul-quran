@@ -31,7 +31,7 @@ const ContactUs = () => {
   const isFormInView = useInView(formRef, { once: true, amount: 0.2 });
   const isDetailsInView = useInView(detailsRef, { once: true, amount: 0.2 });
 
-  const isValidPhoneNumber = (number: string) => /^\d{20}$/.test(number);
+  // const isValidPhoneNumber = (number: string) => /^\d{20}$/.test(number);
 
   useEffect(() => {
     const weekends: string[] = [];
@@ -250,7 +250,7 @@ const ContactUs = () => {
                 </div>
                 <div className="form-input-block">
                   <label htmlFor="course" className="form-label-title">
-                    I'm interested in <span className="required">*</span>
+                    I&apos;m interested in <span className="required">*</span>
                   </label>
                   <select
                     id="course"
