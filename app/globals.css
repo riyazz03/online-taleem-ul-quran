@@ -278,7 +278,7 @@ Button {
   width: 30vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 .overflow-center-div-image {
   height: 85%;
