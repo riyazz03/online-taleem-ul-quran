@@ -348,3 +348,6 @@ body.no-scroll {
   overflow: hidden !important;
   width: 100%;
 }
+a.overflow-center-div-btn {
+    display: none !important;
+}
