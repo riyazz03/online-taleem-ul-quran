@@ -205,7 +205,7 @@ const QuranMemorization = () => {
                         </>,
                         <>
                           We provide a <span>Quran completion certificate</span>{" "}
-                          accredited by Quran Online India
+                          accredited by Online Taleemul Quran
                         </>,
                         <>
                           Exclusive One-on-One and Batch-Wise Sessions for
