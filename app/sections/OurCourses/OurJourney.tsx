@@ -64,7 +64,7 @@ const OurJourney = () => {
                     style={{ transformOrigin: "center center" }}
                     className="content"
                   >
-                    <div className="number">8+</div>
+                    <div className="number">10+</div>
                     <div className="label">Countries</div>
                   </motion.div>
                 </div>
@@ -86,7 +86,7 @@ const OurJourney = () => {
                     style={{ transformOrigin: "center center" }}
                     className="content"
                   >
-                    <div className="number">3+</div>
+                    <div className="number">4+</div>
                     <div className="label">Year</div>
                   </motion.div>
                 </div>
