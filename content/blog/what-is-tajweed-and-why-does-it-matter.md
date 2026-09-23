@@ -1,7 +1,7 @@
 ---
 title: "What is Tajweed and why does it matter?"
 display: "What is *Tajweed* and why does it matter?"
-excerpt: "Tajweed is the art of giving every letter of the Quran its full right. Here is what it covers, why correct pronunciation protects the meaning of Allah's words, and how our Simplified Tajweed course is structured."
+excerpt: "Tajweed is the art of giving every letter of the Quran its full right. Here is what it covers, why correct pronunciation protects the meaning of Allah’s words, and how our Simplified Tajweed course is structured."
 date: "2026-08-10"
 category: "Tajweed"
 author: "Online Taleem ul Quran"
@@ -9,7 +9,7 @@ arabic: "تجويد"
 featured: true
 ---
 
-Many of us learned to read the Quran as children — sounding out the letters, following a teacher's finger across the page, and finishing a first khatm with great joy. Yet years later, a lot of adults quietly wonder whether they are really pronouncing the words correctly. That quiet question is where Tajweed begins.
+Many of us learned to read the Quran as children — sounding out the letters, following a teacher’s finger across the page, and finishing a first khatm with great joy. Yet years later, a lot of adults quietly wonder whether they are really pronouncing the words correctly. That quiet question is where Tajweed begins.
 
 In this article we explain what Tajweed is, the two ideas at its heart, why it matters so much for the meaning of the Quran, and how our Simplified Tajweed course guides you from the very basics to confident, measured recitation.
 
@@ -41,7 +41,7 @@ Almost everything you learn in Tajweed rests on two ideas.
 - **The lips**, for letters such as bā’ and mīm
 - **The nasal passage**, the source of the humming sound called *ghunnah*
 
-English has one "h" sound; Arabic has two quite different ones — a soft *hā’* from the deepest part of the throat, and a breathier *ḥā’* from its middle. Until your ear and mouth learn to separate them, you cannot recite them correctly. Learning the makharij trains exactly this.
+English has one “h” sound; Arabic has two quite different ones — a soft *hā’* from the deepest part of the throat, and a breathier *ḥā’* from its middle. Until your ear and mouth learn to separate them, you cannot recite them correctly. Learning the makharij trains exactly this.
 
 ### Sifaat — the character of each letter
 
@@ -55,9 +55,9 @@ In our course description we put it simply: reading the Quran with Tajweed is an
 
 A few well-known examples show how small the gap can be:
 
-- *Qalb* means "heart". Pronounce the *qāf* as a *kāf* and you get *kalb* — "dog".
-- *‘Alīm* means "all-knowing". Lose the *‘ayn* and *alīm* means "painful".
-- In Surah al-Fatihah, *an‘amta* means "You have blessed". Change its final vowel and it becomes "I have blessed" — a serious change in meaning.
+- *Qalb* means “heart”. Pronounce the *qāf* as a *kāf* and you get *kalb* — “dog”.
+- *‘Alīm* means “all-knowing”. Lose the *‘ayn* and *alīm* means “painful”.
+- In Surah al-Fatihah, *an‘amta* means “You have blessed”. Change its final vowel and it becomes “I have blessed” — a serious change in meaning.
 
 This is why teachers speak of **levels of errors**. *Clear errors* change a letter or a vowel and can distort the meaning. *Hidden errors* — like cutting a ghunnah short or making a heavy letter too light — may not change the meaning, but they take away from the beauty and precision the Quran deserves. A good Tajweed course works on both.
 

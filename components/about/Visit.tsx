@@ -86,7 +86,7 @@ export function Visit() {
             </span>
           </Reveal>
 
-          <Reveal delay={0.2} y={40} className="relative z-10 -mt-24 mx-3 sm:-mt-28 sm:mx-6 lg:-ml-16 lg:mr-10">
+          <Reveal delay={0.2} y={40} className="relative z-10 mx-3 -mt-14 sm:mx-6 sm:-mt-16 lg:-ml-16 lg:mr-10">
             <div className="rounded-[1.75rem] border border-brand-900/8 bg-white/95 p-6 shadow-lift backdrop-blur-md sm:p-7">
               <div className="flex items-start gap-4">
                 <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-brand-800 text-gold-200">

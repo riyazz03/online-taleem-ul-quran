@@ -144,7 +144,7 @@ export function CourseFan() {
           </div>
         </div>
 
-        <Note icon={Users} delay={900} className="absolute -right-6 -top-2 hidden sm:block">
+        <Note icon={Users} delay={900} className="absolute -right-2 -top-2 hidden sm:block xl:-right-6">
           One-to-one & batch classes
         </Note>
         <div className="absolute bottom-[-1%] left-1/2 z-20 -translate-x-1/2">

@@ -3,7 +3,6 @@ import { About } from "@/components/home/About";
 import { Audiences } from "@/components/home/Audiences";
 import { HadithQuote } from "@/components/home/HadithQuote";
 import { LiveLearning } from "@/components/home/LiveLearning";
-import { PhotoStrip } from "@/components/home/PhotoStrip";
 import { FeatureMarquee } from "@/components/sections/FeatureMarquee";
 import { Benefits } from "@/components/sections/Benefits";
 import { CoursesGrid } from "@/components/sections/CoursesGrid";
@@ -27,7 +26,6 @@ export default function HomePage() {
       <Steps />
       <FreeTrial />
       <Testimonials />
-      <PhotoStrip />
       <HadithQuote />
       <Faq />
     </>

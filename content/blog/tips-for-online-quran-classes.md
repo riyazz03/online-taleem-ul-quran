@@ -17,7 +17,7 @@ But the screen is only the doorway. What happens around the lesson — the room,
 
 ### 1. Create a quiet, dedicated space
 
-Choose one spot for your lessons and keep it the same every time: a clean table, good light and as little background noise as possible. A consistent place helps the mind settle into "Quran time" — especially for children. Let the rest of the household know when class is on.
+Choose one spot for your lessons and keep it the same every time: a clean table, good light and as little background noise as possible. A consistent place helps the mind settle into “Quran time” — especially for children. Let the rest of the household know when class is on.
 
 ### 2. Use headphones with a microphone
 
@@ -43,7 +43,7 @@ For many letters, your teacher learns a lot by *seeing* how you form the sound �
 
 ### 7. Ask questions and note every correction
 
-If a rule doesn't make sense, ask — one-to-one classes exist precisely so that you can. Write down each correction your teacher makes in a simple list: the word, the mistake and the fix. That list becomes your personal revision guide.
+If a rule doesn’t make sense, ask — one-to-one classes exist precisely so that you can. Write down each correction your teacher makes in a simple list: the word, the mistake and the fix. That list becomes your personal revision guide.
 
 ## Between classes: where progress really happens
 
@@ -53,7 +53,7 @@ The lesson introduces a skill; daily practice builds it. Ten to fifteen minutes 
 
 ### 9. Parents: stay involved
 
-For younger children, a parent's role is vital. Sit nearby during class when you can, help your child prepare their space and materials, and listen to their revision at home. Stay in touch with the teacher about progress — our monthly exams are a good moment to celebrate how far your child has come and to plan the next step together.
+For younger children, a parent’s role is vital. Sit nearby during class when you can, help your child prepare their space and materials, and listen to their revision at home. Stay in touch with the teacher about progress — our monthly exams are a good moment to celebrate how far your child has come and to plan the next step together.
 
 ### 10. Renew your intention and be patient
 
@@ -69,4 +69,4 @@ The Prophet ﷺ said:
 >
 > <cite>Sahih al-Bukhari 5027</cite>
 
-If you have not started yet, the best way to see how our online classes work is to try one. [Book a free demo class](/contact-us) — it's free, and there's no obligation — or [explore our courses](/our-course) to find the right fit.
+If you have not started yet, the best way to see how our online classes work is to try one. [Book a free demo class](/contact-us) — it’s free, and there’s no obligation — or [explore our courses](/our-course) to find the right fit.

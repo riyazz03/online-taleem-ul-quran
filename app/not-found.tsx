@@ -12,7 +12,6 @@ import { Eyebrow } from "@/components/ui/Section";
 import { HeroTitle, fadeUp } from "@/components/ui/PageHero";
 import { Magnetic } from "@/components/motion/Interactive";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
-import { SiteJsonLd } from "@/components/seo/SiteJsonLd";
 
 export const metadata: Metadata = {
   title: "Page not found",
@@ -80,7 +79,6 @@ const destinations = [
 export default function NotFound() {
   return (
     <>
-      <SiteJsonLd />
       <section className="relative isolate overflow-hidden pb-24 pt-32 sm:pb-32 sm:pt-40">
         {/* Backdrop */}
         <div aria-hidden className="absolute inset-0 -z-10">

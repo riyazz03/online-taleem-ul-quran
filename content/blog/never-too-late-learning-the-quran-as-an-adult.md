@@ -1,6 +1,6 @@
 ---
-title: "It's never too late: learning the Quran as an adult"
-display: "It's never too late: learning the Quran *as an adult*"
+title: "It’s never too late: learning the Quran as an adult"
+display: "It’s never too late: learning the Quran *as an adult*"
 excerpt: "Many adults carry a quiet wish to read the Quran properly. Here is why our academy was built for exactly those learners — and how to start from the very first letter, at your own pace."
 date: "2026-09-07"
 category: "Adult learners"
@@ -23,7 +23,7 @@ That is why we started teaching online. After successfully running offline Quran
 
 ## Shyness is normal — and one-to-one helps
 
-The most common feeling adult students describe is not difficulty. It is embarrassment: *"I should already know this."*
+The most common feeling adult students describe is not difficulty. It is embarrassment: *“I should already know this.”*
 
 Online, one-to-one classes take most of that pressure away. There is no room full of children, no one listening in, and no rush. It is just you, your teacher and the Quran, at a pace that suits you. Mistakes are simply part of the lesson — correcting them is exactly what your teacher is there for.
 

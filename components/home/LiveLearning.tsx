@@ -35,17 +35,16 @@ export function LiveLearning() {
     <section className="relative overflow-hidden py-24 sm:py-32">
       <div className="container-page grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
         <Reveal y={50} className="relative order-2 lg:order-1">
-          <div className="relative aspect-[5/4] overflow-hidden rounded-[2.5rem] shadow-lift">
+          <div className="relative aspect-[5/4] overflow-hidden rounded-[2.5rem] bg-white shadow-lift">
             <Parallax offset={24} className="absolute -inset-y-8 inset-x-0">
               <Image
-                src="/img/photos/boy-laptop.webp"
-                alt="A student attending a live online Quran lesson on his laptop"
+                src="/img/about/guidance-2.webp"
+                alt="Illustration of two students in a live online Quran lesson, one raising a question"
                 fill
                 sizes="(min-width: 1024px) 40rem, 92vw"
                 className="object-cover"
               />
             </Parallax>
-            <div className="absolute inset-0 bg-gradient-to-tr from-brand-950/40 via-transparent to-transparent" />
           </div>
           <div className="absolute -bottom-10 right-3 w-[62%] max-w-[17rem] sm:-right-6 sm:w-[48%]">
             <div className="animate-float-slow">

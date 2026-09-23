@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin } from "lucide-react";
 import { courses } from "@/lib/content";
@@ -25,15 +24,7 @@ export function Footer() {
       {/* Closing call to action, overlapping the footer */}
       <div className="container-page relative z-10">
         <Reveal y={60} className="grain relative overflow-hidden rounded-[2.5rem] bg-brand-800 px-6 py-16 text-center text-cream shadow-lift sm:px-12 sm:py-20">
-          <Image
-            src="/img/photos/minarets-sunset.webp"
-            alt=""
-            fill
-            sizes="(min-width: 1280px) 80rem, 100vw"
-            className="object-cover object-bottom opacity-45 mix-blend-luminosity"
-          />
-          <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-brand-800/40 via-brand-800/75 to-brand-800" />
-          <GeometricPattern id="footer-cta-geo" className="text-gold-200 opacity-[0.06]" />
+          <GeometricPattern id="footer-cta-geo" className="text-gold-200 opacity-[0.09]" />
           <div aria-hidden className="absolute -left-24 -top-24 size-72 rounded-full bg-brand-400/30 blur-3xl" />
           <div aria-hidden className="absolute -bottom-32 -right-16 size-80 rounded-full bg-gold-400/25 blur-3xl" />
           <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-6">

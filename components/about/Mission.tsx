@@ -92,10 +92,12 @@ function Chapter({
 }) {
   return (
     <Reveal y={28} className="grid gap-3 sm:grid-cols-[7.5rem_1fr] sm:gap-8">
-      <p className="flex items-baseline gap-3 sm:flex-col sm:gap-1 sm:pt-1">
-        <span className="font-display text-3xl leading-none text-brand-400">0{index}</span>
+      <h3 className="flex items-baseline gap-3 sm:flex-col sm:gap-1 sm:pt-1">
+        <span aria-hidden className="font-display text-3xl leading-none text-brand-400">
+          0{index}
+        </span>
         <span className="text-[0.68rem] font-bold uppercase tracking-[0.26em] text-gold-600">{label}</span>
-      </p>
+      </h3>
       <p
         className={cn(
           "text-[1.075rem] leading-[1.8] text-ink/80 text-pretty sm:text-lg sm:leading-[1.8]",

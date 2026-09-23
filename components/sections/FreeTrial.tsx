@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Check } from "lucide-react";
 import { trialFeatures } from "@/lib/content";
 import { cn } from "@/lib/utils";
@@ -24,15 +23,7 @@ export function FreeTrial({
     <section className={cn("py-12 sm:py-16", className)}>
       <div className="container-page">
         <Reveal y={50} className="grain relative overflow-hidden rounded-[2.5rem] bg-brand-900 text-cream shadow-lift">
-          <Image
-            src="/img/photos/rehal-window.webp"
-            alt=""
-            fill
-            sizes="(min-width: 1280px) 80rem, 100vw"
-            className="object-cover object-[70%_50%] opacity-40 mix-blend-luminosity"
-          />
-          <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-brand-900 via-brand-900/85 to-brand-900/40" />
-          <GeometricPattern id="trial-geo" className="text-gold-200 opacity-[0.06]" />
+          <GeometricPattern id="trial-geo" className="text-gold-200 opacity-[0.08]" />
           <div aria-hidden className="absolute -left-40 bottom-0 size-96 rounded-full bg-brand-500/30 blur-3xl" />
           <div aria-hidden className="absolute right-0 top-0 size-96 rounded-full bg-gold-400/15 blur-3xl" />
           <div className="skyline absolute inset-x-0 bottom-0 h-32 text-brand-950/40" />

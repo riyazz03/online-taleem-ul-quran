@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { stats } from "@/lib/content";
 import { cn } from "@/lib/utils";
 import { GeometricPattern } from "@/components/ui/Brand";
@@ -11,15 +10,7 @@ export function Stats({ className, limit = 6 }: { className?: string; limit?: nu
   const list = stats.slice(0, limit);
   return (
     <section className={cn("grain relative overflow-hidden bg-brand-950 py-24 text-cream sm:py-32", className)}>
-      <Image
-        src="/img/photos/lantern-corridor.webp"
-        alt=""
-        fill
-        sizes="100vw"
-        className="-z-10 object-cover opacity-25 mix-blend-luminosity"
-      />
-      <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-b from-brand-950 via-brand-950/80 to-brand-950" />
-      <GeometricPattern id="stats-geo" className="text-gold-300 opacity-[0.05]" />
+      <GeometricPattern id="stats-geo" className="text-gold-300 opacity-[0.06]" />
       <div aria-hidden className="absolute left-1/2 top-0 h-80 w-[60rem] -translate-x-1/2 rounded-full bg-brand-600/30 blur-3xl" />
 
       <div className="container-page relative flex flex-col gap-16">

@@ -17,7 +17,7 @@ Our Quran memorization course follows an approach that has stood the test of tim
 
 *Sabaq* means the new lesson. The teacher first listens to the student recite the new verses and makes sure every word is pronounced correctly, with the right accent. Only then does memorization begin: the student repeats the verses many times until they are secure.
 
-The teacher shares tips and techniques for memorizing, both during the class and for practising afterwards. The student's task is simple but serious: **the new lesson must be fully memorized before the next class**.
+The teacher shares tips and techniques for memorizing, both during the class and for practising afterwards. The student’s task is simple but serious: **the new lesson must be fully memorized before the next class**.
 
 Getting pronunciation right *before* memorizing matters. A mistake learned by heart is much harder to remove later than a mistake corrected on the first reading.
 
@@ -29,7 +29,7 @@ Because it happens **in every class, straight after the new lesson**, Sabaq Para
 
 ## Purana Sabaq — keeping old memorization alive
 
-*Purana Sabaq* means "old lesson": the revision of any juz the student has already memorized. In each class the student recites **at least half a juz** from their older memorization, and the teacher listens.
+*Purana Sabaq* means “old lesson”: the revision of any juz the student has already memorized. In each class the student recites **at least half a juz** from their older memorization, and the teacher listens.
 
 This is the part that gives both the student and the teacher real satisfaction and confidence. It shows that the student is memorizing more and more *without forgetting* the earlier parts — the true measure of a strong Hafiz.
 
@@ -54,7 +54,7 @@ Your support at home makes an enormous difference. These simple habits help youn
 - **Keep a fixed daily time.** Many families find the early morning, after Fajr, is when the mind is freshest.
 - **Use the same Mushaf every day.** Seeing each verse in the same place on the same page helps visual memory.
 - **Listen to the sabaq before class.** Five minutes of listening to your child recite shows you both where the weak spots are.
-- **Protect revision time.** When time is short, it is tempting to skip Sabaq Para or Purana Sabaq. Don't — revision is what keeps the memorization.
+- **Protect revision time.** When time is short, it is tempting to skip Sabaq Para or Purana Sabaq. Don’t — revision is what keeps the memorization.
 - **Keep sessions short and focused.** Several short practice sessions are better than one long, tiring one.
 - **Encourage, never compare.** Every child memorizes at their own pace. Praise effort and consistency, not just speed.
 - **Celebrate milestones.** Finishing a surah or a juz deserves a small celebration and a heartfelt du‘a together.
@@ -78,4 +78,4 @@ And memorizing even a few verses carries its own protection:
 
 ## Start the journey
 
-If you are thinking about Hifz for your child — or for yourself — the best first step is a conversation. [Read about the Quran Memorization course](/course-details/quran-memorization) or [book a free demo class](/contact-us), and our team will assess the student's reading and suggest the right place to begin.
+If you are thinking about Hifz for your child — or for yourself — the best first step is a conversation. [Read about the Quran Memorization course](/course-details/quran-memorization) or [book a free demo class](/contact-us), and our team will assess the student’s reading and suggest the right place to begin.

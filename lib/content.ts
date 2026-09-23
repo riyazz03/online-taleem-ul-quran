@@ -21,8 +21,8 @@ export const courses: CourseSummary[] = [
     arabic: "تجويد",
     description:
       "Master the art of Tajweed with expert guidance — live, personalised and at your pace.",
-    image: "/img/photos/tajweed-quran.webp",
-    imageAlt: "An open Quran with prayer beads resting on green cloth",
+    image: "/img/courses/simplified-tajweed.webp",
+    imageAlt: "An open Quran resting inside a softly lit circle",
     tags: ["Beginners welcome", "3 levels"],
   },
   {
@@ -31,8 +31,8 @@ export const courses: CourseSummary[] = [
     arabic: "تلاوة",
     description:
       "Unlock the beauty of the Quran — master recitation and comprehension with expert guidance.",
-    image: "/img/photos/recitation-mosque.webp",
-    imageAlt: "A student reciting the Quran from a wooden stand in a mosque",
+    image: "/img/courses/quran-recitation.webp",
+    imageAlt: "A student reciting the Quran from a wooden stand beneath an arch",
     tags: ["All ages", "One-to-one"],
   },
   {
@@ -41,8 +41,8 @@ export const courses: CourseSummary[] = [
     arabic: "حفظ",
     description:
       "Memorize the Quran with expert guidance — step by step, rooted in tradition, rewarded for eternity.",
-    image: "/img/photos/memorization-kids.webp",
-    imageAlt: "Children sitting together, reading and memorizing the Quran",
+    image: "/img/courses/quran-memorization.webp",
+    imageAlt: "A student seated on the floor, memorizing the Quran",
     tags: ["Hifz", "Sabaq method"],
   },
 ];
@@ -106,32 +106,24 @@ export const audiences = [
     description:
       "Learners from as young as 4 years old build strong Quran reading and pronunciation skills.",
     icon: "baby",
-    image: "/img/photos/online-class.webp",
-    imageAlt: "A young girl with headphones attending an online class on her laptop",
   },
   {
     title: "Sisters",
     description:
       "Female teachers for female students, in a safe and comfortable learning environment.",
     icon: "heart",
-    image: "/img/photos/sister-reading.webp",
-    imageAlt: "A young woman in a hijab reading the Quran",
   },
   {
     title: "Adults & beginners",
     description:
       "It is never too late. Start from the Arabic letters and learn at your own pace — no prior knowledge needed.",
     icon: "sprout",
-    image: "/img/photos/elder-reading.webp",
-    imageAlt: "An elderly man reading the Quran from a stand in a mosque",
   },
   {
     title: "Non-Arabic speakers",
     description:
       "Clear, patient guidance for students around the world who are new to the Arabic language.",
     icon: "globe",
-    image: "/img/photos/father-daughter.webp",
-    imageAlt: "A father and his daughter reading the Quran together",
   },
 ] as const;
 

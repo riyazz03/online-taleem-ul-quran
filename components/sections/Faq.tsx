@@ -2,11 +2,10 @@
 
 import { useId, useState } from "react";
 import { AnimatePresence, m } from "motion/react";
-import { Plus } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { faqs } from "@/lib/content";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
-import { ButtonLink } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/Section";
 import { WhatsAppIcon } from "@/components/ui/Icons";
 import { Reveal } from "@/components/motion/Reveal";
@@ -15,27 +14,18 @@ const ease = [0.16, 1, 0.3, 1] as const;
 
 type Item = { question: string; answer: string };
 
-export function FaqList({ items }: { items: readonly Item[] }) {
+/** Clean accordion: numbered questions separated by hairlines. */
+export function FaqList({ items, className }: { items: readonly Item[]; className?: string }) {
   const [open, setOpen] = useState<number | null>(0);
   const baseId = useId();
   return (
-    <div className="flex flex-col gap-3">
+    <Reveal y={24} className={cn("border-t border-brand-900/10", className)}>
       {items.map((item, i) => {
         const isOpen = open === i;
         const panelId = `${baseId}-panel-${i}`;
         const buttonId = `${baseId}-button-${i}`;
         return (
-          <m.div
-            key={item.question}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.7, delay: i * 0.05, ease }}
-            className={cn(
-              "rounded-3xl border transition-colors duration-500",
-              isOpen ? "border-brand-900/10 bg-white shadow-soft" : "border-brand-900/8 bg-white/40 hover:bg-white/80",
-            )}
-          >
+          <div key={item.question} className="border-b border-brand-900/10">
             <h3>
               <button
                 id={buttonId}
@@ -43,16 +33,33 @@ export function FaqList({ items }: { items: readonly Item[] }) {
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => setOpen(isOpen ? null : i)}
-                className="flex w-full items-center justify-between gap-6 px-6 py-5 text-left sm:px-7"
+                className="group flex w-full items-start gap-4 py-6 text-left sm:gap-6"
               >
-                <span className="text-base font-semibold text-brand-950 sm:text-lg">{item.question}</span>
+                <span className="w-7 shrink-0 pt-1 font-display text-lg tabular-nums text-gold-500">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
                 <span
                   className={cn(
-                    "grid size-9 shrink-0 place-items-center rounded-full transition-all duration-500 ease-[var(--ease-spring)]",
-                    isOpen ? "rotate-45 bg-brand-800 text-cream" : "bg-brand-100 text-brand-800",
+                    "flex-1 text-[1.05rem] font-semibold leading-snug transition-colors duration-300 sm:text-lg",
+                    isOpen ? "text-brand-700" : "text-brand-950 group-hover:text-brand-700",
                   )}
                 >
-                  <Plus className="size-4" strokeWidth={2.5} />
+                  {item.question}
+                </span>
+                <span
+                  aria-hidden
+                  className={cn(
+                    "relative mt-0.5 grid size-8 shrink-0 place-items-center rounded-full border transition-colors duration-300",
+                    isOpen ? "border-brand-700 bg-brand-700 text-cream" : "border-brand-900/15 text-brand-800 group-hover:border-brand-500",
+                  )}
+                >
+                  <span className="absolute h-[1.5px] w-3 rounded-full bg-current" />
+                  <span
+                    className={cn(
+                      "absolute h-3 w-[1.5px] rounded-full bg-current transition-transform duration-300",
+                      isOpen && "rotate-90",
+                    )}
+                  />
                 </span>
               </button>
             </h3>
@@ -65,45 +72,46 @@ export function FaqList({ items }: { items: readonly Item[] }) {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.5, ease }}
+                  transition={{ duration: 0.45, ease }}
                   className="overflow-hidden"
                 >
-                  <p className="px-6 pb-6 leading-relaxed text-muted sm:px-7">{item.answer}</p>
+                  <p className="pb-7 pl-11 pr-12 leading-relaxed text-muted sm:pl-[3.25rem]">{item.answer}</p>
                 </m.div>
               )}
             </AnimatePresence>
-          </m.div>
+          </div>
         );
       })}
-    </div>
+    </Reveal>
   );
 }
 
-/** FAQ section: sticky intro on the left, accordion on the right. */
+/** FAQ section: centred heading, clean list, and a WhatsApp prompt. */
 export function Faq({ className }: { className?: string }) {
   return (
     <section className={cn("relative py-24 sm:py-32", className)}>
-      <div className="container-page grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
-        <div className="flex flex-col items-start gap-8 lg:sticky lg:top-28 lg:self-start">
-          <SectionHeading
-            align="left"
-            eyebrow="FAQ"
-            title="Got questions? *We've got answers.*"
-            description="Explore our FAQs to learn more about our classes, schedules and teaching methods."
-          />
-          <Reveal delay={0.2} className="w-full max-w-md rounded-[2rem] bg-brand-900 p-7 text-cream shadow-lift">
-            <p className="font-display text-3xl">Still have a question?</p>
-            <p className="mt-2 text-sm text-brand-100/75">
-              Message us on WhatsApp and our team will get back to you, in shaa Allah.
-            </p>
-            <ButtonLink href={site.whatsappUrl} variant="gold" className="mt-6">
-              <span className="inline-flex items-center gap-2">
-                <WhatsAppIcon className="size-4" /> Chat on WhatsApp
-              </span>
-            </ButtonLink>
-          </Reveal>
-        </div>
-        <FaqList items={faqs} />
+      <div className="container-page flex flex-col gap-12 sm:gap-14">
+        <SectionHeading
+          eyebrow="FAQ"
+          title="Got questions? *We've got answers.*"
+          description="Everything families usually ask us about classes, timings and teachers."
+        />
+        <FaqList items={faqs} className="mx-auto w-full max-w-3xl" />
+        <Reveal y={12} className="mx-auto">
+          <a
+            href={site.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-muted"
+          >
+            <WhatsAppIcon className="size-4 text-brand-500" />
+            Still have a question?
+            <span className="inline-flex items-center gap-1 font-semibold text-brand-800 underline decoration-brand-300 underline-offset-4 transition-colors group-hover:text-brand-600">
+              Chat with us on WhatsApp
+              <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+            </span>
+          </a>
+        </Reveal>
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ import { SectionHeading } from "@/components/ui/Section";
 import { WhatsAppIcon } from "@/components/ui/Icons";
 import { FaqList } from "@/components/sections/Faq";
 import { Reveal } from "@/components/motion/Reveal";
-import { ContactDetails, ContactIllustration } from "@/components/contact/ContactDetails";
+import { ContactDetails } from "@/components/contact/ContactDetails";
 import { ContactForm } from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
@@ -64,15 +64,14 @@ export default function ContactPage() {
           id="contact-faq-geo"
           className="text-brand-800 opacity-[0.045] [mask-image:linear-gradient(to_bottom,black,transparent_70%)]"
         />
-        <div className="container-page relative grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-20">
-          <div className="flex flex-col gap-10">
+        <div className="container-page relative grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-20">
+          <div className="flex flex-col gap-10 lg:sticky lg:top-28">
             <SectionHeading
               align="left"
               eyebrow="FAQ"
               title="Before you *book*"
               description="Quick answers about our classes and your free demo."
             />
-            <ContactIllustration className="w-full max-w-md" />
           </div>
           <FaqList items={contactFaqs} />
         </div>

@@ -147,36 +147,3 @@ export function ContactDetails({ className }: { className?: string }) {
 }
 
 /** Illustration card: teacher on a laptop with two students. */
-export function ContactIllustration({ className }: { className?: string }) {
-  return (
-    <Reveal
-      y={40}
-      delay={0.1}
-      className={cn(
-        "relative overflow-hidden rounded-[2.5rem] border border-brand-900/8 bg-cream/70 px-6 pb-6 pt-10 shadow-soft sm:px-10",
-        className,
-      )}
-    >
-      <GeometricPattern
-        id="contact-art-geo"
-        className="text-brand-800 opacity-[0.06] [mask-image:radial-gradient(ellipse_at_50%_45%,black,transparent_75%)]"
-      />
-      <div aria-hidden className="absolute left-1/2 top-1/2 size-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/80 blur-3xl" />
-      <Star8 className="absolute left-7 top-7 size-4 animate-float text-gold-400" />
-      <Star8 className="absolute bottom-24 right-8 size-3 animate-float-slow text-brand-400" />
-      <Parallax offset={16} className="relative mx-auto w-full max-w-[21rem]">
-        <Image
-          src="/img/misc/contact.webp"
-          alt="Illustration of a teacher on a laptop screen guiding two students beside a large copy of the Quran"
-          width={1200}
-          height={1088}
-          sizes="(min-width: 1024px) 21rem, (min-width: 640px) 50vw, 80vw"
-          className="h-auto w-full"
-        />
-      </Parallax>
-      <p className="relative mx-auto mt-4 w-fit rounded-full border border-brand-900/8 bg-white/80 px-4 py-2 text-center text-xs font-semibold text-brand-800 shadow-soft backdrop-blur">
-        Live one-to-one classes with male &amp; female tutors
-      </p>
-    </Reveal>
-  );
-}

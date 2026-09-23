@@ -72,11 +72,11 @@ export function Journey() {
                     {numbers.length > 0 && (
                       <dl className="relative mt-7 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10">
                         {numbers.map((s) => (
-                          <div key={s.label} className="flex flex-col-reverse gap-1 bg-brand-950/80 px-5 py-5">
-                            <dt className="text-[0.68rem] font-bold uppercase tracking-[0.25em] text-brand-200/80">
+                          <div key={s.label} className="flex flex-col-reverse gap-1 bg-brand-950/80 px-4 py-5 sm:px-5">
+                            <dt className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-brand-200/80 sm:tracking-[0.25em]">
                               {s.label}
                             </dt>
-                            <dd className="font-display text-5xl leading-none text-gold-gradient">
+                            <dd className="font-display text-[2.6rem] leading-none text-gold-gradient sm:text-5xl">
                               <CountUp value={s.value} suffix={s.suffix} />
                             </dd>
                           </div>
