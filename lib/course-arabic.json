@@ -1,0 +1,138 @@
+{
+  "simplified-tajweed": {
+    "arabic": [
+      {
+        "kind": "matn",
+        "lang": "ar",
+        "text": "اِقْرَئُوُا الْقُرْآنَ بِلُحُوْنِ العَرَبِ وَأَصْوَاتِھَا"
+      },
+      {
+        "kind": "source",
+        "lang": "ar",
+        "text": "(شعب الایمان)۔"
+      },
+      {
+        "kind": "note",
+        "lang": "ur",
+        "text": "ایک اور روایت میں ارشاد ہے:"
+      },
+      {
+        "kind": "matn",
+        "lang": "ar",
+        "text": "حَسِّنُوا القُرْآنَ بِأَصْوَاتِکُم؛ فانَّ الصَّوتَ الحَسَنَ یَزِیْدُ القُرآنَ حُسْنًا"
+      },
+      {
+        "kind": "source",
+        "lang": "ar",
+        "text": "(شعب الایمان)۔"
+      }
+    ],
+    "english": {
+      "narrator": null,
+      "lines": [
+        "Recite the Qur’an with the melodies and tones of the Arabs.",
+        "Beautify the Qur’an with your voices, for a beautiful voice enhances the beauty of the Qur’an."
+      ]
+    },
+    "urdu": [
+      "قرآن کو عرب کے لہجے اور ان کی آواز میں پڑھو اچھی آواز سے قرآن کوپڑھاکرواس لیے کہ اچھی آواز قرآن کے حسن کوبڑھادیتی ہے (شعب الایمان)"
+    ],
+    "source": "شعب الایمان"
+  },
+  "quran-recitation": {
+    "arabic": [
+      {
+        "kind": "isnad",
+        "lang": "ar",
+        "text": "عَنْ عَائِشَةَ رضي اﷲ عنها قَالَتْ: قَالَ رَسُولُ اﷲِ صلی الله عليه وآله وسلم:"
+      },
+      {
+        "kind": "matn",
+        "lang": "ar",
+        "text": "الْمَاهِرُ بِالْقُرْآنِ مَعَ السَّفَرَةِ الْکِرَامِ الْبَرَرَةِ، وَالَّذِي يَقْرَأُ الْقُرْآنَ وَيَتَتَعْتَعُ فِيْهِ، وَهُوَ عَلَيْهِ شَاقٌّ لَهُ أَجْرَانِ."
+      },
+      {
+        "kind": "note",
+        "lang": "ar",
+        "text": "وَفِي رِوايَةٍ:"
+      },
+      {
+        "kind": "matn",
+        "lang": "ar",
+        "text": "وَالَّذِي يَقْرَأُ وَهُوَ يَشْتَدُّ عَلَيْهِ لَهُ أَجْرَانِ."
+      },
+      {
+        "kind": "source",
+        "lang": "ar",
+        "text": "متفق عليه و هذا لفظ مسلم."
+      }
+    ],
+    "english": {
+      "narrator": "Narrated by Hazrat ‘Ā’ishah",
+      "lines": [
+        "The one who is proficient in reciting the Qur’an will be with the noble, honorable angels (and the revered Prophets). And the one who recites the Qur’an with difficulty, stammering or struggling, will have double the reward.",
+        "The person who recites the Qur’an with great difficulty and effort will receive a double reward."
+      ]
+    },
+    "urdu": [
+      "حضرت عائشہ صدیقہ رضی اﷲ عنھا روایت فرماتی ہیں کہ حضور نبی اکرم صلی اللہ علیہ وآلہ وسلم نے فرمایا: قرآن مجید کا ماہر معزز و محترم فرشتوں اور معظم و مکرّم انبیاء علیہم السلام کے ساتھ ہوگا اور وہ شخص جو قرآن پڑھتا ہو لیکن اس میں اٹکتا ہو اور (پڑھنا) اس پر (کند ذہن یا موٹی زبان ہونے کی وجہ سے) مشکل ہو اس کے لئے بھی دوگنا اجر ہے۔",
+      "ایک دوسری روایت میں ہے کہ وہ شخص جو قرآن پڑھتا ہے حالانکہ یہ پڑھنا اس کے لئے سخت مشکل ہو، اس کے لئ دو اجر ہیں۔"
+    ],
+    "source": "متفق عليه و هذا لفظ مسلم."
+  },
+  "quran-memorization": {
+    "arabic": [
+      {
+        "kind": "isnad",
+        "lang": "ar",
+        "text": "حَدَّثَنَا مُسَدَّدٌ، حَدَّثَنَا يَحْيَى، عَنْ سُفْيَانَ، حَدَّثَنِي عَاصِمُ بْنُ بَهْدَلَةَ، عَنْ زِرٍّ، عَنْ عَبْدِ اللَّهِ بْنِ عَمْرٍو، قَالَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم"
+      },
+      {
+        "kind": "matn",
+        "lang": "ar",
+        "text": "يُقَالُ لِصَاحِبِ الْقُرْآنِ اقْرَأْ وَارْتَقِ وَرَتِّلْ كَمَا كُنْتَ تُرَتِّلُ فِي الدُّنْيَا فَإِنَّ مَنْزِلَكَ عِنْدَ آخِرِ آيَةٍ تَقْرَؤُهَا"
+      }
+    ],
+    "english": {
+      "narrator": "The Messenger of Allah (ﷺ) said:",
+      "lines": [
+        "One who was devoted to the Qur’an will be told to recite, ascend and recite carefully as he recited carefully when he was in the world, for he will reach his abode when he comes to the last verse he recites."
+      ]
+    },
+    "urdu": [
+      "رسول اللہ ﷺ نے فرمایا: جو شخص قرآن کا دل سے پابند رہا، اسے (قیامت کے دن) کہا جائے گا: پڑھتا جا، بلند ہوتا جا، اور ٹھہر ٹھہر کر اسی طرح پڑھ جیسے تو دنیا میں ٹھہر ٹھہر کر پڑھتا تھا، کیونکہ تیرا مقام وہی ہوگا جہاں تو آخری آیت پڑھ کر پہنچے گا۔"
+    ],
+    "source": "Abu Dawood 1464"
+  },
+  "ibnMasud": {
+    "title": "The Prophet (s) once said to ibn Mas’ud,",
+    "dialogue": [
+      {
+        "speaker": null,
+        "quote": "“Recite to me some Qur’ān”"
+      },
+      {
+        "speaker": "He replied,",
+        "quote": "“O messenger of Allāh! How can I recite it to you whilst it was revealed to you?”"
+      },
+      {
+        "speaker": "He said,",
+        "quote": "“I love to hear it from other than me.”"
+      },
+      {
+        "speaker": "He said,",
+        "quote": "“So I started to read from Sūrat An-Nisā until I reached the āyah that reads, ‘So how will it be when We bring from every nation a witness, and we bring you, O Muḥammad, against these people as a witness?’”"
+      },
+      {
+        "speaker": "The Prophet (sall Allāhu ʿalayhi wa sallam), at this point, said to Ibn Masʿūd,",
+        "quote": "“This is enough”."
+      },
+      {
+        "speaker": "Ibn Masʿūd said,",
+        "quote": "“I looked at him and he was shedding tears.”"
+      }
+    ],
+    "citation": "Sahih Muslim, Book 31, Hadith 5920",
+    "reflection": "The above hadith shows that the Qur’an has an impact on even our Prophet (s) heart. Being the best of mankind, Prophet (s) possessed the most softest of hearts, so much that these verses brought him to tears."
+  }
+}

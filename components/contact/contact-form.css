@@ -1,0 +1,288 @@
+/* ------------------------------------------------------------------
+   Booking form: floating labels, the react-phone-input-2 skin and the
+   success animation. Plain CSS (no @apply). Colours use the theme
+   tokens; every var() has a fallback because Tailwind only emits the
+   tokens that are used somewhere in class names.
+------------------------------------------------------------------- */
+
+/* ---------- Floating labels (text inputs + textarea) ---------- */
+.cf-float {
+  position: relative;
+}
+
+.cf-float > label {
+  position: absolute;
+  left: 1.25rem;
+  top: 1.25rem;
+  max-width: calc(100% - 2.5rem);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  transform-origin: left top;
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  color: var(--color-muted, #566765);
+  transition:
+    transform 0.45s var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)),
+    color 0.3s ease;
+}
+
+.cf-float > :is(input, textarea):focus + label,
+.cf-float > :is(input, textarea):not(:placeholder-shown) + label {
+  transform: translate3d(0, -0.7rem, 0) scale(0.74);
+  color: var(--color-brand-600, #347770);
+  font-weight: 600;
+}
+
+.cf-float > [aria-invalid="true"] + label {
+  color: #e11d48;
+}
+
+/* Autofill previews have no value yet: float the label anyway (kept in
+   its own rule so browsers that do not know the pseudo-class skip only it) */
+.cf-float > input:-webkit-autofill + label {
+  transform: translate3d(0, -0.7rem, 0) scale(0.74);
+  color: var(--color-brand-600, #347770);
+  font-weight: 600;
+}
+
+/* Keep browser autofill on-brand instead of yellow/blue */
+.cf-input:-webkit-autofill,
+.cf-input:-webkit-autofill:hover,
+.cf-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--color-brand-950, #0f2524);
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+  box-shadow: 0 0 0 1000px #fff inset;
+  caret-color: var(--color-brand-950, #0f2524);
+  transition: background-color 9999s ease-out 0s;
+}
+
+/* ---------- react-phone-input-2 skin ---------- */
+.cf-phone {
+  position: relative;
+}
+
+.cf-phone .react-tel-input {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.cf-phone .react-tel-input .form-control {
+  width: 100%;
+  height: 4rem;
+  padding: 1.5rem 1.25rem 0.5rem 4.4rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: 0.01em;
+  color: var(--color-brand-950, #0f2524);
+  background: rgb(248 245 239 / 0.5);
+  border: 1px solid rgb(27 58 57 / 0.12);
+  border-radius: 1rem;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.cf-phone .react-tel-input .form-control:hover {
+  border-color: rgb(27 58 57 / 0.25);
+}
+
+.cf-phone .react-tel-input .form-control:focus {
+  background: #fff;
+  border-color: var(--color-brand-500, #45938b);
+  box-shadow: 0 0 0 4px rgb(99 174 167 / 0.18);
+}
+
+.cf-phone.is-invalid .react-tel-input .form-control {
+  background: rgb(255 241 242 / 0.4);
+  border-color: #fb7185;
+}
+
+.cf-phone.is-invalid .react-tel-input .form-control:focus {
+  border-color: #f43f5e;
+  box-shadow: 0 0 0 4px rgb(244 63 94 / 0.12);
+}
+
+.cf-phone.is-readonly .react-tel-input .form-control {
+  cursor: default;
+  color: var(--color-brand-700, #2b605b);
+  background: rgb(240 233 220 / 0.55);
+  border-style: dashed;
+  box-shadow: none;
+}
+
+/* Country button */
+.cf-phone .react-tel-input .flag-dropdown,
+.cf-phone .react-tel-input .flag-dropdown.open {
+  background: transparent;
+  border: 0;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.cf-phone .react-tel-input .flag-dropdown::after {
+  content: "";
+  position: absolute;
+  top: 1.1rem;
+  right: 0;
+  bottom: 1.1rem;
+  width: 1px;
+  background: rgb(27 58 57 / 0.12);
+}
+
+.cf-phone .react-tel-input .selected-flag,
+.cf-phone .react-tel-input .flag-dropdown.open .selected-flag {
+  width: 3.6rem;
+  padding: 0 0 0 1.25rem;
+  background: transparent;
+  border-radius: 1rem 0 0 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cf-phone .react-tel-input .selected-flag:hover,
+.cf-phone .react-tel-input .selected-flag:focus,
+.cf-phone .react-tel-input .flag-dropdown.open .selected-flag {
+  background: rgb(99 174 167 / 0.1);
+}
+
+.cf-phone .react-tel-input .selected-flag:focus-visible {
+  outline: 2px solid var(--color-brand-500, #45938b);
+  outline-offset: -2px;
+}
+
+.cf-phone .react-tel-input .selected-flag .arrow {
+  left: 22px;
+  border-top-color: var(--color-brand-700, #2b605b);
+  transition: transform 0.3s ease;
+}
+
+.cf-phone .react-tel-input .selected-flag .arrow.up {
+  border-bottom-color: var(--color-brand-700, #2b605b);
+}
+
+.cf-phone.is-readonly .react-tel-input .selected-flag .arrow {
+  display: none;
+}
+
+/* Country list */
+.cf-phone .react-tel-input .country-list {
+  z-index: 40;
+  width: min(20rem, calc(100vw - 5rem));
+  max-height: 16rem;
+  margin: 0.5rem 0 0;
+  padding: 0.35rem;
+  overscroll-behavior: contain;
+  background: #fff;
+  border: 1px solid rgb(27 58 57 / 0.08);
+  border-radius: 1.25rem;
+  box-shadow:
+    0 2px 6px rgb(15 34 33 / 0.05),
+    0 30px 60px -20px rgb(15 34 33 / 0.28);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brand-200, #aedbd3) transparent;
+}
+
+.cf-phone .react-tel-input .country-list .country {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--color-brand-950, #0f2524);
+}
+
+.cf-phone .react-tel-input .country-list .country:hover,
+.cf-phone .react-tel-input .country-list .country.highlight {
+  background: var(--color-brand-50, #eef7f5);
+}
+
+.cf-phone .react-tel-input .country-list .country .dial-code {
+  color: var(--color-muted, #566765);
+}
+
+.cf-phone .react-tel-input .country-list .flag {
+  margin-top: 0;
+}
+
+.cf-phone .react-tel-input .country-list .divider {
+  margin: 0.25rem 0.5rem 0.35rem;
+  padding: 0;
+  border-bottom-color: rgb(27 58 57 / 0.1);
+}
+
+.cf-phone .react-tel-input .country-list .search {
+  z-index: 1;
+  padding: 0.2rem 0.2rem 0.45rem;
+  background: #fff;
+}
+
+.cf-phone .react-tel-input .country-list .search-box {
+  width: 100%;
+  margin: 0;
+  padding: 0.6rem 0.85rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--color-brand-950, #0f2524);
+  background: var(--color-cream, #f8f5ef);
+  border: 1px solid rgb(27 58 57 / 0.12);
+  border-radius: 0.75rem;
+}
+
+.cf-phone .react-tel-input .country-list .search-box:focus {
+  border-color: var(--color-brand-500, #45938b);
+  outline: none;
+}
+
+.cf-phone .react-tel-input .country-list .no-entries-message {
+  padding: 0.6rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* Our own label, fixed in the "floated" position next to the flag */
+.cf-phone-label {
+  position: absolute;
+  z-index: 1;
+  top: 0.6rem;
+  left: 4.4rem;
+  right: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  font-size: 0.703rem;
+  font-weight: 600;
+  line-height: 1.1rem;
+  color: var(--color-brand-600, #347770);
+}
+
+.cf-phone.is-invalid .cf-phone-label {
+  color: #e11d48;
+}
+
+/* ---------- Success check mark ---------- */
+.cf-check-circle,
+.cf-check-mark {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: cf-draw 0.9s var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)) forwards;
+}
+
+.cf-check-circle {
+  animation-delay: 0.1s;
+}
+
+.cf-check-mark {
+  animation-duration: 0.55s;
+  animation-delay: 0.65s;
+}
+
+@keyframes cf-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

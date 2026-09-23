@@ -1,56 +1,87 @@
-"use client"; // Keep this for using Lenis
-
-import { useEffect, useRef } from "react";
-import { Inter, DM_Sans } from "next/font/google";
-import Lenis from "@studio-freight/lenis";
+import type { Metadata, Viewport } from "next";
+import { Amiri, Instrument_Serif, Manrope } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
+import { site, siteUrl } from "@/lib/site";
+import { Providers } from "@/components/motion/Providers";
+import { ScrollProgress } from "@/components/motion/Interactive";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { WhatsAppFab } from "@/components/layout/WhatsAppFab";
+import { SvgDefs } from "@/components/ui/Brand";
 
-const inter = Inter({
-  variable: "--font-inter",
+const sans = Manrope({
   subsets: ["latin"],
+  variable: "--font-manrope",
+  display: "swap",
 });
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const display = Instrument_Serif({
   subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-instrument",
+  display: "swap",
 });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const lenisRef = useRef<Lenis | null>(null);
+const arabic = Amiri({
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+  variable: "--font-amiri",
+  display: "swap",
+  preload: false,
+});
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const lenis = new Lenis({
-        smoothWheel: true,
-        lerp: 0.1,
-      });
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Online Taleem ul Quran — Learn the Quran online with expert tutors",
+    template: "%s · Online Taleem ul Quran",
+  },
+  description: site.description,
+  applicationName: site.name,
+  keywords: [
+    "online Quran classes",
+    "learn Quran online",
+    "online Tajweed course",
+    "Quran memorization online",
+    "Hifz classes online",
+    "Quran recitation course",
+    "female Quran teacher",
+    "Quran classes for kids",
+  ],
+  openGraph: {
+    type: "website",
+    siteName: site.name,
+    locale: "en_US",
+    url: "/",
+  },
+  twitter: { card: "summary_large_image" },
+  alternates: { canonical: "/" },
+};
 
-      function raf(time: number) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
+export const viewport: Viewport = {
+  themeColor: "#f8f5ef",
+  colorScheme: "light",
+};
 
-      requestAnimationFrame(raf);
-      lenisRef.current = lenis;
-
-      return () => {
-        lenis.destroy();
-      };
-    }
-  }, []);
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${dmSans.variable} antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
+    <html lang="en" className={`${sans.variable} ${display.variable} ${arabic.variable}`}>
+      <body className="min-h-dvh overflow-x-clip">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-full focus:bg-brand-900 focus:px-5 focus:py-3 focus:text-cream"
+        >
+          Skip to content
+        </a>
+        <SvgDefs />
+        <Providers>
+          <ScrollProgress />
+          <Navbar />
+          <main id="main">{children}</main>
+          <Footer />
+          <WhatsAppFab />
+        </Providers>
       </body>
     </html>
   );

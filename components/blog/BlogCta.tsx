@@ -1,0 +1,97 @@
+import Image from "next/image";
+import { CheckCheck } from "lucide-react";
+import { site } from "@/lib/site";
+import { cn } from "@/lib/utils";
+import { GeometricPattern, Star8 } from "@/components/ui/Brand";
+import { ButtonLink } from "@/components/ui/Button";
+import { Eyebrow } from "@/components/ui/Section";
+import { WhatsAppIcon } from "@/components/ui/Icons";
+import { Reveal } from "@/components/motion/Reveal";
+import { SplitHeading } from "@/components/motion/SplitHeading";
+
+/** The message the WhatsApp link pre-fills, read from the link itself. */
+const greeting = new URL(site.whatsappUrl).searchParams.get("text") ?? "Assalamu alaikum!";
+
+/**
+ * Newsletter-style call to action. There is no mailing list: readers
+ * continue the conversation on WhatsApp instead.
+ */
+export function BlogCta({ className }: { className?: string }) {
+  return (
+    <section className={cn("py-16 sm:py-24", className)}>
+      <div className="container-page">
+        <Reveal y={50} className="grain relative overflow-hidden rounded-[2.5rem] bg-brand-950 text-cream shadow-lift">
+          <GeometricPattern id="blog-cta-geo" className="text-gold-300 opacity-[0.07]" />
+          <div aria-hidden className="absolute -left-32 -top-32 size-96 rounded-full bg-brand-500/30 blur-3xl" />
+          <div aria-hidden className="absolute -bottom-40 right-0 size-[28rem] rounded-full bg-gold-400/15 blur-3xl" />
+
+          <div className="relative grid gap-12 p-8 sm:p-12 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-16 lg:p-16">
+            <div className="flex flex-col items-start gap-6">
+              <Eyebrow tone="light">Stay connected</Eyebrow>
+              <SplitHeading
+                text="Questions after *reading?*"
+                className="font-display text-5xl leading-[1] tracking-tight text-balance sm:text-6xl lg:text-7xl"
+                emClassName="italic text-gold-gradient"
+              />
+              <p className="max-w-md text-lg leading-relaxed text-brand-100/80">
+                Ask us anything about Tajweed, Hifz or finding the right class for your child. No sign-up
+                and no mailing list — just a friendly conversation on WhatsApp.
+              </p>
+              <div className="mt-2 flex flex-wrap gap-3">
+                <ButtonLink href={site.whatsappUrl} variant="gold" size="lg">
+                  Message us on WhatsApp
+                </ButtonLink>
+                <ButtonLink href="/contact-us" variant="ghost-light" size="lg">
+                  Book a free demo
+                </ButtonLink>
+              </div>
+            </div>
+
+            {/* Chat preview */}
+            <Reveal delay={0.15} y={40} className="relative mx-auto w-full max-w-md">
+              <div className="rounded-[2rem] border border-white/12 bg-white/[0.06] p-4 backdrop-blur-md sm:p-5">
+                <div className="flex items-center gap-3 border-b border-white/10 px-1 pb-4">
+                  <span className="grid size-11 place-items-center rounded-full bg-cream">
+                    <Image src="/brand/emblem.svg" alt="" width={22} height={24} unoptimized className="h-6 w-auto" />
+                  </span>
+                  <span className="flex flex-col leading-tight">
+                    <span className="font-semibold">{site.name}</span>
+                    <span className="flex items-center gap-1.5 text-xs text-brand-200/80">
+                      <WhatsAppIcon className="size-3.5 text-brand-300" />
+                      WhatsApp
+                    </span>
+                  </span>
+                </div>
+
+                <div className="flex flex-col gap-3 px-1 pb-1 pt-5">
+                  <p className="self-center rounded-full bg-white/10 px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.2em] text-brand-100/70">
+                    Your message
+                  </p>
+                  <div className="ml-auto max-w-[85%] rounded-2xl rounded-br-md bg-brand-500 px-4 py-3 text-[0.95rem] leading-snug text-white shadow-soft">
+                    {greeting}
+                    <span className="mt-1 flex justify-end">
+                      <CheckCheck aria-hidden className="size-4 text-brand-100" />
+                    </span>
+                  </div>
+                  <div
+                    aria-hidden
+                    className="flex w-fit items-center gap-1.5 rounded-2xl rounded-bl-md bg-white/10 px-4 py-3.5"
+                  >
+                    {[0, 1, 2].map((i) => (
+                      <span
+                        key={i}
+                        className="size-2 animate-bounce rounded-full bg-brand-200/80 motion-reduce:animate-none"
+                        style={{ animationDelay: `${i * 160}ms` }}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <Star8 className="absolute -right-3 -top-3 size-6 animate-spin-slow text-gold-300" />
+            </Reveal>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
