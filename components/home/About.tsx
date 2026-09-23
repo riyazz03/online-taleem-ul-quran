@@ -17,9 +17,10 @@ export function About() {
           <Reveal y={60} className="relative mx-auto w-full max-w-md">
             <Parallax offset={30}>
               <ArchImage
-                src="/img/home/learning-journey.webp"
-                alt="Illustration of a student in an online Quran lesson inside a mosque-shaped frame"
+                src="/img/photos/family-reading.webp"
+                alt="A father and his young daughter reading the Quran together at home"
                 className="aspect-[4/5] w-full"
+                imgClassName="object-[55%_50%]"
                 sizes="(min-width: 1024px) 28rem, 90vw"
               />
             </Parallax>

@@ -2,7 +2,6 @@ import Image from "next/image";
 import { GraduationCap } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { GeometricPattern, Star8 } from "@/components/ui/Brand";
-import { Rosette } from "@/components/art/Rosette";
 import { ButtonLink } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Section";
 import { Parallax } from "@/components/motion/Interactive";
@@ -10,6 +9,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { ScrollText } from "@/components/motion/ScrollText";
 import { SplitHeading } from "@/components/motion/SplitHeading";
 import { missionChapters as ch, missionLead } from "./data";
+import { ClientRosette } from "./ClientRosette";
 import { Highlight } from "./Highlight";
 
 /** Circular text seal that slowly turns around an eight-pointed star. */
@@ -39,7 +39,9 @@ function MissionArt() {
       <Reveal y={60} blur>
         <Parallax offset={26}>
           <div className="relative aspect-square">
-            <Rosette className="absolute -inset-[9%] text-gold-400/70" strokeWidth={0.6} />
+            <div aria-hidden className="absolute -inset-[9%]">
+              <ClientRosette className="size-full text-gold-400/70" strokeWidth={0.6} />
+            </div>
             <Star8 className="absolute inset-[3%] size-[94%] animate-spin-slow text-brand-100/80 [animation-direction:reverse]" />
             <div className="absolute inset-[11%] overflow-hidden rounded-full border-[6px] border-white bg-gradient-to-b from-brand-200/70 via-brand-100 to-brand-50 shadow-lift">
               <GeometricPattern id="about-mission-geo" size={48} className="text-brand-800 opacity-[0.1]" />

@@ -33,7 +33,7 @@ export function EnrichSection({ data, className }: { data: CourseDetail["enrich"
               <StaggerItem key={card.title} className="h-full">
                 <TiltCard className="h-full" max={5}>
                   <article className="group relative flex h-full flex-col rounded-[2rem] border border-brand-900/8 bg-white p-3 shadow-soft transition-shadow duration-500 hover:shadow-lift">
-                    <div className="relative mx-auto mt-3 aspect-[5/4] w-[72%]">
+                    <div className="relative mx-auto mt-3 aspect-[5/4] w-[52%] sm:w-[72%]">
                       <ArchOutline className="inset-0 translate-x-2 translate-y-2 text-gold-400/60" />
                       <div className={cn("arch absolute inset-0", featured ? "bg-gold-100" : "bg-brand-50")} />
                       <div className="arch absolute inset-0 bg-gradient-to-b from-brand-800 to-brand-950 opacity-0 transition-opacity duration-700 group-hover:opacity-100" />

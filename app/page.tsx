@@ -2,6 +2,8 @@ import { Hero } from "@/components/home/Hero";
 import { About } from "@/components/home/About";
 import { Audiences } from "@/components/home/Audiences";
 import { HadithQuote } from "@/components/home/HadithQuote";
+import { LiveLearning } from "@/components/home/LiveLearning";
+import { PhotoStrip } from "@/components/home/PhotoStrip";
 import { FeatureMarquee } from "@/components/sections/FeatureMarquee";
 import { Benefits } from "@/components/sections/Benefits";
 import { CoursesGrid } from "@/components/sections/CoursesGrid";
@@ -18,12 +20,14 @@ export default function HomePage() {
       <FeatureMarquee />
       <About />
       <CoursesGrid className="bg-gradient-to-b from-cream to-sand/60" />
+      <LiveLearning />
       <Benefits />
       <Stats />
       <Audiences />
       <Steps />
       <FreeTrial />
       <Testimonials />
+      <PhotoStrip />
       <HadithQuote />
       <Faq />
     </>

@@ -1,10 +1,8 @@
 import Image from "next/image";
-import { Globe, HeartHandshake } from "lucide-react";
+import { HeartHandshake } from "lucide-react";
 import { toWords, cn } from "@/lib/utils";
-import { GeometricPattern } from "@/components/ui/Brand";
-import { ArchScene } from "@/components/art/Scenes";
+import { ArchImage, GeometricPattern } from "@/components/ui/Brand";
 import { CrescentStar } from "@/components/art/Motifs";
-import { LiveClassCard } from "@/components/art/LiveClassCard";
 import { ButtonLink } from "@/components/ui/Button";
 
 const headline = "Your Quran journey *begins* here";
@@ -33,7 +31,7 @@ function FloatingNote({
   className,
   delay,
 }: {
-  icon: typeof Globe;
+  icon: typeof HeartHandshake;
   children: React.ReactNode;
   className?: string;
   delay: number;
@@ -153,31 +151,48 @@ export function Hero() {
           </dl>
         </div>
 
-        {/* Illustrated collage */}
-        <div className="relative mx-auto w-full max-w-[26rem] sm:max-w-[32rem] lg:max-w-[34rem]">
-          <div className="scale-in relative mx-auto w-[80%]" style={{ "--d": "200ms" } as React.CSSProperties}>
-            <div aria-hidden className="absolute inset-x-[8%] bottom-[2%] top-[18%] rounded-full bg-brand-500/25 blur-3xl" />
-            <ArchScene id="hero-scene" variant="night" title="A mihrab arch opening onto a night sky with a crescent moon, lanterns and a mosque" />
+        {/* Photo collage */}
+        <div className="relative mx-auto w-full max-w-[26rem] sm:max-w-[32rem] lg:max-w-[35rem]">
+          <div className="scale-in relative ml-auto w-[86%]" style={{ "--d": "200ms" } as React.CSSProperties}>
+            <ArchImage
+              src="/img/photos/hero-students.webp"
+              alt="Two young students in white reading the Quran on wooden stands beside a patterned window"
+              priority
+              sizes="(min-width: 1024px) 30rem, 80vw"
+              className="aspect-[4/5] w-full"
+              imgClassName="object-[50%_60%]"
+            />
           </div>
 
-          <div className="scale-in absolute -right-1 bottom-[7%] w-[60%] max-w-[16.5rem] sm:right-0 sm:w-[50%]" style={{ "--d": "650ms" } as React.CSSProperties}>
-            <div className="animate-float-slow">
-              <LiveClassCard />
+          <div className="scale-in absolute bottom-[7%] left-0 w-[46%]" style={{ "--d": "500ms" } as React.CSSProperties}>
+            <div className="animate-float-slow overflow-hidden rounded-[1.75rem] border-[5px] border-cream bg-cream shadow-lift">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src="/img/photos/online-class.webp"
+                  alt="A young girl with headphones in a live online Quran class"
+                  fill
+                  sizes="(min-width: 1024px) 16rem, 45vw"
+                  className="object-cover object-[60%_40%]"
+                />
+                <span className="absolute left-2.5 top-2.5 inline-flex items-center gap-1.5 rounded-full bg-white/90 px-2.5 py-1 text-[0.62rem] font-bold uppercase tracking-widest text-red-600 backdrop-blur">
+                  <span className="size-1.5 animate-pulse rounded-full bg-red-500" /> Live class
+                </span>
+              </div>
+              <p className="px-3 py-2.5 text-[0.75rem] font-semibold leading-snug text-brand-900">
+                Learn from home — anytime, anywhere
+              </p>
             </div>
           </div>
 
-          <div className="scale-in absolute -top-3 right-[4%] z-20 hidden sm:block" style={{ "--d": "800ms" } as React.CSSProperties}>
+          <div className="scale-in absolute -top-3 left-[4%] z-20 hidden sm:block" style={{ "--d": "750ms" } as React.CSSProperties}>
             <RotatingSeal />
           </div>
 
-          <FloatingNote icon={Globe} className="-left-3 bottom-[20%] hidden sm:block lg:-left-12" delay={950}>
-            Anytime, anywhere, with expert guidance.
-          </FloatingNote>
-          <FloatingNote icon={HeartHandshake} className="-bottom-6 left-[6%] sm:left-[14%]" delay={1150}>
-            Guided learning for every heart and mind.
+          <FloatingNote icon={HeartHandshake} className="-right-2 top-[38%] hidden sm:block lg:-right-8" delay={950}>
+            Male &amp; female tutors, one-to-one
           </FloatingNote>
 
-          <CrescentStar className="absolute left-[8%] top-[1%] size-7 text-gold-400" />
+          <CrescentStar className="absolute right-[4%] top-[2%] size-8 text-gold-400 drop-shadow" />
         </div>
       </div>
     </section>

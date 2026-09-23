@@ -20,8 +20,8 @@ const RINGS = [62, 112, 162];
  */
 function Rings({ active, labels, arabic }: { active: number; labels: string[]; arabic: string }) {
   return (
-    <div className="relative mx-auto aspect-square w-full max-w-[22rem] lg:max-w-[26rem]">
-      <svg viewBox="0 0 400 400" className="absolute inset-0 size-full" aria-hidden>
+    <div aria-hidden className="relative mx-auto aspect-square w-full max-w-[22rem] lg:max-w-[26rem]">
+      <svg viewBox="0 0 400 400" className="absolute inset-0 size-full">
         <circle
           cx="200"
           cy="200"

@@ -126,7 +126,11 @@ export function ContactForm() {
   const scrollIntoView = useCallback(
     (el: HTMLElement, block: "start" | "center") => {
       const rect = el.getBoundingClientRect();
-      const visible = rect.top >= 96 && rect.bottom <= window.innerHeight;
+      // "start": the top edge is already comfortably on screen; "center": the whole element is.
+      const visible =
+        block === "start"
+          ? rect.top >= 80 && rect.top <= window.innerHeight * 0.4
+          : rect.top >= 96 && rect.bottom <= window.innerHeight;
       if (visible) return;
       if (lenis) {
         lenis.scrollTo(el, { offset: block === "start" ? -112 : -window.innerHeight / 3 });

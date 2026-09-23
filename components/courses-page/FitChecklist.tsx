@@ -10,7 +10,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { fitPoints } from "./data";
 
 const messages = [
-  "Tick the statements that sound like you.",
+  "Which of these sound like you?",
   "A good start — keep going.",
   "Halfway there.",
   "Almost there — just one more.",

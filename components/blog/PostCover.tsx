@@ -111,7 +111,7 @@ export function PostCover({
         dir="rtl"
         aria-hidden
         className={cn(
-          "absolute inset-0 grid place-items-center pb-[4%] font-arabic leading-none text-cream drop-shadow-[0_10px_30px_rgb(0_0_0/0.35)] transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:-translate-y-2 group-hover:scale-105",
+          "absolute inset-0 grid place-items-center pt-[7%] font-arabic leading-none text-cream drop-shadow-[0_10px_30px_rgb(0_0_0/0.35)] transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:-translate-y-2 group-hover:scale-105",
           s.word,
         )}
       >

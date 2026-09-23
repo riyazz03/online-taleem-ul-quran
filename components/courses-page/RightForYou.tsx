@@ -17,7 +17,7 @@ export function RightForYou({ className }: { className?: string }) {
               align="left"
               eyebrow="Before you enrol"
               title="Is this program *right for you?*"
-              description="Learning the Quran well takes patience, practice and proper recitation. Our students thrive when these ring true."
+              description="Learning the Quran well takes patience, practice and proper recitation. Tick the statements that sound like you."
             />
           }
         />

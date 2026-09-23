@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { ArrowUpRight, CalendarDays, MapPin } from "lucide-react";
 import { site } from "@/lib/site";
 import { Star8 } from "@/components/ui/Brand";
+import { ArchScene } from "@/components/art/Scenes";
 import { ButtonLink } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Section";
 import { Parallax } from "@/components/motion/Interactive";
@@ -13,7 +13,7 @@ import { visit } from "./data";
 export function Visit() {
   const { address } = site;
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32">
+    <section className="relative overflow-x-clip py-24 sm:py-32">
       <div className="container-page relative grid items-center gap-14 lg:grid-cols-[1fr_1.05fr] lg:gap-20">
         <div className="flex flex-col items-start gap-7">
           <Reveal y={12}>
@@ -60,40 +60,46 @@ export function Visit() {
           </Reveal>
         </div>
 
-        <Reveal y={50} className="relative">
-          <div className="grain relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-brand-900 shadow-lift sm:aspect-[5/4] lg:aspect-[4/5]">
-            <Parallax offset={40} className="absolute -inset-y-[10%] inset-x-0">
-              <Image
-                src="/img/about/visit.webp"
-                alt=""
-                fill
-                sizes="(min-width: 1024px) 36rem, 92vw"
-                className="object-cover brightness-[1.35] saturate-[1.15]"
-              />
+        <div className="relative mx-auto w-full max-w-[27rem] lg:mr-0">
+          <Reveal y={50} blur>
+            <Parallax offset={24}>
+              <div className="relative">
+                <div aria-hidden className="absolute inset-x-[8%] bottom-[4%] top-[18%] rounded-full bg-brand-300/35 blur-3xl" />
+                <ArchScene
+                  id="about-visit-scene"
+                  variant="night"
+                  focal="mosque"
+                  title="Illustration of a mosque beneath a crescent moon and swinging lanterns, framed by a mihrab arch"
+                  className="relative drop-shadow-[0_30px_40px_rgb(15_37_36/0.25)]"
+                />
+              </div>
             </Parallax>
-            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-brand-950/95 via-brand-950/20 to-transparent" />
+          </Reveal>
 
-            <span className="absolute left-5 top-5 inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-brand-950/40 py-1.5 pl-2 pr-4 text-xs font-semibold text-cream backdrop-blur-md sm:left-7 sm:top-7">
-              <span className="relative grid size-5 place-items-center rounded-full bg-gold-300/20">
-                <span className="absolute inset-0 animate-pulse-ring rounded-full bg-gold-300/60" />
-                <span className="relative size-2 rounded-full bg-gold-300" />
+          <Reveal delay={0.3} y={16} className="absolute -left-2 top-[30%] z-10 sm:-left-10">
+            <span className="inline-flex items-center gap-2.5 rounded-full border border-white/70 bg-white/90 py-2 pl-2 pr-4 text-xs font-semibold text-brand-900 shadow-lift backdrop-blur-md">
+              <span className="relative grid size-6 place-items-center rounded-full bg-gold-100">
+                <span className="absolute inset-0 animate-pulse-ring rounded-full bg-gold-300/70" />
+                <span className="relative size-2 rounded-full bg-gold-500" />
               </span>
-              Drop by every Saturday &amp; Sunday
+              Every Saturday &amp; Sunday
             </span>
+          </Reveal>
 
-            <div className="absolute inset-x-4 bottom-4 rounded-[1.75rem] border border-white/15 bg-white/10 p-6 text-cream backdrop-blur-md sm:inset-x-7 sm:bottom-7 sm:p-7">
+          <Reveal delay={0.2} y={40} className="relative z-10 -mt-24 mx-3 sm:-mt-28 sm:mx-6 lg:-ml-16 lg:mr-10">
+            <div className="rounded-[1.75rem] border border-brand-900/8 bg-white/95 p-6 shadow-lift backdrop-blur-md sm:p-7">
               <div className="flex items-start gap-4">
-                <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-gold-300 text-brand-950">
+                <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-brand-800 text-gold-200">
                   <MapPin className="size-5" />
                 </span>
                 <address className="not-italic">
-                  <span className="block text-[0.68rem] font-bold uppercase tracking-[0.28em] text-brand-200">
+                  <span className="block text-[0.68rem] font-bold uppercase tracking-[0.28em] text-gold-600">
                     Find us at
                   </span>
-                  <span className="mt-2 block font-display text-2xl leading-tight sm:text-[1.7rem]">
+                  <span className="mt-2 block font-display text-2xl leading-tight text-brand-950 sm:text-[1.7rem]">
                     {address.lines[0]}
                   </span>
-                  <span className="mt-1 block text-sm leading-relaxed text-brand-100/80">
+                  <span className="mt-1 block text-sm leading-relaxed text-muted">
                     {address.lines.slice(1).map((line) => (
                       <span key={line} className="block">
                         {line}
@@ -106,15 +112,15 @@ export function Visit() {
                 href={address.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group mt-5 inline-flex items-center gap-2 rounded-full text-sm font-semibold text-gold-200 transition-colors hover:text-gold-100"
+                className="group mt-5 inline-flex items-center gap-2 rounded-full text-sm font-semibold text-brand-700 transition-colors hover:text-brand-950"
               >
                 Open in Google Maps
                 <span className="sr-only"> (opens in a new tab)</span>
                 <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

@@ -118,7 +118,6 @@ export default async function BlogPostPage({ params }: Props) {
                 <Star8 className="size-2.5 text-gold-300" />
                 {post.category}
               </span>
-              <span className="text-sm font-medium text-muted">{post.readingTime} min read</span>
             </div>
 
             <HeroTitle
@@ -207,8 +206,12 @@ export default async function BlogPostPage({ params }: Props) {
       <ReadingPill targetId={ARTICLE_ID} minutes={post.readingTime} />
 
       {related.length > 0 && (
-        <section className="relative mt-16 overflow-hidden bg-sand/60 py-24 sm:mt-24 sm:py-32">
-          <GeometricPattern id="keep-reading-geo" className="text-brand-800 opacity-[0.04]" />
+        <section className="relative mt-16 overflow-hidden py-24 sm:mt-24 sm:py-32">
+          <GeometricPattern
+            id="keep-reading-geo"
+            className="text-brand-800 opacity-[0.05] [mask-image:linear-gradient(to_bottom,black,transparent_70%)]"
+          />
+          <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-400/50 to-transparent" />
           <div className="container-page relative flex flex-col gap-14">
             <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
               <SectionHeading

@@ -12,6 +12,7 @@ import { Eyebrow } from "@/components/ui/Section";
 import { HeroTitle, fadeUp } from "@/components/ui/PageHero";
 import { Magnetic } from "@/components/motion/Interactive";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { SiteJsonLd } from "@/components/seo/SiteJsonLd";
 
 export const metadata: Metadata = {
   title: "Page not found",
@@ -78,72 +79,82 @@ const destinations = [
 
 export default function NotFound() {
   return (
-    <section className="relative isolate overflow-hidden pb-8 pt-32 sm:pt-40">
-      {/* Backdrop */}
-      <div aria-hidden className="absolute inset-0 -z-10">
-        <div className="absolute -right-40 -top-56 size-[42rem] rounded-full bg-brand-200/50 blur-3xl" />
-        <div className="absolute -left-48 top-48 size-[30rem] rounded-full bg-gold-100 blur-3xl" />
-        <GeometricPattern
-          id="not-found-geo"
-          className="text-brand-800 opacity-[0.06] [mask-image:radial-gradient(ellipse_70%_55%_at_50%_30%,black,transparent)]"
-        />
-        <Star8Outline className="absolute -left-40 top-[18%] size-[26rem] animate-spin-slow text-gold-400/25" />
-        <Star8Outline className="absolute -right-40 top-[34%] size-[26rem] animate-spin-slow text-brand-400/25 [animation-direction:reverse]" />
-        <div className="skyline absolute inset-x-0 bottom-0 h-[18vw] max-h-52 text-brand-100/70" />
-      </div>
-
-      <div className="container-page flex flex-col items-center text-center">
-        <p lang="ar" dir="rtl" {...fadeUp(0)} className="fade-up font-arabic text-2xl text-gold-500 sm:text-3xl">
-          ٤٠٤
-        </p>
-        <div {...fadeUp(60)} className="fade-up mt-4">
-          <Eyebrow>Error 404 · Page not found</Eyebrow>
+    <>
+      <SiteJsonLd />
+      <section className="relative isolate overflow-hidden pb-24 pt-32 sm:pb-32 sm:pt-40">
+        {/* Backdrop */}
+        <div aria-hidden className="absolute inset-0 -z-10">
+          <div className="absolute -right-40 -top-56 size-[42rem] rounded-full bg-brand-200/50 blur-3xl" />
+          <div className="absolute -left-48 top-48 size-[30rem] rounded-full bg-gold-100 blur-3xl" />
+          <GeometricPattern
+            id="not-found-geo"
+            className="text-brand-800 opacity-[0.06] [mask-image:radial-gradient(ellipse_70%_55%_at_50%_30%,black,transparent)]"
+          />
+          <Star8Outline className="absolute -left-40 top-[18%] size-[26rem] animate-spin-slow text-gold-400/25" />
+          <Star8Outline className="absolute -right-40 top-[34%] size-[26rem] animate-spin-slow text-brand-400/25 [animation-direction:reverse]" />
+          <div className="skyline absolute inset-x-0 bottom-0 h-[18vw] max-h-52 text-brand-100/70" />
         </div>
 
-        {/* 4 [arch] 4 */}
-        <div aria-hidden className="relative mt-8 flex items-end justify-center sm:mt-10">
-          <Digit index={0} className="text-brand-950">
-            4
-          </Digit>
-          <ArchZero />
-          <Digit index={1} className="italic text-brand-500">
-            4
-          </Digit>
-          <Star8 className="absolute -top-2 left-[6%] size-4 animate-float text-gold-400 sm:size-5" />
-          <Star8 className="absolute -right-2 top-[8%] size-3 animate-float-slow text-brand-400 sm:-right-5" />
-        </div>
+        <div className="container-page flex flex-col items-center text-center">
+          <p lang="ar" dir="rtl" {...fadeUp(0)} className="fade-up font-arabic text-2xl text-gold-500 sm:text-3xl">
+            ٤٠٤
+          </p>
+          <div {...fadeUp(60)} className="fade-up mt-4">
+            <Eyebrow>Error 404 · Page not found</Eyebrow>
+          </div>
 
-        <HeroTitle
-          text="This page has *lost its way*"
-          startIndex={3}
-          className="mt-10 max-w-3xl font-display text-[2.9rem] leading-[1] tracking-[-0.03em] text-balance text-brand-950 sm:mt-14 sm:text-6xl lg:text-7xl"
-        />
-        <p {...fadeUp(480)} className="fade-up mt-6 max-w-xl text-lg leading-relaxed text-muted text-pretty sm:text-xl">
-          The link may be broken, or the page may have moved. Let&rsquo;s guide you back to where your Quran
-          journey continues.
-        </p>
-        <div {...fadeUp(580)} className="fade-up mt-9 flex flex-wrap justify-center gap-3">
-          <Magnetic>
-            <ButtonLink href="/" size="lg">
-              Back to home
+          {/* 4 [arch] 4 */}
+          <div aria-hidden className="relative mt-8 flex items-end justify-center sm:mt-10">
+            <Digit index={0} className="text-brand-950">
+              4
+            </Digit>
+            <ArchZero />
+            <Digit index={1} className="italic text-brand-500">
+              4
+            </Digit>
+            <Star8 className="absolute -top-2 left-[6%] size-4 animate-float text-gold-400 sm:size-5" />
+            <Star8 className="absolute -right-2 top-[8%] size-3 animate-float-slow text-brand-400 sm:-right-5" />
+          </div>
+
+          <HeroTitle
+            text="This page has *lost its way*"
+            startIndex={3}
+            className="mt-10 max-w-3xl font-display text-[2.9rem] leading-[1] tracking-[-0.03em] text-balance text-brand-950 sm:mt-14 sm:text-6xl lg:text-7xl"
+          />
+          <p {...fadeUp(480)} className="fade-up mt-6 max-w-xl text-lg leading-relaxed text-muted text-pretty sm:text-xl">
+            The link may be broken, or the page may have moved. Let&rsquo;s guide you back to where your Quran
+            journey continues.
+          </p>
+          <div
+            {...fadeUp(580)}
+            className="fade-up mt-9 flex w-full max-w-xs flex-col gap-3 sm:w-auto sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center"
+          >
+            <Magnetic className="w-full sm:w-auto">
+              <ButtonLink href="/" size="lg" className="w-full sm:w-auto">
+                Back to home
+              </ButtonLink>
+            </Magnetic>
+            <ButtonLink href="/our-course" variant="outline" size="lg">
+              Explore courses
             </ButtonLink>
-          </Magnetic>
-          <ButtonLink href="/our-course" variant="outline" size="lg">
-            Explore courses
-          </ButtonLink>
-          <ButtonLink href="/contact-us" variant="outline" size="lg">
-            Contact us
-          </ButtonLink>
+            <ButtonLink href="/contact-us" variant="outline" size="lg">
+              Contact us
+            </ButtonLink>
+          </div>
         </div>
+      </section>
 
-        {/* Helpful destinations */}
-        <div className="mt-20 w-full max-w-5xl sm:mt-24">
-          <Reveal y={16} className="flex items-center justify-center gap-3 text-gold-500">
+      {/* Helpful destinations */}
+      <section aria-labelledby="not-found-links" className="pt-4 sm:pt-8">
+        <div className="container-page mx-auto max-w-5xl">
+          <Reveal y={16} className="flex items-center justify-center gap-3">
             <span className="h-px w-10 bg-gold-400/60 sm:w-16" />
-            <span className="text-xs font-bold uppercase tracking-[0.28em] text-muted">Or head straight to</span>
+            <h2 id="not-found-links" className="text-xs font-bold uppercase tracking-[0.28em] text-muted">
+              Or head straight to
+            </h2>
             <span className="h-px w-10 bg-gold-400/60 sm:w-16" />
           </Reveal>
-          <Stagger as="ul" className="mt-8 grid gap-3 text-left sm:grid-cols-2 lg:grid-cols-4" stagger={0.08}>
+          <Stagger as="ul" className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4" stagger={0.08}>
             {destinations.map((d) => {
               const external = d.href.startsWith("http");
               const content = (
@@ -159,13 +170,13 @@ export default function NotFound() {
                   </span>
                   <span className="flex min-w-0 flex-1 flex-col">
                     <span className="text-[0.65rem] font-bold uppercase tracking-[0.22em] text-brand-600">{d.label}</span>
-                    <span className="truncate font-display text-[1.45rem] leading-tight text-brand-950">{d.title}</span>
+                    <span className="font-display text-[1.45rem] leading-tight text-brand-950">{d.title}</span>
                   </span>
-                  <ArrowUpRight className="size-5 shrink-0 text-brand-800 transition-transform duration-500 ease-[var(--ease-spring)] group-hover:rotate-45" />
+                  <ArrowUpRight className="size-5 shrink-0 text-brand-800 transition-transform duration-500 ease-[var(--ease-spring)] group-hover:rotate-45 lg:absolute lg:right-5 lg:top-5" />
                 </>
               );
               const className =
-                "group flex h-full items-center gap-4 rounded-2xl border border-brand-900/8 bg-white/80 p-4 shadow-soft backdrop-blur transition-all duration-500 hover:-translate-y-1 hover:shadow-lift";
+                "group relative flex h-full items-center gap-4 rounded-2xl border border-brand-900/8 bg-white p-4 shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-lift lg:flex-col lg:items-start lg:gap-7 lg:rounded-[1.6rem] lg:p-5";
               return (
                 <StaggerItem as="li" key={d.href}>
                   {external ? (
@@ -182,7 +193,7 @@ export default function NotFound() {
             })}
           </Stagger>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
