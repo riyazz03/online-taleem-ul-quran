@@ -114,7 +114,7 @@ function Chapter({
 /** "Our mission and purpose" — the founding story told as an editorial long-read. */
 export function Mission() {
   return (
-    <section id="mission" className="relative scroll-mt-20 overflow-x-clip py-24 sm:py-32">
+    <section id="mission" className="relative scroll-mt-20 overflow-x-clip section-y">
       <div className="container-page relative grid gap-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
         <div className="relative lg:sticky lg:top-32 lg:self-start">
           <MissionArt />

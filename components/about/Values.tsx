@@ -16,7 +16,7 @@ const valueIcons: Record<(typeof values)[number]["icon"], LucideIcon> = {
 /** "What we stand for" — four principles drawn from the academy's mission. */
 export function Values() {
   return (
-    <section className="relative overflow-hidden bg-sand py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-sand section-y">
       <GeometricPattern id="about-values-geo" className="text-brand-800 opacity-[0.045]" />
       <div aria-hidden className="absolute -left-40 top-10 size-[30rem] rounded-full bg-cream/80 blur-3xl" />
 

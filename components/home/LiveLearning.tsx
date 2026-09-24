@@ -32,7 +32,7 @@ const points = [
 /** "Inside a live class" — what learning online with us actually looks like. */
 export function LiveLearning() {
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32">
+    <section className="relative overflow-hidden section-y">
       <div className="container-page grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
         <Reveal y={50} className="relative order-2 lg:order-1">
           <div className="relative aspect-[5/4] overflow-hidden rounded-[2.5rem] bg-white shadow-lift">

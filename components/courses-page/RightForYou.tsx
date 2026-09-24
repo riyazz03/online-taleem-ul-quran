@@ -6,7 +6,7 @@ import { FitChecklist } from "./FitChecklist";
 /** "Is this program right for you?" on a sand background. */
 export function RightForYou({ className }: { className?: string }) {
   return (
-    <section className={cn("relative overflow-hidden bg-sand py-24 sm:py-32", className)}>
+    <section className={cn("relative overflow-hidden bg-sand section-y", className)}>
       <GeometricPattern id="fit-geo" className="text-brand-800 opacity-[0.045]" />
       <Star8Outline className="absolute -right-40 -top-40 size-[28rem] animate-spin-slow text-gold-400/20" />
       <div aria-hidden className="absolute -left-40 bottom-0 size-[30rem] rounded-full bg-brand-200/30 blur-3xl" />

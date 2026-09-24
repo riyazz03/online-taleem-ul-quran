@@ -84,7 +84,7 @@ const spans = ["md:col-span-4", "md:col-span-2", "md:col-span-2", "md:col-span-4
 /** Bento grid of the four programme benefits. */
 export function Benefits({ className }: { className?: string }) {
   return (
-    <section className={cn("relative py-24 sm:py-32", className)}>
+    <section className={cn("relative section-y", className)}>
       <div className="container-page flex flex-col gap-14">
         <SectionHeading
           eyebrow="Why families choose us"

@@ -17,7 +17,7 @@ export function TajweedCurriculum({ data, arabic }: { data: Curriculum; arabic: 
   return (
     <>
       {/* ---------------- Outline ---------------- */}
-      <section className="relative bg-gradient-to-b from-cream to-sand/60 py-24 sm:py-32">
+      <section className="relative bg-gradient-to-b from-cream to-sand/60 section-y">
         <div className="container-page grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           <div className="flex flex-col items-start gap-10 lg:sticky lg:top-28 lg:self-start">
             <SectionHeading
@@ -65,7 +65,7 @@ export function TajweedCurriculum({ data, arabic }: { data: Curriculum; arabic: 
       </section>
 
       {/* ---------------- Overview + levels ---------------- */}
-      <section className="relative overflow-hidden bg-sand/60 py-24 sm:py-32">
+      <section className="relative overflow-hidden bg-sand/60 section-y">
         <Star8Outline className="absolute -right-40 top-10 size-[28rem] animate-spin-slow text-gold-400/20" />
         <div className="container-page relative flex flex-col gap-20 sm:gap-24">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
@@ -103,7 +103,7 @@ export function TajweedCurriculum({ data, arabic }: { data: Curriculum; arabic: 
       </section>
 
       {/* ---------------- Sisters + what you learn ---------------- */}
-      <section className="relative py-24 sm:py-32">
+      <section className="relative section-y">
         <div className="container-page grid gap-6 lg:grid-cols-[1fr_1.1fr]">
           <Reveal y={50} className="h-full">
             <article className="grain relative flex h-full flex-col gap-6 overflow-hidden rounded-[2.5rem] bg-brand-900 p-8 text-cream shadow-lift sm:p-12">

@@ -20,7 +20,7 @@ export function Footer() {
   const socials = Object.entries(site.socials).filter(([, url]) => url);
 
   return (
-    <footer className="relative mt-24 sm:mt-32">
+    <footer className="relative mt-6 sm:mt-10">
       {/* Closing call to action, overlapping the footer */}
       <div className="container-page relative z-10">
         <Reveal y={60} className="grain relative overflow-hidden rounded-[2.5rem] bg-brand-800 px-6 py-16 text-center text-cream shadow-lift sm:px-12 sm:py-20">

@@ -33,7 +33,7 @@ export function Testimonials({ className }: { className?: string }) {
   const rowA = testimonials.slice(0, half);
   const rowB = testimonials.slice(half);
   return (
-    <section className={cn("relative overflow-hidden py-24 sm:py-32", className)}>
+    <section className={cn("relative overflow-hidden section-y", className)}>
       <div className="container-page flex flex-col items-center gap-8">
         <SectionHeading
           eyebrow="Kind words"

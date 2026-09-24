@@ -73,7 +73,7 @@ export function CoursesGrid({
 }) {
   const list = courses.filter((c) => c.slug !== exclude);
   return (
-    <section className={cn("relative py-24 sm:py-32", className)}>
+    <section className={cn("relative section-y", className)}>
       <div className="container-page flex flex-col gap-14">
         <SectionHeading eyebrow={eyebrow} title={title} description={description} />
         <Stagger

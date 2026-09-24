@@ -16,7 +16,7 @@ export function Steps({ className }: { className?: string }) {
   const progress = useSpring(scrollYProgress, { stiffness: 90, damping: 22 });
 
   return (
-    <section className={cn("relative py-24 sm:py-32", className)}>
+    <section className={cn("relative section-y", className)}>
       <div className="container-page flex flex-col gap-16">
         <SectionHeading
           eyebrow="Getting started"

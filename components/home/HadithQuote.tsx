@@ -5,7 +5,7 @@ import { ScrollText } from "@/components/motion/ScrollText";
 /** Hadith on learning and teaching the Quran (Sahih al-Bukhari 5027). */
 export function HadithQuote() {
   return (
-    <section className="relative overflow-hidden py-24 sm:py-36">
+    <section className="relative overflow-hidden section-y">
       <div className="container-page relative mx-auto flex max-w-4xl flex-col items-center gap-10 text-center">
         <Reveal y={16} className="flex items-center gap-3 text-gold-500">
           <span className="h-px w-12 bg-gold-400/60" />

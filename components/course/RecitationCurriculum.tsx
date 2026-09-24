@@ -15,7 +15,7 @@ const pillars = ["Alphabet", "Grammar", "Vocabulary"];
 /** "Learn Quranic Arabic and connect with the Quran on a deeper level." */
 export function RecitationCurriculum({ data, arabic }: { data: Curriculum; arabic: string }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-cream to-sand/60 py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-b from-cream to-sand/60 section-y">
       <div className="container-page flex flex-col gap-16 sm:gap-20">
         <div className="grid items-center gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
           <div className="flex flex-col items-start gap-8">

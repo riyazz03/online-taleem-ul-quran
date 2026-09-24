@@ -89,7 +89,7 @@ export function FaqList({ items, className }: { items: readonly Item[]; classNam
 /** FAQ section: centred heading, clean list, and a WhatsApp prompt. */
 export function Faq({ className }: { className?: string }) {
   return (
-    <section className={cn("relative py-24 sm:py-32", className)}>
+    <section className={cn("relative section-y", className)}>
       <div className="container-page flex flex-col gap-12 sm:gap-14">
         <SectionHeading
           eyebrow="FAQ"

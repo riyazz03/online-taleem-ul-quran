@@ -66,7 +66,7 @@ export function CompareCourses({ className }: { className?: string }) {
   return (
     <section
       id="compare"
-      className={cn("relative scroll-mt-10 overflow-hidden py-24 sm:py-32", className)}
+      className={cn("relative scroll-mt-10 overflow-hidden section-y", className)}
     >
       <GeometricPattern
         id="compare-geo"

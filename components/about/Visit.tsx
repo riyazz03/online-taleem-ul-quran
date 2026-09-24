@@ -13,7 +13,7 @@ import { visit } from "./data";
 export function Visit() {
   const { address } = site;
   return (
-    <section className="relative overflow-x-clip py-24 sm:py-32">
+    <section className="relative overflow-x-clip section-y">
       <div className="container-page relative grid items-center gap-14 lg:grid-cols-[1fr_1.05fr] lg:gap-20">
         <div className="flex flex-col items-start gap-7">
           <Reveal y={12}>

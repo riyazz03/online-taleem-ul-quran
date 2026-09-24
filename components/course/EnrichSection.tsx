@@ -15,7 +15,7 @@ const icons = [Sparkles, ScrollText, Scale, BookOpenText];
 /** "Enrich your recitation journey" — four arch-topped cards and a CTA. */
 export function EnrichSection({ data, className }: { data: CourseDetail["enrich"]; className?: string }) {
   return (
-    <section className={cn("relative overflow-hidden bg-sand/70 py-24 sm:py-32", className)}>
+    <section className={cn("relative overflow-hidden bg-sand/70 section-y", className)}>
       <GeometricPattern id="enrich-geo" className="text-brand-800 opacity-[0.045]" />
       <div className="container-page relative flex flex-col gap-16">
         <SectionHeading

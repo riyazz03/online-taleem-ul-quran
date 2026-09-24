@@ -30,7 +30,7 @@ function Headline({ text }: { text: string }) {
 /** "Say goodbye to stumbles" — the four essentials of every course. */
 export function CourseEssentials({ items, className }: { items: Essential[]; className?: string }) {
   return (
-    <section className={cn("relative overflow-hidden py-24 sm:py-32", className)}>
+    <section className={cn("relative overflow-hidden section-y", className)}>
       <GeometricPattern
         id="essentials-geo"
         className="text-brand-800 opacity-[0.04] [mask-image:linear-gradient(to_bottom,transparent,black_30%,black_70%,transparent)]"

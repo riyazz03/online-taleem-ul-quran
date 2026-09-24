@@ -118,6 +118,18 @@
   }
 }
 
+/* Consistent vertical rhythm for every page section:
+   72px on phones, 88px on tablets, 104px on desktops. */
+@utility section-y {
+  padding-block: 4.5rem;
+  @media (width >= 40rem) {
+    padding-block: 5.5rem;
+  }
+  @media (width >= 64rem) {
+    padding-block: 6.5rem;
+  }
+}
+
 /* Soft grain that sits on top of dark sections */
 @utility grain {
   position: relative;

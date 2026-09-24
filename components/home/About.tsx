@@ -11,7 +11,7 @@ const story =
 
 export function About() {
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32">
+    <section className="relative overflow-hidden section-y">
       <div className="container-page grid items-start gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
         <div className="relative lg:sticky lg:top-28">
           <Reveal y={60} className="relative mx-auto w-full max-w-md">

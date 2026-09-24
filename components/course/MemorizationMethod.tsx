@@ -145,7 +145,7 @@ export function MemorizationMethod({ data, arabic }: { data: Curriculum; arabic:
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative bg-gradient-to-b from-cream to-sand/60 py-24 sm:py-32">
+    <section className="relative bg-gradient-to-b from-cream to-sand/60 section-y">
       <div className="container-page flex flex-col gap-16">
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-5 text-center">
           <Reveal y={12}>

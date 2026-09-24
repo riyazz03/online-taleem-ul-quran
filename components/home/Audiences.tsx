@@ -8,7 +8,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 /** "Who we teach": children, sisters, adults and non-Arabic speakers. */
 export function Audiences() {
   return (
-    <section className="relative overflow-hidden bg-sand py-24 sm:py-32">
+    <section className="relative overflow-hidden bg-sand section-y">
       <GeometricPattern id="aud-geo" className="text-brand-800 opacity-[0.045]" />
       <div className="container-page relative grid items-start gap-14 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
         <div className="flex flex-col items-start gap-8 lg:sticky lg:top-32 lg:self-start">

@@ -14,7 +14,7 @@ import { ScrollLine } from "./ScrollLine";
 export function IbnMasudStory({ story, className }: { story: Story; className?: string }) {
   const last = story.dialogue.length - 1;
   return (
-    <section className={cn("relative overflow-hidden py-24 sm:py-32", className)}>
+    <section className={cn("relative overflow-hidden section-y", className)}>
       <Star8Outline className="absolute -left-40 bottom-10 size-[26rem] animate-spin-slow text-gold-400/20" />
       <div className="container-page relative grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
         <div className="flex flex-col items-start gap-6 lg:sticky lg:top-28 lg:self-start">
