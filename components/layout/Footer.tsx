@@ -32,7 +32,7 @@ export function Footer() {
               اقْرَأْ بِاسْمِ رَبِّكَ
             </p>
             <SplitHeading
-              text="Take the first step — *book your free demo class*"
+              text={"Take the first step\n*book your free demo*"}
               className="font-display text-4xl leading-[1.05] tracking-tight text-balance sm:text-6xl"
               emClassName="italic text-gold-gradient"
             />

@@ -414,7 +414,7 @@ export function ContactForm() {
                             <span
                               className={cn(
                                 "flex h-full items-center gap-4 rounded-2xl border bg-cream/50 p-3.5 pr-10 transition-all duration-300 hover:border-brand-900/25 hover:bg-white sm:flex-col sm:items-start sm:gap-3 sm:p-4",
-                                "peer-checked:border-brand-500 peer-checked:bg-brand-50 peer-checked:shadow-[0_0_0_4px_rgb(99_174_167/0.15)]",
+                                "peer-checked:border-brand-500 peer-checked:bg-brand-50 peer-checked:shadow-[0_0_0_4px_rgb(99_174_167/0.15)] peer-checked:hover:bg-brand-50",
                                 "peer-focus-visible:ring-2 peer-focus-visible:ring-brand-500 peer-focus-visible:ring-offset-2",
                                 shownError("course") ? "border-rose-300" : "border-brand-900/12",
                               )}
@@ -475,7 +475,7 @@ export function ContactForm() {
                                 <span
                                   className={cn(
                                     "flex h-[6.25rem] flex-col items-center justify-center rounded-2xl border bg-cream/50 text-brand-900 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-900/25 hover:bg-white",
-                                    "peer-checked:-translate-y-0.5 peer-checked:border-brand-800 peer-checked:bg-brand-800 peer-checked:text-cream peer-checked:shadow-[0_16px_30px_-14px_rgb(35_76_74/0.7)]",
+                                    "peer-checked:-translate-y-0.5 peer-checked:border-brand-800 peer-checked:bg-brand-800 peer-checked:text-cream peer-checked:shadow-[0_16px_30px_-14px_rgb(35_76_74/0.7)] peer-checked:hover:border-brand-700 peer-checked:hover:bg-brand-700",
                                     "peer-focus-visible:ring-2 peer-focus-visible:ring-brand-500 peer-focus-visible:ring-offset-2",
                                     shownError("date") ? "border-rose-300" : "border-brand-900/12",
                                   )}

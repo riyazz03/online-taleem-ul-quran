@@ -26,8 +26,9 @@ export function HeroTitle({
       {words.map((w, i) => (
         <span key={i} aria-hidden>
           <span className="rise-word">
-            <span style={{ "--i": i + startIndex } as React.CSSProperties} className={w.em ? emClassName : undefined}>
-              {w.word}
+            <span style={{ "--i": i + startIndex } as React.CSSProperties}>
+              <span className={w.em ? emClassName : undefined}>{w.word}</span>
+              {w.suffix && <span className={w.suffixEm ? emClassName : undefined}>{w.suffix}</span>}
             </span>
           </span>{" "}
         </span>

@@ -104,8 +104,9 @@ export function Hero() {
                   return (
                     <span key={wi}>
                       <span className="rise-word">
-                        <span style={{ "--i": i } as React.CSSProperties} className={w.em ? "italic text-brand-500" : undefined}>
-                          {w.word}
+                        <span style={{ "--i": i } as React.CSSProperties}>
+                          <span className={w.em ? "italic text-brand-500" : undefined}>{w.word}</span>
+                          {w.suffix}
                         </span>
                       </span>
                       {wi < line.length - 1 && " "}

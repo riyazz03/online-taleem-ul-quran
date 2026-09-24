@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { audiences } from "@/lib/content";
 import { GeometricPattern } from "@/components/ui/Brand";
 import { ButtonLink } from "@/components/ui/Button";
@@ -11,25 +10,14 @@ export function Audiences() {
   return (
     <section className="relative overflow-hidden bg-sand py-24 sm:py-32">
       <GeometricPattern id="aud-geo" className="text-brand-800 opacity-[0.045]" />
-      <div className="container-page relative grid items-center gap-14 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
-        <div className="flex flex-col items-start gap-8">
+      <div className="container-page relative grid items-start gap-14 lg:grid-cols-[1fr_1.2fr] lg:gap-20">
+        <div className="flex flex-col items-start gap-8 lg:sticky lg:top-32 lg:self-start">
           <SectionHeading
             align="left"
             eyebrow="Who we teach"
             title="A place at the table for *every learner*"
             description="From a child's first letters to an adult finally fulfilling a lifelong wish — our teachers meet every student where they are."
           />
-          <Reveal delay={0.2} className="relative w-full max-w-sm">
-            <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] shadow-lift">
-              <Image
-                src="/img/about/guidance.webp"
-                alt="Illustration of a teacher guiding two young students in an online Quran class"
-                fill
-                sizes="(min-width: 1024px) 24rem, 90vw"
-                className="object-cover"
-              />
-            </div>
-          </Reveal>
           <Reveal delay={0.25}>
             <ButtonLink href="/contact-us">Find the right class</ButtonLink>
           </Reveal>

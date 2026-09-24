@@ -35,7 +35,7 @@ function Seal({ className }: { className?: string }) {
 
 function MissionArt() {
   return (
-    <div className="relative mx-auto w-full max-w-[26rem] lg:max-w-[30rem]">
+    <div className="relative mx-auto w-full max-w-[19.5rem] sm:max-w-[26rem] lg:max-w-[30rem]">
       <Reveal y={60} blur>
         <Parallax offset={26}>
           <div className="relative aspect-square">

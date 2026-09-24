@@ -81,7 +81,7 @@ export function TableOfContents({
                 className={cn(
                   "-ml-px flex gap-3 border-l-2 py-2 pl-4 text-sm leading-snug transition-[color,border-color] duration-300",
                   on
-                    ? "border-gold-400 font-semibold text-brand-950"
+                    ? "border-gold-400 text-brand-950"
                     : "border-transparent text-muted hover:border-brand-900/25 hover:text-brand-800",
                 )}
               >

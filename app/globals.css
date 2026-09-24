@@ -86,6 +86,14 @@
     background: var(--color-brand-200);
     color: var(--color-brand-950);
   }
+  /* Tailwind v4 resets buttons to the default cursor; restore the pointer. */
+  button:not(:disabled),
+  [role="button"],
+  summary,
+  label[for],
+  select {
+    cursor: pointer;
+  }
   :focus-visible {
     outline: 2px solid var(--color-brand-500);
     outline-offset: 3px;
@@ -169,7 +177,7 @@
   animation-delay: calc(var(--i, 0) * 70ms + 120ms);
 }
 @keyframes rise-word {
-  from { transform: translate3d(0, 105%, 0) rotate(4deg); }
+  from { transform: translate3d(0, 160%, 0) rotate(4deg); }
   to { transform: translate3d(0, 0, 0) rotate(0); }
 }
 

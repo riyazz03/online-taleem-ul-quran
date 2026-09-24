@@ -11,7 +11,7 @@ const container: Variants = {
 };
 
 const word: Variants = {
-  hidden: { y: "108%", rotate: 4 },
+  hidden: { y: "160%", rotate: 4 },
   show: { y: "0%", rotate: 0, transition: { duration: 1, ease } },
 };
 
@@ -26,7 +26,22 @@ type Props = {
 /** A heading whose words slide up from a mask, one after another, when scrolled into view. */
 export function SplitHeading({ text, as = "h2", className, emClassName }: Props) {
   const Tag = m[as];
-  const words = toWords(text);
+  // A "\n" in the text forces a line break at that point.
+  const lines = text.split("\n").map((line) => toWords(line));
+  const renderWords = (words: ReturnType<typeof toWords>) =>
+    words.map((w, i) => (
+      <span key={i} aria-hidden>
+        <span className="rise-mask">
+          <m.span variants={word} className="inline-block">
+            <span className={cn(w.em && (emClassName ?? "italic text-brand-500"))}>{w.word}</span>
+            {w.suffix && (
+              <span className={cn(w.suffixEm && (emClassName ?? "italic text-brand-500"))}>{w.suffix}</span>
+            )}
+          </m.span>
+        </span>
+        {i < words.length - 1 && " "}
+      </span>
+    ));
   return (
     <Tag
       className={className}
@@ -34,21 +49,15 @@ export function SplitHeading({ text, as = "h2", className, emClassName }: Props)
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.5 }}
-      aria-label={text.replaceAll("*", "")}
+      aria-label={text.replaceAll("*", "").replaceAll("\n", " ")}
     >
-      {words.map((w, i) => (
-        <span key={i} aria-hidden>
-          <span className="rise-mask">
-            <m.span
-              variants={word}
-              className={cn("inline-block", w.em && (emClassName ?? "italic text-brand-500"))}
-            >
-              {w.word}
-            </m.span>
-          </span>
-          {i < words.length - 1 && " "}
-        </span>
-      ))}
+      {lines.length === 1
+        ? renderWords(lines[0])
+        : lines.map((line, li) => (
+            <span key={li} className="block">
+              {renderWords(line)}
+            </span>
+          ))}
     </Tag>
   );
 }

@@ -44,7 +44,7 @@ export function ScrollText({ text, className }: { text: string; className?: stri
               range={[start, start + 1 / words.length]}
               highlight={w.em}
             >
-              {w.word}
+              {w.word + (w.suffix ?? "")}
             </Word>
           );
         })}
