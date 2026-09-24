@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { HeartHandshake, Languages } from "lucide-react";
 import type { RecitationCurriculum as Curriculum } from "@/lib/course-details";
-import { Star8, Star8Outline } from "@/components/ui/Brand";
+import { Star8 } from "@/components/ui/Brand";
 import { Eyebrow } from "@/components/ui/Section";
 import { Parallax, SpotlightCard } from "@/components/motion/Interactive";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -61,7 +61,6 @@ export function RecitationCurriculum({ data, arabic }: { data: Curriculum; arabi
                 </li>
               ))}
             </ul>
-            <Star8Outline className="absolute -right-16 -top-16 -z-10 size-48 animate-spin-slow text-gold-400/40" />
           </Reveal>
         </div>
 

@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import { courses } from "@/lib/content";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
-import { ArchOutline, GeometricPattern, Star8, Star8Outline } from "@/components/ui/Brand";
+import { ArchOutline, GeometricPattern, Star8 } from "@/components/ui/Brand";
 import { ButtonLink } from "@/components/ui/Button";
 import { WhatsAppIcon } from "@/components/ui/Icons";
 import { Eyebrow } from "@/components/ui/Section";
@@ -50,7 +50,6 @@ function ArchZero() {
       <div className="arch grain relative grid h-full w-full place-items-center overflow-hidden bg-brand-900">
         <GeometricPattern id="not-found-arch-geo" size={48} className="text-gold-200 opacity-[0.12]" />
         <div className="absolute inset-x-0 top-0 h-2/3 bg-gradient-to-b from-brand-400/35 to-transparent" />
-        <Star8Outline className="absolute top-1/2 left-1/2 size-[160%] -translate-x-1/2 -translate-y-1/2 animate-spin-slow text-gold-300/35" />
         <div className="relative mt-[18%] w-[58%] animate-float-slow">
           <Image
             src="/brand/emblem-light.svg"
@@ -88,8 +87,6 @@ export default function NotFound() {
             id="not-found-geo"
             className="text-brand-800 opacity-[0.06] [mask-image:radial-gradient(ellipse_70%_55%_at_50%_30%,black,transparent)]"
           />
-          <Star8Outline className="absolute -left-40 top-[18%] size-[26rem] animate-spin-slow text-gold-400/25" />
-          <Star8Outline className="absolute -right-40 top-[34%] size-[26rem] animate-spin-slow text-brand-400/25 [animation-direction:reverse]" />
           <div className="skyline absolute inset-x-0 bottom-0 h-[18vw] max-h-52 text-brand-100/70" />
         </div>
 

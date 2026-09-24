@@ -4,7 +4,7 @@ import { useState } from "react";
 import { m } from "motion/react";
 import { Check } from "lucide-react";
 import { cn, parseEmphasis } from "@/lib/utils";
-import { Star8, Star8Outline } from "@/components/ui/Brand";
+import { Star8 } from "@/components/ui/Brand";
 import { ButtonLink } from "@/components/ui/Button";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { fitPoints } from "./data";
@@ -30,12 +30,6 @@ function FitMeter({ count, total }: { count: number; total: number }) {
         done ? "border-brand-800 bg-brand-900 text-cream" : "border-brand-900/8 bg-white/80 backdrop-blur",
       )}
     >
-      <Star8Outline
-        className={cn(
-          "absolute -right-10 -top-10 size-40 animate-spin-slow transition-colors duration-700",
-          done ? "text-gold-300/30" : "text-brand-300/25",
-        )}
-      />
       <div className="relative size-20 shrink-0">
         <svg viewBox="0 0 80 80" className="size-full -rotate-90" aria-hidden>
           <circle cx="40" cy="40" r={R} fill="none" strokeWidth="6" className={done ? "stroke-white/10" : "stroke-brand-100"} />

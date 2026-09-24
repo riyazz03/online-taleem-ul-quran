@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Baby, Users } from "lucide-react";
 import { courses } from "@/lib/content";
 import { cn } from "@/lib/utils";
-import { ArchOutline, Star8, Star8Outline } from "@/components/ui/Brand";
+import { ArchOutline, Star8 } from "@/components/ui/Brand";
 import { TiltCard } from "@/components/motion/Interactive";
 
 /*
@@ -88,7 +88,6 @@ export function CourseFan() {
       <div className="group/fan relative aspect-[5/4] w-full">
         {/* Backdrop ornaments */}
         <div aria-hidden className="absolute inset-[6%] rounded-full bg-gradient-to-br from-brand-100/80 via-cream/40 to-gold-100/80" />
-        <Star8Outline className="absolute -inset-[4%] animate-spin-slow text-gold-400/35" />
         <div aria-hidden className="absolute inset-x-[12%] bottom-[8%] h-10 rounded-[50%] bg-brand-900/20 blur-2xl" />
 
         {courses.map((course, i) => {

@@ -1,6 +1,6 @@
 import type { PostMeta } from "@/lib/blog";
 import { cn } from "@/lib/utils";
-import { ArchOutline, GeometricPattern, Star8, Star8Outline } from "@/components/ui/Brand";
+import { ArchOutline, GeometricPattern, Star8 } from "@/components/ui/Brand";
 
 /** Four deep-teal colourways; each post keeps the same one everywhere. */
 const tones = [
@@ -85,14 +85,6 @@ export function PostCover({
         />
         <div className={cn("absolute -right-16 -top-20 size-72 rounded-full blur-3xl", tone.glowA)} />
         <div className={cn("absolute -bottom-24 -left-16 size-72 rounded-full blur-3xl", tone.glowB)} />
-        <Star8Outline
-          strokeWidth={0.35}
-          className={cn(
-            "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 animate-spin-slow motion-reduce:animate-none",
-            tone.star,
-            s.star,
-          )}
-        />
         {/* Mihrab arch framing the word */}
         <div className="absolute bottom-0 left-1/2 aspect-[4/5] h-[80%] -translate-x-1/2">
           <div className="arch absolute inset-0 bg-gradient-to-b from-white/[0.09] via-white/[0.03] to-transparent" />

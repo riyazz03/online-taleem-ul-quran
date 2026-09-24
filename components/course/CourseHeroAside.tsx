@@ -1,7 +1,7 @@
 import { Sparkles, Users } from "lucide-react";
 import type { CourseSummary } from "@/lib/content";
 import { cn } from "@/lib/utils";
-import { ArchImage, Star8, Star8Outline } from "@/components/ui/Brand";
+import { ArchImage, Star8 } from "@/components/ui/Brand";
 
 function Chip({
   icon: Icon,
@@ -40,7 +40,6 @@ export function CourseHeroAside({ course }: { course: CourseSummary }) {
   const [first, second] = course.tags;
   return (
     <div className="relative mx-auto aspect-[4/5] w-full max-w-[21rem] sm:max-w-[27rem] lg:max-w-[30rem]">
-      <Star8Outline className="absolute -right-16 -top-12 size-56 animate-spin-slow text-gold-400/35" />
       <div aria-hidden className="absolute inset-x-[10%] bottom-[2%] top-[8%] rounded-full bg-brand-300/30 blur-3xl" />
 
       <div className="absolute inset-x-[7%] bottom-[5%] top-0">

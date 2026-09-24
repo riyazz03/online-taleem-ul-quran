@@ -2,7 +2,7 @@ import Image from "next/image";
 import { CheckCheck } from "lucide-react";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
-import { GeometricPattern, Star8, Star8Outline } from "@/components/ui/Brand";
+import { GeometricPattern, Star8 } from "@/components/ui/Brand";
 import { ButtonLink } from "@/components/ui/Button";
 import { Eyebrow } from "@/components/ui/Section";
 import { WhatsAppIcon } from "@/components/ui/Icons";
@@ -31,7 +31,6 @@ export function BlogCta({ className }: { className?: string }) {
           />
           <div aria-hidden className="absolute -right-24 -top-32 size-[26rem] rounded-full bg-brand-200/60 blur-3xl" />
           <div aria-hidden className="absolute -bottom-40 -left-24 size-96 rounded-full bg-gold-100 blur-3xl" />
-          <Star8Outline className="absolute -bottom-24 right-1/3 size-72 animate-spin-slow text-gold-400/25" />
 
           <div className="relative grid gap-12 p-8 sm:p-12 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-16 lg:p-16">
             <div className="flex flex-col items-start gap-6">

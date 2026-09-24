@@ -11,11 +11,6 @@ export function Star8({ className }: { className?: string }) {
   );
 }
 
-/** @deprecated Abstract outline ornament — retired in favour of the Islamic motifs in components/art/Motifs.tsx. Renders nothing. */
-export function Star8Outline(_props: { className?: string; strokeWidth?: number }) {
-  return null;
-}
-
 /**
  * Repeating Islamic geometric lattice (connected eight-pointed stars).
  * Colour it with a text-* class and tune strength with opacity-*.

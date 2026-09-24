@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Check, HeartHandshake } from "lucide-react";
 import type { TajweedCurriculum as Curriculum } from "@/lib/course-details";
-import { GeometricPattern, Star8Outline } from "@/components/ui/Brand";
+import { GeometricPattern } from "@/components/ui/Brand";
 import { ButtonLink } from "@/components/ui/Button";
 import { Eyebrow, SectionHeading } from "@/components/ui/Section";
 import { CountUp } from "@/components/motion/Interactive";
@@ -66,7 +66,6 @@ export function TajweedCurriculum({ data, arabic }: { data: Curriculum; arabic: 
 
       {/* ---------------- Overview + levels ---------------- */}
       <section className="relative overflow-hidden bg-sand/60 section-y">
-        <Star8Outline className="absolute -right-40 top-10 size-[28rem] animate-spin-slow text-gold-400/20" />
         <div className="container-page relative flex flex-col gap-20 sm:gap-24">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
             <div className="flex flex-col items-start gap-5">

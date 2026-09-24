@@ -19,7 +19,7 @@ import {
 import { courses } from "@/lib/content";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
-import { GeometricPattern, Star8, Star8Outline } from "@/components/ui/Brand";
+import { GeometricPattern, Star8 } from "@/components/ui/Brand";
 import { Eyebrow } from "@/components/ui/Section";
 import { WhatsAppIcon } from "@/components/ui/Icons";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -250,7 +250,6 @@ export function ContactForm() {
           id="contact-form-geo"
           className="text-brand-800 opacity-[0.06] [mask-image:radial-gradient(circle_at_100%_0%,black,transparent_42%)]"
         />
-        <Star8Outline className="absolute -right-20 -top-20 size-64 animate-spin-slow text-gold-400/25" />
       </div>
 
       {/* Completion meter */}

@@ -1,7 +1,7 @@
 import { Award, BookOpenCheck, Sprout, Users, type LucideIcon } from "lucide-react";
 import type { Essential, EssentialIcon } from "@/lib/course-details";
 import { cn } from "@/lib/utils";
-import { GeometricPattern, Star8Outline } from "@/components/ui/Brand";
+import { GeometricPattern } from "@/components/ui/Brand";
 import { SectionHeading } from "@/components/ui/Section";
 import { CountUp } from "@/components/motion/Interactive";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
@@ -52,7 +52,6 @@ export function CourseEssentials({ items, className }: { items: Essential[]; cla
                     aria-hidden
                     className="absolute -right-12 -top-12 size-36 rounded-full bg-brand-50 transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[2.4]"
                   />
-                  <Star8Outline className="absolute -bottom-10 -right-10 size-32 text-gold-400/0 transition-colors duration-700 group-hover:text-gold-400/30" />
 
                   <div className="relative flex items-center justify-between">
                     <span className="grid size-12 place-items-center rounded-2xl bg-brand-900 text-gold-200 shadow-soft transition-transform duration-500 ease-[var(--ease-spring)] group-hover:-rotate-8 group-hover:scale-105">

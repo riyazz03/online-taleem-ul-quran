@@ -1,11 +1,10 @@
-import Image from "next/image";
 import { ArrowUpRight, CalendarDays, Mail, MapPin } from "lucide-react";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
-import { GeometricPattern, Star8, Star8Outline } from "@/components/ui/Brand";
+import { GeometricPattern } from "@/components/ui/Brand";
 import { Eyebrow } from "@/components/ui/Section";
 import { WhatsAppIcon } from "@/components/ui/Icons";
-import { Parallax, SpotlightCard } from "@/components/motion/Interactive";
+import { SpotlightCard } from "@/components/motion/Interactive";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { SplitHeading } from "@/components/motion/SplitHeading";
 
@@ -57,7 +56,6 @@ export function ContactDetails({ className }: { className?: string }) {
       <GeometricPattern id="contact-panel-geo" className="text-gold-300 opacity-[0.06]" />
       <div aria-hidden className="absolute -right-24 -top-24 size-80 rounded-full bg-brand-500/25 blur-3xl" />
       <div aria-hidden className="absolute -bottom-28 -left-20 size-72 rounded-full bg-gold-400/15 blur-3xl" />
-      <Star8Outline className="absolute -right-16 -top-16 size-56 animate-spin-slow text-gold-300/20" />
       <div aria-hidden className="skyline absolute inset-x-0 bottom-0 h-40 text-brand-800/70" />
 
       <div className="relative flex flex-col items-start gap-5">

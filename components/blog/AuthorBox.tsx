@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
-import { GeometricPattern, Star8Outline } from "@/components/ui/Brand";
+import { GeometricPattern } from "@/components/ui/Brand";
 import { ButtonLink } from "@/components/ui/Button";
 import { Reveal } from "@/components/motion/Reveal";
 
@@ -17,7 +17,6 @@ export function AuthorBox({ author, className }: { author: string; className?: s
           id="author-box-geo"
           className="text-brand-800 opacity-[0.05] [mask-image:linear-gradient(to_left,black,transparent_70%)]"
         />
-        <Star8Outline className="absolute -right-16 -top-16 size-56 animate-spin-slow text-gold-400/30" />
         <div className="relative flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-8">
           <span className="grid size-20 shrink-0 place-items-center rounded-3xl bg-white shadow-soft">
             <Image src="/brand/emblem.svg" alt="" width={40} height={44} unoptimized className="h-11 w-auto" />

@@ -1,6 +1,6 @@
 import type { Hadith, HadithSegment } from "@/lib/course-details";
 import { cn } from "@/lib/utils";
-import { GeometricPattern, Star8, Star8Outline } from "@/components/ui/Brand";
+import { GeometricPattern, Star8 } from "@/components/ui/Brand";
 import { SectionHeading } from "@/components/ui/Section";
 import { Reveal } from "@/components/motion/Reveal";
 
@@ -31,8 +31,6 @@ export function HadithPanel({ hadith, className }: { hadith: Hadith; className?:
     <section className={cn("grain relative overflow-hidden bg-brand-950 py-24 text-cream sm:py-32", className)}>
       <GeometricPattern id="hadith-geo" className="text-gold-300 opacity-[0.06]" />
       <div aria-hidden className="absolute left-1/2 top-0 h-80 w-[60rem] -translate-x-1/2 rounded-full bg-brand-600/30 blur-3xl" />
-      <Star8Outline className="absolute -left-48 top-1/3 size-[30rem] animate-spin-slow text-brand-400/15" />
-      <Star8Outline className="absolute -bottom-48 -right-48 size-[32rem] animate-spin-slow text-gold-300/10 [animation-direction:reverse]" />
 
       <div className="container-page relative flex flex-col items-center gap-14">
         <SectionHeading tone="light" eyebrow="Prophetic guidance" title="Wisdom from *the Sunnah*" />
