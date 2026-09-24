@@ -1,0 +1,129 @@
+/* ------------------------------------------------------------------
+   Night arch "life" (components/art/Scenes.tsx → ArchScene variant night).
+   Slow, calm loops that only animate transform + opacity. Every animated
+   element is drawn around its own local origin (its parent <g> positions
+   it), so the SVG default transform-origin (0 0) scales/rotates in place.
+------------------------------------------------------------------- */
+
+/* Breathing halo around the crescent */
+.scene-breathe {
+  animation: scene-breathe 9s ease-in-out infinite;
+}
+@keyframes scene-breathe {
+  0%, 100% { transform: scale(0.88); opacity: 0.7; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+/* A few brighter stars that glint (on top of the regular twinkle) */
+.scene-glint {
+  animation: scene-glint 5.5s ease-in-out infinite;
+}
+@keyframes scene-glint {
+  0%, 100% { transform: scale(0.3) rotate(0deg); opacity: 0.15; }
+  50% { transform: scale(1) rotate(18deg); opacity: 1; }
+}
+
+/* Wispy moonlit clouds drifting across the sky */
+.scene-cloud {
+  animation: scene-cloud var(--dur, 60s) linear infinite;
+}
+@keyframes scene-cloud {
+  0% { transform: translateX(var(--from, -300px)); opacity: 0; }
+  10%, 90% { opacity: 1; }
+  100% { transform: translateX(var(--to, 300px)); opacity: 0; }
+}
+
+/* Third lantern: slower and starting on the opposite side (out of phase) */
+.scene-swing-slow {
+  transform-box: view-box;
+  animation: scene-swing-slow 7.2s ease-in-out infinite;
+}
+@keyframes scene-swing-slow {
+  0%, 100% { transform: rotate(2.8deg); }
+  50% { transform: rotate(-2.8deg); }
+}
+
+/* Golden embers drifting up from the lanterns */
+.scene-mote {
+  opacity: 0;
+  animation: scene-mote var(--dur, 9s) ease-in-out infinite;
+}
+@keyframes scene-mote {
+  0% { transform: translate(0, 0) scale(0.5); opacity: 0; }
+  18% { opacity: 0.95; }
+  50% { transform: translate(var(--dx, 0px), calc(var(--rise, -60px) * 0.5)) scale(1); }
+  72% { opacity: 0.65; }
+  100% { transform: translate(calc(var(--dx, 0px) * -0.4), var(--rise, -60px)) scale(0.35); opacity: 0; }
+}
+
+/* Fireflies wandering over the domes */
+.scene-firefly {
+  opacity: 0;
+  animation: scene-firefly var(--dur, 10s) ease-in-out infinite;
+}
+@keyframes scene-firefly {
+  0%, 100% { transform: translate(0, 0); opacity: 0; }
+  20% { transform: translate(7px, -6px); opacity: 0.9; }
+  40% { transform: translate(12px, -14px); opacity: 0.3; }
+  60% { transform: translate(4px, -20px); opacity: 1; }
+  80% { transform: translate(-5px, -10px); opacity: 0.45; }
+}
+
+/* A small flock of doves crossing now and then */
+.scene-flock {
+  opacity: 0;
+  animation: scene-flock 36s linear 3s infinite;
+}
+@keyframes scene-flock {
+  0% { transform: translate(-70px, 0); opacity: 0; }
+  2% { opacity: 1; }
+  38% { transform: translate(470px, -54px); opacity: 1; }
+  40%, 100% { transform: translate(470px, -54px); opacity: 0; }
+}
+.scene-bob {
+  animation: scene-bob 4.2s ease-in-out infinite;
+}
+@keyframes scene-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+.scene-flap {
+  animation: scene-flap 0.95s ease-in-out infinite;
+}
+@keyframes scene-flap {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(-0.5); }
+}
+
+/* Warm mosque windows: some breathe, some switch off for a while */
+.scene-window {
+  animation: scene-window var(--dur, 12s) ease-in-out infinite;
+}
+@keyframes scene-window {
+  0%, 36%, 100% { opacity: 1; }
+  46%, 68% { opacity: 0.18; }
+  80% { opacity: 1; }
+}
+.scene-window-soft {
+  animation: scene-window-soft 6s ease-in-out infinite;
+}
+@keyframes scene-window-soft {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene-breathe,
+  .scene-glint,
+  .scene-cloud,
+  .scene-swing-slow,
+  .scene-mote,
+  .scene-firefly,
+  .scene-flock,
+  .scene-bob,
+  .scene-flap,
+  .scene-window,
+  .scene-window-soft {
+    animation: none !important;
+  }
+}

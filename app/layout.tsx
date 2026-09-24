@@ -8,6 +8,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppFab } from "@/components/layout/WhatsAppFab";
 import { SvgDefs } from "@/components/ui/Brand";
+import { SiteJsonLd } from "@/components/seo/SiteJsonLd";
+import { Analytics } from "@/components/analytics/Analytics";
 
 const sans = Manrope({
   subsets: ["latin"],
@@ -52,11 +54,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: site.name,
-    locale: "en_US",
-    url: "/",
+    locale: "en_IN",
   },
   twitter: { card: "summary_large_image" },
-  alternates: { canonical: "/" },
 };
 
 export const viewport: Viewport = {
@@ -75,12 +75,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <SvgDefs />
+        <SiteJsonLd />
         <Providers>
           <ScrollProgress />
           <Navbar />
           <main id="main">{children}</main>
           <Footer />
           <WhatsAppFab />
+          <Analytics />
         </Providers>
       </body>
     </html>

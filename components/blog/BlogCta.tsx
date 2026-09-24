@@ -23,7 +23,7 @@ export function BlogCta({ className }: { className?: string }) {
       <div className="container-page">
         <Reveal
           y={50}
-          className="relative overflow-hidden rounded-[2.5rem] border border-brand-900/8 bg-sand/70 shadow-soft"
+          className="relative overflow-hidden rounded-[1.5rem] sm:rounded-[2.5rem] border border-brand-900/8 bg-sand/70 shadow-soft"
         >
           <GeometricPattern
             id="blog-cta-geo"
@@ -56,7 +56,7 @@ export function BlogCta({ className }: { className?: string }) {
 
             {/* Chat preview */}
             <Reveal delay={0.15} y={40} className="relative mx-auto w-full max-w-md">
-              <div className="rotate-[1.5deg] rounded-[2rem] border border-brand-900/8 bg-white p-4 shadow-lift transition-transform duration-700 ease-[var(--ease-out-expo)] hover:rotate-0 sm:p-5">
+              <div className="rotate-[1.5deg] rounded-[1.25rem] sm:rounded-[2rem] border border-brand-900/8 bg-white p-4 shadow-lift transition-transform duration-700 ease-[var(--ease-out-expo)] hover:rotate-0 sm:p-5">
                 <div className="flex items-center gap-3 border-b border-brand-900/8 px-1 pb-4">
                   <span className="grid size-11 place-items-center rounded-full bg-brand-50 ring-1 ring-brand-900/8">
                     <Image src="/brand/emblem.svg" alt="" width={22} height={24} unoptimized className="h-6 w-auto" />

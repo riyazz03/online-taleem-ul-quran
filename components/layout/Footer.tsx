@@ -5,6 +5,7 @@ import { navLinks, site } from "@/lib/site";
 import { GeometricPattern, Logo, Star8 } from "@/components/ui/Brand";
 import { ButtonLink } from "@/components/ui/Button";
 import { WhatsAppIcon } from "@/components/ui/Icons";
+import { AskAi } from "./AskAi";
 import { Reveal } from "@/components/motion/Reveal";
 import { SplitHeading } from "@/components/motion/SplitHeading";
 
@@ -23,7 +24,7 @@ export function Footer() {
     <footer className="relative mt-6 sm:mt-10">
       {/* Closing call to action, overlapping the footer */}
       <div className="container-page relative z-10">
-        <Reveal y={60} className="grain relative overflow-hidden rounded-[2.5rem] bg-brand-800 px-6 py-16 text-center text-cream shadow-lift sm:px-12 sm:py-20">
+        <Reveal y={60} className="grain relative overflow-hidden rounded-[1.5rem] sm:rounded-[2.5rem] bg-brand-800 px-6 py-16 text-center text-cream shadow-lift sm:px-12 sm:py-20">
           <GeometricPattern id="footer-cta-geo" className="text-gold-200 opacity-[0.09]" />
           <div aria-hidden className="absolute -left-24 -top-24 size-72 rounded-full bg-brand-400/30 blur-3xl" />
           <div aria-hidden className="absolute -bottom-32 -right-16 size-80 rounded-full bg-gold-400/25 blur-3xl" />
@@ -123,6 +124,10 @@ export function Footer() {
               <span>{site.address.lines.join(", ")}</span>
             </a>
           </FooterColumn>
+        </div>
+
+        <div className="relative pb-10">
+          <AskAi />
         </div>
 
         <div className="container-page relative">

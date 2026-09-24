@@ -19,9 +19,9 @@ export function PostCard({
     <TiltCard max={5} className={cn("h-full", className)}>
       <Link
         href={`/blog/${post.slug}`}
-        className="group flex h-full flex-col rounded-[2rem] border border-brand-900/8 bg-white p-3 shadow-soft transition-shadow duration-500 hover:shadow-lift"
+        className="group flex h-full flex-col rounded-[1.25rem] sm:rounded-[2rem] border border-brand-900/8 bg-white p-3 shadow-soft transition-shadow duration-500 hover:shadow-lift"
       >
-        <PostCover post={post} idSuffix={idSuffix} className="aspect-[4/3] rounded-[1.6rem]" />
+        <PostCover post={post} idSuffix={idSuffix} className="aspect-[4/3] rounded-[1rem] sm:rounded-[1.6rem]" />
         <div className="flex flex-1 flex-col gap-3 px-4 pb-4 pt-6">
           <p className="flex flex-wrap items-center gap-x-2 text-[0.72rem] font-bold uppercase tracking-[0.18em] text-muted">
             <time dateTime={post.date}>{post.dateLabel}</time>

@@ -12,6 +12,7 @@ import { Mission } from "@/components/about/Mission";
 import { Values } from "@/components/about/Values";
 import { Journey } from "@/components/about/Journey";
 import { Visit } from "@/components/about/Visit";
+import { defaultShareImage } from "@/components/seo/defaults";
 
 const description =
   `Connecting you with the timeless wisdom of Islam. With over 15 years of experience in Quranic education, ${site.name} offers flexible, accessible Quran learning with Tajweed for children, adults, men and women.`;
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
   description,
   alternates: { canonical: "/about-us" },
   openGraph: {
+    images: [defaultShareImage],
     type: "website",
     siteName: site.name,
     url: "/about-us",

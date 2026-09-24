@@ -50,7 +50,7 @@ export function ContactDetails({ className }: { className?: string }) {
     <Reveal
       y={40}
       className={cn(
-        "grain relative flex flex-col overflow-hidden rounded-[2.5rem] bg-brand-950 p-6 text-cream shadow-lift sm:p-10",
+        "grain relative flex flex-col overflow-hidden rounded-[1.5rem] sm:rounded-[2.5rem] bg-brand-950 p-6 text-cream shadow-lift sm:p-10",
         className,
       )}
     >

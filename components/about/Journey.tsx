@@ -60,12 +60,12 @@ export function Journey() {
                   y={40}
                   className={cn(cardLeft ? "lg:order-1" : "lg:order-2")}
                 >
-                  <article className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 backdrop-blur-sm transition-colors duration-500 hover:border-gold-300/30 hover:bg-white/[0.07] sm:p-9">
+                  <article className="group relative overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 backdrop-blur-sm transition-colors duration-500 hover:border-gold-300/30 hover:bg-white/[0.07] sm:p-9">
                     <div aria-hidden className="absolute -right-16 -top-16 size-40 rounded-full bg-brand-500/20 blur-2xl transition-transform duration-700 group-hover:scale-150" />
                     <p className="relative text-[0.7rem] font-bold uppercase tracking-[0.28em] text-gold-300">
                       {ms.kicker}
                     </p>
-                    <h3 className="relative mt-3 font-display text-[2.1rem] leading-[1.05] text-cream sm:text-[2.6rem]">
+                    <h3 className="relative mt-3 font-display text-[1.7rem] leading-[1.05] text-cream sm:text-[2.6rem]">
                       {ms.title}
                     </h3>
                     <p className="relative mt-4 leading-relaxed text-brand-100/75">{ms.text}</p>

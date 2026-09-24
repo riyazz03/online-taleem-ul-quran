@@ -64,7 +64,7 @@ export function TableOfContents({
   return (
     <nav
       aria-label="Table of contents"
-      className={cn("rounded-[1.75rem] border border-brand-900/8 bg-white/75 p-6 shadow-soft backdrop-blur", className)}
+      className={cn("rounded-[1.25rem] sm:rounded-[1.75rem] border border-brand-900/8 bg-white/75 p-6 shadow-soft backdrop-blur", className)}
     >
       <p className="flex items-center gap-2 text-[0.7rem] font-bold uppercase tracking-[0.28em] text-brand-600">
         <Star8 className="size-3 text-gold-400" />

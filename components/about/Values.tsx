@@ -37,7 +37,7 @@ export function Values() {
             return (
               <StaggerItem key={v.title} className={cn("h-full", i % 2 === 1 && "lg:translate-y-12")}>
                 <TiltCard max={5} className="h-full">
-                  <article className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-brand-900/8 bg-cream p-7 shadow-soft transition-shadow duration-500 hover:shadow-lift sm:min-h-[21rem] lg:min-h-[23rem]">
+                  <article className="group relative flex h-full flex-col overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] border border-brand-900/8 bg-cream p-7 shadow-soft transition-shadow duration-500 hover:shadow-lift sm:min-h-[21rem] lg:min-h-[23rem]">
                     <span
                       aria-hidden
                       className="absolute inset-x-7 top-0 h-[3px] origin-left scale-x-0 rounded-b-full bg-gradient-to-r from-brand-400 to-gold-400 transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-x-100"

@@ -33,9 +33,9 @@ export function FaqList({ items, className }: { items: readonly Item[]; classNam
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => setOpen(isOpen ? null : i)}
-                className="group flex w-full items-start gap-4 py-6 text-left sm:gap-6"
+                className="group flex w-full items-center gap-4 py-5 text-left sm:gap-6 sm:py-6"
               >
-                <span className="w-7 shrink-0 pt-1 font-display text-lg tabular-nums text-gold-500">
+                <span className="w-7 shrink-0 font-display text-lg leading-none tabular-nums text-gold-500">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span
@@ -49,7 +49,7 @@ export function FaqList({ items, className }: { items: readonly Item[]; classNam
                 <span
                   aria-hidden
                   className={cn(
-                    "relative mt-0.5 grid size-8 shrink-0 place-items-center rounded-full border transition-colors duration-300",
+                    "relative grid size-8 shrink-0 place-items-center rounded-full border transition-colors duration-300",
                     isOpen ? "border-brand-700 bg-brand-700 text-cream" : "border-brand-900/15 text-brand-800 group-hover:border-brand-500",
                   )}
                 >

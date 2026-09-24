@@ -11,7 +11,7 @@ export function AuthorBox({ author, className }: { author: string; className?: s
     <Reveal y={40} className={className}>
       <aside
         aria-label="About the author"
-        className="relative overflow-hidden rounded-[2rem] border border-brand-900/8 bg-sand/70 p-7 sm:p-10"
+        className="relative overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] border border-brand-900/8 bg-sand/70 p-7 sm:p-10"
       >
         <GeometricPattern
           id="author-box-geo"
@@ -24,7 +24,7 @@ export function AuthorBox({ author, className }: { author: string; className?: s
           </span>
           <div className="flex flex-col items-start gap-3">
             <p className="text-[0.7rem] font-bold uppercase tracking-[0.28em] text-brand-600">Written by</p>
-            <p className="font-display text-3xl leading-tight text-brand-950 sm:text-4xl">{author}</p>
+            <p className="font-display text-2xl leading-tight text-brand-950 sm:text-4xl">{author}</p>
             <p className="max-w-xl leading-relaxed text-muted">
               With over 15 years of experience in Quranic education, we help children and adults
               read the Quran correctly and beautifully with Tajweed — in live one-to-one classes

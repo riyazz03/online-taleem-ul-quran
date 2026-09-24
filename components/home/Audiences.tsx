@@ -28,13 +28,13 @@ export function Audiences() {
             const Icon = icons[a.icon];
             return (
               <StaggerItem key={a.title} className={i % 2 === 1 ? "sm:translate-y-10" : undefined}>
-                <article className="group relative h-full overflow-hidden rounded-[2rem] border border-brand-900/8 bg-cream p-7 shadow-soft transition-all duration-500 hover:-translate-y-1.5 hover:shadow-lift">
+                <article className="group relative h-full overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] border border-brand-900/8 bg-cream p-7 shadow-soft transition-all duration-500 hover:-translate-y-1.5 hover:shadow-lift">
                   <div className="absolute -right-10 -top-10 size-32 rounded-full bg-brand-100 transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[2.6]" />
                   <div className="relative flex flex-col gap-5">
                     <span className="grid size-12 place-items-center rounded-2xl bg-white text-brand-700 shadow-soft transition-colors duration-500 group-hover:bg-brand-800 group-hover:text-gold-200">
                       <Icon className="size-5" />
                     </span>
-                    <h3 className="font-display text-3xl text-brand-950">{a.title}</h3>
+                    <h3 className="font-display text-2xl sm:text-3xl text-brand-950">{a.title}</h3>
                     <p className="leading-relaxed text-muted">{a.description}</p>
                   </div>
                 </article>

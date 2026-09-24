@@ -24,7 +24,7 @@ const outer = starPath(12, 5, 88);
 const inner = starPath(12, 5, 52, 100, 100, -75);
 const dots = Array.from({ length: 12 }, (_, k) => {
   const a = ((-90 + k * 30) * Math.PI) / 180;
-  return [100 + 94 * Math.cos(a), 100 + 94 * Math.sin(a)];
+  return [+(100 + 94 * Math.cos(a)).toFixed(2), +(100 + 94 * Math.sin(a)).toFixed(2)];
 });
 
 /**

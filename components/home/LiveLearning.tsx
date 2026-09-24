@@ -1,9 +1,7 @@
-import Image from "next/image";
 import { CalendarClock, Mic, MonitorSmartphone, NotebookPen } from "lucide-react";
-import { LiveClassCard } from "@/components/art/LiveClassCard";
+import { VirtualClassroom } from "@/components/art/VirtualClassroom";
 import { ButtonLink } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/Section";
-import { Parallax } from "@/components/motion/Interactive";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
 const points = [
@@ -34,22 +32,11 @@ export function LiveLearning() {
   return (
     <section className="relative overflow-hidden section-y">
       <div className="container-page grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
-        <Reveal y={50} className="relative order-2 lg:order-1">
-          <div className="relative aspect-[5/4] overflow-hidden rounded-[2.5rem] bg-white shadow-lift">
-            <Parallax offset={24} className="absolute -inset-y-8 inset-x-0">
-              <Image
-                src="/img/about/guidance-2.webp"
-                alt="Illustration of two students in a live online Quran lesson, one raising a question"
-                fill
-                sizes="(min-width: 1024px) 40rem, 92vw"
-                className="object-cover"
-              />
-            </Parallax>
-          </div>
-          <div className="absolute -bottom-10 right-3 w-[62%] max-w-[17rem] sm:-right-6 sm:w-[48%]">
-            <div className="animate-float-slow">
-              <LiveClassCard />
-            </div>
+        <Reveal y={50} className="order-2 mx-auto w-full min-w-0 max-w-xl lg:order-1 lg:max-w-none">
+          <div className="relative isolate">
+            <div aria-hidden className="absolute inset-x-[6%] -bottom-6 top-[12%] -z-10 rounded-full bg-brand-300/35 blur-3xl" />
+            <div aria-hidden className="absolute -left-10 -top-8 -z-10 size-48 rounded-full bg-gold-100 blur-3xl" />
+            <VirtualClassroom />
           </div>
         </Reveal>
 
@@ -58,7 +45,7 @@ export function LiveLearning() {
             align="left"
             eyebrow="Inside a class"
             title="A real teacher, *live*, in every lesson"
-            description="No recorded courses to watch alone. Every class is a live, personal session with a qualified tutor who knows your name, your level and your goals."
+            description="No recorded courses to watch alone. Every class is a live session with a qualified tutor — one-to-one or in a small batch — who knows your level and your goals."
           />
           <Stagger as="ul" className="grid gap-6 sm:grid-cols-2" stagger={0.1}>
             {points.map(({ icon: Icon, title, text }) => (

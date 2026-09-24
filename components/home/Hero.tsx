@@ -113,6 +113,7 @@ export function Hero() {
                     </span>
                   );
                 })}
+                {li < lines.length - 1 && " "}
               </span>
             ))}
           </h1>
@@ -161,9 +162,10 @@ export function Hero() {
             <ArchScene id="hero-scene" variant="night" title="A mihrab arch opening onto a night sky with a crescent moon, lanterns and a mosque" />
           </div>
 
-          <div className="scale-in absolute -right-1 bottom-[7%] w-[60%] max-w-[16.5rem] sm:right-0 sm:w-[50%]" style={{ "--d": "650ms" } as React.CSSProperties}>
+          <div className="scale-in absolute -bottom-6 -right-1 w-[54%] max-w-[16.5rem] sm:bottom-[7%] sm:right-0 sm:w-[50%]" style={{ "--d": "650ms" } as React.CSSProperties}>
             <div className="animate-float-slow">
-              <LiveClassCard />
+              <LiveClassCard compact className="sm:hidden" />
+              <LiveClassCard className="hidden sm:block" />
             </div>
           </div>
 
@@ -174,7 +176,7 @@ export function Hero() {
           <FloatingNote icon={Globe} className="-left-3 bottom-[20%] hidden sm:block lg:-left-12" delay={950}>
             Anytime, anywhere, with expert guidance.
           </FloatingNote>
-          <FloatingNote icon={HeartHandshake} className="-bottom-6 left-[6%] sm:left-[14%]" delay={1150}>
+          <FloatingNote icon={HeartHandshake} className="-bottom-6 left-[14%] hidden sm:block" delay={1150}>
             Guided learning for every heart and mind.
           </FloatingNote>
 

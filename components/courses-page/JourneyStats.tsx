@@ -43,7 +43,7 @@ export function JourneyStats({ className }: { className?: string }) {
         />
 
         <Stagger as="dl" className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4" stagger={0.08}>
-          <StaggerItem className="group relative isolate col-span-2 flex min-h-52 flex-col-reverse justify-center gap-3 overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-brand-800/80 via-brand-900/50 to-brand-950/20 p-7 transition-colors duration-500 hover:border-gold-300/30 sm:col-span-3 sm:min-h-60 sm:p-10">
+          <StaggerItem className="group relative isolate col-span-2 flex min-h-52 flex-col-reverse justify-center gap-3 overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] border border-white/10 bg-gradient-to-br from-brand-800/80 via-brand-900/50 to-brand-950/20 p-7 transition-colors duration-500 hover:border-gold-300/30 sm:col-span-3 sm:min-h-60 sm:p-10">
             <dt className="text-xs font-bold uppercase tracking-[0.25em] text-brand-200/80">
               {lead.label} · our Guided Seekers
             </dt>

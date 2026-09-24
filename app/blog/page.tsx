@@ -8,6 +8,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { BlogCta } from "@/components/blog/BlogCta";
 import { FeaturedPost } from "@/components/blog/FeaturedPost";
 import { PostExplorer } from "@/components/blog/PostExplorer";
+import { defaultShareImage } from "@/components/seo/defaults";
 
 const description =
   "Reflections and practical learning notes on Tajweed, Hifz and learning the Quran online — for students, parents and families.";
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
   description,
   alternates: { canonical: "/blog" },
   openGraph: {
+    images: [defaultShareImage],
     type: "website",
     url: "/blog",
     siteName: site.name,

@@ -25,6 +25,7 @@ import { WhatsAppIcon } from "@/components/ui/Icons";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { SplitHeading } from "@/components/motion/SplitHeading";
 import { useWeekendOptions } from "./weekends";
+import { track } from "@/lib/analytics";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -226,6 +227,7 @@ export function ContactForm() {
 
     setReceipt({ name: values.name, course, date });
     resetForm();
+    track("generate_lead", { course: course || undefined, date: date || undefined });
     setStatus("success");
   }
 
@@ -238,7 +240,7 @@ export function ContactForm() {
   return (
     <div
       ref={cardRef}
-      className="relative rounded-[2.5rem] border border-brand-900/8 bg-white shadow-lift"
+      className="relative rounded-[1.5rem] sm:rounded-[2.5rem] border border-brand-900/8 bg-white shadow-lift"
     >
       {/* Decoration (clipped separately so the country list can overflow the card) */}
       <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden rounded-[inherit]">

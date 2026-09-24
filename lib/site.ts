@@ -2,7 +2,9 @@ export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ??
   (process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "http://localhost:3000");
+    : process.env.NODE_ENV === "production"
+      ? "https://online-taleem-ul-quran-riyaz12.vercel.app"
+      : "http://localhost:3100");
 
 const whatsappGreeting =
   "Assalamu alaikum! I would like to know more about your Quran classes.";

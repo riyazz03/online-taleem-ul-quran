@@ -1,6 +1,7 @@
 /**
  * Shared marketing content. Copy is carried over from the original site.
  */
+import type { AvatarVariant } from "@/components/art/Avatars";
 
 export type CourseSlug = "simplified-tajweed" | "quran-recitation" | "quran-memorization";
 
@@ -127,61 +128,62 @@ export const audiences = [
   },
 ] as const;
 
-export type Testimonial = { name: string; country: string; review: string; avatar: string };
+/** `avatar` picks one of the illustrated badges in components/art/Avatars.tsx. */
+export type Testimonial = { name: string; country: string; review: string; avatar: AvatarVariant };
 
 export const testimonials: Testimonial[] = [
   {
     name: "Yasmeen",
-    avatar: "/img/avatars/avatar-6.webp",
+    avatar: "mosque",
     country: "America",
     review:
       "This online Quran class has been a life-changing experience! The teachers are patient, knowledgeable, and make learning so easy. Highly recommend!",
   },
   {
     name: "Hafsa",
-    avatar: "/img/avatars/avatar-13.webp",
+    avatar: "rehal",
     country: "America",
     review:
       "Corrects every mistake, improves Tajweed and Qirah. Excellent teaching — I highly recommend the classes.",
   },
   {
     name: "Jibreel",
-    avatar: "/img/avatars/avatar-4.webp",
+    avatar: "palm",
     country: "America",
     review:
       "Patient, attentive teaching with consistent correction. Huge improvement in Tajweed and Qirah over two years.",
   },
   {
     name: "Tajamul Hussai",
-    avatar: "/img/avatars/avatar-5.webp",
+    avatar: "letters",
     country: "America",
     review:
       "Highly structured, supportive learning. Precise feedback and a motivating environment helped me improve significantly.",
   },
   {
     name: "Fahad Abdullah",
-    avatar: "/img/avatars/avatar-11.webp",
+    avatar: "lantern",
     country: "Saudi Arabia",
     review:
       "My son is learning Tajweed with proper names and great interest — Alhamdulillah, very satisfied with the academy.",
   },
   {
     name: "Mutahar",
-    avatar: "/img/avatars/avatar-4.webp",
+    avatar: "qalam",
     country: "Canada",
     review:
       "Teaching made a big impact — recitation improved and connection to the Quran strengthened. Truly appreciated and effective.",
   },
   {
     name: "Mariam",
-    avatar: "/img/avatars/avatar-12.webp",
+    avatar: "tasbih",
     country: "America",
     review:
       "Extremely satisfied! Noticeable improvement in recitation, especially rulings. Grateful for such dedicated teaching.",
   },
   {
     name: "Fazal",
-    avatar: "/img/avatars/avatar-14.webp",
+    avatar: "minaret",
     country: "America",
     review:
       "Well-organized classes, kind teachers, and great progress in Hifz. Highly recommended for online Quran learning.",

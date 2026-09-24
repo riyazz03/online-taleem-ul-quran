@@ -8,7 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
-import { Marked } from "marked";
+import { Marked, type Tokens } from "marked";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "blog");
 const WORDS_PER_MINUTE = 200;
@@ -30,6 +30,8 @@ export type PostMeta = {
   author: string;
   /** Short Arabic word used as generative cover art. */
   arabic: string;
+  /** Accessible description of the cover art (frontmatter `coverAlt`). */
+  coverAlt: string;
   featured: boolean;
   readingTime: number;
   wordCount: number;
@@ -37,7 +39,14 @@ export type PostMeta = {
   tone: number;
 };
 
-export type Post = PostMeta & { html: string; toc: TocItem[] };
+export type FaqItem = { question: string; answer: string };
+
+export type Post = PostMeta & {
+  html: string;
+  toc: TocItem[];
+  /** Q&As from the post's "## Frequently asked questions" section (### questions), as plain text. */
+  faqs: FaqItem[];
+};
 
 /* ------------------------------------------------------------------
    Markdown rendering
@@ -125,6 +134,52 @@ function renderMarkdown(markdown: string) {
 }
 
 /* ------------------------------------------------------------------
+   FAQ extraction (for FAQPage structured data)
+------------------------------------------------------------------- */
+
+/** An H2 that opens a post's FAQ block, e.g. "Frequently asked questions about Tajweed". */
+const FAQ_HEADING = /^(frequently asked questions|faqs?)\b/i;
+
+/** Inline Markdown → plain text: drops tags, link targets and emphasis markers. */
+function toPlainText(markdown: string) {
+  return markdown
+    .replace(/<[^>]+>/g, "")
+    .replace(/!?\[([^\]]*)\]\([^)]*\)/g, "$1")
+    .replace(/\*+/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/**
+ * Collects the `### question` + answer pairs under the post's FAQ heading.
+ * The section ends at the next H2 (or the end of the post).
+ */
+function extractFaqs(markdown: string): FaqItem[] {
+  const items: { question: string; parts: string[] }[] = [];
+  let inFaq = false;
+
+  for (const token of new Marked().lexer(markdown)) {
+    if (token.type === "heading") {
+      const text = toPlainText(String(token.text));
+      if (token.depth <= 2) inFaq = token.depth === 2 && FAQ_HEADING.test(text);
+      else if (inFaq && token.depth === 3) items.push({ question: text, parts: [] });
+      continue;
+    }
+    const current = inFaq ? items[items.length - 1] : undefined;
+    if (!current) continue;
+    if (token.type === "paragraph") {
+      current.parts.push(toPlainText(token.text));
+    } else if (token.type === "list") {
+      for (const item of token.items as Tokens.ListItem[]) current.parts.push(toPlainText(item.text));
+    }
+  }
+
+  return items
+    .filter((item) => item.parts.length > 0)
+    .map((item) => ({ question: item.question, answer: item.parts.join(" ") }));
+}
+
+/* ------------------------------------------------------------------
    Loading posts
 ------------------------------------------------------------------- */
 
@@ -188,12 +243,17 @@ function loadPosts(): Post[] {
       category: requireString(data, "category", file),
       author: requireString(data, "author", file),
       arabic: requireString(data, "arabic", file),
+      coverAlt:
+        typeof data.coverAlt === "string" && data.coverAlt.trim()
+          ? data.coverAlt.trim()
+          : `Arabic calligraphy cover art for “${title}”`,
       featured: data.featured === true,
       readingTime: Math.max(1, Math.round(wordCount / WORDS_PER_MINUTE)),
       wordCount,
       tone: 0,
       html,
       toc,
+      faqs: extractFaqs(content),
     } satisfies Post;
   });
 
@@ -211,7 +271,7 @@ function loadPosts(): Post[] {
 
 function toMeta(post: Post): PostMeta {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { html, toc, ...meta } = post;
+  const { html, toc, faqs, ...meta } = post;
   return meta;
 }
 

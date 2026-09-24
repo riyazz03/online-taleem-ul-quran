@@ -38,7 +38,7 @@ export function HadithPanel({ hadith, className }: { hadith: Hadith; className?:
         <SectionHeading tone="light" eyebrow="Prophetic guidance" title="Wisdom from *the Sunnah*" />
 
         <Reveal y={50} className="w-full max-w-5xl">
-          <figure className="relative overflow-hidden rounded-[2.5rem] border border-gold-300/15 bg-white/[0.035] px-6 py-10 shadow-[0_40px_80px_-30px_rgb(0_0_0/0.5)] backdrop-blur-sm sm:px-12 sm:py-14 lg:px-16 lg:py-16">
+          <figure className="relative overflow-hidden rounded-[1.5rem] sm:rounded-[2.5rem] border border-gold-300/15 bg-white/[0.035] px-6 py-10 shadow-[0_40px_80px_-30px_rgb(0_0_0/0.5)] backdrop-blur-sm sm:px-12 sm:py-14 lg:px-16 lg:py-16">
             {/* Corner ornaments */}
             {["left-5 top-5", "right-5 top-5", "bottom-5 left-5", "bottom-5 right-5"].map((pos) => (
               <Star8 key={pos} className={cn("absolute size-3 text-gold-300/40", pos)} />

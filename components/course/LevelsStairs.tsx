@@ -34,7 +34,7 @@ export function LevelsStairs({ levels }: { levels: { title: string; description:
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.9, delay: 0.15 + i * 0.15, ease }}
-            className="group relative flex flex-col gap-4 rounded-[2rem] border border-brand-900/8 bg-white p-7 shadow-soft transition-shadow duration-500 hover:shadow-lift sm:p-8"
+            className="group relative flex flex-col gap-4 rounded-[1.25rem] sm:rounded-[2rem] border border-brand-900/8 bg-white p-7 shadow-soft transition-shadow duration-500 hover:shadow-lift sm:p-8"
           >
             <div className="flex items-center justify-between gap-4">
               <span className="rounded-full bg-brand-50 px-3 py-1 text-[0.7rem] font-bold uppercase tracking-[0.25em] text-brand-700">

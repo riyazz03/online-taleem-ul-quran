@@ -18,7 +18,7 @@ export function FeatureMarquee() {
     <section aria-label="What we offer" className="relative -rotate-1 bg-brand-950 py-5 text-cream shadow-lift">
       <Marquee duration={40} gap={2.5}>
         {items.map((item) => (
-          <span key={item} className="flex items-center gap-10 whitespace-nowrap font-display text-3xl italic sm:text-4xl">
+          <span key={item} className="flex items-center gap-10 whitespace-nowrap font-display text-2xl italic sm:text-4xl">
             {item}
             <Star8 className="size-4 text-gold-400" />
           </span>

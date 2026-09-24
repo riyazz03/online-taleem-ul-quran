@@ -89,16 +89,16 @@ export function Benefits({ className }: { className?: string }) {
         <SectionHeading
           eyebrow="Why families choose us"
           title="Key benefits of *our program*"
-          description="Every class is built around one student, one teacher and steady, measurable progress."
+          description="Personal attention in one-to-one and batch classes, with steady, measurable progress."
         />
         <Stagger className="grid gap-4 md:grid-cols-6" stagger={0.12}>
           {benefits.map((b, i) => {
             const Icon = icons[b.icon];
             const Visual = visuals[i];
             return (
-              <StaggerItem key={b.title} className={spans[i]}>
-                <SpotlightCard className="group relative flex h-full flex-col gap-6 overflow-hidden rounded-[2rem] border border-brand-900/8 bg-white/70 p-7 shadow-soft transition-shadow duration-500 hover:shadow-lift sm:p-8">
-                  <div className="rounded-3xl bg-gradient-to-br from-brand-50 to-cream p-3">
+              <StaggerItem key={b.title} className={cn("min-w-0", spans[i])}>
+                <SpotlightCard className="group relative flex h-full flex-col gap-6 overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] border border-brand-900/8 bg-white/70 p-5 shadow-soft transition-shadow duration-500 hover:shadow-lift sm:p-8">
+                  <div className="rounded-2xl bg-gradient-to-br from-brand-50 to-cream p-2 sm:rounded-3xl sm:p-3">
                     <Visual />
                   </div>
                   <div className="flex items-start gap-4">
@@ -106,8 +106,8 @@ export function Benefits({ className }: { className?: string }) {
                       <Icon className="size-5" />
                     </span>
                     <div>
-                      <h3 className="font-display text-[1.9rem] leading-tight text-brand-950">{b.title}</h3>
-                      <p className="mt-2 leading-relaxed text-muted">{b.description}</p>
+                      <h3 className="font-display text-[1.5rem] sm:text-[1.9rem] leading-tight text-brand-950">{b.title}</h3>
+                      <p className="mt-2 text-[0.95rem] leading-relaxed text-muted sm:text-base">{b.description}</p>
                     </div>
                   </div>
                 </SpotlightCard>

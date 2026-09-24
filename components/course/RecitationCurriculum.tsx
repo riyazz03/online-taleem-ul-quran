@@ -34,7 +34,7 @@ export function RecitationCurriculum({ data, arabic }: { data: Curriculum; arabi
 
           <Reveal y={60} className="relative mx-auto w-full max-w-md">
             <Parallax offset={30}>
-              <div className="relative aspect-[1200/1132] overflow-hidden rounded-[2.5rem] border border-brand-900/8 bg-white shadow-lift">
+              <div className="relative aspect-[1200/1132] overflow-hidden rounded-[1.5rem] sm:rounded-[2.5rem] border border-brand-900/8 bg-white shadow-lift">
                 <Image
                   src="/img/about/guidance-2.webp"
                   alt="Illustration of a teacher on a video call guiding a smiling student at his laptop"
@@ -70,14 +70,14 @@ export function RecitationCurriculum({ data, arabic }: { data: Curriculum; arabi
             const Icon = pointIcons[i % pointIcons.length];
             return (
               <StaggerItem key={point.title} className="h-full">
-                <SpotlightCard className="group relative flex h-full flex-col gap-5 overflow-hidden rounded-[2rem] border border-brand-900/8 bg-white/80 p-8 shadow-soft transition-shadow duration-500 hover:shadow-lift sm:p-10">
+                <SpotlightCard className="group relative flex h-full flex-col gap-5 overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] border border-brand-900/8 bg-white/80 p-8 shadow-soft transition-shadow duration-500 hover:shadow-lift sm:p-10">
                   <div className="flex items-center gap-4">
                     <span className="grid size-12 place-items-center rounded-2xl bg-brand-900 text-gold-200 transition-transform duration-500 group-hover:-rotate-8">
                       <Icon className="size-5" />
                     </span>
                     <span className="text-xs font-bold tabular-nums tracking-[0.3em] text-gold-500">0{i + 1}</span>
                   </div>
-                  <h3 className="font-display text-[2.1rem] leading-tight text-brand-950">{point.title}</h3>
+                  <h3 className="font-display text-[1.7rem] sm:text-[2.1rem] leading-tight text-brand-950">{point.title}</h3>
                   <p className="text-lg leading-relaxed text-muted text-pretty">{point.text}</p>
                 </SpotlightCard>
               </StaggerItem>

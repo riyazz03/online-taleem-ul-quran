@@ -10,12 +10,14 @@ import { FaqList } from "@/components/sections/Faq";
 import { Reveal } from "@/components/motion/Reveal";
 import { ContactDetails } from "@/components/contact/ContactDetails";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { defaultShareImage } from "@/components/seo/defaults";
 
 export const metadata: Metadata = {
   title: "Contact Us — Book a free demo class",
   description:
     "Book a free demo Quran class or get in touch with Online Taleem ul Quran on WhatsApp or email. Choose Quran Recitation, Simplified Tajweed or Quran Memorization — demo classes are held on weekends.",
   alternates: { canonical: "/contact-us" },
+  openGraph: { type: "website", url: "/contact-us", images: [defaultShareImage] },
 };
 
 /** The FAQ entries most relevant to someone about to book. */

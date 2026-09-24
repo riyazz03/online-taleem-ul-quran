@@ -56,6 +56,7 @@ export function SplitHeading({ text, as = "h2", className, emClassName }: Props)
         : lines.map((line, li) => (
             <span key={li} className="block">
               {renderWords(line)}
+              {li < lines.length - 1 && " "}
             </span>
           ))}
     </Tag>

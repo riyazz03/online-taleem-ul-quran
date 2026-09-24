@@ -22,7 +22,7 @@ export function Stats({ className, limit = 6 }: { className?: string; limit?: nu
         />
         <Stagger
           as="dl"
-          className="grid grid-cols-2 gap-px overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 md:grid-cols-3"
+          className="grid grid-cols-2 gap-px overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] border border-white/10 bg-white/10 md:grid-cols-3"
           stagger={0.08}
         >
           {list.map((s) => (

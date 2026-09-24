@@ -8,6 +8,7 @@ import { CoursesHero } from "@/components/courses-page/CoursesHero";
 import { CompareCourses } from "@/components/courses-page/CompareCourses";
 import { JourneyStats } from "@/components/courses-page/JourneyStats";
 import { RightForYou } from "@/components/courses-page/RightForYou";
+import { defaultShareImage } from "@/components/seo/defaults";
 
 const description =
   "Explore our online Quran courses — Simplified Tajweed, Quran Recitation and Quran Memorization (Hifz). Live one-to-one and batch classes with male and female tutors, for learners from 4 years old.";
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
   description,
   alternates: { canonical: "/our-course" },
   openGraph: {
+    images: [defaultShareImage],
     type: "website",
     siteName: site.name,
     url: "/our-course",

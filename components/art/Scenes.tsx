@@ -4,7 +4,9 @@
  * plain CSS (no JavaScript). Every scene takes a unique `id` so its
  * gradients/clip-paths never collide when several are on one page.
  */
+import type { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
+import "./scenes.css";
 
 const ARCH_OUTER = "M14,520 V196 C14,106 104,48 200,10 C296,48 386,106 386,196 V520 Z";
 const ARCH_INNER = "M30,520 V201 C30,117 113,64 200,30 C287,64 370,117 370,201 V520 Z";
@@ -21,18 +23,26 @@ function Lantern({
   length,
   scale = 1,
   delay = 0,
+  swing = "normal",
   id,
 }: {
   x: number;
   length: number;
   scale?: number;
+  /** Phase offset in seconds (applied as a negative delay, so it never jumps on load). */
   delay?: number;
+  /** "slow" swings on a longer, opposite cycle so lanterns never move in lockstep. */
+  swing?: "normal" | "slow";
   id: string;
 }) {
   const s = scale;
   const y = length;
+  const phase = `${-delay}s`;
   return (
-    <g className="art-swing" style={{ transformOrigin: `${x}px 0px`, animationDelay: `${delay}s` }}>
+    <g
+      className={swing === "slow" ? "scene-swing-slow" : "art-swing"}
+      style={{ transformOrigin: `${x}px 0px`, animationDelay: phase }}
+    >
       <line x1={x} y1={0} x2={x} y2={y} stroke="#d2a554" strokeWidth={1.2} opacity={0.8} />
       <circle
         className="art-flicker"
@@ -40,7 +50,7 @@ function Lantern({
         cy={y + 32 * s}
         r={42 * s}
         fill={`url(#${id}-lamp)`}
-        style={{ animationDelay: `${delay}s` }}
+        style={{ animationDelay: phase }}
       />
       <path d={`M${x - 9 * s},${y + 9 * s} Q${x},${y - 5 * s} ${x + 9 * s},${y + 9 * s} Z`} fill="#d2a554" />
       <path
@@ -79,6 +89,250 @@ function MosqueSilhouette({ fill }: { fill: string }) {
       {/* hall */}
       <path d="M40,520 V466 H360 V520 Z" />
     </g>
+  );
+}
+
+/* ------------------------------------------------------------------
+   Night-only life. Every moving piece is drawn around its local origin
+   and positioned by a parent <g>, so the CSS loops in scenes.css only
+   touch transform/opacity. Delays are negative so the scene is already
+   "mid-life" when it appears.
+------------------------------------------------------------------- */
+
+type Vars = CSSProperties & Record<`--${string}`, string>;
+
+/** Brighter stars that glint now and then: [x, y, size, phase]. */
+const GLINTS: Array<[number, number, number, number]> = [
+  [200, 70, 1, 1.2],
+  [236, 262, 0.75, 3.6],
+  [122, 292, 0.7, 5.3],
+];
+
+/** Embers drifting up from the lanterns: [x, y, drift, rise, duration, phase, radius]. */
+const MOTES: Array<[number, number, number, number, number, number, number]> = [
+  // large lantern (x 92)
+  [84, 150, -10, -78, 8.5, 0, 1.1],
+  [100, 162, 9, -92, 10, 3.2, 0.9],
+  [92, 140, -4, -70, 9, 6.1, 1.2],
+  [78, 168, -12, -64, 11, 8.4, 0.8],
+  // small high lantern (x 146)
+  [140, 96, -8, -50, 8, 1.5, 0.9],
+  [153, 102, 7, -56, 9.5, 5.6, 1],
+  [146, 90, 2, -44, 10.5, 8, 0.8],
+  // low lantern (x 54)
+  [49, 236, -6, -62, 9, 2.4, 0.9],
+  [60, 244, 8, -72, 10, 6.8, 1.1],
+  [54, 228, -2, -56, 11.5, 9.9, 0.8],
+];
+
+/** Fireflies over the domes: [x, y, duration, phase]. */
+const FIREFLIES: Array<[number, number, number, number]> = [
+  [100, 404, 9, 2],
+  [162, 382, 11, 6],
+  [238, 388, 10, 4],
+  [302, 404, 12, 8.5],
+];
+
+/** Doves in a loose formation, relative to the lead bird: [dx, dy, scale, flap phase]. */
+const DOVES: Array<[number, number, number, number]> = [
+  [0, 0, 1, 0],
+  [-13, -7, 0.8, 0.3],
+  [-15, 8, 0.85, 0.55],
+  [-29, 1, 0.7, 0.15],
+];
+
+const CLOUD =
+  "M8,0 C-1,0 -2,-9 9,-10 C11,-19 25,-22 33,-15 C37,-27 57,-30 65,-19 C71,-26 87,-26 91,-16 C99,-21 113,-19 113,-10 C125,-11 131,-2 122,0 Z";
+const CLOUD_WISP = "M26,5 C38,1 64,1 80,4 C94,2 112,4 106,8 C90,10 50,10 30,9 C22,8 20,6 26,5 Z";
+
+/**
+ * A wispy moonlit cloud. `x` is where it rests (and where it is drawn when
+ * motion is reduced); it drifts from `from` to `to` (scene units, absolute x).
+ */
+function Cloud({
+  id,
+  x,
+  y,
+  scale = 1,
+  from,
+  to,
+  duration,
+  phase,
+  opacity = 1,
+}: {
+  id: string;
+  x: number;
+  y: number;
+  scale?: number;
+  from: number;
+  to: number;
+  duration: number;
+  phase: number;
+  opacity?: number;
+}) {
+  const style: Vars = {
+    "--from": `${(from - x) / scale}px`,
+    "--to": `${(to - x) / scale}px`,
+    "--dur": `${duration}s`,
+    animationDelay: `${-phase}s`,
+  };
+  return (
+    <g transform={`translate(${x} ${y}) scale(${scale})`} opacity={opacity}>
+      <g className="scene-cloud" style={style}>
+        <path d={CLOUD} fill={`url(#${id}-cloud)`} />
+        <path d={CLOUD_WISP} fill={`url(#${id}-cloud)`} opacity={0.8} />
+      </g>
+    </g>
+  );
+}
+
+/** Stars, crescent with a breathing halo, drifting clouds and a passing flock. */
+function NightSky({ id }: { id: string }) {
+  return (
+    <>
+      {STARS.map(([x, y, r, d], i) => (
+        <circle
+          key={i}
+          className="art-twinkle"
+          cx={x}
+          cy={y}
+          r={r}
+          fill="#fbf6ea"
+          // Each star keeps its own tempo (2.8s–5.2s) so the sky never pulses in unison.
+          style={{ animationDelay: `${-d}s`, animationDuration: `${2.8 + ((i * 7) % 5) * 0.6}s` }}
+        />
+      ))}
+      {GLINTS.map(([x, y, s, d], i) => (
+        <g key={i} transform={`translate(${x} ${y}) scale(${s})`}>
+          <g className="scene-glint" style={{ animationDelay: `${-d}s` }}>
+            <circle r={5} fill={`url(#${id}-mote)`} />
+            <path d="M0,-6 Q0.8,-0.8 6,0 Q0.8,0.8 0,6 Q-0.8,0.8 -6,0 Q-0.8,-0.8 0,-6 Z" fill="#fbf6ea" />
+          </g>
+        </g>
+      ))}
+
+      <g transform="translate(276 150)">
+        <circle className="scene-breathe" r={90} fill={`url(#${id}-moonglow)`} />
+      </g>
+      <rect x={230} y={100} width={100} height={100} fill="#ecd6a4" mask={`url(#${id}-crescent)`} />
+
+      {/* doves crossing every ~36s, rising gently past the crescent */}
+      <g transform="translate(0 234)" opacity={0.8}>
+        <g className="scene-flock">
+          <g className="scene-bob">
+            {DOVES.map(([dx, dy, s, d], i) => (
+              <g key={i} transform={`translate(${dx} ${dy}) scale(${s})`}>
+                <path
+                  className="scene-flap"
+                  d="M-5.5,0 Q-2.8,-3.6 0,0.8 Q2.8,-3.6 5.5,0"
+                  fill="none"
+                  stroke="#f5ead0"
+                  strokeWidth={1.2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  style={{ animationDelay: `${-d}s` }}
+                />
+              </g>
+            ))}
+          </g>
+        </g>
+      </g>
+
+      {/* a faint high cloud behind the lanterns, and a nearer one that veils the crescent */}
+      <Cloud id={id} x={70} y={112} scale={0.7} from={-110} to={400} duration={84} phase={17} opacity={0.65} />
+      <Cloud id={id} x={186} y={194} from={-150} to={420} duration={58} phase={31} />
+    </>
+  );
+}
+
+/** Golden embers rising slowly from the lanterns. */
+function LanternMotes({ id }: { id: string }) {
+  return (
+    <>
+      {MOTES.map(([x, y, dx, rise, dur, d, r], i) => {
+        const style: Vars = {
+          "--dx": `${dx}px`,
+          "--rise": `${rise}px`,
+          "--dur": `${dur}s`,
+          animationDelay: `${-d}s`,
+        };
+        return (
+          <g key={i} transform={`translate(${x} ${y})`}>
+            <g className="scene-mote" style={style}>
+              <circle r={r * 3.4} fill={`url(#${id}-mote)`} />
+              <circle r={r} fill="#fff1c9" />
+            </g>
+          </g>
+        );
+      })}
+    </>
+  );
+}
+
+function archWindow(x: number, top: number, bottom: number, w: number) {
+  const h = w / 2;
+  return `M${x - h},${bottom} V${top + w * 1.1} Q${x - h},${top + w * 0.35} ${x},${top} Q${x + h},${top + w * 0.35} ${x + h},${top + w * 1.1} V${bottom} Z`;
+}
+
+/** Warm lit windows in the mosque; groups glow and dim on their own slow cycles. */
+function MosqueLights({ id }: { id: string }) {
+  const fill = `url(#${id}-window)`;
+  const hall = (xs: number[]) => xs.map((x) => <path key={x} d={archWindow(x, 475, 493, 7)} />);
+  const cycle = (dur: number, phase: number): CSSProperties & Record<"--dur", string> => ({
+    "--dur": `${dur}s`,
+    animationDelay: `${-phase}s`,
+  });
+  return (
+    <g fill={fill}>
+      {/* warm spill of light across the prayer hall */}
+      <g opacity={0.35}>
+        <ellipse className="scene-window-soft" cx={200} cy={490} rx={168} ry={30} fill={`url(#${id}-lamp)`} />
+      </g>
+      <ellipse className="scene-window-soft" cx={200} cy={486} rx={46} ry={24} fill={`url(#${id}-lamp)`} style={{ animationDelay: "-2s" }} />
+
+      <g className="scene-window" style={cycle(11, 2)}>{hall([84, 120, 156])}</g>
+      <g className="scene-window" style={cycle(14, 9)}>{hall([102, 138])}</g>
+      <g className="scene-window" style={cycle(12.5, 5)}>{hall([244, 280, 316])}</g>
+      <g className="scene-window" style={cycle(10, 7.5)}>{hall([262, 298])}</g>
+
+      {/* doorway, dome drum and side-dome windows breathe but never go dark */}
+      <path className="scene-window-soft" d={archWindow(200, 471, 500, 17)} />
+      <g className="scene-window-soft" style={{ animationDelay: "-3s" }}>
+        {[172, 186, 214, 228].map((x) => (
+          <path key={x} d={archWindow(x, 449, 462, 5)} />
+        ))}
+      </g>
+      <g className="scene-window-soft" style={{ animationDelay: "-1.5s" }}>
+        <path d={archWindow(116, 454, 466, 5)} />
+        <path d={archWindow(284, 454, 466, 5)} />
+      </g>
+
+      {/* minaret slits */}
+      <g className="scene-window" style={cycle(16, 12)}>
+        <path d={archWindow(62, 390, 401, 3.4)} />
+        <path d={archWindow(62, 424, 435, 3.4)} />
+      </g>
+      <g className="scene-window" style={cycle(13, 3)}>
+        <path d={archWindow(338, 390, 401, 3.4)} />
+        <path d={archWindow(338, 424, 435, 3.4)} />
+      </g>
+    </g>
+  );
+}
+
+/** A few fireflies wandering over the domes. */
+function Fireflies({ id }: { id: string }) {
+  return (
+    <>
+      {FIREFLIES.map(([x, y, dur, d], i) => (
+        <g key={i} transform={`translate(${x} ${y})`}>
+          <g className="scene-firefly" style={{ "--dur": `${dur}s`, animationDelay: `${-d}s` } as Vars}>
+            <circle r={3.6} fill={`url(#${id}-mote)`} />
+            <circle r={0.9} fill="#fff1c9" />
+          </g>
+        </g>
+      ))}
+    </>
   );
 }
 
@@ -191,6 +445,24 @@ export function ArchScene({
           <stop offset="0.6" stopColor="#e9c97f" />
           <stop offset="1" stopColor="#bf8d3c" />
         </radialGradient>
+        {night && (
+          <>
+            <linearGradient id={`${id}-cloud`} x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stopColor="#fbf1da" stopOpacity="0.42" />
+              <stop offset="0.55" stopColor="#cfe9e3" stopOpacity="0.16" />
+              <stop offset="1" stopColor="#83c4b9" stopOpacity="0.05" />
+            </linearGradient>
+            <radialGradient id={`${id}-mote`}>
+              <stop offset="0" stopColor="#ffe9b0" stopOpacity="0.9" />
+              <stop offset="0.4" stopColor="#e9c97f" stopOpacity="0.35" />
+              <stop offset="1" stopColor="#d2a554" stopOpacity="0" />
+            </radialGradient>
+            <linearGradient id={`${id}-window`} x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stopColor="#fff1c9" />
+              <stop offset="1" stopColor="#d9a954" />
+            </linearGradient>
+          </>
+        )}
         <radialGradient id={`${id}-bookglow`}>
           <stop offset="0" stopColor={night ? "#ffe9b0" : "#ffffff"} stopOpacity="0.9" />
           <stop offset="0.5" stopColor="#ecd6a4" stopOpacity="0.35" />
@@ -217,13 +489,7 @@ export function ArchScene({
         <rect width="400" height="520" fill={`url(#${id}-geo)`} opacity={night ? 0.07 : 0.1} />
 
         {night ? (
-          <>
-            {STARS.map(([x, y, r, d], i) => (
-              <circle key={i} className="art-twinkle" cx={x} cy={y} r={r} fill="#fbf6ea" style={{ animationDelay: `${d}s` }} />
-            ))}
-            <circle cx={276} cy={150} r={90} fill={`url(#${id}-moonglow)`} />
-            <rect x={230} y={100} width={100} height={100} fill="#ecd6a4" mask={`url(#${id}-crescent)`} />
-          </>
+          <NightSky id={id} />
         ) : (
           <>
             <circle cx={200} cy={120} r={160} fill="#fbf6ea" opacity={0.6} />
@@ -231,14 +497,23 @@ export function ArchScene({
           </>
         )}
 
+        {/* night: a third, smaller lantern hangs lowest on a slower, opposite swing */}
+        {night && <Lantern id={id} x={54} length={218} scale={0.52} delay={2.1} swing="slow" />}
         <Lantern id={id} x={92} length={night ? 120 : 96} scale={1} delay={0} />
         <Lantern id={id} x={146} length={night ? 66 : 150} scale={0.75} delay={0.8} />
         {!night && <Lantern id={id} x={296} length={80} scale={0.85} delay={1.6} />}
+        {night && <LanternMotes id={id} />}
 
         {show === "mosque" ? (
           <>
             <MosqueSilhouette fill={night ? "#0a1a19" : "#aedbd3"} />
             <rect x={0} y={500} width={400} height={20} fill={night ? "#0a1a19" : "#aedbd3"} />
+            {night && (
+              <>
+                <MosqueLights id={id} />
+                <Fireflies id={id} />
+              </>
+            )}
           </>
         ) : (
           <>

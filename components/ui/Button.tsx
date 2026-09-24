@@ -8,7 +8,7 @@ type Variant = "primary" | "gold" | "outline" | "light" | "ghost-light";
 const variants: Record<Variant, { base: string; fill: string; text: string }> = {
   primary: {
     base: "bg-brand-800 text-cream shadow-[0_10px_24px_-10px_rgb(35_76_74/0.7)]",
-    fill: "bg-brand-500",
+    fill: "bg-brand-600",
     text: "hover:text-white",
   },
   gold: {

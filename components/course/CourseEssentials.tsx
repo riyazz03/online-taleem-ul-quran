@@ -47,7 +47,7 @@ export function CourseEssentials({ items, className }: { items: Essential[]; cla
             const Icon = iconFor[item.icon];
             return (
               <StaggerItem key={item.label} className={cn("h-full", i % 2 === 1 && "lg:translate-y-10")}>
-                <article className="group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-brand-900/8 bg-white p-7 shadow-soft transition-all duration-500 hover:-translate-y-1.5 hover:shadow-lift">
+                <article className="group relative flex h-full flex-col overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] border border-brand-900/8 bg-white p-7 shadow-soft transition-all duration-500 hover:-translate-y-1.5 hover:shadow-lift">
                   <div
                     aria-hidden
                     className="absolute -right-12 -top-12 size-36 rounded-full bg-brand-50 transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-[2.4]"
@@ -64,7 +64,7 @@ export function CourseEssentials({ items, className }: { items: Essential[]; cla
                   <p className="relative mt-8 text-[0.7rem] font-bold uppercase tracking-[0.28em] text-brand-600">
                     {item.label}
                   </p>
-                  <h3 className="relative mt-2 font-display text-[2.1rem] leading-[1.05] text-brand-950">
+                  <h3 className="relative mt-2 font-display text-[1.7rem] sm:text-[2.1rem] leading-[1.05] text-brand-950">
                     <Headline text={item.headline} />
                   </h3>
                   <p className="relative mt-4 leading-relaxed text-muted">

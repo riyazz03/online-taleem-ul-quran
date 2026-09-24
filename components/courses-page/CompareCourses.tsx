@@ -120,7 +120,7 @@ export function CompareCourses({ className }: { className?: string }) {
                   key={c.slug}
                   as="article"
                   className={cn(
-                    "group relative flex-col overflow-hidden rounded-[2rem] border border-brand-900/8 bg-white shadow-soft transition-[box-shadow,border-color] duration-500 hover:border-brand-400/40 hover:shadow-lift lg:row-span-6 lg:grid lg:grid-rows-subgrid",
+                    "group relative flex-col overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] border border-brand-900/8 bg-white shadow-soft transition-[box-shadow,border-color] duration-500 hover:border-brand-400/40 hover:shadow-lift lg:row-span-6 lg:grid lg:grid-rows-subgrid",
                     active === i ? "flex" : "hidden",
                   )}
                 >
@@ -214,7 +214,7 @@ export function CompareCourses({ className }: { className?: string }) {
         </div>
 
         {/* What every course shares */}
-        <Reveal y={40} className="relative overflow-hidden rounded-[2rem] border border-brand-900/8 bg-gradient-to-br from-white via-white/80 to-brand-50 p-6 shadow-soft sm:p-10">
+        <Reveal y={40} className="relative overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] border border-brand-900/8 bg-gradient-to-br from-white via-white/80 to-brand-50 p-6 shadow-soft sm:p-10">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-14">
             <div className="flex flex-col gap-3 lg:w-64 lg:shrink-0">
               <Star8 className="size-6 text-gold-400" />

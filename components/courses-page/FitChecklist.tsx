@@ -26,7 +26,7 @@ function FitMeter({ count, total }: { count: number; total: number }) {
   return (
     <div
       className={cn(
-        "relative flex items-center gap-5 overflow-hidden rounded-[2rem] border p-5 shadow-soft transition-colors duration-700 sm:gap-6 sm:p-6",
+        "relative flex items-center gap-5 overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] border p-5 shadow-soft transition-colors duration-700 sm:gap-6 sm:p-6",
         done ? "border-brand-800 bg-brand-900 text-cream" : "border-brand-900/8 bg-white/80 backdrop-blur",
       )}
     >
@@ -101,7 +101,7 @@ export function FitChecklist({ heading }: { heading: React.ReactNode }) {
                 aria-pressed={on}
                 onClick={() => toggle(i)}
                 className={cn(
-                  "group relative flex h-full w-full flex-col gap-5 overflow-hidden rounded-[2rem] border p-7 text-left shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-lift active:scale-[0.99] sm:p-8",
+                  "group relative flex h-full w-full flex-col gap-5 overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] border p-7 text-left shadow-soft transition-all duration-500 hover:-translate-y-1 hover:shadow-lift active:scale-[0.99] sm:p-8",
                   on ? "border-brand-800 bg-brand-900" : "border-brand-900/8 bg-cream",
                 )}
               >

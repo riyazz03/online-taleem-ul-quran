@@ -27,7 +27,7 @@ export function TajweedCurriculum({ data, arabic }: { data: Curriculum; arabic: 
               description={data.outlineIntro}
             />
             <Reveal delay={0.2} className="w-full max-w-md">
-              <div className="grain relative flex items-end gap-5 overflow-hidden rounded-[2rem] bg-brand-900 p-7 text-cream shadow-lift">
+              <div className="grain relative flex items-end gap-5 overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] bg-brand-900 p-7 text-cream shadow-lift">
                 <GeometricPattern id="topics-geo" className="text-gold-200 opacity-[0.08]" />
                 <span
                   lang="ar"
@@ -51,7 +51,7 @@ export function TajweedCurriculum({ data, arabic }: { data: Curriculum; arabic: 
             {data.topics.map((topic, i) => (
               <StaggerItem as="li" key={topic}>
                 <div className="group flex h-full items-center gap-4 rounded-2xl border border-brand-900/8 bg-white/80 p-4 pr-5 shadow-soft backdrop-blur transition-all duration-500 hover:-translate-y-0.5 hover:border-brand-800 hover:bg-brand-900 hover:shadow-lift">
-                  <span className="w-10 shrink-0 font-display text-3xl leading-none tabular-nums text-gold-500 transition-colors duration-500 group-hover:text-gold-300">
+                  <span className="w-10 shrink-0 font-display text-2xl sm:text-3xl leading-none tabular-nums text-gold-500 transition-colors duration-500 group-hover:text-gold-300">
                     {pad(i + 1)}
                   </span>
                   <span className="font-medium leading-snug text-brand-950 transition-colors duration-500 group-hover:text-cream">
@@ -106,7 +106,7 @@ export function TajweedCurriculum({ data, arabic }: { data: Curriculum; arabic: 
       <section className="relative section-y">
         <div className="container-page grid gap-6 lg:grid-cols-[1fr_1.1fr]">
           <Reveal y={50} className="h-full">
-            <article className="grain relative flex h-full flex-col gap-6 overflow-hidden rounded-[2.5rem] bg-brand-900 p-8 text-cream shadow-lift sm:p-12">
+            <article className="grain relative flex h-full flex-col gap-6 overflow-hidden rounded-[1.5rem] sm:rounded-[2.5rem] bg-brand-900 p-8 text-cream shadow-lift sm:p-12">
               <GeometricPattern id="sisters-geo" className="text-gold-200 opacity-[0.07]" />
               <div aria-hidden className="absolute -right-24 -top-24 size-80 rounded-full bg-brand-500/30 blur-3xl" />
               <span className="relative grid size-12 place-items-center rounded-2xl bg-gold-300 text-brand-950">
@@ -119,7 +119,7 @@ export function TajweedCurriculum({ data, arabic }: { data: Curriculum; arabic: 
                 emClassName="italic text-gold-gradient"
               />
               <p className="relative text-lg leading-relaxed text-brand-100/80 text-pretty">{data.sisters.text}</p>
-              <div className="relative mt-auto aspect-[6/5] w-full overflow-hidden rounded-[2rem] bg-white">
+              <div className="relative mt-auto aspect-[6/5] w-full overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] bg-white">
                 <Image
                   src="/img/about/hero.webp"
                   alt="Illustration of a sister in hijab studying from an open book beside her screen"
@@ -132,7 +132,7 @@ export function TajweedCurriculum({ data, arabic }: { data: Curriculum; arabic: 
           </Reveal>
 
           <Reveal y={50} delay={0.1} className="h-full">
-            <article className="relative flex h-full flex-col overflow-hidden rounded-[2.5rem] border border-brand-900/8 bg-white p-8 shadow-soft sm:p-12">
+            <article className="relative flex h-full flex-col overflow-hidden rounded-[1.5rem] sm:rounded-[2.5rem] border border-brand-900/8 bg-white p-8 shadow-soft sm:p-12">
               <Eyebrow>Learning outcomes</Eyebrow>
               <SplitHeading
                 as="h2"

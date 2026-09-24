@@ -13,9 +13,9 @@ export function CourseCard({ slug, index }: { slug: CourseSlug; index: number })
     <TiltCard className="h-full">
       <Link
         href={`/course-details/${course.slug}`}
-        className="group flex h-full flex-col rounded-[2rem] border border-brand-900/8 bg-white p-3 shadow-soft transition-shadow duration-500 hover:shadow-lift"
+        className="group flex h-full flex-col rounded-[1.25rem] sm:rounded-[2rem] border border-brand-900/8 bg-white p-3 shadow-soft transition-shadow duration-500 hover:shadow-lift"
       >
-        <div className="relative aspect-[4/3] overflow-hidden rounded-[1.6rem] bg-brand-100">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-[1rem] sm:rounded-[1.6rem] bg-brand-100">
           <Image
             src={course.image}
             alt={course.imageAlt}
@@ -43,7 +43,7 @@ export function CourseCard({ slug, index }: { slug: CourseSlug; index: number })
               </span>
             ))}
           </div>
-          <h3 className="font-display text-[2.1rem] leading-tight text-brand-950">{course.title}</h3>
+          <h3 className="font-display text-[1.7rem] sm:text-[2.1rem] leading-tight text-brand-950">{course.title}</h3>
           <p className="leading-relaxed text-muted">{course.description}</p>
           <span className="mt-auto flex items-center justify-between pt-4 text-sm font-semibold text-brand-800">
             Start with a free trial

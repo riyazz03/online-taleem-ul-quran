@@ -1,0 +1,106 @@
+/* ------------------------------------------------------------------
+   ProfileBadge (components/art/Avatars.tsx)
+   Ambient motion is limited to cheap opacity changes plus the gently
+   swinging lantern; everything else plays only while the badge (or a
+   parent marked `.pb-host`, e.g. a testimonial card) is hovered.
+   Every keyframe starts and ends at the resting pose, so the global
+   reduced-motion rule leaves each scene perfectly still.
+------------------------------------------------------------------- */
+.pb-art {
+  transition: transform 0.8s var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1));
+}
+.pb:hover .pb-art,
+.pb-host:hover .pb-art {
+  transform: scale(1.07);
+}
+
+.pb-art .pb-twinkle {
+  animation: pb-twinkle 3.2s ease-in-out infinite;
+}
+@keyframes pb-twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.pb-art .pb-flicker {
+  animation: pb-flicker 3.6s ease-in-out infinite;
+}
+@keyframes pb-flicker {
+  0%, 100% { opacity: 1; }
+  40% { opacity: 0.78; }
+  65% { opacity: 0.92; }
+}
+
+.pb-art .pb-swing,
+.pb-art .pb-sway,
+.pb-art .pb-rays,
+.pb-art .pb-birds,
+.pb-art .pb-hop,
+.pb-art .pb-dip {
+  transform-box: view-box;
+}
+
+/* lantern: always swaying a little, like the arch scene */
+.pb-art .pb-swing {
+  animation: pb-swing 5s ease-in-out infinite;
+}
+@keyframes pb-swing {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(4deg); }
+  75% { transform: rotate(-4deg); }
+}
+
+/* hover-only motions */
+.pb:hover .pb-sway,
+.pb-host:hover .pb-sway {
+  animation: pb-sway 2.4s ease-in-out infinite;
+}
+@keyframes pb-sway {
+  0%, 100% { transform: rotate(0deg); }
+  30% { transform: rotate(3deg); }
+  70% { transform: rotate(-2.5deg); }
+}
+
+.pb:hover .pb-rays,
+.pb-host:hover .pb-rays {
+  animation: pb-rays 3s ease-in-out infinite;
+}
+@keyframes pb-rays {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(6deg) scale(1.08); }
+}
+
+.pb:hover .pb-birds,
+.pb-host:hover .pb-birds {
+  animation: pb-birds 2.6s ease-in-out infinite;
+}
+@keyframes pb-birds {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-3px, -1.5px); }
+}
+
+.pb:hover .pb-hop,
+.pb-host:hover .pb-hop {
+  animation: pb-hop 1.8s var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)) infinite;
+}
+@keyframes pb-hop {
+  0%, 40%, 100% { transform: translateY(0); }
+  15% { transform: translateY(-2.6px); }
+}
+
+.pb:hover .pb-dip,
+.pb-host:hover .pb-dip {
+  animation: pb-dip 1.8s ease-in-out infinite;
+}
+@keyframes pb-dip {
+  0%, 100% { transform: translateY(0); }
+  45% { transform: translateY(2.4px); }
+}
+
+.pb:hover .pb-tasbih,
+.pb-host:hover .pb-tasbih {
+  animation: pb-swing 2.2s ease-in-out infinite;
+}
+.pb-art .pb-tasbih {
+  transform-box: view-box;
+}

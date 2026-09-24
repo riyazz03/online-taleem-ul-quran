@@ -45,7 +45,7 @@ export function IbnMasudStory({ story, className }: { story: Story; className?: 
                 {line.speaker && <p className="text-sm font-semibold text-brand-600">{line.speaker}</p>}
                 <p
                   className={cn(
-                    "font-display text-[1.9rem] leading-[1.18] tracking-tight text-pretty sm:text-4xl",
+                    "font-display text-[1.5rem] leading-[1.18] tracking-tight text-pretty sm:text-4xl",
                     line.speaker && "mt-2",
                     i === last ? "italic text-brand-500" : "text-brand-950",
                   )}
@@ -57,7 +57,7 @@ export function IbnMasudStory({ story, className }: { story: Story; className?: 
           </ol>
 
           <Reveal y={30} className="mt-14 pl-10 sm:pl-14">
-            <div className="relative flex flex-col gap-4 overflow-hidden rounded-[2rem] border border-brand-900/8 bg-sand/70 p-7 sm:p-9">
+            <div className="relative flex flex-col gap-4 overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] border border-brand-900/8 bg-sand/70 p-7 sm:p-9">
               <span aria-hidden className="grid size-10 place-items-center rounded-full bg-white text-gold-500 shadow-soft">
                 <Quote className="size-4" />
               </span>

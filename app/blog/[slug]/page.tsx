@@ -17,6 +17,7 @@ import { PostGrid } from "@/components/blog/PostGrid";
 import { ReadingPill } from "@/components/blog/ReadingPill";
 import { ShareButtons } from "@/components/blog/ShareButtons";
 import { TableOfContents } from "@/components/blog/TableOfContents";
+import { defaultShareImage } from "@/components/seo/defaults";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -39,6 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: { canonical: url },
     authors: [{ name: post.author }],
     openGraph: {
+    images: [defaultShareImage],
       type: "article",
       url,
       siteName: site.name,
@@ -143,7 +145,7 @@ export default async function BlogPostPage({ params }: Props) {
               post={post}
               size="xl"
               idSuffix="hero"
-              className="aspect-[4/3] rounded-[2rem] shadow-lift sm:aspect-[16/9] sm:rounded-[2.5rem] lg:aspect-[21/9]"
+              className="aspect-[4/3] rounded-[1.25rem] shadow-lift sm:aspect-[16/9] sm:rounded-[2.5rem] lg:aspect-[21/9]"
             />
           </div>
         </div>
@@ -153,7 +155,7 @@ export default async function BlogPostPage({ params }: Props) {
           <aside className="hidden lg:block">
             <div className="sticky top-28 flex flex-col gap-5">
               <TableOfContents items={post.toc} targetId={ARTICLE_ID} minutes={post.readingTime} />
-              <div className="rounded-[1.75rem] border border-brand-900/8 bg-white/75 p-6 shadow-soft backdrop-blur">
+              <div className="rounded-[1.25rem] sm:rounded-[1.75rem] border border-brand-900/8 bg-white/75 p-6 shadow-soft backdrop-blur">
                 <p className="text-[0.7rem] font-bold uppercase tracking-[0.28em] text-brand-600">Share</p>
                 <ShareButtons url={url} title={post.title} className="mt-4" />
               </div>

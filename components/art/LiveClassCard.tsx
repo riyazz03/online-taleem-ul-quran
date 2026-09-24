@@ -9,7 +9,7 @@ const bars = [10, 18, 26, 14, 30, 22, 12, 28, 20, 16, 24, 11, 19, 27, 15];
  */
 export function LiveClassCard({ className, compact = false }: { className?: string; compact?: boolean }) {
   return (
-    <div className={cn("rounded-[1.75rem] border border-white/70 bg-white/90 p-4 shadow-lift backdrop-blur-md", className)}>
+    <div aria-hidden className={cn("rounded-[1.25rem] sm:rounded-[1.75rem] border border-white/70 bg-white/90 p-4 shadow-lift backdrop-blur-md", className)}>
       <div className="flex items-center justify-between gap-3">
         <span className="inline-flex items-center gap-1.5 rounded-full bg-red-50 px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-widest text-red-600">
           <span className="relative flex size-1.5">

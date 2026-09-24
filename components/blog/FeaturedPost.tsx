@@ -12,13 +12,13 @@ export function FeaturedPost({ post }: { post: PostMeta }) {
     <Reveal y={50} amount={0.15}>
       <Link
         href={`/blog/${post.slug}`}
-        className="group grid overflow-hidden rounded-[2.5rem] border border-brand-900/8 bg-white p-3 shadow-soft transition-shadow duration-500 hover:shadow-lift lg:grid-cols-[1.1fr_1fr]"
+        className="group grid overflow-hidden rounded-[1.5rem] sm:rounded-[2.5rem] border border-brand-900/8 bg-white p-3 shadow-soft transition-shadow duration-500 hover:shadow-lift lg:grid-cols-[1.1fr_1fr]"
       >
         <PostCover
           post={post}
           size="lg"
           idSuffix="featured"
-          className="aspect-[4/3] rounded-[2rem] sm:aspect-[16/10] lg:aspect-auto lg:min-h-[32rem]"
+          className="aspect-[4/3] rounded-[1.25rem] sm:rounded-[2rem] sm:aspect-[16/10] lg:aspect-auto lg:min-h-[32rem]"
         />
         <div className="flex flex-col items-start justify-center gap-6 px-3 pb-5 pt-8 sm:px-8 sm:pb-8 lg:px-12 lg:py-12">
           <span className="inline-flex items-center gap-2 rounded-full bg-gold-100 px-3.5 py-1.5 text-[0.68rem] font-bold uppercase tracking-[0.22em] text-gold-700">

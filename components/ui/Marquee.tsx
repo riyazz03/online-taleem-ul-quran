@@ -32,7 +32,7 @@ export function Marquee({
     >
       <div
         className={cn(
-          "flex w-max animate-marquee motion-reduce:animate-none group-hover:[animation-play-state:paused]",
+          "flex w-max animate-marquee motion-reduce:animate-none group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused] group-active:[animation-play-state:paused]",
           reverse && "[animation-direction:reverse]",
         )}
         style={{ "--marquee-duration": `${duration}s` } as React.CSSProperties}

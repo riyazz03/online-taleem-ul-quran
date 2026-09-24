@@ -111,7 +111,7 @@ function StepCard({
       transition={{ duration: 0.9, ease }}
       onPointerEnter={() => onActivate(index)}
       className={cn(
-        "group relative overflow-hidden rounded-[2rem] border bg-white p-7 shadow-soft transition-[border-color,box-shadow] duration-500 sm:p-9",
+        "group relative overflow-hidden rounded-[1.25rem] sm:rounded-[2rem] border bg-white p-7 shadow-soft transition-[border-color,box-shadow] duration-500 sm:p-9",
         active ? "border-brand-400/60 shadow-lift" : "border-brand-900/8",
       )}
     >
