@@ -37,7 +37,7 @@ export const site = {
     instagram: "",
     youtube: "",
   },
-  credit: { name: "Crayont", href: "mailto:crayontofficial@gmail.com" },
+  credit: { name: "Crayont", href: "https://crayont.com" },
 } as const;
 
 export const navLinks = [

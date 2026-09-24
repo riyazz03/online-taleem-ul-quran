@@ -6,6 +6,7 @@ import { GeometricPattern, Logo, Star8 } from "@/components/ui/Brand";
 import { ButtonLink } from "@/components/ui/Button";
 import { WhatsAppIcon } from "@/components/ui/Icons";
 import { AskAi } from "./AskAi";
+import { CrayontCredit } from "./CrayontCredit";
 import { Reveal } from "@/components/motion/Reveal";
 import { SplitHeading } from "@/components/motion/SplitHeading";
 
@@ -144,9 +145,7 @@ export function Footer() {
             <p className="flex items-center gap-2">
               <Star8 className="size-3 text-gold-400" /> © {year} {site.name}. All rights reserved.
             </p>
-            <a href={site.credit.href} className="inline-flex items-center gap-1.5 hover:text-cream">
-              Crafted by <span className="font-semibold text-cream">{site.credit.name}</span>
-            </a>
+            <CrayontCredit />
           </div>
         </div>
       </div>
